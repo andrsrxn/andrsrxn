@@ -42,9 +42,9 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                     <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full truncate text-sm leading-tight'>
                       {PROJECTS.ICEMENE_REBRANDING.CLIENT} - {PROJECTS.ICEMENE_REBRANDING.INDUSTRY}
                     </span>
-                    <h3 className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
+                    <p className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
                       {PROJECTS.ICEMENE_REBRANDING.SUMMARY}
-                    </h3>
+                    </p>
                   </div>
                 </InView>
                 <div className='relative'>
@@ -79,9 +79,9 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                       {PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.CLIENT} -{' '}
                       {PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.INDUSTRY}
                     </span>
-                    <h3 className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
+                    <p className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
                       {PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.SUMMARY}
-                    </h3>
+                    </p>
                   </div>
                 </InView>
                 <div className='relative'>
@@ -116,9 +116,9 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                       {PROJECTS.PINALZA_VISUAL_IDENTITY.CLIENT} -{' '}
                       {PROJECTS.PINALZA_VISUAL_IDENTITY.INDUSTRY}
                     </span>
-                    <h3 className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
+                    <p className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
                       {PROJECTS.PINALZA_VISUAL_IDENTITY.SUMMARY}
-                    </h3>
+                    </p>
                   </div>
                 </InView>
                 <div className='relative'>
@@ -153,9 +153,9 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                       {PROJECTS.SOLAR_GROUP_REBRANDING.CLIENT} -{' '}
                       {PROJECTS.SOLAR_GROUP_REBRANDING.INDUSTRY}
                     </span>
-                    <h3 className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
+                    <p className='font-heading laptop:text-5xl desktop:text-6xl text-3xl'>
                       {PROJECTS.SOLAR_GROUP_REBRANDING.SUMMARY}
-                    </h3>
+                    </p>
                   </div>
                 </InView>
                 <div className='relative'>

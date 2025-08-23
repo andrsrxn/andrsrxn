@@ -61,7 +61,9 @@ export default function Home() {
             </Button>
           </div>
           <div className='laptop:mt-22 tablet:mt-18 laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl mt-10 overflow-clip'>
-            <div className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center desktop:gap-0 flex snap-x snap-mandatory gap-5 overflow-auto'>
+            <div
+              className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center desktop:gap-0 flex snap-x snap-mandatory gap-5 overflow-auto'
+              tabIndex={0}>
               <div className='tablet:w-[30%] animate-fade laptop:w-[33%] tablet:p-0 tablet:border-0 tablet:bg-none tablet:m-0 relative ml-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:750ms] [animation-duration:500ms]'>
                 <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
                   <h2 className='font-heading laptop:text-center tablet:text-3xl laptop:text-5xl desktop:text-5xl text-4xl'>
@@ -129,9 +131,9 @@ export default function Home() {
                     {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} -{' '}
                     {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
                   </span>
-                  <h3 className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
                     {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
-                  </h3>
+                  </p>
                 </div>
               </InView>
               <div className='relative'>
@@ -171,9 +173,9 @@ export default function Home() {
                   <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
                     {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
                   </span>
-                  <h3 className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
                     {PROJECTS.ICPSJ_BRANDING.SUMMARY}
-                  </h3>
+                  </p>
                 </div>
               </InView>
               <div className='relative'>
@@ -213,9 +215,9 @@ export default function Home() {
                   <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
                     {PROJECTS.BONZER_BRANDING.CLIENT} - {PROJECTS.BONZER_BRANDING.INDUSTRY}
                   </span>
-                  <h3 className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
                     {PROJECTS.BONZER_BRANDING.SUMMARY}
-                  </h3>
+                  </p>
                 </div>
               </InView>
               <div className='relative'>
@@ -256,9 +258,9 @@ export default function Home() {
                     {PROJECTS.THEPRINCIPAL_BRANDING.CLIENT} -{' '}
                     {PROJECTS.THEPRINCIPAL_BRANDING.INDUSTRY}
                   </span>
-                  <h3 className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
                     {PROJECTS.THEPRINCIPAL_BRANDING.SUMMARY}
-                  </h3>
+                  </p>
                 </div>
               </InView>
               <div className='relative'>
@@ -321,7 +323,7 @@ export default function Home() {
           />
           <OrbitingLogos />
         </section>
-        <section className='mb-16' id='contacto'>
+        <section className='mb-16 outline-none' id='contacto' tabIndex={-1}>
           <div className='desktop:max-w-3xl container mx-auto mb-3 w-4/5 max-w-xl'>
             <h2 className='font-heading laptop:text-center tablet:text-5xl desktop:text-7xl text-center text-4xl'>
               Comencemos a crear diseños memorables

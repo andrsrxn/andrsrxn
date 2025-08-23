@@ -1,0 +1,73 @@
+import { type NextRequest, NextResponse } from 'next/server'
+import { isProductionEnv } from '@/lib/config/env'
+
+export default function middleware(request: NextRequest) {
+  const styleSrc = "'self' 'unsafe-inline'"
+  let scriptSrc = "'self' 'unsafe-inline'"
+  let imgSrc = "'self' blob: data:"
+  // TODO: media src y image src cloudfare
+  let workerSrc = "'self'"
+  const connectSrc = "'self'"
+  // TODO: Ahrefs https://app.ahrefs.com/onboarding
+  // Añadir dominios específicos para conectar (ej. analítica, APIs)
+  // connectSrc += " https://www.google-analytics.com https://region.api.com";
+
+  if (!isProductionEnv()) {
+    scriptSrc += " 'unsafe-eval'"
+    workerSrc += ' blob:'
+    imgSrc += ' http://localhost:3000 https://via.placeholder.com https://placehold.co' //
+  }
+
+  const cspHeaderParts: string[] = [
+    "default-src 'self'",
+    `script-src ${scriptSrc}`,
+    `style-src ${styleSrc}`,
+    "object-src 'none'",
+    `img-src ${imgSrc}`,
+    "font-src 'self'",
+    `worker-src ${workerSrc}`,
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'none'",
+    "script-src-attr 'none'",
+    `connect-src ${connectSrc}`,
+  ]
+
+  if (isProductionEnv()) {
+    cspHeaderParts.push('upgrade-insecure-requests') // Solo en prod
+  }
+
+  const cspHeader = `${cspHeaderParts.join('; ')};` // Unir con ; y asegurar el final
+
+  const contentSecurityPolicyHeaderValue = cspHeader.replace(/\s{2,}/g, ' ').trim()
+
+  const response = NextResponse.next({
+    request: {
+      headers: new Headers(request.headers),
+    },
+  })
+
+  // Aplicar todas las cabeceras a la respuesta
+  response.headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue)
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+
+  if (isProductionEnv()) {
+    response.headers.set('Origin-Agent-Cluster', '?1')
+    response.headers.set(
+      'Strict-Transport-Security',
+      'max-age=31536000; includeSubDomains; preload'
+    )
+  }
+
+  response.headers.set('X-DNS-Prefetch-Control', 'on')
+  response.headers.set('X-Download-Options', 'noopen')
+  response.headers.set('X-Permitted-Cross-Domain-Policies', 'none')
+
+  return response
+}
+
+export const config = {
+  matcher: ['/', '/((?!api|_next|_vercel|url|.*\\..*).*)'],
+}

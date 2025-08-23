@@ -1,0 +1,103 @@
+import { IMAGES } from '@/lib/constants/paths'
+import { SERVICES } from '@/lib/constants/services'
+
+export const PROJECTS = {
+  ATPROY_BRAND_REFRESH: {
+    SLUG: 'grupo-atproy-actualizacion-de-marca',
+    CLIENT: 'Grupo ATProy',
+    INDUSTRY: 'Ingeniería eléctrica y telecomunicación',
+    SUMMARY: 'Actualización de Marca y Desarrollo Web',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.BRAND_REFRESH.TITLE,
+      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.MOTION_GRAPHICS.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.FULL_PAGE_DEV.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.ATPROY,
+  },
+  ICPSJ_BRANDING: {
+    SLUG: 'icpsj-branding',
+    CLIENT: 'La Presencia del Señor Jesús',
+    INDUSTRY: 'Iglesia evangélica',
+    SUMMARY: 'Branding, Desarrollo Web y Redes Sociales',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.SOCIAL_MEDIA_POSTS.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.COPYWRITING.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.MOTION_GRAPHICS.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.SEO.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.FULL_PAGE_DEV.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.ICPSJ,
+  },
+
+  BONZER_BRANDING: {
+    SLUG: 'bonzer-branding',
+    CLIENT: 'Bonzer',
+    INDUSTRY: 'Estética y cuidado personal',
+    SUMMARY: 'Branding y Posts para Redes Sociales',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.SOCIAL_MEDIA_POSTS.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.BONZER,
+  },
+  ICEMENE_REBRANDING: {
+    SLUG: 'icemene-rebranding',
+    CLIENT: 'ICEMENE',
+    INDUSTRY: 'Joyería y accesorios',
+    SUMMARY: 'Propuesta de Rebranding',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.REBRANDING.TITLE,
+      SERVICES.BRAND.SUBSERVICES.BRAND_STRATEGY.TITLE,
+      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.ICEMENE,
+  },
+  THEPRINCIPAL_BRANDING: {
+    SLUG: 'theprincipal-branding',
+    CLIENT: 'ThePrincipal',
+    INDUSTRY: 'Blog online',
+    SUMMARY: 'Branding y Diseño UI/UX',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
+      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.COPYWRITING.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.UI_UX_DESIGN.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.THEPRINCIPAL,
+  },
+
+  SOLAR_GROUP_REBRANDING: {
+    SLUG: 'solar-group-guatemala-rebranding',
+    CLIENT: 'Solar Group Guatemala',
+    INDUSTRY: 'Ingeniería eléctrica',
+    SUMMARY: 'Propuesta de Rebranding',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.REBRANDING.TITLE,
+      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.SOLAR_GROUP,
+  },
+
+  TRANSPORTIISA_VISUAL_IDENTITY: {
+    SLUG: 'transportii-s-a-identidad-visual',
+    CLIENT: 'Transportii S.A.',
+    INDUSTRY: 'Ingeniería eléctrica y telecomunicaciones',
+    SUMMARY: 'Nueva Identidad Visual',
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.BRAND_REFRESH.TITLE,
+      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.MOTION_GRAPHICS.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.TRANSPORTIISA,
+  },
+  PINALZA_VISUAL_IDENTITY: {
+    SLUG: 'pinalza-identidad-visual',
+    CLIENT: 'Pinalza',
+    INDUSTRY: 'Arquitectura y construcción',
+    SUMMARY: 'Propuesta de Identidad Visual',
+    SERVICES: [SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE],
+    IMAGES: IMAGES.PROJECTS.PINALZA,
+  },
+}

@@ -1,7 +1,21 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  poweredByHeader: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    staleTimes: {
+      static: 0,
+      dynamic: 60,
+    },
+    devtoolSegmentExplorer: true,
+  },
+  typedRoutes: true,
+  images: {
+    unoptimized: true,
+  },
+}
 
-export default nextConfig;
+export default nextConfig

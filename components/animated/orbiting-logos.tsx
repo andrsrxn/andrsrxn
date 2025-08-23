@@ -1,0 +1,57 @@
+'use client'
+
+import { OrbitingCircles } from '@/components/animated/orbiting-circles'
+import { DESIGN_TOOLS } from '@/lib/constants/design'
+import { useMediaQuery } from '@/lib/hooks/use-media-query'
+import { cn } from '@/lib/utils'
+
+export const OrbitingLogos = () => {
+  const isTablet = useMediaQuery('(min-width: 48rem)')
+  const isLaptop = useMediaQuery('(min-width: 64rem)')
+  const isDesktop = useMediaQuery('(min-width: 80rem)')
+
+  // const _lastCircleRadius = isLaptop ? 650 : isTablet ? 440 : 400
+  const secondCircleRadius = isDesktop ? 530 : isLaptop ? 500 : isTablet ? 400 : 320
+  const firstCircleRadius = isDesktop ? 320 : isLaptop ? 300 : isTablet ? 250 : 200
+
+  const designToolsArray = Object.values(DESIGN_TOOLS)
+
+  return (
+    <div className='desktop:h-[750px] relative z-50 flex h-[700px] w-full flex-col items-center justify-center overflow-hidden'>
+      <OrbitingCircles speed={0.3} radius={secondCircleRadius} iconSize={isLaptop ? 75 : 60}>
+        {designToolsArray.slice(9, designToolsArray.length).map(tool => {
+          return (
+            <tool.ICON
+              key={tool.LABEL}
+              className={cn(
+                'laptop:size-[75px] size-[60px]',
+                tool.STROKE === 3
+                  ? 'stroke-white stroke-3'
+                  : tool.STROKE === 1
+                    ? 'stroke-white stroke-1'
+                    : null
+              )}
+            />
+          )
+        })}
+      </OrbitingCircles>
+      <OrbitingCircles speed={0.3} radius={firstCircleRadius} iconSize={isLaptop ? 75 : 60} reverse>
+        {designToolsArray.slice(0, 9).map(tool => {
+          return (
+            <tool.ICON
+              key={tool.LABEL}
+              className={cn(
+                'laptop:size-[75px] size-[60px]',
+                tool.STROKE === 3
+                  ? 'stroke-white stroke-3'
+                  : tool.STROKE === 1
+                    ? 'stroke-white stroke-1'
+                    : null
+              )}
+            />
+          )
+        })}
+      </OrbitingCircles>
+    </div>
+  )
+}

@@ -250,19 +250,19 @@ export const IMAGES = {
 
       LOGO: {
         URL: `${IMAGES_PATHS.PROJECTS}/transportiisa/logo.svg`,
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y slogan "Transmitimos energía" en color negro.',
+        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en color negro.',
       },
       LOGO_ALTERNATIVE: {
         URL: `${IMAGES_PATHS.PROJECTS}/transportiisa/logo-alternative.svg`,
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y slogan "Transmitimos energía" en color blanco.',
+        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en color blanco.',
       },
       LOGO_POSITIVE: {
         URL: `${IMAGES_PATHS.PROJECTS}/transportiisa/logo-positive.svg`,
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y slogan "Transmitimos energía" en una sola tinta (Negra).',
+        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en una sola tinta (Negra).',
       },
       LOGO_NEGATIVE: {
         URL: `${IMAGES_PATHS.PROJECTS}/transportiisa/logo-negative.svg`,
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y slogan "Transmitimos energía" en una sola tinta (Blanca).',
+        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en una sola tinta (Blanca).',
       },
       SYMBOL: {
         URL: `${IMAGES_PATHS.PROJECTS}/transportiisa/symbol.svg`,
@@ -478,11 +478,11 @@ export const IMAGES = {
     THEPRINCIPAL: {
       BANNER_SMALL: {
         URL: `${IMAGES_PATHS.PROJECTS}/theprincipal/banner-small.webp`,
-        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el slogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imagenes de estudiantes.',
+        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el slogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imágenes de estudiantes.',
       },
       BANNER: {
         URL: `${IMAGES_PATHS.PROJECTS}/theprincipal/banner.webp`,
-        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el slogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imagenes de estudiantes.',
+        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el slogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imágenes de estudiantes.',
       },
       BANNER_COMPARISON: null,
       LOGO: {

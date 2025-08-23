@@ -161,11 +161,11 @@
   }
 
   *::-webkit-scrollbar {
-    @apply h-3 w-1.5 bg-transparent;
+    @apply h-2 w-1.5 bg-transparent;
   }
 
   *::-webkit-scrollbar-thumb {
-    @apply h-3 rounded-full bg-neutral-600 hover:bg-neutral-500 active:bg-neutral-400;
+    @apply h-2 rounded-full bg-neutral-600 hover:bg-neutral-500 active:bg-neutral-400;
   }
 
   html {

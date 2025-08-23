@@ -12,6 +12,9 @@ export const baseMetadata: Metadata = {
     template: `%s | ${COMPANY.NAME}`,
     default: `${COMPANY.NAME}`,
   },
+  alternates: {
+    canonical: '/',
+  },
   applicationName: COMPANY.NAME,
   referrer: 'strict-origin-when-cross-origin',
   description: COMPANY.DESCRIPTION,
@@ -19,6 +22,7 @@ export const baseMetadata: Metadata = {
     title: COMPANY.NAME,
     description: COMPANY.DESCRIPTION,
     siteName: COMPANY.NAME,
+    url: '/',
     images: [
       {
         url: SITE.SEO.IMAGES.BANNER_SOCIAL,

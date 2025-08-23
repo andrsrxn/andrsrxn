@@ -13,6 +13,33 @@ export const IMAGES = {
       ALT: 'Bandera de Guatemala',
     },
   },
+
+  BRAND: {
+    SYMBOL: {
+      SVG: {
+        URL: `${IMAGES_PATHS.BRAND}/symbol.svg`,
+        ALT: 'Logo de Marca Personal de Andrés Raxón',
+      },
+    },
+    LOGO: {
+      PNG: {
+        URL: `${IMAGES_PATHS.BRAND}/logo.png`,
+        ALT: 'Logo de Marca Personal de Andrés Raxón',
+      },
+    },
+    GRADIENT: {
+      WEBP: {
+        URL: `${IMAGES_PATHS.BRAND}/gradient.webp`,
+        ALT: '',
+      },
+    },
+    GRADIENT_WIDE: {
+      WEBP: {
+        URL: `${IMAGES_PATHS.BRAND}/gradient-wide.webp`,
+        ALT: '',
+      },
+    },
+  },
   PROJECTS: {
     ATPROY: {
       BANNER_COMPARISON: null,
@@ -615,27 +642,6 @@ export const IMAGES = {
       TYPOGRAPHY_1: {
         URL: `${IMAGES_PATHS.PROJECTS}/solar-group/typography-1.svg`,
         ALT: 'Tipografía principal Montserrat para titulares y cuerpo del texto.',
-      },
-    },
-  },
-
-  BRAND: {
-    SYMBOL: {
-      SVG: {
-        URL: `${IMAGES_PATHS.BRAND}/symbol.svg`,
-        ALT: 'Logo de Marca Personal de Andrés Raxón',
-      },
-    },
-    GRADIENT: {
-      WEBP: {
-        URL: `${IMAGES_PATHS.BRAND}/gradient.webp`,
-        ALT: '',
-      },
-    },
-    GRADIENT_WIDE: {
-      WEBP: {
-        URL: `${IMAGES_PATHS.BRAND}/gradient-wide.webp`,
-        ALT: '',
       },
     },
   },

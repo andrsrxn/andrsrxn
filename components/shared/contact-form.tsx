@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import { toast } from '@/components/ui/sonner'
 import { Textarea } from '@/components/ui/textarea'
 import { SERVICES } from '@/lib/constants/services'
@@ -94,7 +93,9 @@ export const ContactForm = () => {
                     disabled={pending || rest.disabled}
                     className='relative grid w-full gap-1 border p-4'
                     value='Freelancer'>
-                    <Label className='desktop:text-base mb-2 block text-center'>Freelancer</Label>
+                    <span className='desktop:text-base mb-2 block text-center text-sm leading-none font-medium'>
+                      Freelancer
+                    </span>
                     <span className='text-muted-foreground desktop:text-base text-sm leading-tight font-normal text-wrap'>
                       Trabajador
                       <span className='block'>independiente</span>
@@ -106,7 +107,9 @@ export const ContactForm = () => {
                     disabled={pending || rest.disabled}
                     className='relative grid w-full gap-1 border p-4'
                     value='Empresa'>
-                    <Label className='desktop:text-base mb-2 block text-center'>Empresa</Label>
+                    <span className='desktop:text-base mb-2 block text-center text-sm leading-none font-medium'>
+                      Empresa
+                    </span>{' '}
                     <span className='text-muted-foreground desktop:text-base text-sm leading-tight font-normal text-wrap'>
                       Persona
                       <span className='block'>jurídica</span>
@@ -170,7 +173,7 @@ export const ContactForm = () => {
                           <div key={SERVICE.TITLE} className='flex items-center gap-2'>
                             <Checkbox
                               ref={i === 0 ? ref : null}
-                              id={`ch-${SERVICE.TITLE.toLocaleLowerCase().replace(' ', '-')}`}
+                              id={`ch-${SERVICE.SLUG}`}
                               disabled={pending}
                               onBlur={rest.onBlur}
                               checked={rest.value?.includes(SERVICE.TITLE)}
@@ -182,7 +185,7 @@ export const ContactForm = () => {
                             />
 
                             <FormLabel
-                              htmlFor={`ch-${SERVICE.TITLE.toLocaleLowerCase().replace(' ', '-')}`}
+                              htmlFor={`ch-${SERVICE.SLUG}`}
                               className={cn(
                                 'cursor-pointer',
                                 pending && 'opacity-disabled pointer-events-none'

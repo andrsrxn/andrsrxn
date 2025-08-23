@@ -13,4 +13,11 @@ export const COMPANY = {
   EMAIL_ADDRESSES: {
     INFO: 'andresraxon.creativo@gmail.com',
   },
+  ADDRESS: {
+    LOCALITY: 'Mixco',
+    COUNTRY: 'Guatemala',
+    COUNTRY_CODE: 'GT',
+    REGION: 'Guatemala',
+    POSTAL_CODE: '01057',
+  },
 } as const

@@ -84,7 +84,7 @@ export default function RootLayout({
 
               <Image
                 src={IMAGES.FLAGS.GT.URL}
-                alt={IMAGES.FLAGS.GT.URL}
+                alt={IMAGES.FLAGS.GT.ALT}
                 title='Guatemala'
                 className='inline h-4 w-auto'
                 includePlaceholder={false}

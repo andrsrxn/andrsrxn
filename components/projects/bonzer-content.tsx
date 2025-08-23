@@ -47,6 +47,7 @@ export const BonzerContent = () => {
       <div className='my-12'>
         <Image
           includePlaceholder={false}
+          className='aspect-video'
           src={project.IMAGES.SYMBOL_CONSTRUCTION.URL}
           alt={project.IMAGES.SYMBOL_CONSTRUCTION.ALT}
         />

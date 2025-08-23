@@ -58,7 +58,7 @@ export const SolarGroupContent = () => {
         <div className='grid gap-6 overflow-hidden'>
           <Image
             includePlaceholder={false}
-            className='origin-center scale-125'
+            className='aspect-video origin-center scale-125'
             src={project.IMAGES.LOGO_CONSTRUCTION.URL}
             alt={project.IMAGES.LOGO_CONSTRUCTION.ALT}
           />

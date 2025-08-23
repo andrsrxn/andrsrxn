@@ -34,6 +34,9 @@ export default function Home() {
               <source srcSet={IMAGES.BRAND.GRADIENT_WIDE.WEBP.URL} media='(min-width: 64rem)' />
 
               <Image
+                loading='eager'
+                fetchPriority='high'
+                decoding='sync'
                 src={IMAGES.BRAND.GRADIENT.WEBP.URL}
                 alt={IMAGES.BRAND.GRADIENT.WEBP.ALT}
                 includePlaceholder={false}

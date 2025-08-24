@@ -88,27 +88,28 @@ export const IcpjsContent = () => {
       </div>
 
       <Separator className='my-16' />
-      <div className='tablet:flex-row tablet:h-[600px] flex flex-col'>
-        <div className='flex items-center justify-center border p-20'>
+      <div className='tablet:flex-row tablet:h-[600px] flex h-auto flex-col'>
+        <div className='tablet:p-20 flex items-center justify-center border p-12'>
           <Image
             includePlaceholder={false}
+            className='tablet:h-auto h-40'
             src={project.IMAGES.SYMBOL.URL}
             alt={project.IMAGES.SYMBOL.ALT}
           />
         </div>
         <div className='h-full'>
-          <div className='bg-accent flex h-1/2 items-center justify-center border p-20'>
+          <div className='bg-accent tablet:p-20 flex h-1/2 items-center justify-center border p-12'>
             <Image
               includePlaceholder={false}
-              className='h-auto'
+              className='tablet:h-auto h-40'
               src={project.IMAGES.SYMBOL_NEGATIVE.URL}
               alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
             />
           </div>
-          <div className='flex h-1/2 items-center justify-center border bg-white p-20'>
+          <div className='tablet:p-20 flex h-1/2 items-center justify-center border bg-white p-12'>
             <Image
               includePlaceholder={false}
-              className='h-auto'
+              className='tablet:h-auto h-40'
               src={project.IMAGES.SYMBOL_POSITIVE.URL}
               alt={project.IMAGES.SYMBOL_POSITIVE.ALT}
             />
@@ -117,7 +118,7 @@ export const IcpjsContent = () => {
       </div>
       <div className='flex flex-col'>
         <div className=''>
-          <div className='border p-18'>
+          <div className='tablet:p-18 border px-8 py-12'>
             <Image
               includePlaceholder={false}
               className='h-auto'
@@ -125,7 +126,7 @@ export const IcpjsContent = () => {
               alt={project.IMAGES.LOGO_INVERTED.ALT}
             />
           </div>
-          <div className='border bg-white p-18'>
+          <div className='tablet:p-18 border bg-white px-8 py-12'>
             <Image
               includePlaceholder={false}
               src={project.IMAGES.LOGO.URL}
@@ -154,7 +155,11 @@ export const IcpjsContent = () => {
       </div>
       <Separator className='my-16' />
       <div className='grid gap-6'>
-        <Image src={project.IMAGES.INSTAGRAM_POSTS.URL} alt={project.IMAGES.INSTAGRAM_POSTS.ALT} />
+        <Image
+          includePlaceholder={false}
+          src={project.IMAGES.INSTAGRAM_POSTS.URL}
+          alt={project.IMAGES.INSTAGRAM_POSTS.ALT}
+        />
         <Image src={project.IMAGES.BIBLE_STUDY.URL} alt={project.IMAGES.BIBLE_STUDY.ALT} />
         <Image src={project.IMAGES.SIGN_LIGHT.URL} alt={project.IMAGES.SIGN_LIGHT.ALT} />
         <Image src={project.IMAGES.STICKERS.URL} alt={project.IMAGES.SIGN_LIGHT.ALT} />
@@ -164,7 +169,7 @@ export const IcpjsContent = () => {
       <SafariWindow
         title='icpsj.org'
         stretch={false}
-        className='h-[1750px] w-full'
+        className='tablet:h-[1700px] laptop:h-[2300px] desktop:h-[1550px] h-[1050px] w-full'
         imageUrl={project.IMAGES.WEB.URL}
         imageHeight={3500}
       />

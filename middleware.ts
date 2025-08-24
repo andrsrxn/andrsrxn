@@ -4,7 +4,7 @@ import { isProductionEnv } from '@/lib/config/env'
 export default function middleware(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
   let scriptSrc = "'self' 'unsafe-inline'"
-  let imgSrc = "'self' blob: data:"
+  let imgSrc = "'self' blob: data: https://res.cloudinary.com"
   // TODO: media src y image src cloudfare
   let workerSrc = "'self'"
   const connectSrc = "'self'"
@@ -24,6 +24,7 @@ export default function middleware(request: NextRequest) {
     `style-src ${styleSrc}`,
     "object-src 'none'",
     `img-src ${imgSrc}`,
+    'media-src https://res.cloudinary.com',
     "font-src 'self'",
     `worker-src ${workerSrc}`,
     "base-uri 'self'",

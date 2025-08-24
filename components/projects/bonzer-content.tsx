@@ -12,33 +12,37 @@ export const BonzerContent = () => {
       title={project.SUMMARY}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
-      <div className='tablet:flex'>
-        <div className='border p-12'>
+      <div className='tablet:flex w-full'>
+        <div className='grow border p-8'>
           <Image
             includePlaceholder={false}
+            className='aspect-video'
             src={project.IMAGES.LOGO.URL}
             alt={project.IMAGES.LOGO.ALT}
           />
         </div>
-        <div className='border p-12'>
+        <div className='grow border p-8'>
           <Image
             includePlaceholder={false}
+            className='aspect-video'
             src={project.IMAGES.LOGO_ALTERNATIVE.URL}
             alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
           />
         </div>
       </div>
-      <div className='tablet:flex'>
-        <div className='border p-12'>
+      <div className='flex w-full'>
+        <div className='grow border p-12'>
           <Image
             includePlaceholder={false}
+            className='aspect-square'
             src={project.IMAGES.SYMBOL_ALTERNATIVE.URL}
             alt={project.IMAGES.SYMBOL_ALTERNATIVE.ALT}
           />
         </div>
-        <div className='border p-12'>
+        <div className='grow border p-12'>
           <Image
             includePlaceholder={false}
+            className='aspect-square'
             src={project.IMAGES.SYMBOL.URL}
             alt={project.IMAGES.SYMBOL.ALT}
           />
@@ -62,22 +66,27 @@ export const BonzerContent = () => {
         />
       </div>
 
-      <div className='grid gap-20 overflow-x-hidden pt-20 pb-4'>
+      <div className='tablet:grid-cols-2 grid gap-20 overflow-x-hidden pt-20 pb-4'>
         <Image
           includePlaceholder={false}
-          className='w-2/3'
+          className='tablet:w-full w-2/3'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
           alt={project.IMAGES.TYPOGRAPHY_1.ALT}
         />
         <Image
           includePlaceholder={false}
-          className='w-2/5'
+          className='tablet:w-1/2 w-2/5'
           src={project.IMAGES.TYPOGRAPHY_2.URL}
           alt={project.IMAGES.TYPOGRAPHY_2.ALT}
         />
       </div>
+      <Image
+        includePlaceholder={false}
+        className='my-12'
+        src={project.IMAGES.ILLUSTRATION.URL}
+        alt={project.IMAGES.ILLUSTRATION.ALT}
+      />
 
-      <Separator className='my-16' />
       <div className='grid gap-6'>
         <Image src={project.IMAGES.ADS_1.URL} alt={project.IMAGES.ADS_1.ALT} />
         <Image src={project.IMAGES.ADS_2.URL} alt={project.IMAGES.ADS_2.ALT} />

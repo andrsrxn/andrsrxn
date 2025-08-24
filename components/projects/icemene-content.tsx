@@ -14,38 +14,41 @@ export const IcemeneContent = () => {
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div>
         <Image
+          className='aspect-video'
           src={project.IMAGES.BANNER_COMPARISON.URL}
           alt={project.IMAGES.BANNER_COMPARISON.ALT}
         />
         <Separator className='my-12' />
         <div>
-          <div className='border bg-white p-20'>
+          <div className='tablet:p-20 border bg-white p-16'>
             <Image
               includePlaceholder={false}
+              className='aspect-video'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
             />
           </div>
-          <div className='border p-20'>
+          <div className='tablet:p-20 border p-16'>
             <Image
               includePlaceholder={false}
+              className='aspect-video'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
             />
           </div>
-          <div className='flex'>
-            <div className='grow border bg-white p-20'>
+          <div className='flex w-full'>
+            <div className='tablet:p-20 grow border bg-white p-12'>
               <Image
                 includePlaceholder={false}
-                className='h-40'
+                className='aspect-square h-40'
                 src={project.IMAGES.SYMBOL.URL}
                 alt={project.IMAGES.SYMBOL.ALT}
               />
             </div>
-            <div className='grow border p-20'>
+            <div className='tablet:p-20 grow border p-12'>
               <Image
                 includePlaceholder={false}
-                className='h-40'
+                className='aspect-square h-40'
                 src={project.IMAGES.SYMBOL_ALTERNATIVE.URL}
                 alt={project.IMAGES.SYMBOL_ALTERNATIVE.ALT}
               />

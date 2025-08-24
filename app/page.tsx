@@ -53,7 +53,7 @@ export default function Home() {
                 Director Creativo
               </span>
             </h1>
-            <p className='text-muted-foreground display:text-xl laptop:text-base tablet:text-sm text-xs !leading-none'>
+            <p className='text-muted-foreground display:text-xl laptop:text-base text-sm !leading-none'>
               Obtén 10% de descuento en tu primera contratación
             </p>
             <Button asChild className='display:h-10 display:px-8 display:text-base mt-2 max-w-fit'>

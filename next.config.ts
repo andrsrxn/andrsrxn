@@ -15,6 +15,15 @@ const nextConfig: NextConfig = {
   typedRoutes: true,
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/dcopojqng/**',
+        port: '',
+        search: '',
+      },
+    ],
   },
 }
 

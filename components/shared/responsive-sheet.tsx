@@ -46,12 +46,12 @@ export function ResponsiveSheetContent({
   ...props
 }: ResponsiveSheetContentProps) {
   return (
-    <DrawerContent {...props}>
+    <DrawerContent {...props} aria-describedby={undefined} className='max-w-5xl'>
       <div
         className='desktop:grid desktop:gap-12 desktop:grid-cols-2 desktop:mt-6 relative overflow-y-auto'
         data-lenis-prevent>
         <DrawerHeader className='desktop:sticky desktop:top-0 desktop:pt-0 desktop:h-max'>
-          <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
+          <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-left text-sm leading-tight'>
             {client}
           </span>
           <DrawerTitle className='tablet:text-5xl desktop:w-11/12 text-4xl'>{title}</DrawerTitle>

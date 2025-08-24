@@ -14,38 +14,43 @@ export const ThePrincipalContent = () => {
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div>
         <div>
-          <div className='border bg-white p-16'>
+          <div className='tablet:p-16 border bg-white px-8 py-12'>
             <Image
               includePlaceholder={false}
+              className='w-full'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
             />
           </div>
-          <div className='border p-16'>
+          <div className='tablet:p-16 border px-8 py-12'>
             <Image
               includePlaceholder={false}
+              className='w-full'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
             />
           </div>
-          <div className='flex'>
-            <div className='border p-12'>
+          <div className='flex w-full'>
+            <div className='tablet:p-12 grow border p-8'>
               <Image
                 includePlaceholder={false}
+                className='aspect-square'
                 src={project.IMAGES.SYMBOL.URL}
                 alt={project.IMAGES.SYMBOL.ALT}
               />
             </div>
-            <div className='border p-12'>
+            <div className='tablet:p-12 grow border p-8'>
               <Image
                 includePlaceholder={false}
+                className='aspect-square'
                 src={project.IMAGES.SYMBOL_NEGATIVE.URL}
                 alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
               />
             </div>
-            <div className='border bg-white p-12'>
+            <div className='tablet:p-12 grow border bg-white p-8'>
               <Image
                 includePlaceholder={false}
+                className='aspect-square'
                 src={project.IMAGES.SYMBOL_POSITIVE.URL}
                 alt={project.IMAGES.SYMBOL_POSITIVE.ALT}
               />
@@ -56,7 +61,7 @@ export const ThePrincipalContent = () => {
           <div className='bg-[#00aa72] p-12 pb-30'>
             <Image
               includePlaceholder={false}
-              className='w-1/3'
+              className='tablet:w-1/3 w-1/2'
               src={project.IMAGES.COLOR_1.URL}
               alt={project.IMAGES.COLOR_1.ALT}
             />

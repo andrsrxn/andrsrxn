@@ -106,7 +106,7 @@ export const AtproyContent = () => {
       <SafariWindow
         title='atproy.com'
         stretch={false}
-        className='h-[1750px] w-full'
+        className='tablet:h-[1700px] desktop:h-[1800px] h-[1050px] w-full'
         imageUrl={project.IMAGES.WEB.URL}
         imageHeight={3500}
       />

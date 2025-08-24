@@ -14,29 +14,30 @@ export const SolarGroupContent = () => {
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div>
         <Image
+          className='aspect-video'
           src={project.IMAGES.BANNER_COMPARISON.URL}
           alt={project.IMAGES.BANNER_COMPARISON.ALT}
         />
         <Separator className='my-12' />
 
         <div>
-          <div className='border p-20'>
+          <div className='tablet:p-20 border p-12'>
             <Image
               includePlaceholder={false}
-              className='h-60'
+              className='tablet:h-60 h-32'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
             />
           </div>
-          <div className='border bg-white p-20'>
+          <div className='tablet:p-20 border bg-white p-12'>
             <Image
               includePlaceholder={false}
-              className='h-60'
+              className='tablet:h-60 h-32'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
             />
           </div>
-          <div className='flex'>
+          <div className='tablet:flex'>
             <div className='border p-12'>
               <Image
                 includePlaceholder={false}
@@ -58,7 +59,7 @@ export const SolarGroupContent = () => {
         <div className='grid gap-6 overflow-hidden'>
           <Image
             includePlaceholder={false}
-            className='aspect-video origin-center scale-125'
+            className='tablet:scale-125 tablet:object-contain aspect-video h-80 origin-center object-cover'
             src={project.IMAGES.LOGO_CONSTRUCTION.URL}
             alt={project.IMAGES.LOGO_CONSTRUCTION.ALT}
           />
@@ -77,6 +78,12 @@ export const SolarGroupContent = () => {
             className='w-80'
             src={project.IMAGES.TYPOGRAPHY_1.URL}
             alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+          />
+          <Image
+            includePlaceholder={false}
+            className='mt-12'
+            src={project.IMAGES.ABC.URL}
+            alt={project.IMAGES.ABC.ALT}
           />
         </div>
       </div>

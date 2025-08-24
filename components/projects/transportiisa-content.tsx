@@ -14,6 +14,7 @@ export const TransportiisaContent = () => {
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div>
         <Image
+          className='aspect-video'
           src={project.IMAGES.BANNER_COMPARISON.URL}
           alt={project.IMAGES.BANNER_COMPARISON.ALT}
         />
@@ -23,32 +24,32 @@ export const TransportiisaContent = () => {
           <div className='border p-12'>
             <Image
               includePlaceholder={false}
-              className='h-68'
+              className='tablet:h-68 aspect-square h-40'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
             />
           </div>
-          <div className='flex'>
-            <div className='border bg-white p-6'>
+          <div className='tablet:flex w-full'>
+            <div className='tablet:p-6 grow border bg-white p-12'>
               <Image
                 includePlaceholder={false}
-                className='h-32'
+                className='tablet:h-32 aspect-square h-40'
                 src={project.IMAGES.LOGO.URL}
                 alt={project.IMAGES.LOGO.ALT}
               />
             </div>
-            <div className='border p-6'>
+            <div className='tablet:p-6 grow border p-12'>
               <Image
                 includePlaceholder={false}
-                className='h-32'
+                className='tablet:h-32 aspect-square h-40'
                 src={project.IMAGES.LOGO_NEGATIVE.URL}
                 alt={project.IMAGES.LOGO_NEGATIVE.ALT}
               />
             </div>
-            <div className='border bg-white p-6'>
+            <div className='tablet:p-6 grow border bg-white p-12'>
               <Image
                 includePlaceholder={false}
-                className='h-32'
+                className='tablet:h-32 aspect-square h-40'
                 src={project.IMAGES.LOGO_POSITIVE.URL}
                 alt={project.IMAGES.LOGO_POSITIVE.ALT}
               />
@@ -67,22 +68,12 @@ export const TransportiisaContent = () => {
         <div className='bg-accent px-12 py-16'>
           <Image
             includePlaceholder={false}
-            className='w-1/2'
+            className='tablet:w-1/2'
             src={project.IMAGES.TYPOGRAPHY_1.URL}
             alt={project.IMAGES.TYPOGRAPHY_1.ALT}
           />
         </div>
       </div>
-
-      <video
-        autoPlay
-        muted
-        controls={false}
-        loop
-        playsInline
-        className='aspect-video bg-white object-contain'>
-        <source src={project.IMAGES.LOGO_ANIMATION.URL} type='video/mp4' />
-      </video>
 
       <Separator className='my-12' />
 

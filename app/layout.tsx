@@ -1,7 +1,7 @@
 import './globals.css'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { preload } from 'react-dom'
+import { preconnect, preload } from 'react-dom'
 import { LenisScroll } from '@/components/animated/lenis'
 import { ParticlesBackground } from '@/components/backgrounds/particles'
 import { JsonLd } from '@/components/shared/json-ld'
@@ -20,7 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode
 }>) {
-  // preconnect('') TODO: CLOUDFLARE
+  preconnect('https://res.cloudinary.com')
 
   preload(IMAGES.BRAND.SYMBOL.SVG.URL, {
     as: 'image',

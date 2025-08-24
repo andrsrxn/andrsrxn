@@ -49,9 +49,7 @@ export const ContactForm = () => {
     },
     shouldFocusError: true,
   })
-  // useEffect(() => {
-  // captchaRef.current?.render()
-  // }, [captchaRef])
+
   function onSubmit(values: z.infer<typeof contactSchema>) {
     if (!token) {
       toast.error('Verifica que eres humano', {
@@ -67,6 +65,8 @@ export const ContactForm = () => {
             description: response.description,
           })
           form.reset()
+          captchaRef.current?.resetCaptcha()
+          setToken(null)
           return
         }
         toast.error(response.message, {

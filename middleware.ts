@@ -2,17 +2,17 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { isProductionEnv } from '@/lib/config/env'
 
 export default function middleware(request: NextRequest) {
-  const styleSrc = "'self' 'unsafe-inline'"
-  let scriptSrc = "'self' 'unsafe-inline'"
+  const styleSrc = "'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com"
+  let scriptSrc = "'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com"
   let imgSrc = "'self' blob: data: https://res.cloudinary.com"
   // TODO: media src y image src cloudfare
   let workerSrc = "'self'"
-  const connectSrc = "'self'"
-  // TODO: Ahrefs https://app.ahrefs.com/onboarding
-  // Añadir dominios específicos para conectar (ej. analítica, APIs)
-  // connectSrc += " https://www.google-analytics.com https://region.api.com";
+  const connectSrc = "'self' https://hcaptcha.com https://*.hcaptcha.com"
 
   if (!isProductionEnv()) {
+    // TODO: Ahrefs https://app.ahrefs.com/onboarding
+    // Añadir dominios específicos para conectar (ej. analítica, APIs)
+    // connectSrc += " https://www.google-analytics.com https://region.api.com";
     scriptSrc += " 'unsafe-eval'"
     workerSrc += ' blob:'
     imgSrc += ' http://localhost:3000 https://via.placeholder.com https://placehold.co' //
@@ -28,6 +28,7 @@ export default function middleware(request: NextRequest) {
     "font-src 'self'",
     `worker-src ${workerSrc}`,
     "base-uri 'self'",
+    'frame-src https://hcaptcha.com https://*.hcaptcha.com',
     "form-action 'self'",
     "frame-ancestors 'none'",
     "script-src-attr 'none'",

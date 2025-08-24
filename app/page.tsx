@@ -18,6 +18,7 @@ import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/paths'
 import { PROJECTS } from '@/lib/constants/projects'
 import { SERVICES } from '@/lib/constants/services'
+import { obfuscateEmail } from '@/lib/utils'
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: required content
 export default function Home() {
@@ -335,9 +336,11 @@ export default function Home() {
                 Comunícate conmigo por medio de{' '}
                 <a
                   className='text-foreground inline-block font-bold underline decoration-1 underline-offset-2'
-                  href={`mailto:${COMPANY.EMAIL_ADDRESSES.INFO}`}>
-                  {COMPANY.EMAIL_ADDRESSES.INFO}
-                </a>{' '}
+                  href={`mailto:${obfuscateEmail(COMPANY.EMAIL_ADDRESSES.INFO)}`}
+                  // biome-ignore lint/style/useNamingConvention: ofuscated
+                  // biome-ignore lint/security/noDangerouslySetInnerHtml: ofuscated
+                  dangerouslySetInnerHTML={{ __html: obfuscateEmail(COMPANY.EMAIL_ADDRESSES.INFO) }}
+                />{' '}
                 o por medio del siguiente formulario.
               </p>
             </div>

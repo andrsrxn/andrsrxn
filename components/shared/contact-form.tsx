@@ -1,6 +1,8 @@
 'use client'
+
+import HCaptcha from '@hcaptcha/react-hcaptcha'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState, useTransition } from 'react'
+import { useRef, useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
 import { SendContactMessage } from '@/actions/contact'
@@ -23,6 +25,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/sonner'
 import { Textarea } from '@/components/ui/textarea'
+import { envClient } from '@/lib/config/env.client'
 import { SERVICES } from '@/lib/constants/services'
 import { contactSchema } from '@/lib/schemas/contact-schema'
 import { cn } from '@/lib/utils'
@@ -31,6 +34,8 @@ import { cn } from '@/lib/utils'
 export const ContactForm = () => {
   const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
   const [pending, startTransition] = useTransition()
+  const [token, setToken] = useState<string | null>(null)
+  const captchaRef = useRef<HCaptcha>(null)
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -45,6 +50,12 @@ export const ContactForm = () => {
   })
 
   function onSubmit(values: z.infer<typeof contactSchema>) {
+    if (!token) {
+      toast.error('Verifica que eres humano', {
+        description: 'Marca la última casilla para verificar tu identidad',
+      })
+      return
+    }
     startTransition(async () => {
       try {
         const response = await SendContactMessage(values)
@@ -222,6 +233,11 @@ export const ContactForm = () => {
               <FormMessage />
             </FormItem>
           )}
+        />
+        <HCaptcha
+          sitekey={envClient.NEXT_PUBLIC_HCAPTCHA_SITEKEY}
+          onVerify={setToken}
+          ref={captchaRef}
         />
 
         <Button type='submit' className='mt-4 rounded-none' size='lg' disabled={pending}>

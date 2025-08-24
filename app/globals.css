@@ -172,7 +172,6 @@
     scroll-behavior: smooth;
     font-size: 100%;
     overscroll-behavior: contain;
-    scroll-padding-top: 80px;
     color-scheme: dark;
   }
 
@@ -320,4 +319,7 @@
     scroll-behavior: auto !important;
     transition: none 0.01ms !important;
   }
+}
+[id] {
+  scroll-margin-top: 80px;
 }

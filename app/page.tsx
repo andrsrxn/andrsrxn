@@ -10,15 +10,14 @@ import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
 import { ContactForm } from '@/components/shared/contact-form'
+import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
 import { Button } from '@/components/ui/button'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/paths'
 import { PROJECTS } from '@/lib/constants/projects'
 import { SERVICES } from '@/lib/constants/services'
-import { obfuscateEmail } from '@/lib/utils'
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: required content
 export default function Home() {
@@ -61,16 +60,16 @@ export default function Home() {
               <Link href='#contacto'>Contratar Servicios</Link>
             </Button>
           </div>
-          <div className='laptop:mt-22 tablet:mt-18 laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl mt-10 overflow-clip'>
+          <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl mt-10 overflow-clip'>
             <div
-              className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center desktop:gap-0 flex snap-x snap-mandatory gap-5 overflow-auto'
+              className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center tablet:gap-3 laptop:gap-5 flex snap-x snap-mandatory gap-5 overflow-auto'
               tabIndex={0}>
-              <div className='tablet:w-[30%] animate-fade laptop:w-[33%] tablet:p-0 tablet:border-0 tablet:bg-none tablet:m-0 relative ml-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:750ms] [animation-duration:500ms]'>
+              <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 relative ml-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:750ms] [animation-duration:500ms]'>
                 <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
-                  <h2 className='font-heading laptop:text-center tablet:text-3xl laptop:text-5xl desktop:text-5xl text-4xl'>
+                  <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                     {SERVICES.BRAND.TITLE}
                   </h2>
-                  <ul className='pl-5'>
+                  <ul className='pl-4'>
                     {Object.values(SERVICES.BRAND.SUBSERVICES).map(service => {
                       return (
                         <li
@@ -83,12 +82,12 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className='tablet:w-[30%] animate-fade laptop:w-[33%] tablet:p-0 tablet:border-0 tablet:bg-none desktop:-ml-5 relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:850ms] [animation-duration:500ms]'>
+              <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 animate-fade laptop:w-[33%] relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:850ms] [animation-duration:500ms]'>
                 <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
-                  <h2 className='font-heading laptop:text-center tablet:text-3xl laptop:text-5xl desktop:text-5xl text-4xl'>
+                  <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                     {SERVICES.WEB_DEV.TITLE}
                   </h2>
-                  <ul className='pl-5'>
+                  <ul className='pl-4'>
                     {Object.values(SERVICES.WEB_DEV.SUBSERVICES).map(service => {
                       return (
                         <li
@@ -101,12 +100,12 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className='tablet:w-[30%] laptop:w-[33%] tablet:p-0 tablet:border-0 animate-fade tablet:bg-none tablet:m-0 relative mr-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:950ms] [animation-duration:1000ms]'>
+              <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 laptop:w-[33%] animate-fade tablet:m-0 relative mr-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:950ms] [animation-duration:1000ms]'>
                 <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
-                  <h2 className='font-heading laptop:text-center tablet:text-3xl laptop:text-5xl desktop:text-5xl text-4xl'>
+                  <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                     {SERVICES.MARKETING.TITLE}
                   </h2>
-                  <ul className='pl-5'>
+                  <ul className='pl-4'>
                     {Object.values(SERVICES.MARKETING.SUBSERVICES).map(service => {
                       return (
                         <li
@@ -324,24 +323,18 @@ export default function Home() {
           />
           <OrbitingLogos />
         </section>
-        <section className='mb-16 outline-none' id='contacto' tabIndex={-1}>
-          <div className='desktop:max-w-3xl container mx-auto mb-3 w-4/5 max-w-xl'>
-            <h2 className='font-heading laptop:text-center tablet:text-5xl desktop:text-7xl text-center text-4xl'>
+        <div tabIndex={0} id='contacto' />
+        <section className='mb-16 outline-none'>
+          <div className='desktop:max-w-3xl container mx-auto mb-3 h-max w-4/5 max-w-xl'>
+            <h2 className='font-heading laptop:text-center tablet:text-5xl desktop:text-7xl text-center text-4xl outline-none'>
               Comencemos a crear diseños memorables
             </h2>
           </div>
           <div>
             <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
               <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
-                Comunícate conmigo por medio de{' '}
-                <a
-                  className='text-foreground inline-block font-bold underline decoration-1 underline-offset-2'
-                  href={`mailto:${obfuscateEmail(COMPANY.EMAIL_ADDRESSES.INFO)}`}
-                  // biome-ignore lint/style/useNamingConvention: ofuscated
-                  // biome-ignore lint/security/noDangerouslySetInnerHtml: ofuscated
-                  dangerouslySetInnerHTML={{ __html: obfuscateEmail(COMPANY.EMAIL_ADDRESSES.INFO) }}
-                />{' '}
-                o por medio del siguiente formulario.
+                Comunícate conmigo por medio de <ObfuscatedEmailLink /> o por medio del siguiente
+                formulario.
               </p>
             </div>
 

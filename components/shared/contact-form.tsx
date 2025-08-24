@@ -33,6 +33,7 @@ import { cn } from '@/lib/utils'
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const ContactForm = () => {
   const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
+  const [showCaptcha, setShowCaptcha] = useState(false)
   const [pending, startTransition] = useTransition()
   const [token, setToken] = useState<string | null>(null)
   const captchaRef = useRef<HCaptcha>(null)
@@ -48,7 +49,9 @@ export const ContactForm = () => {
     },
     shouldFocusError: true,
   })
-
+  // useEffect(() => {
+  // captchaRef.current?.render()
+  // }, [captchaRef])
   function onSubmit(values: z.infer<typeof contactSchema>) {
     if (!token) {
       toast.error('Verifica que eres humano', {
@@ -142,6 +145,7 @@ export const ContactForm = () => {
               <FormLabel>{typeName}</FormLabel>
               <FormControl>
                 <Input
+                  onFocus={() => setShowCaptcha(true)}
                   disabled={pending}
                   placeholder={typeName === 'Nombre de la empresa' ? 'Acme S.A.' : 'José Perez'}
                   {...field}
@@ -234,11 +238,18 @@ export const ContactForm = () => {
             </FormItem>
           )}
         />
-        <HCaptcha
-          sitekey={envClient.NEXT_PUBLIC_HCAPTCHA_SITEKEY}
-          onVerify={setToken}
-          ref={captchaRef}
-        />
+
+        {showCaptcha && (
+          <HCaptcha
+            theme='dark'
+            loadAsync
+            languageOverride='es-419'
+            sentry={false}
+            sitekey={envClient.NEXT_PUBLIC_HCAPTCHA_SITEKEY}
+            onVerify={setToken}
+            ref={captchaRef}
+          />
+        )}
 
         <Button type='submit' className='mt-4 rounded-none' size='lg' disabled={pending}>
           {pending ? 'Enviando...' : 'Contactar'}

@@ -2,12 +2,12 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { isProductionEnv } from '@/lib/config/env'
 
 export default function middleware(request: NextRequest) {
-  const styleSrc = "'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com"
-  let scriptSrc = "'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com"
+  const styleSrc = "'self' 'unsafe-inline'"
+  let scriptSrc = "'self' 'unsafe-inline'"
   let imgSrc = "'self' blob: data: https://res.cloudinary.com"
   // TODO: media src y image src cloudfare
   let workerSrc = "'self'"
-  const connectSrc = "'self' https://hcaptcha.com https://*.hcaptcha.com"
+  const connectSrc = "'self'"
 
   if (!isProductionEnv()) {
     // TODO: Ahrefs https://app.ahrefs.com/onboarding
@@ -28,7 +28,6 @@ export default function middleware(request: NextRequest) {
     "font-src 'self'",
     `worker-src ${workerSrc}`,
     "base-uri 'self'",
-    'frame-src https://hcaptcha.com https://*.hcaptcha.com',
     "form-action 'self'",
     "frame-ancestors 'none'",
     "script-src-attr 'none'",

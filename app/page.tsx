@@ -375,7 +375,7 @@ export default function Home() {
           <div>
             <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
               <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
-                Comunícate conmigo por medio de <ObfuscatedEmailLink /> o por medio del siguiente
+                Comunícate conmigo por medio de: <ObfuscatedEmailLink /> o llenando el siguiente
                 formulario.
               </p>
             </div>

@@ -1,8 +1,7 @@
 'use client'
 
-import HCaptcha from '@hcaptcha/react-hcaptcha'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useRef, useState, useTransition } from 'react'
+import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
 import { SendContactMessage } from '@/actions/contact'
@@ -25,7 +24,6 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/sonner'
 import { Textarea } from '@/components/ui/textarea'
-import { envClient } from '@/lib/config/env.client'
 import { SERVICES } from '@/lib/constants/services'
 import { contactSchema } from '@/lib/schemas/contact-schema'
 import { cn } from '@/lib/utils'
@@ -33,10 +31,8 @@ import { cn } from '@/lib/utils'
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const ContactForm = () => {
   const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
-  const [showCaptcha, setShowCaptcha] = useState(false)
   const [pending, startTransition] = useTransition()
   const [token, setToken] = useState<string | null>(null)
-  const captchaRef = useRef<HCaptcha>(null)
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -65,7 +61,7 @@ export const ContactForm = () => {
             description: response.description,
           })
           form.reset()
-          captchaRef.current?.resetCaptcha()
+
           setToken(null)
           return
         }
@@ -145,7 +141,6 @@ export const ContactForm = () => {
               <FormLabel>{typeName}</FormLabel>
               <FormControl>
                 <Input
-                  onFocus={() => setShowCaptcha(true)}
                   disabled={pending}
                   placeholder={typeName === 'Nombre de la empresa' ? 'Acme S.A.' : 'José Perez'}
                   {...field}
@@ -238,18 +233,6 @@ export const ContactForm = () => {
             </FormItem>
           )}
         />
-
-        {showCaptcha && (
-          <HCaptcha
-            theme='dark'
-            loadAsync
-            languageOverride='es-419'
-            sentry={false}
-            sitekey={envClient.NEXT_PUBLIC_HCAPTCHA_SITEKEY}
-            onVerify={setToken}
-            ref={captchaRef}
-          />
-        )}
 
         <Button type='submit' className='mt-4 rounded-none' size='lg' disabled={pending}>
           {pending ? 'Enviando...' : 'Contactar'}

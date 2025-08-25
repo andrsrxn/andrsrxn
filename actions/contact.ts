@@ -1,5 +1,6 @@
 'use server'
 
+import { checkBotId } from 'botid/server'
 import { headers } from 'next/headers'
 import type { z } from 'zod'
 import { ContactEmailTemplate } from '@/components/email/contact-email'
@@ -13,6 +14,16 @@ const REGEX_IP = /, /
 
 export const SendContactMessage = async (values: z.infer<typeof contactSchema>) => {
   try {
+    const verification = await checkBotId()
+
+    if (verification.isBot) {
+      return {
+        success: false,
+        message: 'Acceso denegado',
+        description: 'Dispositivo no autorizado para enviar mensajes',
+      }
+    }
+
     const validatedValues = contactSchema.safeParse(values)
     if (!validatedValues.success) {
       return {

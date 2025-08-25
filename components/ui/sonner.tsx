@@ -10,7 +10,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
   return (
     <Sonner
-      position='top-right'
+      position='bottom-right'
       duration={4500}
       closeButton
       richColors

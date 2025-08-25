@@ -294,6 +294,48 @@ export default function Home() {
                 </ResponsiveSheet>
               </div>
             </ScrollPolygonContainer>
+            <ScrollPolygonContainer className='tablet:gap-6 laptop:hidden relative flex flex-col gap-4'>
+              <InView>
+                <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
+                  <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
+                    {PROJECTS.ICEMENE_REBRANDING.CLIENT} - {PROJECTS.ICEMENE_REBRANDING.INDUSTRY}
+                  </span>
+                  <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                    {PROJECTS.ICEMENE_REBRANDING.SUMMARY}
+                  </p>
+                </div>
+              </InView>
+              <div className='relative'>
+                <picture>
+                  <source
+                    srcSet={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL}
+                    media='(min-width: 64rem)'
+                  />
+
+                  <Image
+                    src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.ALT}
+                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                  />
+                </picture>
+                <ResponsiveSheet>
+                  <InView
+                    viewOptions={{
+                      start: 'top 100%',
+                    }}
+                    to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
+                    <ResponsiveSheetTrigger>
+                      <Button
+                        className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                        variant='secondary'>
+                        Ver proyecto completo <IconPlus />
+                      </Button>
+                    </ResponsiveSheetTrigger>
+                  </InView>
+                  <ThePrincipalContent />
+                </ResponsiveSheet>
+              </div>
+            </ScrollPolygonContainer>
           </div>
           <Separator className='container mx-auto my-10 !w-11/12' />
         </section>
@@ -323,8 +365,8 @@ export default function Home() {
           />
           <OrbitingLogos />
         </section>
-        <div tabIndex={0} id='contacto' />
-        <section className='mb-16 outline-none'>
+
+        <section className='mb-16 outline-none' id='contacto'>
           <div className='desktop:max-w-3xl container mx-auto mb-3 h-max w-4/5 max-w-xl'>
             <h2 className='font-heading laptop:text-center tablet:text-5xl desktop:text-7xl text-center text-4xl outline-none'>
               Comencemos a crear diseños memorables

@@ -13,13 +13,15 @@ import { Button } from '@/components/ui/button'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Image } from '@/components/ui/image'
 import { PROJECTS } from '@/lib/constants/projects'
+import { useMediaQuery } from '@/lib/hooks/use-media-query'
 import { cn } from '@/lib/utils'
 
 interface MoreProyectsProps extends ComponentProps<'div'> {}
 
 export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const isLaptop = useMediaQuery('(min-width: 64rem)')
+  const totalProjects = isLaptop ? 4 : 3
   return (
     <div className='animate-fade-up desktop:container desktop:w-11/12 mx-auto'>
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
@@ -28,7 +30,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
             <Button
               variant='default'
               className='display:h-10 display:!px-10 display:text-base px-12 [&_svg]:transition-transform [&_svg]:duration-300 [&_svg]:ease-in-out'>
-              {isOpen ? 'Cerrar' : 'Ver 4 proyectos más'}{' '}
+              {isOpen ? 'Cerrar' : `Ver ${totalProjects} proyectos más`}{' '}
               <IconChevronDown className={cn(isOpen && '-rotate-180')} />
             </Button>
           </CollapsibleTrigger>
@@ -36,7 +38,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
         <CollapsibleContent>
           <InView>
             <div className='tablet:grid-cols-2 tablet:gap-y-20 tablet:gap-x-12 desktop:gap-y-32 desktop:gap-x-16 grid gap-12'>
-              <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
+              <ScrollPolygonContainer className='laptop:flex tablet:gap-6 relative hidden flex-col gap-4'>
                 <InView>
                   <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
                     <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full truncate text-sm leading-tight'>

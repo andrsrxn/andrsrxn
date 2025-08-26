@@ -25,7 +25,7 @@ interface ResponsiveSheetContentProps extends ComponentProps<typeof DrawerConten
 
 export function ResponsiveSheet({ children, open, ...props }: ComponentProps<typeof Drawer>) {
   return (
-    <Drawer shouldScaleBackground open={open} {...props}>
+    <Drawer open={open} {...props}>
       {children}
     </Drawer>
   )

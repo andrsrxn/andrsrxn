@@ -60,9 +60,9 @@ export default function Home() {
               <Link href='#contacto'>Contratar Servicios</Link>
             </Button>
           </div>
-          <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl mt-10 overflow-clip'>
+          <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl tablet:overflow-visible mt-10 overflow-x-clip'>
             <div
-              className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center tablet:gap-3 laptop:gap-5 flex snap-x snap-mandatory gap-5 overflow-auto'
+              className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center tablet:gap-3 laptop:gap-5 flex snap-x snap-mandatory gap-5 overflow-auto p-1'
               tabIndex={0}>
               <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 relative ml-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:750ms] [animation-duration:500ms]'>
                 <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
@@ -375,7 +375,7 @@ export default function Home() {
           <div>
             <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
               <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
-                Comunícate conmigo por medio de: <ObfuscatedEmailLink /> o llenando el siguiente
+                Comunícate conmigo por medio de: <ObfuscatedEmailLink /> o enviando el siguiente
                 formulario.
               </p>
             </div>

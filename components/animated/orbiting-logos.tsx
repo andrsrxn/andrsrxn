@@ -18,37 +18,43 @@ export const OrbitingLogos = () => {
 
   return (
     <div className='desktop:h-[750px] relative z-50 flex h-[700px] w-full flex-col items-center justify-center overflow-hidden'>
-      <OrbitingCircles speed={0.3} radius={secondCircleRadius} iconSize={isLaptop ? 75 : 60}>
+      <OrbitingCircles speed={0.2} radius={secondCircleRadius} iconSize={isLaptop ? 75 : 60}>
         {designToolsArray.slice(9, designToolsArray.length).map(tool => {
           return (
-            <tool.ICON
-              key={tool.LABEL}
-              className={cn(
-                'laptop:size-[75px] size-[60px]',
-                tool.STROKE === 3
-                  ? 'stroke-white stroke-3'
-                  : tool.STROKE === 1
-                    ? 'stroke-white stroke-1'
-                    : null
-              )}
-            />
+            <div key={tool.LABEL} title={tool.LABEL}>
+              <tool.ICON
+                className={cn(
+                  'laptop:size-[75px] size-[60px]',
+                  tool.STROKE === 3
+                    ? 'stroke-white stroke-3'
+                    : tool.STROKE === 1
+                      ? 'stroke-white stroke-1'
+                      : null
+                )}
+              />
+            </div>
           )
         })}
       </OrbitingCircles>
-      <OrbitingCircles speed={0.3} radius={firstCircleRadius} iconSize={isLaptop ? 75 : 60} reverse>
+      <OrbitingCircles
+        speed={0.25}
+        radius={firstCircleRadius}
+        iconSize={isLaptop ? 75 : 60}
+        reverse>
         {designToolsArray.slice(0, 9).map(tool => {
           return (
-            <tool.ICON
-              key={tool.LABEL}
-              className={cn(
-                'laptop:size-[75px] size-[60px]',
-                tool.STROKE === 3
-                  ? 'stroke-white stroke-3'
-                  : tool.STROKE === 1
-                    ? 'stroke-white stroke-1'
-                    : null
-              )}
-            />
+            <div key={tool.LABEL} title={tool.LABEL}>
+              <tool.ICON
+                className={cn(
+                  'laptop:size-[75px] size-[60px]',
+                  tool.STROKE === 3
+                    ? 'stroke-white stroke-3'
+                    : tool.STROKE === 1
+                      ? 'stroke-white stroke-1'
+                      : null
+                )}
+              />
+            </div>
           )
         })}
       </OrbitingCircles>

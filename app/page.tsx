@@ -6,6 +6,7 @@ import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
+import { IcemeneContent } from '@/components/projects/icemene-content'
 import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
@@ -332,7 +333,7 @@ export default function Home() {
                       </Button>
                     </ResponsiveSheetTrigger>
                   </InView>
-                  <ThePrincipalContent />
+                  <IcemeneContent />
                 </ResponsiveSheet>
               </div>
             </ScrollPolygonContainer>

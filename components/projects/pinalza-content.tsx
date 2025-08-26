@@ -23,6 +23,7 @@ export const PinalzaContent = () => {
         <div className='tablet:p-16 border bg-white px-8 py-12'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='aspect-video h-32'
             src={project.IMAGES.LOGO_1.URL}
             alt={project.IMAGES.LOGO_1.ALT}
@@ -31,6 +32,7 @@ export const PinalzaContent = () => {
         <div className='tablet:p-16 border px-8 py-12'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='aspect-video h-32'
             src={project.IMAGES.LOGO_ALTERNATIVE_1.URL}
             alt={project.IMAGES.LOGO_ALTERNATIVE_1.ALT}
@@ -94,6 +96,7 @@ export const PinalzaContent = () => {
         <div className='my-12'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='tablet:h-32 h-20'
             src={project.IMAGES.PATTERN_1.URL}
             alt={project.IMAGES.PATTERN_1.ALT}
@@ -105,6 +108,7 @@ export const PinalzaContent = () => {
         <div className='tablet:p-16 border bg-white px-8 py-12'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='aspect-video h-32'
             src={project.IMAGES.LOGO_2.URL}
             alt={project.IMAGES.LOGO_2.ALT}
@@ -113,6 +117,7 @@ export const PinalzaContent = () => {
         <div className='tablet:p-16 border px-8 py-12'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='aspect-video h-32'
             src={project.IMAGES.LOGO_ALTERNATIVE_2.URL}
             alt={project.IMAGES.LOGO_ALTERNATIVE_2.ALT}
@@ -176,6 +181,7 @@ export const PinalzaContent = () => {
         <div className='my-12'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='tablet:h-32 h-20'
             src={project.IMAGES.PATTERN_2.URL}
             alt={project.IMAGES.PATTERN_2.ALT}
@@ -186,6 +192,7 @@ export const PinalzaContent = () => {
           <div className='bg-[#f5b700] p-10'>
             <Image
               includePlaceholder={false}
+              loading='eager'
               className='w-40'
               src={project.IMAGES.COLOR_1.URL}
               alt={project.IMAGES.COLOR_1.ALT}
@@ -194,6 +201,7 @@ export const PinalzaContent = () => {
           <div className='bg-accent tablet:h-auto flex h-60 items-center justify-center p-8'>
             <Image
               includePlaceholder={false}
+              loading='eager'
               src={project.IMAGES.TYPOGRAPHY_1.URL}
               alt={project.IMAGES.TYPOGRAPHY_1.ALT}
             />

@@ -15,6 +15,7 @@ export const TransportiisaContent = () => {
       <div>
         <Image
           className='aspect-video'
+          loading='eager'
           src={project.IMAGES.BANNER_COMPARISON.URL}
           alt={project.IMAGES.BANNER_COMPARISON.ALT}
         />
@@ -24,6 +25,7 @@ export const TransportiisaContent = () => {
           <div className='border p-12'>
             <Image
               includePlaceholder={false}
+              loading='eager'
               className='tablet:h-68 aspect-square h-40'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
@@ -33,6 +35,7 @@ export const TransportiisaContent = () => {
             <div className='tablet:p-6 grow border bg-white p-12'>
               <Image
                 includePlaceholder={false}
+                loading='eager'
                 className='tablet:h-32 aspect-square h-40'
                 src={project.IMAGES.LOGO.URL}
                 alt={project.IMAGES.LOGO.ALT}
@@ -41,6 +44,7 @@ export const TransportiisaContent = () => {
             <div className='tablet:p-6 grow border p-12'>
               <Image
                 includePlaceholder={false}
+                loading='eager'
                 className='tablet:h-32 aspect-square h-40'
                 src={project.IMAGES.LOGO_NEGATIVE.URL}
                 alt={project.IMAGES.LOGO_NEGATIVE.ALT}
@@ -49,6 +53,7 @@ export const TransportiisaContent = () => {
             <div className='tablet:p-6 grow border bg-white p-12'>
               <Image
                 includePlaceholder={false}
+                loading='eager'
                 className='tablet:h-32 aspect-square h-40'
                 src={project.IMAGES.LOGO_POSITIVE.URL}
                 alt={project.IMAGES.LOGO_POSITIVE.ALT}
@@ -60,6 +65,7 @@ export const TransportiisaContent = () => {
         <div className='bg-[#006EB3] px-12 py-16'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='w-40'
             src={project.IMAGES.COLOR_1.URL}
             alt={project.IMAGES.COLOR_1.ALT}
@@ -68,6 +74,7 @@ export const TransportiisaContent = () => {
         <div className='bg-accent px-12 py-16'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='tablet:w-1/2'
             src={project.IMAGES.TYPOGRAPHY_1.URL}
             alt={project.IMAGES.TYPOGRAPHY_1.ALT}
@@ -78,9 +85,21 @@ export const TransportiisaContent = () => {
       <Separator className='my-12' />
 
       <div className='grid gap-6 overflow-hidden'>
-        <Image src={project.IMAGES.ADS.URL} alt={project.IMAGES.ADS.ALT} />
-        <Image src={project.IMAGES.CARDS.URL} alt={project.IMAGES.CARDS.ALT} />
-        <Image src={project.IMAGES.ON_FABRIC.URL} alt={project.IMAGES.ON_FABRIC.ALT} />
+        <Image
+          className='aspect-video object-cover'
+          src={project.IMAGES.ADS.URL}
+          alt={project.IMAGES.ADS.ALT}
+        />
+        <Image
+          className='aspect-video object-cover'
+          src={project.IMAGES.CARDS.URL}
+          alt={project.IMAGES.CARDS.ALT}
+        />
+        <Image
+          className='aspect-video object-cover'
+          src={project.IMAGES.ON_FABRIC.URL}
+          alt={project.IMAGES.ON_FABRIC.ALT}
+        />
       </div>
 
       <Separator className='my-16' />

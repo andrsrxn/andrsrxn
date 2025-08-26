@@ -17,6 +17,7 @@ export const AtproyContent = () => {
         <div className='bg-[#002F6D] p-8 pb-28'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_1.URL}
             alt={project.IMAGES.COLOR_1.ALT}
@@ -25,6 +26,7 @@ export const AtproyContent = () => {
         <div className='bg-[#00A6E2] p-8 pb-20'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_2.URL}
             alt={project.IMAGES.COLOR_2.ALT}
@@ -33,6 +35,7 @@ export const AtproyContent = () => {
         <div className='bg-[#00943C] p-8 pb-16'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_3.URL}
             alt={project.IMAGES.COLOR_3.ALT}
@@ -41,6 +44,7 @@ export const AtproyContent = () => {
         <div className='bg-[#AAC8B9] p-8'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_4.URL}
             alt={project.IMAGES.COLOR_4.ALT}
@@ -50,6 +54,7 @@ export const AtproyContent = () => {
       <div className='overflow-x-hidden py-30 pb-20'>
         <Image
           includePlaceholder={false}
+          loading='eager'
           className='w-4/5 max-w-xs'
           src={project.IMAGES.TYPOGRAPHY_WHITE.URL}
           alt={project.IMAGES.TYPOGRAPHY_WHITE.ALT}
@@ -57,12 +62,14 @@ export const AtproyContent = () => {
         <div className='mx-auto my-14 grid origin-center scale-[120%] overflow-hidden'>
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='h-20 mask-x-from-80% mask-x-to-90% object-cover object-left'
             src={project.IMAGES.ABC_WHITE.URL}
             alt={project.IMAGES.ABC_WHITE.ALT}
           />
           <Image
             includePlaceholder={false}
+            loading='eager'
             className='h-20 mask-x-from-80% mask-x-to-90% object-cover object-right'
             src={project.IMAGES.ABC_WHITE.URL}
             alt={project.IMAGES.ABC_WHITE.ALT}
@@ -72,12 +79,14 @@ export const AtproyContent = () => {
       <div className='mx-auto w-11/12'>
         <Image
           includePlaceholder={false}
+          loading='eager'
           src={project.IMAGES.LOGO_RESPONSIVE_VERTICAL.URL}
           alt={project.IMAGES.LOGO_RESPONSIVE_VERTICAL.ALT}
           className='laptop:hidden mx-auto max-w-md'
         />
         <Image
           includePlaceholder={false}
+          loading='eager'
           src={project.IMAGES.LOGO_RESPONSIVE.URL}
           alt={project.IMAGES.LOGO_RESPONSIVE.ALT}
           className='laptop:block hidden'
@@ -85,18 +94,39 @@ export const AtproyContent = () => {
       </div>
       <Separator className='my-16' />
       <div className='grid gap-6'>
-        <Image src={project.IMAGES.BUSINESS_CARD.URL} alt={project.IMAGES.BUSINESS_CARD.ALT} />
-        <Image src={project.IMAGES.POLO_FRONT.URL} alt={project.IMAGES.POLO_FRONT.ALT} />
-        <Image src={project.IMAGES.BILLBOARD.URL} alt={project.IMAGES.BILLBOARD.ALT} />
+        <Image
+          className='aspect-video object-cover'
+          src={project.IMAGES.BUSINESS_CARD.URL}
+          alt={project.IMAGES.BUSINESS_CARD.ALT}
+        />
+        <Image
+          className='aspect-square'
+          src={project.IMAGES.POLO_FRONT.URL}
+          alt={project.IMAGES.POLO_FRONT.ALT}
+        />
+        <Image
+          className='aspect-video'
+          src={project.IMAGES.BILLBOARD.URL}
+          alt={project.IMAGES.BILLBOARD.ALT}
+        />
         <div>
-          <Image src={project.IMAGES.FAVICON_DARK.URL} alt={project.IMAGES.FAVICON_DARK.ALT} />
-          <Image src={project.IMAGES.FAVICON_LIGHT.URL} alt={project.IMAGES.FAVICON_LIGHT.ALT} />
+          <Image
+            className='aspect-video object-cover object-left'
+            src={project.IMAGES.FAVICON_DARK.URL}
+            alt={project.IMAGES.FAVICON_DARK.ALT}
+          />
+          <Image
+            className='aspect-video object-cover object-left'
+            src={project.IMAGES.FAVICON_LIGHT.URL}
+            alt={project.IMAGES.FAVICON_LIGHT.ALT}
+          />
         </div>
       </div>
       <div className='tablet:my-12 my-8 origin-center scale-[120%] overflow-hidden'>
         <Image
           className='tablet:h-28 h-20 mask-x-from-80% mask-x-to-90% object-cover object-center'
           includePlaceholder={false}
+          loading='eager'
           src={project.IMAGES.PATTERN.URL}
           alt={project.IMAGES.PATTERN.ALT}
         />

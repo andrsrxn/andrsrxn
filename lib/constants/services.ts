@@ -28,6 +28,9 @@ export const SERVICES = {
       BRAND_GUIDELINES: {
         TITLE: 'Manual de Marca',
       },
+      DESIGN_SYSTEM: {
+        TITLE: 'Sistema de Diseño',
+      },
     },
   },
 
@@ -49,12 +52,11 @@ export const SERVICES = {
       SEO: {
         TITLE: 'Optimización SEO',
       },
+      UX_AUDIT: {
+        TITLE: 'Análisis UX',
+      },
       COMPONENT_LIBRARY: {
         TITLE: 'Librería de Componentes',
-      },
-
-      WIREFRAMING: {
-        TITLE: 'Wireframing y Prototipado',
       },
     },
   },

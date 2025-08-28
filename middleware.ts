@@ -3,10 +3,10 @@ import { isProductionEnv } from '@/lib/config/env'
 
 export default function middleware(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
-  let scriptSrc = "'self' 'unsafe-inline' https://analytics.ahrefs.com"
+  let scriptSrc = "'self' 'unsafe-inline'"
   const imgSrc = "'self' blob: data: https://res.cloudinary.com"
   let workerSrc = "'self'"
-  const connectSrc = "'self' https://analytics.ahrefs.com"
+  const connectSrc = "'self'"
 
   if (!isProductionEnv()) {
     scriptSrc += " 'unsafe-eval'"

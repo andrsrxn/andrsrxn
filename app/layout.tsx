@@ -1,6 +1,6 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
 import Link from 'next/link'
-import Script from 'next/script'
 import type { ReactNode } from 'react'
 import { preconnect, preload } from 'react-dom'
 import { LenisScroll } from '@/components/animated/lenis'
@@ -8,7 +8,6 @@ import { ParticlesBackground } from '@/components/backgrounds/particles'
 import { JsonLd } from '@/components/shared/json-ld'
 import { Image } from '@/components/ui/image'
 import { Toaster } from '@/components/ui/sonner'
-import { env } from '@/lib/config/env'
 import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
 import { IMAGES } from '@/lib/constants/paths'
 import { PERSON_SCHEMA, SERVICES_SCHEMA, WEBSITE_SCHEMA } from '@/lib/constants/schema-json'
@@ -23,7 +22,6 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   preconnect('https://res.cloudinary.com')
-  preconnect('https://analytics.ahrefs.com')
 
   preload(IMAGES.BRAND.SYMBOL.SVG.URL, {
     as: 'image',
@@ -38,11 +36,6 @@ export default function RootLayout({
 
   return (
     <html lang='es' className='dark'>
-      <Script
-        src='https://analytics.ahrefs.com/analytics.js'
-        async
-        data-key={env.AHREFS_ANALYTICS_KEY}
-      />
       <body className={`${fontHeading.variable} ${fontBody.variable} antialiased`}>
         <header className='fixed top-0 left-0 z-1000 flex h-12 w-full items-center justify-center mix-blend-difference'>
           <Link href='/' aria-label='Ir al inicio'>
@@ -106,6 +99,8 @@ export default function RootLayout({
         <JsonLd schema={WEBSITE_SCHEMA} />
         <JsonLd schema={PERSON_SCHEMA} />
         <JsonLd schema={SERVICES_SCHEMA} />
+
+        <Analytics />
       </body>
     </html>
   )

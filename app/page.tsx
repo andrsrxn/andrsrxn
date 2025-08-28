@@ -1,3 +1,6 @@
+/** biome-ignore-all lint/a11y/noRedundantRoles: read by voiceover */
+/** biome-ignore-all lint/a11y/useSemanticElements: read by voiceover */
+
 import { IconPlus } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'
@@ -82,7 +85,7 @@ export default function Home() {
                 <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                   {SERVICES.BRAND.TITLE}
                 </h2>
-                <ul className='pl-4'>
+                <ul className='pl-4' role='list'>
                   {Object.values(SERVICES.BRAND.SUBSERVICES).map(service => {
                     return (
                       <li
@@ -100,7 +103,7 @@ export default function Home() {
                 <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                   {SERVICES.WEB_DEV.TITLE}
                 </h2>
-                <ul className='pl-4'>
+                <ul className='pl-4' role='list'>
                   {Object.values(SERVICES.WEB_DEV.SUBSERVICES).map(service => {
                     return (
                       <li
@@ -118,7 +121,7 @@ export default function Home() {
                 <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                   {SERVICES.MARKETING.TITLE}
                 </h2>
-                <ul className='pl-4'>
+                <ul className='pl-4' role='list'>
                   {Object.values(SERVICES.MARKETING.SUBSERVICES).map(service => {
                     return (
                       <li

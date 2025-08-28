@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <main className='mt-40'>
+    <main className='laptop:mt-30 mt-24'>
       <div className='prose numbered-heading desktop:prose-xl font-body text-muted-foreground container mx-auto w-11/12'>
         <h1 className='text-foreground font-heading laptop:!text-7xl eading-none !mb-8 text-6xl !font-normal'>
           Política de Privacidad
@@ -49,7 +49,7 @@ export default function page() {
         <p>
           El responsable del tratamiento de los datos personales recopilados a través de este sitio
           web es: <strong className='text-foreground'>Carlos Andrés Raxón Castañeda</strong> con
-          número de NIT: <strong className='text-foreground'>123984-4</strong> Para cualquier
+          número de NIT: <strong className='text-foreground'>452194-6</strong>. Para cualquier
           pregunta o inquietud, puedes contactarme directamente a través del link en la sección de
           Contacto.
         </p>

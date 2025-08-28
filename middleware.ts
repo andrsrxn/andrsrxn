@@ -3,19 +3,14 @@ import { isProductionEnv } from '@/lib/config/env'
 
 export default function middleware(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
-  let scriptSrc = "'self' 'unsafe-inline'"
-  let imgSrc = "'self' blob: data: https://res.cloudinary.com"
-  // TODO: media src y image src cloudfare
+  let scriptSrc = "'self' 'unsafe-inline' https://analytics.ahrefs.com"
+  const imgSrc = "'self' blob: data: https://res.cloudinary.com"
   let workerSrc = "'self'"
-  const connectSrc = "'self'"
+  const connectSrc = "'self' https://analytics.ahrefs.com"
 
   if (!isProductionEnv()) {
-    // TODO: Ahrefs https://app.ahrefs.com/onboarding
-    // Añadir dominios específicos para conectar (ej. analítica, APIs)
-    // connectSrc += " https://www.google-analytics.com https://region.api.com";
     scriptSrc += " 'unsafe-eval'"
     workerSrc += ' blob:'
-    imgSrc += ' http://localhost:3000 https://via.placeholder.com https://placehold.co' //
   }
 
   const cspHeaderParts: string[] = [

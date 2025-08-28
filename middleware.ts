@@ -3,10 +3,10 @@ import { isProductionEnv } from '@/lib/config/env'
 
 export default function middleware(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
-  let scriptSrc = "'self' 'unsafe-inline'"
+  let scriptSrc = "'self' 'unsafe-inline' https://va.vercel-scripts.com"
   const imgSrc = "'self' blob: data: https://res.cloudinary.com"
   let workerSrc = "'self'"
-  const connectSrc = "'self'"
+  const connectSrc = "'self' https://va.vercel-scripts.com"
 
   if (!isProductionEnv()) {
     scriptSrc += " 'unsafe-eval'"

@@ -35,7 +35,7 @@ export default function RootLayout({
   })
 
   return (
-    <html lang='es' className='dark'>
+    <html lang='es' className='dark' data-scroll-behavior='smooth'>
       <body className={`${fontHeading.variable} ${fontBody.variable} antialiased`}>
         <header className='fixed top-0 left-0 z-1000 flex h-12 w-full items-center justify-center mix-blend-difference'>
           <Link href='/' aria-label='Ir al inicio'>

@@ -1,6 +1,3 @@
-/** biome-ignore-all lint/a11y/noRedundantRoles: read by voiceover */
-/** biome-ignore-all lint/a11y/useSemanticElements: read by voiceover */
-
 import { IconPlus } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'
@@ -16,12 +13,12 @@ import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
 import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
+import { ServicesCarousel } from '@/components/shared/services-carousel'
 import { Button } from '@/components/ui/button'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
 import { IMAGES } from '@/lib/constants/paths'
 import { PROJECTS } from '@/lib/constants/projects'
-import { SERVICES } from '@/lib/constants/services'
 import { cn } from '@/lib/utils'
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: required content
@@ -34,7 +31,7 @@ export default function Home() {
         <div className='display-2xl:container display-2xl:left-[50%] display-2xl:translate-x-[-50%] animate-fade-down display-2xl:w-11/12 tablet:top-20 absolute top-18 left-0 isolate z-0 mx-auto w-full duration-300 ease-in'>
           <div className='ease-gradient-to-rt display-2xl:block absolute top-0 left-0 hidden h-full w-60' />
           <div className='ease-gradient-to-lt display-2xl:block absolute top-0 right-0 hidden h-full w-60' />
-          <picture>
+          <picture aria-hidden className='pointer-events-none'>
             <source srcSet={IMAGES.BRAND.GRADIENT_WIDE.WEBP.URL} media='(min-width: 64rem)' />
 
             <Image
@@ -76,66 +73,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl tablet:overflow-visible mt-10 overflow-x-clip'>
-          <div
-            className='no-scrollbar tablet:snap-none tablet:overflow-clip tablet:justify-center tablet:gap-3 laptop:gap-5 flex snap-x snap-mandatory gap-5 overflow-auto p-1'
-            tabIndex={0}>
-            <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 relative ml-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:750ms] [animation-duration:500ms]'>
-              <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
-                <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
-                  {SERVICES.BRAND.TITLE}
-                </h2>
-                <ul className='pl-4' role='list'>
-                  {Object.values(SERVICES.BRAND.SUBSERVICES).map(service => {
-                    return (
-                      <li
-                        className='tablet:text-sm laptop:text-base desktop:text-lg list-disc leading-relaxed marker:text-neutral-600'
-                        key={service.TITLE}>
-                        {service.TITLE}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </div>
-            <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 animate-fade laptop:w-[33%] relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:850ms] [animation-duration:500ms]'>
-              <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
-                <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
-                  {SERVICES.WEB_DEV.TITLE}
-                </h2>
-                <ul className='pl-4' role='list'>
-                  {Object.values(SERVICES.WEB_DEV.SUBSERVICES).map(service => {
-                    return (
-                      <li
-                        className='tablet:text-sm laptop:text-base desktop:text-lg list-disc leading-relaxed marker:text-neutral-600'
-                        key={service.TITLE}>
-                        {service.TITLE}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </div>
-            <div className='tablet:w-[30%] desktop:pt-10 desktop:pb- tablet:pt-6 laptop:w-[33%] animate-fade tablet:m-0 relative mr-[calc(5%_+_2px)] flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 [animation-delay:950ms] [animation-duration:1000ms]'>
-              <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
-                <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
-                  {SERVICES.MARKETING.TITLE}
-                </h2>
-                <ul className='pl-4' role='list'>
-                  {Object.values(SERVICES.MARKETING.SUBSERVICES).map(service => {
-                    return (
-                      <li
-                        className='tablet:text-sm laptop:text-base desktop:text-lg list-disc leading-relaxed marker:text-neutral-600'
-                        key={service.TITLE}>
-                        {service.TITLE}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ServicesCarousel />
       </section>
       <Separator className='container mx-auto my-20 !w-11/12' />
       <section className='tablet:mt-20 laptop:w-11/12 mx-auto mt-12 max-w-6xl'>

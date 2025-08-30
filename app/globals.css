@@ -13,9 +13,9 @@
   --breakpoint-display-2xl: 112rem;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-heading: var(--font-heading);
-  --font-label: var(--font-heading);
-  --font-body: var(--font-body);
+  --font-heading: var(--font-heading), serif;
+  --font-label: var(--font-heading), serif;
+  --font-body: var(--font-body), sans-serif;
   --font-mono: monospace;
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
@@ -312,6 +312,7 @@
     transition: none 0.01ms !important;
   }
 }
+
 [id] {
   scroll-margin-top: 80px;
 }

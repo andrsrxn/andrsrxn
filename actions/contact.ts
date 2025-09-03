@@ -73,7 +73,7 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
       // from: `${fullName} <${isProductionEnv() ? email : 'onboarding@resend.dev'}>`,
       from: `${fullName} <onboarding@resend.dev>`,
       // to: isProductionEnv() ? COMPANY.EMAIL_ADDRESES.SALES : 'carlosraxon019@gmail.com',
-      to: 'andresraxon.creativo@gmail.com',
+      to: 'andresraxon.art@gmail.com',
       subject: 'Contacto web para cotización',
       react: ContactEmailTemplate({
         ip,

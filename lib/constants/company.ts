@@ -3,15 +3,9 @@ export const COMPANY = {
   DESCRIPTION:
     'Director creativo especializado en Branding, Desarrollo Web, Diseño UI/UX y Marketing Digital. Ayudo a empresas con estrategias creativas, innovación y tecnología.',
   SERVICES_SUMMARY: 'Branding, Desarrollo Web, Diseño UI/UX y Marketing Digital',
-  SOCIAL_MEDIA: {
-    TELEGRAM: {
-      URL: 'https://instagram.com/@vintra.agency',
-      TITLE: 'Telegram',
-      LABEL: '@andresraxon',
-    },
-  },
+
   EMAIL_ADDRESSES: {
-    INFO: 'andresraxon.creativo@gmail.com',
+    INFO: 'andresraxon.art@gmail.com',
   },
   ADDRESS: {
     LOCALITY: 'Mixco',

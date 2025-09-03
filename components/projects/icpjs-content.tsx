@@ -37,6 +37,7 @@ export const IcpjsContent = () => {
           <Image
             includePlaceholder={false}
             loading='eager'
+            className='object-cover'
             src={project.IMAGES.PALETTE_1.URL}
             alt={project.IMAGES.PALETTE_1.ALT}
           />
@@ -55,6 +56,7 @@ export const IcpjsContent = () => {
             <Image
               includePlaceholder={false}
               loading='eager'
+              className='object-cover'
               src={project.IMAGES.PALETTE_2.URL}
               alt={project.IMAGES.PALETTE_2.ALT}
             />
@@ -72,6 +74,7 @@ export const IcpjsContent = () => {
             <Image
               includePlaceholder={false}
               loading='eager'
+              className='object-cover'
               src={project.IMAGES.PALETTE_3.URL}
               alt={project.IMAGES.PALETTE_3.ALT}
             />

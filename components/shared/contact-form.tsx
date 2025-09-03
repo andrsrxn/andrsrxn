@@ -32,7 +32,6 @@ import { cn } from '@/lib/utils'
 export const ContactForm = () => {
   const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
   const [pending, startTransition] = useTransition()
-  const [token, setToken] = useState<string | null>(null)
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -47,12 +46,6 @@ export const ContactForm = () => {
   })
 
   function onSubmit(values: z.infer<typeof contactSchema>) {
-    if (!token) {
-      toast.error('Verifica que eres humano', {
-        description: 'Marca la última casilla para verificar tu identidad',
-      })
-      return
-    }
     startTransition(async () => {
       try {
         const response = await SendContactMessage(values)
@@ -62,7 +55,6 @@ export const ContactForm = () => {
           })
           form.reset()
 
-          setToken(null)
           return
         }
         toast.error(response.message, {

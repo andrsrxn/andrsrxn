@@ -77,8 +77,20 @@ export const SERVICES = {
       COPYWRITING: {
         TITLE: 'Copywriting',
       },
+      PACKAGING: {
+        TITLE: 'Packaging',
+      },
+      STATIONERY: {
+        TITLE: 'Material Corporativo',
+      },
       SLIDESHOW: {
         TITLE: 'Presentaciones de Diapositivas',
+      },
+      FLYERS: {
+        TITLE: 'Material Promocional',
+      },
+      MENU: {
+        TITLE: 'Menú de Restaurante',
       },
     },
   },

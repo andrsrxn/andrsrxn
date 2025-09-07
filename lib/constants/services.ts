@@ -43,7 +43,7 @@ export const SERVICES = {
         TITLE: 'Landing Page',
       },
       FULL_PAGE_DEV: {
-        TITLE: 'Sitio Web Multipágina',
+        TITLE: 'Sitio Web',
       },
 
       UI_UX_DESIGN: {

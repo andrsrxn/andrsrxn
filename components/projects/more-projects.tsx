@@ -1,7 +1,9 @@
-import { IconPlus } from '@tabler/icons-react'
+import { IconExternalLink, IconPlus } from '@tabler/icons-react'
+import Link from 'next/link'
 import type { ComponentProps } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
+import { IconInstagram } from '@/components/icons/brands/instagram'
 import { IcemeneContent } from '@/components/projects/icemene-content'
 import { PinalzaContent } from '@/components/projects/pinalza-content'
 import { SolarGroupContent } from '@/components/projects/solar-group-content'
@@ -9,6 +11,7 @@ import { TransportiisaContent } from '@/components/projects/transportiisa-conten
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
 import { Button } from '@/components/ui/button'
 import { Image } from '@/components/ui/image'
+import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 import { cn } from '@/lib/utils'
 
@@ -47,7 +50,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -84,7 +87,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -121,7 +124,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -158,7 +161,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -168,6 +171,18 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
+        </div>
+      </InView>
+      <InView>
+        <div className='desktop:mt-24 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
+          <Link
+            className='text-foreground laptop:text-xl desktop:text-2xl desktop:px-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-4 text-lg leading-none font-bold underline decoration-1 underline-offset-2 hover:bg-neutral-800'
+            target='_blank'
+            rel='noopener noreferrer'
+            href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
+            <IconInstagram className='desktop:scale-[1.4] mr-2 size-[0.8em] scale-125' />
+            Ver más creaciones en Instagram <IconExternalLink className='desktop:size-6 size-5' />
+          </Link>
         </div>
       </InView>
     </div>

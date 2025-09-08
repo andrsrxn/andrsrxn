@@ -7,6 +7,13 @@ export const COMPANY = {
   EMAIL_ADDRESSES: {
     INFO: 'andresraxon.art@gmail.com',
   },
+  SOCIAL_MEDIA: {
+    INSTAGRAM: {
+      LABEL: 'Instagram',
+      USER: '@andresraxon.art',
+      URL: 'https://www.instagram.com/andresraxon.art',
+    },
+  },
   ADDRESS: {
     LOCALITY: 'Mixco',
     COUNTRY: 'Guatemala',

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
+import { IconInstagram } from '@/components/icons/brands/instagram'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcemeneContent } from '@/components/projects/icemene-content'
@@ -17,6 +18,7 @@ import { ServicesCarousel } from '@/components/shared/services-carousel'
 import { Button } from '@/components/ui/button'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
+import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/paths'
 import { PROJECTS } from '@/lib/constants/projects'
 import { cn } from '@/lib/utils'
@@ -325,8 +327,14 @@ export default function Home() {
         <div>
           <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
             <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
-              Comunícate conmigo por medio de: <ObfuscatedEmailLink /> o enviando el siguiente
-              formulario.
+              Comunícate conmigo por medio de: <ObfuscatedEmailLink />,{' '}
+              <Link
+                className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
+                href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
+                <IconInstagram className='desktop:scale-[1.5] size-[0.8em] scale-125' />
+                {COMPANY.SOCIAL_MEDIA.INSTAGRAM.USER}
+              </Link>{' '}
+              o llenando el siguiente formulario.
             </p>
           </div>
 

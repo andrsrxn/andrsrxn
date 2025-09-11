@@ -3,5 +3,20 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "never",
     "source.removeUnusedImports": "explicit"
-  }
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    { "text": "Use conventional commit format: type(scope): description." },
+    { "text": "Use imperative mood: 'Add feature' not 'Added feature'." },
+    { "text": "Keep subject line under 50 characters." },
+    { "text": "Use types: feat, fix, docs, style, refactor, perf, test, chore, ci." },
+    { "text": "Include scope when relevant (e.g., api, ui, auth)." },
+    {
+      "text": "For additional details, use a well-structured body section, for minimal changes is not necessary to add more details, with the description should be enough, take your own criteria on it."
+    },
+    { "text": "Use bullet points (*) for clarity." },
+    { "text": "Always make all the commit text on english." },
+    {
+      "text": "Understand the context, if i make a change on page.tsx, the scope should not be just (page), this is a Next.js 15 project, check the folders above the file, such as if i make a change con input.tsx but its inside components folder, determinate whether add just (components) or the specific component name such as (input), everything depends on the changes and the context."
+    }
+  ]
 }

@@ -176,12 +176,12 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
       <InView>
         <div className='desktop:mt-24 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
           <Link
-            className='text-foreground laptop:text-xl desktop:text-2xl desktop:px-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-4 text-lg leading-none font-bold underline decoration-1 underline-offset-2 hover:bg-neutral-800'
+            className='text-foreground laptop:text-xl desktop:px-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-4 text-lg leading-none font-bold underline decoration-1 underline-offset-2 hover:bg-neutral-800'
             target='_blank'
             rel='noopener noreferrer'
             href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
             <IconInstagram className='desktop:scale-[1.4] mr-2 size-[0.8em] scale-125' />
-            Ver más creaciones en Instagram <IconExternalLink className='desktop:size-6 size-5' />
+            Ver más en Instagram <IconExternalLink className='desktop:size-6 size-5' />
           </Link>
         </div>
       </InView>

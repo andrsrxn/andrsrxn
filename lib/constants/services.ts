@@ -28,9 +28,6 @@ export const SERVICES = {
       BRAND_GUIDELINES: {
         TITLE: 'Manual de Marca',
       },
-      DESIGN_SYSTEM: {
-        TITLE: 'Sistema de Diseño',
-      },
     },
   },
 
@@ -55,9 +52,6 @@ export const SERVICES = {
       UX_AUDIT: {
         TITLE: 'Análisis UX',
       },
-      COMPONENT_LIBRARY: {
-        TITLE: 'Librería de Componentes',
-      },
     },
   },
   MARKETING: {
@@ -69,7 +63,7 @@ export const SERVICES = {
         TITLE: 'Posts para Redes Sociales',
       },
       VIDEO_EDITING: {
-        TITLE: 'Edición Profesional de Video',
+        TITLE: 'Edición de Video',
       },
       MOTION_GRAPHICS: {
         TITLE: 'Motion Graphics',

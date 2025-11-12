@@ -107,7 +107,7 @@ export default function Home() {
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
-                    start: 'top 100%',
+                    start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
@@ -146,7 +146,7 @@ export default function Home() {
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
-                    start: 'top 100%',
+                    start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
@@ -188,7 +188,7 @@ export default function Home() {
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
-                    start: 'top 100%',
+                    start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
@@ -231,7 +231,7 @@ export default function Home() {
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
-                    start: 'top 100%',
+                    start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
@@ -273,7 +273,7 @@ export default function Home() {
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
-                    start: 'top 100%',
+                    start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>

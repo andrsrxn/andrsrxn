@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { isProductionEnv } from '@/lib/config/env'
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
   let scriptSrc = "'self' 'unsafe-inline' https://va.vercel-scripts.com"
   const imgSrc = "'self' blob: data: https://res.cloudinary.com"

@@ -1,5 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
     "ignoreUnknown": false,
@@ -211,12 +212,15 @@
         "useUniqueElementIds": "off"
       },
       "security": {
+        "noSecrets": "off",
         "noDangerouslySetInnerHtml": "error",
         "noDangerouslySetInnerHtmlWithChildren": "error",
         "noGlobalEval": "error",
         "noBlankTarget": "error"
       },
       "style": {
+        "useConsistentTypeDefinitions": "error",
+        "useReactFunctionComponents": "error",
         "noCommonJs": "error",
         "noRestrictedGlobals": "error",
         "noRestrictedImports": "error",
@@ -334,6 +338,7 @@
         "useUnifiedTypeSignatures": "error"
       },
       "suspicious": {
+        "noNonNullAssertedOptionalChain": "error",
         "noBiomeFirstException": "error",
         "noUselessRegexBackrefs": "error",
         "useBiomeIgnoreFolder": "error",
@@ -435,25 +440,50 @@
         "useIterableCallbackReturn": "error"
       },
       "nursery": {
+        "noContinue": "off",
+        "noDuplicatedSpreadProps": "error",
+        "noEmptySource": {
+          "level": "error",
+          "options": {
+            "allowComments": true
+          }
+        },
+        "noEqualsToNull": "error",
+        "noForIn": "error",
+        "noIncrementDecrement": "off",
+        "noLeakedRender": "off",
+        "noMultiStr": "error",
+        "noParametersOnlyUsedInRecursion": "error",
+        "noProto": "error",
+        "noSyncScripts": "error",
+        "noTernary": "off",
+        "noUnknownAttribute": "error",
+        "noJsxLiterals": "off",
+        "noShadow": "off",
+        "noUnusedExpressions": "off",
+        "noUselessCatchBinding": "error",
+        "useArraySortCompare": "error",
+        "useConsistentArrowReturn": "off",
+        "useDeprecatedDate": "error",
+        "useFind": "error",
+        "useSpread": "error",
         "noMisusedPromises": "error",
+        "noReactForwardRef": "error",
+        "noDeprecatedImports": "error",
+        "noDuplicateDependencies": "error",
         "noNextAsyncClientComponent": "error",
-        "noNonNullAssertedOptionalChain": "error",
         "noUnnecessaryConditions": "error",
-        "useAnchorHref": "error",
-        "useConsistentTypeDefinitions": "error",
         "useMaxParams": {
           "level": "error",
           "options": {
             "max": 8
           }
         },
-        "useReactFunctionComponents": "error",
         "noFloatingPromises": "error",
         "noImportCycles": "error",
         "noUnresolvedImports": "off",
         "noUselessUndefined": "error",
         "useExhaustiveSwitchCases": "error",
-        "noSecrets": "off",
         "useExplicitType": "off",
         "useSortedClasses": "off"
       },

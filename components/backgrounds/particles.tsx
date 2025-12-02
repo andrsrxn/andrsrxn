@@ -116,7 +116,7 @@ export const ParticlesBackground = ({
     window.addEventListener('resize', handleResize)
 
     return () => {
-      if (rafID.current != null) {
+      if (rafID.current !== null) {
         window.cancelAnimationFrame(rafID.current)
       }
       if (resizeTimeout.current) {

@@ -3,9 +3,7 @@
 import { IconCheck } from '@tabler/icons-react'
 import {
   type ComponentProps,
-  type ComponentRef,
   createContext,
-  forwardRef,
   type HTMLAttributes,
   type ReactNode,
   useContext,
@@ -36,22 +34,22 @@ const useChoiceBoxSingle = () => {
   return context
 }
 
-export const ChoiceBoxSingle = forwardRef<HTMLDivElement, ChoiceBoxSingleProps>(
-  ({ onValueChange, children, value, ...props }, ref) => {
-    return (
-      <ChoiceBoxSingleContext.Provider
-        value={{
-          selected: value,
-          setSelected: onValueChange,
-        }}>
-        <div ref={ref} {...props}>
-          {children}
-        </div>
-      </ChoiceBoxSingleContext.Provider>
-    )
-  }
-)
-ChoiceBoxSingle.displayName = 'ChoiceBoxSingle'
+export const ChoiceBoxSingle = ({
+  onValueChange,
+  children,
+  value,
+  ...props
+}: ChoiceBoxSingleProps) => {
+  return (
+    <ChoiceBoxSingleContext.Provider
+      value={{
+        selected: value,
+        setSelected: onValueChange,
+      }}>
+      <div {...props}>{children}</div>
+    </ChoiceBoxSingleContext.Provider>
+  )
+}
 
 interface ChoiceBoxSingleItemContextType {
   value: ChoiceBoxSingleValue
@@ -73,10 +71,12 @@ interface ChoiceBoxSinglePropsItem extends Omit<ComponentProps<typeof Button>, '
   value: ChoiceBoxSingleValue
 }
 
-export const ChoiceBoxSingleItem = forwardRef<
-  ComponentRef<typeof Button>,
-  ChoiceBoxSinglePropsItem
->(({ children, className, value, ...props }, ref) => {
+export const ChoiceBoxSingleItem = ({
+  children,
+  className,
+  value,
+  ...props
+}: ChoiceBoxSinglePropsItem) => {
   const { setSelected, selected } = useChoiceBoxSingle()
 
   const isSelected = selected === value
@@ -85,7 +85,6 @@ export const ChoiceBoxSingleItem = forwardRef<
     <ChoiceBoxSingleItemContext.Provider value={{ value }}>
       <Button
         type='button'
-        ref={ref}
         onClick={() => {
           if (isSelected) {
             setSelected?.('')
@@ -96,8 +95,8 @@ export const ChoiceBoxSingleItem = forwardRef<
         variant='outline'
         {...props}
         className={cn(
-          'h-auto min-h-0 w-full rounded-none border border-transparent !bg-neutral-900 p-0',
-          isSelected && '!bg-neutral-800',
+          'h-auto min-h-0 w-full rounded-none border border-transparent bg-neutral-900! p-0',
+          isSelected && 'bg-neutral-800!',
           className
         )}
         size='default'>
@@ -105,8 +104,7 @@ export const ChoiceBoxSingleItem = forwardRef<
       </Button>
     </ChoiceBoxSingleItemContext.Provider>
   )
-})
-ChoiceBoxSingleItem.displayName = 'ChoiceBoxSingleItem'
+}
 
 export const ChoiceBoxSingleIndicator = ({ className, ...props }: ComponentProps<'span'>) => {
   const { selected } = useChoiceBoxSingle()
@@ -127,5 +125,3 @@ export const ChoiceBoxSingleIndicator = ({ className, ...props }: ComponentProps
     </span>
   )
 }
-
-ChoiceBoxSingleIndicator.displayName = 'ChoiceBoxSingleIndicator'

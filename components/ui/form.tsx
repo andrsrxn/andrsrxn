@@ -17,11 +17,10 @@ import { cn } from '@/lib/utils'
 
 const Form = FormProvider
 
-// biome-ignore lint/nursery/useConsistentTypeDefinitions: idk
-type FormFieldContextValue<
+interface FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = {
+> {
   name: TName
 }
 

@@ -47,16 +47,16 @@ export default function Home() {
             />
           </picture>
         </div>
-        <div className='tablet:gap-4 animate-fade tablet:mt-44 display:mt-50 relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-3 opacity-0 [animation-delay:500ms] [animation-duration:800ms]'>
+        <div className='tablet:gap-4 animate-fade tablet:mt-44 display:mt-50 animation-duration-[800ms] relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-3 opacity-0 [animation-delay:500ms]'>
           <h1 className='text-center'>
             <span className='font-body tablet:text-lg display:text-2xl laptop:text-xl block'>
               Andrés Raxón
             </span>
-            <span className='font-heading display:text-9xl tablet:text-7xl laptop:text-8xl block text-6xl !leading-none'>
+            <span className='font-heading display:text-9xl tablet:text-7xl laptop:text-8xl block text-6xl leading-none!'>
               Director Creativo
             </span>
           </h1>
-          <p className='text-muted-foreground display:text-xl laptop:text-base text-sm !leading-none'>
+          <p className='text-muted-foreground display:text-xl laptop:text-base text-sm leading-none!'>
             Obtén 10% de descuento en tu primera contratación
           </p>
           <div className='relative mt-2 overflow-hidden rounded-full p-[2px]'>
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
         <ServicesCarousel />
       </section>
-      <Separator className='container mx-auto my-20 !w-11/12' />
+      <Separator className='container mx-auto my-20 w-11/12!' />
       <section className='tablet:mt-20 laptop:w-11/12 mx-auto mt-12 max-w-6xl'>
         <div className='tablet:gap-20 desktop:gap-40 flex flex-col gap-16'>
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
@@ -112,7 +112,7 @@ export default function Home() {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -151,7 +151,7 @@ export default function Home() {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -193,7 +193,7 @@ export default function Home() {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -236,7 +236,7 @@ export default function Home() {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -278,7 +278,7 @@ export default function Home() {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -289,7 +289,7 @@ export default function Home() {
             </div>
           </ScrollPolygonContainer>
         </div>
-        <Separator className='container mx-auto my-10 !w-11/12' />
+        <Separator className='container mx-auto my-10 w-11/12!' />
       </section>
       <section>
         <MoreProjects className='-mt-1 mb-12' />
@@ -308,12 +308,12 @@ export default function Home() {
         </div>
         <div
           aria-hidden
-          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-gradient-to-b to-transparent'
+          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-linear-to-b to-transparent'
         />
 
         <div
           aria-hidden
-          className='from-background pointer-events-none absolute bottom-0 left-0 z-200 h-40 w-full bg-gradient-to-t to-transparent'
+          className='from-background pointer-events-none absolute bottom-0 left-0 z-200 h-40 w-full bg-linear-to-t to-transparent'
         />
         <OrbitingLogos />
       </section>

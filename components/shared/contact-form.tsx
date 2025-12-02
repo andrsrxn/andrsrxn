@@ -73,7 +73,7 @@ export const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='laptop:gap-8 desktop:p-8 relative z-50 mx-auto grid w-11/12 max-w-xl gap-7 border border-b-0 bg-gradient-to-b from-neutral-900 p-6'>
+        className='laptop:gap-8 desktop:p-8 relative z-50 mx-auto grid w-11/12 max-w-xl gap-7 border border-b-0 bg-linear-to-b from-neutral-900 p-6'>
         <FormField
           control={form.control}
           name='clientType'

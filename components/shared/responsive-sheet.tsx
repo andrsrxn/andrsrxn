@@ -71,7 +71,7 @@ export function ResponsiveSheetContent({
             className='bg-accent desktop:mx-0 desktop:w-11/12 tablet:mt-4 mx-auto mt-2 aspect-video object-cover'
           />
         </DrawerHeader>
-        <Separator className='desktop:hidden mx-auto my-4 !w-11/12' />
+        <Separator className='desktop:hidden mx-auto my-4 w-11/12!' />
 
         <div className='desktop:mt-0 desktop:pt-0 relative overflow-x-clip pt-6 pb-20'>
           {children}

@@ -50,7 +50,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -87,7 +87,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -124,7 +124,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>
@@ -161,7 +161,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger>
                     <Button
-                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 !px-6'
+                      className='desktop:text-base absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
                       variant='secondary'>
                       Ver proyecto completo <IconPlus />
                     </Button>

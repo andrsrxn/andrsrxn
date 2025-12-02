@@ -74,9 +74,9 @@ export function ServicesCarousel() {
             <div
               key={service.TITLE}
               className={cn(
-                'tablet:w-[30%] desktop:pt-10 tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-gradient-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 transition duration-500 ease-in-out [animation-duration:500ms]',
-                index === 0 && 'ml-[calc(5%_+_2px)]',
-                index === serviceCards.length - 1 && 'mr-[calc(5%_+_2px)]',
+                'tablet:w-[30%] desktop:pt-10 tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 animation-duration-[500ms] relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-linear-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 transition duration-500 ease-in-out',
+                index === 0 && 'ml-[calc(5%+2px)]',
+                index === serviceCards.length - 1 && 'mr-[calc(5%+2px)]',
                 delays[index],
                 !isActive && 'tablet:scale-100 scale-95'
               )}

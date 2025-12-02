@@ -31,7 +31,7 @@ export default function page() {
   return (
     <main className='laptop:mt-30 mt-24'>
       <div className='prose desktop:prose-xl numbered-heading font-body text-muted-foreground container mx-auto w-11/12'>
-        <h1 className='text-foreground font-heading laptop:!text-7xl eading-none !mb-8 text-6xl !font-normal'>
+        <h1 className='text-foreground font-heading laptop:text-7xl! eading-none mb-8! text-6xl font-normal!'>
           Términos y Condiciones de Uso
         </h1>
 

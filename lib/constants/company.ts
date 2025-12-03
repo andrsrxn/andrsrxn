@@ -10,8 +10,8 @@ export const COMPANY = {
   SOCIAL_MEDIA: {
     INSTAGRAM: {
       LABEL: 'Instagram',
-      USER: '@andresraxon.art',
-      URL: 'https://www.instagram.com/andresraxon.art',
+      USER: '@andrsrxn',
+      URL: 'https://www.instagram.com/andrsrxn',
     },
   },
   ADDRESS: {

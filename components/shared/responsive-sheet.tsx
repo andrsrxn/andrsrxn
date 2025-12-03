@@ -1,6 +1,4 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: accepted */
-'use client'
-
 import type { ComponentProps, ReactNode } from 'react'
 import { Badge } from '@/components/ui/badge'
 import {
@@ -15,7 +13,7 @@ import { Separator } from '@/components/ui/separator'
 
 interface ResponsiveSheetContentProps extends ComponentProps<typeof DrawerContent> {
   title: string
-  description?: string
+  description?: string[]
   children: React.ReactNode
   client: string
   services: string[]
@@ -74,7 +72,19 @@ export function ResponsiveSheetContent({
         <Separator className='desktop:hidden mx-auto my-4 w-11/12!' />
 
         <div className='desktop:mt-0 desktop:pt-0 relative overflow-x-clip pt-6 pb-20'>
+          <div className='mb-8 grid gap-4'>
+            {description && description.length > 0
+              ? description.map((text, i) => (
+                  // biome-ignore lint/suspicious/noArrayIndexKey: wont change
+                  <p className='text-muted-foreground max-w-prose text-base' key={i}>
+                    {text}
+                  </p>
+                ))
+              : null}
+          </div>
+
           {children}
+
           <div
             aria-hidden
             className='ease-gradient-to-t desktop:block pointer-events-none fixed right-0 bottom-0 hidden h-24 w-1/2'

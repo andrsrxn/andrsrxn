@@ -10,7 +10,6 @@ export const OrbitingLogos = () => {
   const isLaptop = useMediaQuery('(min-width: 64rem)')
   const isDesktop = useMediaQuery('(min-width: 80rem)')
 
-  // const _lastCircleRadius = isLaptop ? 650 : isTablet ? 440 : 400
   const secondCircleRadius = isDesktop ? 530 : isLaptop ? 500 : isTablet ? 400 : 320
   const firstCircleRadius = isDesktop ? 320 : isLaptop ? 300 : isTablet ? 250 : 200
 

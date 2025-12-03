@@ -6,7 +6,6 @@ export const IconCloudflare = ({ className, ...props }: SVGProps<SVGSVGElement>)
     aria-label='Cloudflare'
     className={cn('size-icon shrink-0', className)}
     role='img'
-    {...props}
     viewBox='0 0 256 116'
     xmlns='http://www.w3.org/2000/svg'
     preserveAspectRatio='xMidYMid'

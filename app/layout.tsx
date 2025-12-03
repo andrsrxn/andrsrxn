@@ -36,7 +36,7 @@ export default function RootLayout({
 
   return (
     <html lang='es' className='dark' data-scroll-behavior='smooth'>
-      <body className={`${fontHeading.variable} ${fontBody.variable} antialiased`}>
+      <body className={`${fontHeading.variable} ${fontBody.variable} isolate antialiased`}>
         <header className='fixed top-0 left-0 z-1000 flex h-12 w-full items-center justify-center mix-blend-difference'>
           <Link href='/' aria-label='Ir al inicio'>
             <Image
@@ -65,21 +65,21 @@ export default function RootLayout({
             <ul className='flex w-full items-center justify-center gap-4'>
               <li>
                 <Link
-                  className='underline decoration-1 underline-offset-2'
+                  className='text-sm underline decoration-1 underline-offset-2'
                   href='/politica-de-privacidad'>
                   Privacidad
                 </Link>
               </li>
               <li>
                 <Link
-                  className='underline decoration-1 underline-offset-2'
+                  className='text-sm underline decoration-1 underline-offset-2'
                   href='/terminos-y-condiciones'>
                   Términos de uso
                 </Link>
               </li>
             </ul>
             <div className='flex items-center justify-center gap-2'>
-              <p className='text-muted-foreground shrink-0 text-center'>
+              <p className='text-muted-foreground shrink-0 text-center text-sm'>
                 &copy; 2025. Andrés Raxón - Director Creativo
               </p>
 
@@ -87,7 +87,7 @@ export default function RootLayout({
                 src={IMAGES.FLAGS.GT.URL}
                 alt={IMAGES.FLAGS.GT.ALT}
                 title='Guatemala'
-                className='inline h-4 w-auto'
+                className='inline h-3 w-auto'
                 includePlaceholder={false}
               />
             </div>

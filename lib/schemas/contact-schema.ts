@@ -11,7 +11,7 @@ export const contactSchema = z.object({
   }),
   fullName: z
     .string({ message: 'Tipo no aceptado', invalid_type_error: 'Tipo no aceptado' })
-    .min(1, { message: 'Agrega tu nombre o el de la empresa' }),
+    .min(1, { message: 'Agrega tu nombre o el de tu empresa' }),
   email: z
     .string({ message: 'Tipo no aceptado', invalid_type_error: 'Tipo no aceptado' })
     .min(1, { message: 'Agrega tu correo electrónico' })

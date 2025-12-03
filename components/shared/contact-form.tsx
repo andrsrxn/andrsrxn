@@ -60,8 +60,7 @@ export const ContactForm = () => {
         toast.error(response.message, {
           description: response.description,
         })
-      } catch (error) {
-        console.error(error)
+      } catch {
         toast.error('No se pudo enviar tu mensaje', {
           description: 'Ocurrió un error inesperado. Por favor, intentalo más tarde',
         })

@@ -12,7 +12,6 @@ export function obfuscateEmail(email: string) {
 
   const encoded = Array.from(email)
     .map(char => {
-      // Codifica cada carácter a su entidad HTML
       return `&#${char.charCodeAt(0)};`
     })
     .join('')

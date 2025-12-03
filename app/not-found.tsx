@@ -2,7 +2,6 @@ import { IconArrowRight } from '@tabler/icons-react'
 import Link from 'next/link'
 
 export default function NotFoundPage() {
-  // añadir estrellas
   return (
     <div className='isolate flex h-dvh flex-col items-center justify-center gap-3'>
       <span className='text-muted-foreground tablet:text-xl desktop:text-2xl text-lg leading-none'>

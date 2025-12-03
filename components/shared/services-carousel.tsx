@@ -74,7 +74,7 @@ export function ServicesCarousel() {
             <div
               key={service.TITLE}
               className={cn(
-                'tablet:w-[30%] desktop:pt-10 tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 animation-duration-[500ms] relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-linear-to-b from-neutral-900 to-transparent p-4 pt-8 opacity-0 transition duration-500 ease-in-out',
+                'tablet:w-[30%] desktop:pt-10 tablet:pt-6 animate-fade laptop:w-[33%] tablet:m-0 animation-duration-[500ms] relative flex w-[85%] shrink-0 snap-center justify-center border border-b-0 bg-linear-to-b from-neutral-900 to-transparent p-4 pt-8 pb-6 opacity-0 transition duration-500 ease-in-out',
                 index === 0 && 'ml-[calc(5%+2px)]',
                 index === serviceCards.length - 1 && 'mr-[calc(5%+2px)]',
                 delays[index],
@@ -86,10 +86,10 @@ export function ServicesCarousel() {
                 <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                   {service.TITLE}
                 </h2>
-                <ul className='pl-4' role='list'>
+                <ul className='grid gap-1 pl-4' role='list'>
                   {Object.values(service.SUBSERVICES).map(subService => (
                     <li
-                      className='tablet:text-sm laptop:text-base desktop:text-lg list-disc leading-relaxed marker:text-neutral-600'
+                      className='desktop:text-lg list-disc text-base leading-normal marker:text-neutral-600'
                       key={subService.TITLE}>
                       {subService.TITLE}
                     </li>

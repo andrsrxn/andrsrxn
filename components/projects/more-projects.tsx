@@ -36,12 +36,16 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
               </div>
             </InView>
             <div className='relative'>
-              <Image
-                src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL}
-                alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.ALT}
-                includePlaceholder={false}
-                className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-              />
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <Image
+                  src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL}
+                  alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.ALT}
+                  includePlaceholder={false}
+                  className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                />
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -73,12 +77,16 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
               </div>
             </InView>
             <div className='relative'>
-              <Image
-                src={PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.IMAGES.BANNER.URL}
-                alt={PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.IMAGES.BANNER.ALT}
-                includePlaceholder={false}
-                className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-              />
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <Image
+                  src={PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.IMAGES.BANNER.URL}
+                  alt={PROJECTS.TRANSPORTIISA_VISUAL_IDENTITY.IMAGES.BANNER.ALT}
+                  includePlaceholder={false}
+                  className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                />
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -110,12 +118,16 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
               </div>
             </InView>
             <div className='relative'>
-              <Image
-                src={PROJECTS.PINALZA_VISUAL_IDENTITY.IMAGES.BANNER_COMPARISON.URL}
-                alt={PROJECTS.PINALZA_VISUAL_IDENTITY.IMAGES.BANNER_COMPARISON.ALT}
-                includePlaceholder={false}
-                className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-              />
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <Image
+                  src={PROJECTS.PINALZA_VISUAL_IDENTITY.IMAGES.BANNER_COMPARISON.URL}
+                  alt={PROJECTS.PINALZA_VISUAL_IDENTITY.IMAGES.BANNER_COMPARISON.ALT}
+                  includePlaceholder={false}
+                  className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                />
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -147,12 +159,16 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
               </div>
             </InView>
             <div className='relative'>
-              <Image
-                src={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.URL}
-                alt={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.ALT}
-                includePlaceholder={false}
-                className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-              />
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <Image
+                  src={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.URL}
+                  alt={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.ALT}
+                  includePlaceholder={false}
+                  className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                />
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -176,12 +192,12 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
       <InView>
         <div className='desktop:mt-24 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
           <Link
-            className='text-foreground laptop:text-xl desktop:px-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-4 text-lg leading-none font-bold underline decoration-1 underline-offset-2 hover:bg-neutral-800'
+            className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-1 rounded-full bg-neutral-900 px-6 py-3 text-base leading-none font-bold hover:bg-neutral-800'
             target='_blank'
             rel='noopener noreferrer'
             href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
-            <IconInstagram className='desktop:scale-[1.4] mr-2 size-[0.8em] scale-125' />
-            Ver más en Instagram <IconExternalLink className='desktop:size-6 size-5' />
+            <IconInstagram className='mr-1 size-[0.8em] scale-125' />
+            Ver más en Instagram <IconExternalLink className='tablet:size-5 size-4' />
           </Link>
         </div>
       </InView>

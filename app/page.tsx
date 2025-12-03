@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
-import { IconInstagram } from '@/components/icons/brands/instagram'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcemeneContent } from '@/components/projects/icemene-content'
@@ -97,12 +96,15 @@ export default function Home() {
                   srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
                   media='(min-width: 64rem)'
                 />
-
-                <Image
-                  src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
-                  alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
-                  className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                />
+                <InView
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                  <Image
+                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
+                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                  />
+                </InView>
               </picture>
               <ResponsiveSheet>
                 <InView
@@ -134,15 +136,20 @@ export default function Home() {
               </div>
             </InView>
             <div className='relative'>
-              <video
-                autoPlay
-                muted
-                controls={false}
-                loop
-                playsInline
-                className='animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 opacity-95 will-change-[clip-path]'>
-                <source src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL} type='video/mp4' />
-              </video>
+              <InView>
+                <video
+                  autoPlay
+                  muted
+                  controls={false}
+                  loop
+                  playsInline
+                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 opacity-95 will-change-[clip-path]'>
+                  <source
+                    src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
+                    type='video/mp4'
+                  />
+                </video>
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -178,12 +185,15 @@ export default function Home() {
                   srcSet={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
                   media='(min-width: 64rem)'
                 />
-
-                <Image
-                  src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
-                  alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
-                  className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                />
+                <InView
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                  <Image
+                    src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
+                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                  />
+                </InView>
               </picture>
               <ResponsiveSheet>
                 <InView
@@ -221,12 +231,15 @@ export default function Home() {
                   srcSet={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL}
                   media='(min-width: 64rem)'
                 />
-
-                <Image
-                  src={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL}
-                  alt={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.ALT}
-                  className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                />
+                <InView
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                  <Image
+                    src={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.ALT}
+                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                  />
+                </InView>
               </picture>
               <ResponsiveSheet>
                 <InView
@@ -263,12 +276,15 @@ export default function Home() {
                   srcSet={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL}
                   media='(min-width: 64rem)'
                 />
-
-                <Image
-                  src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL}
-                  alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.ALT}
-                  className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                />
+                <InView
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                  <Image
+                    src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.ALT}
+                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                  />
+                </InView>
               </picture>
               <ResponsiveSheet>
                 <InView
@@ -308,7 +324,7 @@ export default function Home() {
         </div>
         <div
           aria-hidden
-          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-linear-to-b to-transparent'
+          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-linear-to-b bg-gradient-to-b to-transparent'
         />
 
         <div
@@ -327,11 +343,10 @@ export default function Home() {
         <div>
           <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
             <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
-              Comunícate conmigo por medio de: <ObfuscatedEmailLink />,{' '}
+              Comunícate conmigo por medio del correo: <ObfuscatedEmailLink />, Instagram:{' '}
               <Link
                 className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
                 href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
-                <IconInstagram className='desktop:scale-[1.5] size-[0.8em] scale-125' />
                 {COMPANY.SOCIAL_MEDIA.INSTAGRAM.USER}
               </Link>{' '}
               o llenando el siguiente formulario.

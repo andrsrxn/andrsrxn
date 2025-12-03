@@ -10,6 +10,7 @@ export const PinalzaContent = () => {
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}
       title={project.SUMMARY}
+      description={project.DESCRIPTION}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div>

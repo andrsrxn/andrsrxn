@@ -6,10 +6,8 @@ import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
-import { IcemeneContent } from '@/components/projects/icemene-content'
 import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
-import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
 import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
@@ -22,7 +20,6 @@ import { IMAGES } from '@/lib/constants/paths'
 import { PROJECTS } from '@/lib/constants/projects'
 import { cn } from '@/lib/utils'
 
-// biome-ignore lint/complexity/noExcessiveLinesPerFunction: required content
 export default function Home() {
   return (
     <main className='relative z-50'>
@@ -91,21 +88,21 @@ export default function Home() {
               </div>
             </InView>
             <div className='relative'>
-              <picture>
-                <source
-                  srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
-                  media='(min-width: 64rem)'
-                />
-                <InView
-                  from={{ opacity: 0 }}
-                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <picture>
+                  <source
+                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
+                    media='(min-width: 64rem)'
+                  />
                   <Image
                     src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
                     alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
                     className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
                   />
-                </InView>
-              </picture>
+                </picture>
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -180,21 +177,21 @@ export default function Home() {
               </div>
             </InView>
             <div className='relative'>
-              <picture>
-                <source
-                  srcSet={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
-                  media='(min-width: 64rem)'
-                />
-                <InView
-                  from={{ opacity: 0 }}
-                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <picture>
+                  <source
+                    srcSet={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
+                    media='(min-width: 64rem)'
+                  />
                   <Image
                     src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
                     alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
                     className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
                   />
-                </InView>
-              </picture>
+                </picture>
+              </InView>
               <ResponsiveSheet>
                 <InView
                   viewOptions={{
@@ -213,98 +210,8 @@ export default function Home() {
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
-                  {PROJECTS.THEPRINCIPAL_BRANDING.CLIENT} -{' '}
-                  {PROJECTS.THEPRINCIPAL_BRANDING.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.THEPRINCIPAL_BRANDING.SUMMARY}
-                </p>
-              </div>
-            </InView>
-            <div className='relative'>
-              <picture>
-                <source
-                  srcSet={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL}
-                  media='(min-width: 64rem)'
-                />
-                <InView
-                  from={{ opacity: 0 }}
-                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                  <Image
-                    src={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.ALT}
-                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </InView>
-              </picture>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
-                </InView>
-                <ThePrincipalContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
-          <ScrollPolygonContainer className='tablet:gap-6 laptop:hidden relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
-                  {PROJECTS.ICEMENE_REBRANDING.CLIENT} - {PROJECTS.ICEMENE_REBRANDING.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.ICEMENE_REBRANDING.SUMMARY}
-                </p>
-              </div>
-            </InView>
-            <div className='relative'>
-              <picture>
-                <source
-                  srcSet={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL}
-                  media='(min-width: 64rem)'
-                />
-                <InView
-                  from={{ opacity: 0 }}
-                  to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                  <Image
-                    src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.ALT}
-                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </InView>
-              </picture>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
-                </InView>
-                <IcemeneContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
         </div>
+
         <Separator className='container mx-auto my-10 w-11/12!' />
       </section>
       <section>
@@ -324,7 +231,7 @@ export default function Home() {
         </div>
         <div
           aria-hidden
-          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-linear-to-b bg-gradient-to-b to-transparent'
+          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-linear-to-b to-transparent'
         />
 
         <div

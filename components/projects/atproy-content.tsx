@@ -64,14 +64,14 @@ export const AtproyContent = () => {
           <Image
             includePlaceholder={false}
             loading='eager'
-            className='h-20 mask-x-from-80% mask-x-to-90% object-cover object-left'
+            className='h-10 mask-x-from-70% mask-x-to-90% object-cover object-left'
             src={project.IMAGES.ABC_WHITE.URL}
             alt={project.IMAGES.ABC_WHITE.ALT}
           />
           <Image
             includePlaceholder={false}
             loading='eager'
-            className='h-20 mask-x-from-80% mask-x-to-90% object-cover object-right'
+            className='h-10 mask-x-from-70% mask-x-to-90% object-cover object-right'
             src={project.IMAGES.ABC_WHITE.URL}
             alt={project.IMAGES.ABC_WHITE.ALT}
           />
@@ -123,9 +123,9 @@ export const AtproyContent = () => {
           />
         </div>
       </div>
-      <div className='tablet:my-12 my-8 origin-center scale-[120%] overflow-hidden'>
+      <div className='tablet:my-12 my-8 origin-center overflow-hidden'>
         <Image
-          className='tablet:h-28 h-20 mask-x-from-80% mask-x-to-90% object-cover object-center'
+          className='h-16 object-contain object-center'
           includePlaceholder={false}
           loading='eager'
           src={project.IMAGES.PATTERN.URL}

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { COMPANY } from '@/lib/constants/company'
+import { IMAGES } from '@/lib/constants/paths'
 import { SITE } from '@/lib/constants/site'
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -14,13 +15,13 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: SITE.BASE_URL,
     icons: [
       {
-        src: SITE.SEO.IMAGES.ICON.MANIFEST.ICO_192,
+        src: IMAGES.BRAND.ICON.MANIFEST.X192.PNG.URL,
         sizes: '192x192',
         type: 'image/png',
         purpose: 'maskable',
       },
       {
-        src: SITE.SEO.IMAGES.ICON.MANIFEST.ICO_512,
+        src: IMAGES.BRAND.ICON.MANIFEST.X512.PNG.URL,
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',

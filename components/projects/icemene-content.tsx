@@ -22,7 +22,7 @@ export const IcemeneContent = () => {
         />
         <Separator className='my-12' />
         <div>
-          <div className='tablet:p-20 border bg-white p-16'>
+          <div className='tablet:p-20 border bg-[#fffcf2] p-16'>
             <Image
               includePlaceholder={false}
               loading='eager'
@@ -41,7 +41,7 @@ export const IcemeneContent = () => {
             />
           </div>
           <div className='flex w-full'>
-            <div className='tablet:p-20 grow border bg-white p-12'>
+            <div className='tablet:p-20 grow border bg-[#fffcf2] p-12'>
               <Image
                 includePlaceholder={false}
                 loading='eager'
@@ -111,13 +111,20 @@ export const IcemeneContent = () => {
           </div>
         </div>
       </div>
-      <div className='flex items-center justify-center py-24'>
+      <div className='flex flex-col items-center justify-center gap-20 py-24'>
         <Image
           includePlaceholder={false}
           loading='eager'
           className='w-1/2'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
           alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+        />
+        <Image
+          includePlaceholder={false}
+          loading='eager'
+          className='w-1/2'
+          src={project.IMAGES.TYPOGRAPHY_2.URL}
+          alt={project.IMAGES.TYPOGRAPHY_2.ALT}
         />
       </div>
       <div className='overflow-hidden pb-16'>
@@ -131,24 +138,24 @@ export const IcemeneContent = () => {
       </div>
       <div className='grid gap-6 overflow-hidden'>
         <Image
-          className='aspect-square object-cover'
-          src={project.IMAGES.SHOPPING_BAG.URL}
-          alt={project.IMAGES.SHOPPING_BAG.ALT}
-        />
-        <Image
-          className='aspect-square object-cover'
-          src={project.IMAGES.PACKAGE.URL}
-          alt={project.IMAGES.PACKAGE.ALT}
-        />
-        <Image
           className='aspect-video object-cover'
           src={project.IMAGES.SIGN.URL}
           alt={project.IMAGES.SIGN.ALT}
         />
         <Image
           className='aspect-square object-cover'
+          src={project.IMAGES.SHOPPING_BAG.URL}
+          alt={project.IMAGES.SHOPPING_BAG.ALT}
+        />
+        <Image
+          className='aspect-square object-cover'
           src={project.IMAGES.BOX.URL}
           alt={project.IMAGES.BOX.ALT}
+        />
+        <Image
+          className='aspect-square object-cover'
+          src={project.IMAGES.PACKAGE.URL}
+          alt={project.IMAGES.PACKAGE.ALT}
         />
       </div>
 

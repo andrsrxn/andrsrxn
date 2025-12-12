@@ -62,7 +62,7 @@ export const BonzerContent = () => {
         />
       </div>
 
-      <div className='bg-[#008997] p-12 pb-28'>
+      <div className='bg-[#008997] p-12'>
         <Image
           includePlaceholder={false}
           loading='eager'
@@ -73,20 +73,33 @@ export const BonzerContent = () => {
       </div>
 
       <div className='tablet:grid-cols-2 grid gap-20 overflow-x-hidden pt-20 pb-4'>
-        <Image
-          includePlaceholder={false}
-          loading='eager'
-          className='tablet:w-full w-2/3'
-          src={project.IMAGES.TYPOGRAPHY_1.URL}
-          alt={project.IMAGES.TYPOGRAPHY_1.ALT}
-        />
-        <Image
-          includePlaceholder={false}
-          loading='eager'
-          className='tablet:w-1/2 w-2/5'
-          src={project.IMAGES.TYPOGRAPHY_2.URL}
-          alt={project.IMAGES.TYPOGRAPHY_2.ALT}
-        />
+        <div className='grid grid-cols-1 grid-rows-2'>
+          <Image
+            includePlaceholder={false}
+            loading='eager'
+            className='tablet:w-full w-2/3'
+            src={project.IMAGES.TYPOGRAPHY_1.URL}
+            alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+          />
+          <p className='text-muted-foreground'>
+            Melodrama es una elección audaz y muy efectiva para el posicionamiento de una marca
+            moderna de cuidado personal, ya que equilibra la elegancia con la personalidad.
+          </p>
+        </div>
+        <div className='grid grid-cols-1 grid-rows-2'>
+          <Image
+            includePlaceholder={false}
+            loading='eager'
+            className='tablet:w-1/2 w-2/5'
+            src={project.IMAGES.TYPOGRAPHY_2.URL}
+            alt={project.IMAGES.TYPOGRAPHY_2.ALT}
+          />
+          <p className='text-muted-foreground'>
+            Inter es una tipografía Sans-Serif moderna, diseñada meticulosamente para ser altamente
+            legible en pantallas. Actúa como el contrapunto técnico y funcional de la personalidad
+            artística de Melodrama.
+          </p>
+        </div>
       </div>
       <Image
         includePlaceholder={false}
@@ -98,20 +111,22 @@ export const BonzerContent = () => {
 
       <div className='grid gap-6'>
         <Image
-          className='aspect-video'
-          src={project.IMAGES.ADS_1.URL}
-          alt={project.IMAGES.ADS_1.ALT}
-        />
-        <Image
-          className='aspect-square'
-          src={project.IMAGES.ADS_2.URL}
-          alt={project.IMAGES.ADS_2.ALT}
-        />
-        <Image
-          className='aspect-square'
+          className='bg-accent'
           src={project.IMAGES.ADS_3.URL}
           alt={project.IMAGES.ADS_3.ALT}
         />
+        <div className='tablet:grid-cols-2 grid gap-6'>
+          <Image
+            className='bg-accent'
+            src={project.IMAGES.ADS_1.URL}
+            alt={project.IMAGES.ADS_1.ALT}
+          />
+          <Image
+            className='bg-accent'
+            src={project.IMAGES.ADS_2.URL}
+            alt={project.IMAGES.ADS_2.ALT}
+          />
+        </div>
       </div>
 
       <Separator className='my-16' />

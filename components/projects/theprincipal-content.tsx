@@ -97,6 +97,11 @@ export const ThePrincipalContent = () => {
       <div className='grid gap-6 overflow-hidden'>
         <Image
           className='aspect-video object-cover'
+          src={project.IMAGES.APP.URL}
+          alt={project.IMAGES.APP.ALT}
+        />
+        <Image
+          className='aspect-video object-cover'
           src={project.IMAGES.LAPTOP_1.URL}
           alt={project.IMAGES.LAPTOP_1.ALT}
         />

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { COMPANY } from '@/lib/constants/company'
+import { IMAGES } from '@/lib/constants/paths'
 import { SITE } from '@/lib/constants/site'
 
 export const baseViewport: Viewport = {
@@ -25,7 +26,7 @@ export const baseMetadata: Metadata = {
     url: '/',
     images: [
       {
-        url: SITE.SEO.IMAGES.BANNER_SOCIAL,
+        url: IMAGES.BRAND.BANNER_SOCIAL.PNG.URL,
         width: 1200,
         height: 630,
         alt: 'Logo de Marca Personal al centro con un gradiente por detrás simulando la superficie de un planeta en un fondo negro',
@@ -39,7 +40,7 @@ export const baseMetadata: Metadata = {
     card: 'summary_large_image',
     title: COMPANY.NAME,
     description: COMPANY.DESCRIPTION,
-    images: [SITE.SEO.IMAGES.BANNER_SOCIAL],
+    images: [IMAGES.BRAND.BANNER_SOCIAL.PNG.URL],
   },
   robots: {
     index: true,
@@ -67,11 +68,11 @@ export const baseMetadata: Metadata = {
   icons: {
     icon: [
       {
-        url: SITE.SEO.IMAGES.ICON.ICO_SVG,
+        url: IMAGES.BRAND.ICON.FAVICON.SVG.URL,
         type: 'image/svg+xml',
         rel: 'icon',
       },
     ],
-    apple: { url: SITE.SEO.IMAGES.ICON.APPLE, sizes: '180x180', type: 'image/png' },
+    apple: { url: IMAGES.BRAND.ICON.APPLE.PNG.URL, sizes: '180x180', type: 'image/png' },
   },
 }

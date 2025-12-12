@@ -140,7 +140,7 @@ export default function Home() {
                   controls={false}
                   loop
                   playsInline
-                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 opacity-95 will-change-[clip-path]'>
+                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 will-change-[clip-path]'>
                   <source
                     src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
                     type='video/mp4'

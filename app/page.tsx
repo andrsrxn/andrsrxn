@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
+import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
@@ -103,20 +104,15 @@ export default function Home() {
                 </picture>
               </InView>
               <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
-                </InView>
-                {/* <AtproyContent /> */}
+                <ResponsiveSheetTrigger>
+                  <Button
+                    className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
+                    variant='secondary'>
+                    Ver proyecto completo <IconPlus />
+                  </Button>
+                </ResponsiveSheetTrigger>
+
+                <AtproyContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>

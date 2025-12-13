@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   experimental: {
     staleTimes: {
-      static: 0,
+      static: 30,
       dynamic: 60,
     },
   },

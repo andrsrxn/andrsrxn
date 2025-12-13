@@ -80,6 +80,51 @@ export default function Home() {
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
                 <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
+                  {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
+                </span>
+                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
+                </p>
+              </div>
+            </InView>
+            <div className='relative'>
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <picture>
+                  <source
+                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
+                    media='(min-width: 64rem)'
+                  />
+                  <Image
+                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
+                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
+                  />
+                </picture>
+              </InView>
+              <ResponsiveSheet>
+                <InView
+                  viewOptions={{
+                    start: 'top 105%',
+                  }}
+                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
+                  <ResponsiveSheetTrigger>
+                    <Button
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
+                      variant='secondary'>
+                      Ver proyecto completo <IconPlus />
+                    </Button>
+                  </ResponsiveSheetTrigger>
+                </InView>
+                <AtproyContent />
+              </ResponsiveSheet>
+            </div>
+          </ScrollPolygonContainer>
+          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
+            <InView>
+              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
                   {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
                 </span>
                 <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
@@ -162,51 +207,6 @@ export default function Home() {
                   </ResponsiveSheetTrigger>
                 </InView>
                 <BonzerContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
-                </p>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView
-                from={{ opacity: 0 }}
-                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
-                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
-                </InView>
-                <AtproyContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>

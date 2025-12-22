@@ -5,10 +5,10 @@ export const PROJECTS = {
   ATPROY_BRAND_REFRESH: {
     SLUG: 'grupo-atproy-actualizacion-de-marca',
     CLIENT: 'Grupo ATProy',
-    INDUSTRY: 'Ingeniería eléctrica y telecomunicación',
+    INDUSTRY: 'Ingeniería eléctrica y telecomunicaciones',
     SUMMARY: 'Actualización de Marca y Desarrollo Web',
     DESCRIPTION: [
-      'Con un trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.',
+      'Con una trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.',
       'Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del sitio web, con el objetivo de facilitar la información de sus servicios y proyectos realizados a lo largo de su historia y un medio de contacto para crecer su experiencia con más clientes.',
     ],
     SERVICES: [
@@ -36,7 +36,7 @@ export const PROJECTS = {
     ],
     DESCRIPTION: [
       'Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.',
-      'Se desarrolló un Sitio Web (Blog) en inglés y español, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, oferecer detalles sobre los servicios y acceso a estudios bíblicos relevantes.',
+      'Se desarrolló un Sitio Web (Blog) en inglés y español, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes.',
     ],
     IMAGES: IMAGES.PROJECTS.ICPSJ,
   },
@@ -66,7 +66,7 @@ export const PROJECTS = {
     SUMMARY: 'Propuesta de Rebranding',
     DESCRIPTION: [
       'Se mejoró la calidad gráfica de ICEMENE, una tienda de joyería y accesorios masculinos, alineando su personalidad con la marca para reflejar la elegancia y calidad que lo caracteriza.',
-      'Por medio del Rebranding se actualiza la estretegia de marca que impulsará sus decisiones a futuro más allá del diseño, tanto digital y en medios físicos.',
+      'Por medio del Rebranding se actualiza la estrategia de marca que impulsará sus decisiones a futuro más allá del diseño, tanto digital y en medios físicos.',
     ],
     SERVICES: [
       SERVICES.BRAND.SUBSERVICES.REBRANDING.TITLE,
@@ -81,9 +81,9 @@ export const PROJECTS = {
     INDUSTRY: 'Blog online',
     SUMMARY: 'Branding y Diseño UI/UX',
     DESCRIPTION: [
-      'ThePrincipal es una plataforma en línea de auto aprendizaje inspirada en la lectura de los periódicos combinada con la interación dinámico de los usuarios en la web.',
+      'ThePrincipal es una plataforma en línea de auto aprendizaje inspirada en la lectura de los periódicos combinada con la interacción dinámica de los usuarios en la web.',
       'El valor del conocimiento online debe estar acompañado de una marca que respalde la experiencia de aprender y descubrir.',
-      'La plataforma inlcuye cursos, artículos, resúmenes de temas relevantes e históricos y herramientas en línea; facilita el seguimiento de los cursos, la publicación automatizada de los temas, búsqueda avanzada por categorías, entre otros, totalmente gratis.',
+      'La plataforma incluye cursos, artículos, resúmenes de temas relevantes e históricos y herramientas en línea; facilita el seguimiento de los cursos, la publicación automatizada de los temas, búsqueda avanzada por categorías, entre otros, totalmente gratis.',
     ],
     SERVICES: [
       SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
@@ -101,7 +101,7 @@ export const PROJECTS = {
     SUMMARY: 'Propuesta de Rebranding',
     DESCRIPTION: [
       'Se creó una nueva oportunidad de crecimiento en el mercado para Solar Group Guatemala con una marca consistente y fácilmente reconocible en todas sus aplicaciones.',
-      'La marca se distingue por medio de la innovación, claridad del mensaje y reconocimiento constante, proporcionandole un mejor posicionamiento en el mercado.',
+      'La marca se distingue por medio de la innovación, claridad del mensaje y reconocimiento constante, proporcionándole un mejor posicionamiento en el mercado.',
       'Se revitalizó su Identidad Visual creando un universo gráfico sólido y coherente que destaque sus servicios junto con su amplia trayectoria, adaptándola a las necesidades modernas de su industria.',
     ],
     SERVICES: [

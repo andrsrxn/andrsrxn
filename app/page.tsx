@@ -248,6 +248,8 @@ export default function Home() {
               Comunícate conmigo por medio del correo: <ObfuscatedEmailLink />, Instagram:{' '}
               <Link
                 className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
+                target='_blank'
+                rel='noopener noreferrer'
                 href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
                 {COMPANY.SOCIAL_MEDIA.INSTAGRAM.USER}
               </Link>{' '}

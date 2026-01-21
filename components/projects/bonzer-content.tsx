@@ -115,18 +115,17 @@ export const BonzerContent = () => {
           src={project.IMAGES.ADS_3.URL}
           alt={project.IMAGES.ADS_3.ALT}
         />
-        <div className='tablet:grid-cols-2 grid gap-6'>
-          <Image
-            className='bg-accent'
-            src={project.IMAGES.ADS_1.URL}
-            alt={project.IMAGES.ADS_1.ALT}
-          />
-          <Image
-            className='bg-accent'
-            src={project.IMAGES.ADS_2.URL}
-            alt={project.IMAGES.ADS_2.ALT}
-          />
-        </div>
+
+        <Image
+          className='bg-accent'
+          src={project.IMAGES.ADS_1.URL}
+          alt={project.IMAGES.ADS_1.ALT}
+        />
+        <Image
+          className='bg-accent'
+          src={project.IMAGES.ADS_2.URL}
+          alt={project.IMAGES.ADS_2.ALT}
+        />
       </div>
 
       <Separator className='my-16' />

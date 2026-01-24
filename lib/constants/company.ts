@@ -5,7 +5,7 @@ export const COMPANY = {
   SERVICES_SUMMARY: 'Branding, Desarrollo Web, Diseño UI/UX y Marketing Digital',
 
   EMAIL_ADDRESSES: {
-    INFO: 'andresraxon.art@gmail.com',
+    INFO: 'info',
   },
   SOCIAL_MEDIA: {
     INSTAGRAM: {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Separator } from '@/components/ui/separator'
 import { COMPANY } from '@/lib/constants/company'
 import { baseMetadata } from '@/lib/constants/metadata'
+import { SITE } from '@/lib/constants/site'
 
 const TITLE = 'Términos y condiciones'
 const DESCRIPTION =
@@ -226,8 +227,8 @@ export default function page() {
           en:{' '}
           <a
             className='text-foreground decoration-1 underline-offset-2'
-            href={`mailto:${COMPANY.EMAIL_ADDRESSES.INFO}`}>
-            {COMPANY.EMAIL_ADDRESSES.INFO}
+            href={`mailto:${COMPANY.EMAIL_ADDRESSES.INFO}@${SITE.DOMAIN}`}>
+            {COMPANY.EMAIL_ADDRESSES.INFO}@{SITE.DOMAIN}
           </a>
         </p>
       </div>

@@ -1,8 +1,8 @@
 export const COMPANY = {
   NAME: 'Andrés Raxón - Director Creativo',
   DESCRIPTION:
-    'Director creativo especializado en Branding, Desarrollo Web, Diseño UI/UX y Marketing Digital. Ayudo a empresas con estrategias creativas, innovación y tecnología.',
-  SERVICES_SUMMARY: 'Branding, Desarrollo Web, Diseño UI/UX y Marketing Digital',
+    'Director creativo especializado en Branding, Desarrollo Web y Marketing. Ayudo a empresas por medio de estrategias creativas que transforman ideas en proyectos únicos.',
+  SERVICES_SUMMARY: 'Branding, Desarrollo Web y Marketing',
 
   EMAIL_ADDRESSES: {
     INFO: 'info',

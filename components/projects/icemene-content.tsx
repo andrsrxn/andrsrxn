@@ -16,7 +16,6 @@ export const IcemeneContent = () => {
       <div>
         <Image
           className='aspect-video'
-          loading='eager'
           src={project.IMAGES.BANNER_COMPARISON.URL}
           alt={project.IMAGES.BANNER_COMPARISON.ALT}
         />
@@ -25,7 +24,6 @@ export const IcemeneContent = () => {
           <div className='tablet:p-20 border bg-[#fffcf2] p-16'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='aspect-video'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
@@ -34,7 +32,6 @@ export const IcemeneContent = () => {
           <div className='tablet:p-20 border p-16'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='aspect-video'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
@@ -44,7 +41,6 @@ export const IcemeneContent = () => {
             <div className='tablet:p-20 grow border bg-[#fffcf2] p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='aspect-square h-40'
                 src={project.IMAGES.SYMBOL.URL}
                 alt={project.IMAGES.SYMBOL.ALT}
@@ -53,7 +49,6 @@ export const IcemeneContent = () => {
             <div className='tablet:p-20 grow border p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='aspect-square h-40'
                 src={project.IMAGES.SYMBOL_ALTERNATIVE.URL}
                 alt={project.IMAGES.SYMBOL_ALTERNATIVE.ALT}
@@ -65,7 +60,6 @@ export const IcemeneContent = () => {
           <div className='bg-[#252422] p-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='w-40'
               src={project.IMAGES.COLOR_1.URL}
               alt={project.IMAGES.COLOR_1.ALT}
@@ -74,7 +68,6 @@ export const IcemeneContent = () => {
           <div className='bg-[#fffcf2] p-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='w-40'
               src={project.IMAGES.COLOR_2.URL}
               alt={project.IMAGES.COLOR_2.ALT}
@@ -84,7 +77,6 @@ export const IcemeneContent = () => {
             <div className='h-full bg-[#cfdbd5] p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='w-40 object-cover'
                 src={project.IMAGES.COLOR_3.URL}
                 alt={project.IMAGES.COLOR_3.ALT}
@@ -93,7 +85,6 @@ export const IcemeneContent = () => {
             <div className='h-full bg-[#e8eddf] p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='w-40 object-cover'
                 src={project.IMAGES.COLOR_4.URL}
                 alt={project.IMAGES.COLOR_4.ALT}
@@ -102,7 +93,6 @@ export const IcemeneContent = () => {
             <div className='h-full bg-[#f5cb5c] p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='w-40 object-cover'
                 src={project.IMAGES.COLOR_5.URL}
                 alt={project.IMAGES.COLOR_5.ALT}
@@ -114,14 +104,12 @@ export const IcemeneContent = () => {
       <div className='flex flex-col items-center justify-center gap-20 py-24'>
         <Image
           includePlaceholder={false}
-          loading='eager'
           className='w-1/2'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
           alt={project.IMAGES.TYPOGRAPHY_1.ALT}
         />
         <Image
           includePlaceholder={false}
-          loading='eager'
           className='w-1/2'
           src={project.IMAGES.TYPOGRAPHY_2.URL}
           alt={project.IMAGES.TYPOGRAPHY_2.ALT}
@@ -130,7 +118,6 @@ export const IcemeneContent = () => {
       <div className='overflow-hidden pb-16'>
         <Image
           includePlaceholder={false}
-          loading='eager'
           className='h-30 object-cover'
           src={project.IMAGES.PATTERN.URL}
           alt={project.IMAGES.PATTERN.ALT}

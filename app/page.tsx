@@ -34,7 +34,7 @@ export default function Home() {
             <source srcSet={IMAGES.BRAND.GRADIENT_WIDE.WEBP.URL} media='(min-width: 64rem)' />
 
             <Image
-              loading='eager'
+              loading='lazy'
               fetchPriority='high'
               decoding='sync'
               src={IMAGES.BRAND.GRADIENT.WEBP.URL}
@@ -120,6 +120,7 @@ export default function Home() {
                   <Image
                     src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
                     alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
+                    loading='eager'
                     className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
                   />
                 </picture>
@@ -161,6 +162,7 @@ export default function Home() {
                   <Image
                     src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
                     alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
+                    loading='eager'
                     className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
                   />
                 </picture>
@@ -202,7 +204,7 @@ export default function Home() {
                   controls={false}
                   loop
                   playsInline
-                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 will-change-[clip-path]'>
+                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover will-change-[clip-path]'>
                   <source
                     src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
                     type='video/mp4'

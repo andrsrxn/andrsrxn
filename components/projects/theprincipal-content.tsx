@@ -18,7 +18,6 @@ export const ThePrincipalContent = () => {
           <div className='tablet:p-16 border bg-white px-8 py-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='w-full'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
@@ -27,7 +26,6 @@ export const ThePrincipalContent = () => {
           <div className='tablet:p-16 border px-8 py-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='w-full'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
@@ -37,7 +35,6 @@ export const ThePrincipalContent = () => {
             <div className='tablet:p-12 grow border p-8'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='aspect-square'
                 src={project.IMAGES.SYMBOL.URL}
                 alt={project.IMAGES.SYMBOL.ALT}
@@ -46,7 +43,6 @@ export const ThePrincipalContent = () => {
             <div className='tablet:p-12 grow border p-8'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='aspect-square'
                 src={project.IMAGES.SYMBOL_NEGATIVE.URL}
                 alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
@@ -55,7 +51,6 @@ export const ThePrincipalContent = () => {
             <div className='tablet:p-12 grow border bg-white p-8'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='aspect-square'
                 src={project.IMAGES.SYMBOL_POSITIVE.URL}
                 alt={project.IMAGES.SYMBOL_POSITIVE.ALT}
@@ -66,7 +61,6 @@ export const ThePrincipalContent = () => {
         <div className='mt-12'>
           <div className='bg-[#00aa72] p-12 pb-30'>
             <Image
-              loading='eager'
               includePlaceholder={false}
               className='tablet:w-1/3 w-1/2'
               src={project.IMAGES.COLOR_1.URL}
@@ -79,7 +73,6 @@ export const ThePrincipalContent = () => {
         <Image
           includePlaceholder={false}
           className='w-full'
-          loading='eager'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
           alt={project.IMAGES.TYPOGRAPHY_1.ALT}
         />
@@ -88,7 +81,6 @@ export const ThePrincipalContent = () => {
       <div className='py-20'>
         <Image
           includePlaceholder={false}
-          loading='eager'
           src={project.IMAGES.DOODLE.URL}
           alt={project.IMAGES.DOODLE.ALT}
         />

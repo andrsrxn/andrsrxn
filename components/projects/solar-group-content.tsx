@@ -25,7 +25,6 @@ export const SolarGroupContent = () => {
           <div className='tablet:p-20 border p-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='tablet:h-60 h-32'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
               alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
@@ -34,7 +33,6 @@ export const SolarGroupContent = () => {
           <div className='tablet:p-20 border bg-white p-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='tablet:h-60 h-32'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
@@ -44,7 +42,6 @@ export const SolarGroupContent = () => {
             <div className='border p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='h-32'
                 src={project.IMAGES.LOGO_NEGATIVE.URL}
                 alt={project.IMAGES.LOGO_NEGATIVE.ALT}
@@ -53,7 +50,6 @@ export const SolarGroupContent = () => {
             <div className='border bg-white p-12'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='h-32'
                 src={project.IMAGES.LOGO_POSITIVE.URL}
                 alt={project.IMAGES.LOGO_POSITIVE.ALT}
@@ -72,7 +68,6 @@ export const SolarGroupContent = () => {
         <div className='bg-[#f16c00] px-12 py-16'>
           <Image
             includePlaceholder={false}
-            loading='eager'
             className='w-48'
             src={project.IMAGES.COLOR_1.URL}
             alt={project.IMAGES.COLOR_1.ALT}
@@ -81,14 +76,12 @@ export const SolarGroupContent = () => {
         <div className='bg-accent px-12 py-20'>
           <Image
             includePlaceholder={false}
-            loading='eager'
             className='w-80'
             src={project.IMAGES.TYPOGRAPHY_1.URL}
             alt={project.IMAGES.TYPOGRAPHY_1.ALT}
           />
           <Image
             includePlaceholder={false}
-            loading='eager'
             className='mt-12'
             src={project.IMAGES.ABC.URL}
             alt={project.IMAGES.ABC.ALT}

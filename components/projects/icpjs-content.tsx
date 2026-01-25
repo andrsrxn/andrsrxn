@@ -29,7 +29,6 @@ export const IcpjsContent = () => {
           <div className='bg-[#ff5300] p-8 pb-40'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='h-32 w-auto'
               src={project.IMAGES.COLOR_1.URL}
               alt={project.IMAGES.COLOR_1.ALT}
@@ -37,7 +36,6 @@ export const IcpjsContent = () => {
           </div>
           <Image
             includePlaceholder={false}
-            loading='eager'
             className='object-cover'
             src={project.IMAGES.PALETTE_1.URL}
             alt={project.IMAGES.PALETTE_1.ALT}
@@ -48,7 +46,6 @@ export const IcpjsContent = () => {
             <div className='bg-[#c70017] p-8 pb-20'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='h-32 w-auto'
                 src={project.IMAGES.COLOR_2.URL}
                 alt={project.IMAGES.COLOR_2.ALT}
@@ -56,7 +53,6 @@ export const IcpjsContent = () => {
             </div>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='object-cover'
               src={project.IMAGES.PALETTE_2.URL}
               alt={project.IMAGES.PALETTE_2.ALT}
@@ -66,7 +62,6 @@ export const IcpjsContent = () => {
             <div className='bg-[#fbd823] p-8 pb-20'>
               <Image
                 includePlaceholder={false}
-                loading='eager'
                 className='h-32 w-auto'
                 src={project.IMAGES.COLOR_3.URL}
                 alt={project.IMAGES.COLOR_3.ALT}
@@ -74,7 +69,6 @@ export const IcpjsContent = () => {
             </div>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='object-cover'
               src={project.IMAGES.PALETTE_3.URL}
               alt={project.IMAGES.PALETTE_3.ALT}
@@ -85,14 +79,12 @@ export const IcpjsContent = () => {
       <div className='grid gap-22 overflow-x-hidden py-22 pb-2'>
         <Image
           includePlaceholder={false}
-          loading='eager'
           className='w-4/5 max-w-sm'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
           alt={project.IMAGES.TYPOGRAPHY_1.ALT}
         />
         <Image
           includePlaceholder={false}
-          loading='eager'
           className='w-4/5 max-w-sm'
           src={project.IMAGES.TYPOGRAPHY_2.URL}
           alt={project.IMAGES.TYPOGRAPHY_2.ALT}
@@ -104,7 +96,6 @@ export const IcpjsContent = () => {
         <div className='tablet:p-20 flex items-center justify-center border p-12'>
           <Image
             includePlaceholder={false}
-            loading='eager'
             className='tablet:h-auto h-40'
             src={project.IMAGES.SYMBOL.URL}
             alt={project.IMAGES.SYMBOL.ALT}
@@ -114,7 +105,6 @@ export const IcpjsContent = () => {
           <div className='bg-accent tablet:p-20 flex h-1/2 items-center justify-center border p-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='tablet:h-auto h-40'
               src={project.IMAGES.SYMBOL_NEGATIVE.URL}
               alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
@@ -123,7 +113,6 @@ export const IcpjsContent = () => {
           <div className='tablet:p-20 flex h-1/2 items-center justify-center border bg-white p-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='tablet:h-auto h-40'
               src={project.IMAGES.SYMBOL_POSITIVE.URL}
               alt={project.IMAGES.SYMBOL_POSITIVE.ALT}
@@ -136,7 +125,6 @@ export const IcpjsContent = () => {
           <div className='tablet:p-18 border px-8 py-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='h-auto'
               src={project.IMAGES.LOGO_INVERTED.URL}
               alt={project.IMAGES.LOGO_INVERTED.ALT}
@@ -145,7 +133,6 @@ export const IcpjsContent = () => {
           <div className='tablet:p-18 border bg-white px-8 py-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               src={project.IMAGES.LOGO.URL}
               alt={project.IMAGES.LOGO.ALT}
             />
@@ -155,7 +142,6 @@ export const IcpjsContent = () => {
           <div className='bg-accent border px-8 py-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='h-auto'
               src={project.IMAGES.LOGO_NEGATIVE.URL}
               alt={project.IMAGES.LOGO_NEGATIVE.ALT}
@@ -164,7 +150,6 @@ export const IcpjsContent = () => {
           <div className='border bg-white px-8 py-12'>
             <Image
               includePlaceholder={false}
-              loading='eager'
               className='h-auto'
               src={project.IMAGES.LOGO_POSITIVE.URL}
               alt={project.IMAGES.LOGO_POSITIVE.ALT}

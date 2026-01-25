@@ -5,6 +5,7 @@ export const COMPANY = {
   SERVICES_SUMMARY: 'Branding, Desarrollo Web y Marketing',
 
   EMAIL_ADDRESSES: {
+    VERIFIED_SENDING: 'updates',
     INFO: 'info',
   },
   SOCIAL_MEDIA: {

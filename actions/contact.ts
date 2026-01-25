@@ -6,6 +6,8 @@ import type { z } from 'zod'
 import { ContactEmailTemplate } from '@/components/email/contact-email'
 import { emailClient } from '@/lib/config/email'
 import { isProductionEnv } from '@/lib/config/env'
+import { COMPANY } from '@/lib/constants/company'
+import { SITE } from '@/lib/constants/site'
 import { getUserAgent } from '@/lib/headers'
 import { contactSchema } from '@/lib/schemas/contact-schema'
 import type { GeolocationAPIResponse } from '@/lib/types/geo'
@@ -70,10 +72,12 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
     }
 
     const { error } = await emailClient.emails.send({
-      // from: `${fullName} <${isProductionEnv() ? email : 'onboarding@resend.dev'}>`,
-      from: `${fullName} <onboarding@resend.dev>`,
-      // to: isProductionEnv() ? COMPANY.EMAIL_ADDRESES.SALES : 'carlosraxon019@gmail.com',
-      to: 'andresraxon.art@gmail.com',
+      from: `${fullName} <${isProductionEnv() ? `web@${COMPANY.EMAIL_ADDRESSES.VERIFIED_SENDING}.${SITE.DOMAIN}` : 'onboarding@resend.dev'}>`,
+
+      to: isProductionEnv()
+        ? `${COMPANY.EMAIL_ADDRESSES.INFO}@${SITE.DOMAIN}`
+        : 'andresraxon.art@gmail.com',
+
       subject: 'Contacto web para cotización',
       react: ContactEmailTemplate({
         ip,

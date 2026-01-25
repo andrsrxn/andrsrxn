@@ -1,6 +1,6 @@
 import './globals.css'
-import { Analytics } from '@vercel/analytics/next'
 import Link from 'next/link'
+import Script from 'next/script'
 import type { ReactNode } from 'react'
 import { preconnect, preload } from 'react-dom'
 import { LenisScroll } from '@/components/animated/lenis'
@@ -100,7 +100,11 @@ export default function RootLayout({
         <JsonLd schema={PERSON_SCHEMA} />
         <JsonLd schema={SERVICES_SCHEMA} />
 
-        <Analytics />
+        <Script
+          src='https://analytics.ahrefs.com/analytics.js'
+          data-key='JLiv06hF0KF2FleRJzZcWA'
+          strategy='afterInteractive'
+        />
       </body>
     </html>
   )

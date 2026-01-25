@@ -79,10 +79,7 @@ export default function Home() {
                   'bg-[conic-gradient(from_90deg_at_50%_50%,#e300bf_0%,#0f00d3_50%,#e300bf_100%)]'
                 )}
               />
-              <Button
-                asChild
-                size='icon'
-                className='display:h-10 display:px-8 display:text-base relative'>
+              <Button asChild size='icon' className='relative h-10 px-8'>
                 <Link
                   target='_blank'
                   title={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}

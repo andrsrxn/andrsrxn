@@ -1,4 +1,5 @@
-import { IconPlus } from '@tabler/icons-react'
+/** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: <explanation> */
+import { IconBrandWhatsapp, IconPlus } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
@@ -55,20 +56,43 @@ export default function Home() {
           <p className='text-muted-foreground display:text-xl laptop:text-base text-sm leading-none!'>
             Obtén 10% de descuento en tu primera contratación
           </p>
-          <div className='relative mt-2 overflow-hidden rounded-full p-[2px]'>
-            <span
-              className={cn(
-                'absolute inset-0 scale-[500%] animate-[spin_2s_linear_infinite]',
-                'bg-[conic-gradient(from_90deg_at_50%_50%,#e300bf_0%,#0f00d3_50%,#e300bf_100%)]'
-              )}
-            />
+          <div className='mt-2 flex flex-wrap items-center gap-2'>
+            <div className='relative overflow-hidden rounded-full p-[2px]'>
+              <span
+                className={cn(
+                  'absolute inset-0 scale-[500%] animate-[spin_2s_linear_infinite]',
+                  'bg-[conic-gradient(from_90deg_at_50%_50%,#e300bf_0%,#0f00d3_50%,#e300bf_100%)]'
+                )}
+              />
 
-            <Button
-              asChild
-              size='lg'
-              className='display:h-10 display:px-8 display:text-base relative max-w-fit'>
-              <Link href='#contacto'>Contratar Servicios</Link>
-            </Button>
+              <Button
+                asChild
+                size='lg'
+                className='display:h-10 display:px-8 display:text-base relative max-w-fit'>
+                <Link href='#contacto'>Contratar Servicios</Link>
+              </Button>
+            </div>
+            <div className='relative w-max shrink-0 overflow-hidden rounded-full p-[2px]'>
+              <span
+                className={cn(
+                  'absolute inset-0 scale-[500%] animate-[spin_2s_linear_infinite]',
+                  'bg-[conic-gradient(from_90deg_at_50%_50%,#e300bf_0%,#0f00d3_50%,#e300bf_100%)]'
+                )}
+              />
+              <Button
+                asChild
+                size='icon'
+                className='display:h-10 display:px-8 display:text-base relative'>
+                <Link
+                  target='_blank'
+                  title={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
+                  aria-label={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
+                  rel='noopener noreferrer'
+                  href={COMPANY.SOCIAL_MEDIA.WHATSAPP.URL}>
+                  <IconBrandWhatsapp className='size-6' />{' '}
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
         <ServicesCarousel />
@@ -116,50 +140,7 @@ export default function Home() {
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
-                  {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.ICPSJ_BRANDING.SUMMARY}
-                </p>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView>
-                <video
-                  autoPlay
-                  muted
-                  controls={false}
-                  loop
-                  playsInline
-                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 will-change-[clip-path]'>
-                  <source
-                    src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
-                    type='video/mp4'
-                  />
-                </video>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
-                </InView>
-                <IcpjsContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
+
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
@@ -205,6 +186,50 @@ export default function Home() {
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
+          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
+            <InView>
+              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
+                  {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
+                </span>
+                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  {PROJECTS.ICPSJ_BRANDING.SUMMARY}
+                </p>
+              </div>
+            </InView>
+            <div className='relative'>
+              <InView>
+                <video
+                  autoPlay
+                  muted
+                  controls={false}
+                  loop
+                  playsInline
+                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover p-0.5 will-change-[clip-path]'>
+                  <source
+                    src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
+                    type='video/mp4'
+                  />
+                </video>
+              </InView>
+              <ResponsiveSheet>
+                <InView
+                  viewOptions={{
+                    start: 'top 105%',
+                  }}
+                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
+                  <ResponsiveSheetTrigger>
+                    <Button
+                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
+                      variant='secondary'>
+                      Ver proyecto completo <IconPlus />
+                    </Button>
+                  </ResponsiveSheetTrigger>
+                </InView>
+                <IcpjsContent />
+              </ResponsiveSheet>
+            </div>
+          </ScrollPolygonContainer>
         </div>
 
         <Separator className='container mx-auto my-10 w-11/12!' />
@@ -245,13 +270,21 @@ export default function Home() {
         <div>
           <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
             <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
-              Comunícate conmigo por medio del correo: <ObfuscatedEmailLink />, Instagram:{' '}
+              Comunícate conmigo por medio de: <ObfuscatedEmailLink />,{' '}
               <Link
                 className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
                 target='_blank'
                 rel='noopener noreferrer'
                 href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
-                {COMPANY.SOCIAL_MEDIA.INSTAGRAM.USER}
+                {COMPANY.SOCIAL_MEDIA.INSTAGRAM.LABEL}
+              </Link>
+              ,{' '}
+              <Link
+                className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
+                target='_blank'
+                rel='noopener noreferrer'
+                href={COMPANY.SOCIAL_MEDIA.WHATSAPP.URL}>
+                {COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
               </Link>{' '}
               o llenando el siguiente formulario.
             </p>

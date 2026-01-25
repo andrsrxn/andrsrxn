@@ -13,6 +13,11 @@ export const COMPANY = {
       USER: '@andrsrxn',
       URL: 'https://www.instagram.com/andrsrxn',
     },
+    WHATSAPP: {
+      LABEL: 'WhatsApp',
+      USER: 'andrsrxn',
+      URL: 'https://wa.me/message/SZWJ4FNBEJHID1',
+    },
   },
   ADDRESS: {
     LOCALITY: 'Mixco',

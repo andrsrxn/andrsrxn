@@ -3,10 +3,12 @@ import { isProductionEnv } from '@/lib/config/env'
 
 export default function proxy(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
-  let scriptSrc = "'self' 'unsafe-inline' https://va.vercel-scripts.com"
+  let scriptSrc =
+    "'self' 'unsafe-inline' https://va.vercel-scripts.com https://static.cloudflareinsights.com"
   const imgSrc = "'self' blob: data: https://res.cloudinary.com"
   let workerSrc = "'self'"
-  const connectSrc = "'self' https://va.vercel-scripts.com https://res.cloudinary.com"
+  const connectSrc =
+    "'self' https://va.vercel-scripts.com https://res.cloudinary.com https://static.cloudflareinsights.com"
 
   if (!isProductionEnv()) {
     scriptSrc += " 'unsafe-eval'"

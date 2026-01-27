@@ -94,7 +94,7 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchemaWit
       from: `${fullName} <${isProductionEnv() ? `web@${COMPANY.EMAIL_ADDRESSES.VERIFIED_SENDING}.${SITE.DOMAIN}` : 'onboarding@resend.dev'}>`,
 
       to: isProductionEnv()
-        ? `${COMPANY.EMAIL_ADDRESSES.INFO}@${SITE.DOMAIN}`
+        ? `${COMPANY.EMAIL_ADDRESSES.VERIFIED_RECEIVING}@${SITE.DOMAIN}`
         : 'andresraxon.art@gmail.com',
 
       subject: 'Contacto web para cotización',

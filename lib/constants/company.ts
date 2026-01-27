@@ -6,6 +6,7 @@ export const COMPANY = {
 
   EMAIL_ADDRESSES: {
     VERIFIED_SENDING: 'updates',
+    VERIFIED_RECEIVING: 'web',
     INFO: 'info',
   },
   SOCIAL_MEDIA: {

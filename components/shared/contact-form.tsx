@@ -251,7 +251,7 @@ export const ContactForm = () => {
           )}
         />
 
-        <Button type='submit' className='mt-2 rounded-none' size='lg' disabled={pending}>
+        <Button type='submit' className='rounded-none' size='lg' disabled={pending}>
           {pending ? 'Enviando...' : 'Contactar'}
         </Button>
       </form>

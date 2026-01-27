@@ -1,6 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import { resetTurnstile, Turnstile } from 'nextjs-turnstile'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
@@ -24,8 +25,9 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/sonner'
 import { Textarea } from '@/components/ui/textarea'
+import { envClient } from '@/lib/config/env.client'
 import { SERVICES } from '@/lib/constants/services'
-import { contactSchema } from '@/lib/schemas/contact-schema'
+import { contactSchemaWithBotTurnstile } from '@/lib/schemas/contact-schema'
 import { cn } from '@/lib/utils'
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
@@ -33,19 +35,20 @@ export const ContactForm = () => {
   const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
   const [pending, startTransition] = useTransition()
 
-  const form = useForm<z.infer<typeof contactSchema>>({
-    resolver: zodResolver(contactSchema),
+  const form = useForm<z.infer<typeof contactSchemaWithBotTurnstile>>({
+    resolver: zodResolver(contactSchemaWithBotTurnstile),
     defaultValues: {
-      email: '',
-      fullName: '',
+      CFTurnstileToken: '',
+      email: 'carlos@carlos.com',
+      fullName: 'Carlos',
       comments: '',
-      services: [],
-      clientType: undefined,
+      services: ['Branding'],
+      clientType: 'Freelancer',
     },
     shouldFocusError: true,
   })
 
-  function onSubmit(values: z.infer<typeof contactSchema>) {
+  function onSubmit(values: z.infer<typeof contactSchemaWithBotTurnstile>) {
     startTransition(async () => {
       try {
         const response = await SendContactMessage(values)
@@ -54,6 +57,7 @@ export const ContactForm = () => {
             description: response.description,
           })
           form.reset()
+          resetTurnstile()
 
           return
         }
@@ -217,6 +221,28 @@ export const ContactForm = () => {
                   disabled={pending}
                   placeholder='Detalles del proyecto, servicios en específico, necesidades de la marca, información relevante, etc...'
                   {...field}
+                />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name='CFTurnstileToken'
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Turnstile
+                  theme='dark'
+                  siteKey={envClient.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                  appearance='interaction-only'
+                  style={{}}
+                  onSuccess={token => field.onChange(token)}
+                  onError={() => field.onChange('')}
+                  onExpire={() => field.onChange('')}
                 />
               </FormControl>
 

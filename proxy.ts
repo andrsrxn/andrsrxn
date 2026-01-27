@@ -4,11 +4,12 @@ import { isProductionEnv } from '@/lib/config/env'
 export default function proxy(request: NextRequest) {
   const styleSrc = "'self' 'unsafe-inline'"
   let scriptSrc =
-    "'self' 'unsafe-inline' https://va.vercel-scripts.com https://static.cloudflareinsights.com"
+    "'self' 'unsafe-inline' https://challenges.cloudflare.com https://va.vercel-scripts.com https://static.cloudflareinsights.com"
   const imgSrc = "'self' blob: data: https://res.cloudinary.com"
   let workerSrc = "'self'"
   const connectSrc =
-    "'self' https://va.vercel-scripts.com https://res.cloudinary.com https://static.cloudflareinsights.com"
+    "'self' https://challenges.cloudflare.com https://va.vercel-scripts.com https://res.cloudinary.com https://static.cloudflareinsights.com"
+  const frameSrc = "'self' https://challenges.cloudflare.com"
 
   if (!isProductionEnv()) {
     scriptSrc += " 'unsafe-eval'"
@@ -20,6 +21,7 @@ export default function proxy(request: NextRequest) {
     `script-src ${scriptSrc}`,
     `style-src ${styleSrc}`,
     "object-src 'none'",
+    `frame-src ${frameSrc}`,
     `img-src ${imgSrc}`,
     'media-src https://res.cloudinary.com',
     "font-src 'self'",

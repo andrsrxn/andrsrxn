@@ -65,6 +65,7 @@ export default function RootLayout({
             <ul className='flex w-full items-center justify-center gap-4'>
               <li>
                 <Link
+                  prefetch={false}
                   className='text-sm underline decoration-1 underline-offset-2'
                   href='/politica-de-privacidad'>
                   Privacidad
@@ -72,6 +73,7 @@ export default function RootLayout({
               </li>
               <li>
                 <Link
+                  prefetch={false}
                   className='text-sm underline decoration-1 underline-offset-2'
                   href='/terminos-y-condiciones'>
                   Términos de uso

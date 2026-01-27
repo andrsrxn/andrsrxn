@@ -81,6 +81,7 @@ export default function Home() {
               />
               <Button asChild size='icon' className='relative h-10 px-8'>
                 <Link
+                  prefetch={false}
                   target='_blank'
                   title={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
                   aria-label={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
@@ -271,6 +272,7 @@ export default function Home() {
             <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
               Comunícate conmigo por medio de: <ObfuscatedEmailLink />,{' '}
               <Link
+                prefetch={false}
                 className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -279,6 +281,7 @@ export default function Home() {
               </Link>
               ,{' '}
               <Link
+                prefetch={false}
                 className='text-foreground inline-flex items-center gap-2 leading-none font-bold underline decoration-1 underline-offset-2'
                 target='_blank'
                 rel='noopener noreferrer'

@@ -217,6 +217,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
       <InView>
         <div className='desktop:mt-24 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
           <Link
+            prefetch={false}
             className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-1 rounded-full bg-neutral-900 px-6 py-3 text-base leading-none font-bold transition duration-75 hover:bg-neutral-800'
             target='_blank'
             rel='noopener noreferrer'

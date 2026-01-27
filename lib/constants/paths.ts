@@ -375,11 +375,11 @@ export const IMAGES = {
     THEPRINCIPAL: {
       BANNER_SMALL: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561705/banner-small_jl2ekr.webp',
-        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el slogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imágenes de estudiantes.',
+        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el eslogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imágenes de estudiantes.',
       },
       BANNER: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561704/banner_oxagvg.webp',
-        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el slogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imágenes de estudiantes.',
+        ALT: 'Logo de ThePrincipal en la parte superior izquierda con el eslogan "¿Qué deseas aprender hoy?" y en la parte inferior derecha dos imágenes de estudiantes.',
       },
       BANNER_COMPARISON: null,
       LOGO: {

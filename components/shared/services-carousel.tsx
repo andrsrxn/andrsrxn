@@ -86,7 +86,7 @@ export function ServicesCarousel() {
                 <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
                   {service.TITLE}
                 </h2>
-                <ul className='grid gap-1 pl-4' role='list'>
+                <ul className='grid gap-1 pl-4'>
                   {Object.values(service.SUBSERVICES).map(subService => (
                     <li
                       className='desktop:text-lg list-disc text-base leading-normal marker:text-neutral-600'

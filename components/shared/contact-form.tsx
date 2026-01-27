@@ -39,11 +39,11 @@ export const ContactForm = () => {
     resolver: zodResolver(contactSchemaWithBotTurnstile),
     defaultValues: {
       CFTurnstileToken: '',
-      email: 'carlos@carlos.com',
-      fullName: 'Carlos',
+      email: '',
+      fullName: '',
       comments: '',
-      services: ['Branding'],
-      clientType: 'Freelancer',
+      services: [],
+      clientType: undefined,
     },
     shouldFocusError: true,
   })
@@ -251,7 +251,7 @@ export const ContactForm = () => {
           )}
         />
 
-        <Button type='submit' className='mt-4 rounded-none' size='lg' disabled={pending}>
+        <Button type='submit' className='mt-2 rounded-none' size='lg' disabled={pending}>
           {pending ? 'Enviando...' : 'Contactar'}
         </Button>
       </form>

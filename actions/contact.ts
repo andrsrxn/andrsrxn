@@ -14,11 +14,13 @@ import type { GeolocationAPIResponse } from '@/lib/types/geo'
 
 const REGEX_IP = /, /
 
+// biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const SendContactMessage = async (values: z.infer<typeof contactSchema>) => {
   try {
     const verification = await checkBotId()
 
     if (verification.isBot) {
+      console.error('Bot detected', verification)
       return {
         success: false,
         message: 'Acceso denegado',
@@ -28,6 +30,7 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
 
     const validatedValues = contactSchema.safeParse(values)
     if (!validatedValues.success) {
+      console.error('Invalid values', validatedValues.error)
       return {
         success: false,
         message: 'Mensaje enviado con éxito',
@@ -45,6 +48,7 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
     const userAgent = await getUserAgent()
 
     if (ip === undefined || userAgent === null) {
+      console.error('Invalid ip or user agent', 'ip:', ip, 'userAgent:', userAgent)
       return {
         success: false,
         message: 'Dispositivo no aceptado',
@@ -53,6 +57,7 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
     }
     const res = await fetch(`https://api.ipquery.io/${ip}?format=json`)
     if (!res.ok) {
+      console.error('Invalid ip validation', 'ip:', ip)
       return {
         success: false,
         message: 'Dispositivo no aceptado',
@@ -64,6 +69,17 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
     }: GeolocationAPIResponse = await res.json()
 
     if (country === '' || city === '' || state === '') {
+      console.error(
+        'Invalid geolocation',
+        'ip:',
+        ip,
+        'country:',
+        country,
+        'city:',
+        city,
+        'state:',
+        state
+      )
       return {
         success: false,
         message: 'Dispositivo no aceptado',

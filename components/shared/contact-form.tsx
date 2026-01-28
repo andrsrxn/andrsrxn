@@ -1,7 +1,6 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { resetTurnstile, Turnstile } from 'nextjs-turnstile'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
@@ -25,9 +24,8 @@ import {
 import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/sonner'
 import { Textarea } from '@/components/ui/textarea'
-import { envClient } from '@/lib/config/env.client'
 import { SERVICES } from '@/lib/constants/services'
-import { contactSchemaWithBotTurnstile } from '@/lib/schemas/contact-schema'
+import { contactSchema } from '@/lib/schemas/contact-schema'
 import { cn } from '@/lib/utils'
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
@@ -35,10 +33,9 @@ export const ContactForm = () => {
   const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
   const [pending, startTransition] = useTransition()
 
-  const form = useForm<z.infer<typeof contactSchemaWithBotTurnstile>>({
-    resolver: zodResolver(contactSchemaWithBotTurnstile),
+  const form = useForm<z.infer<typeof contactSchema>>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
-      CFTurnstileToken: '',
       email: '',
       fullName: '',
       comments: '',
@@ -48,7 +45,7 @@ export const ContactForm = () => {
     shouldFocusError: true,
   })
 
-  function onSubmit(values: z.infer<typeof contactSchemaWithBotTurnstile>) {
+  function onSubmit(values: z.infer<typeof contactSchema>) {
     startTransition(async () => {
       try {
         const response = await SendContactMessage(values)
@@ -57,7 +54,6 @@ export const ContactForm = () => {
             description: response.description,
           })
           form.reset()
-          resetTurnstile()
 
           return
         }
@@ -229,29 +225,7 @@ export const ContactForm = () => {
           )}
         />
 
-        <FormField
-          control={form.control}
-          name='CFTurnstileToken'
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Turnstile
-                  theme='dark'
-                  siteKey={envClient.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-                  appearance='interaction-only'
-                  style={{}}
-                  onSuccess={token => field.onChange(token)}
-                  onError={() => field.onChange('')}
-                  onExpire={() => field.onChange('')}
-                />
-              </FormControl>
-
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <Button type='submit' className='rounded-none' size='lg' disabled={pending}>
+        <Button type='submit' className='mt-4 rounded-none' size='lg' disabled={pending}>
           {pending ? 'Enviando...' : 'Contactar'}
         </Button>
       </form>

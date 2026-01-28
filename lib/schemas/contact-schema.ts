@@ -4,8 +4,6 @@ import type { Service } from '@/lib/types/services'
 
 const services = Object.values(SERVICES).map(service => service.TITLE) as [Service, ...Service[]]
 
-const CFTurnstileToken = z.string().min(1, { message: 'Valida que no seas un robot' })
-
 const REGEX_EMAIL_TAGS = /(^[^+]+)@/
 export const contactSchema = z.object({
   clientType: z.enum(['Freelancer', 'Empresa'], {
@@ -25,8 +23,4 @@ export const contactSchema = z.object({
     .string({ message: 'Tipo no aceptado', invalid_type_error: 'Tipo no aceptado' })
     .max(500, { message: 'Máximo de 500 characteres' })
     .optional(),
-})
-
-export const contactSchemaWithBotTurnstile = contactSchema.extend({
-  CFTurnstileToken,
 })

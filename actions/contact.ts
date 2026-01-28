@@ -1,29 +1,26 @@
 'use server'
 
+import { checkBotId } from 'botid/server'
 import { headers } from 'next/headers'
-import { verifyTurnstile } from 'nextjs-turnstile'
 import type { z } from 'zod'
 import { ContactEmailTemplate } from '@/components/email/contact-email'
 import { emailClient } from '@/lib/config/email'
-import { env, isProductionEnv } from '@/lib/config/env'
+import { isProductionEnv } from '@/lib/config/env'
 import { COMPANY } from '@/lib/constants/company'
 import { SITE } from '@/lib/constants/site'
 import { getUserAgent } from '@/lib/headers'
-import { contactSchemaWithBotTurnstile } from '@/lib/schemas/contact-schema'
+import { contactSchema } from '@/lib/schemas/contact-schema'
 import type { GeolocationAPIResponse } from '@/lib/types/geo'
 
 const REGEX_IP = /, /
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
-export const SendContactMessage = async (values: z.infer<typeof contactSchemaWithBotTurnstile>) => {
-  console.log('CLOUDFLARE SERVER: ', values.CFTurnstileToken)
+export const SendContactMessage = async (values: z.infer<typeof contactSchema>) => {
   try {
-    const isHuman = await verifyTurnstile(values.CFTurnstileToken, {
-      secretKey: env.TURNSTILE_SECRET_KEY,
-    })
+    const verification = await checkBotId()
 
-    if (!isHuman) {
-      console.error('Bot detected', isHuman)
+    if (verification.isBot) {
+      console.error('Bot detected', verification)
       return {
         success: false,
         message: 'Acceso denegado',
@@ -31,7 +28,7 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchemaWit
       }
     }
 
-    const validatedValues = contactSchemaWithBotTurnstile.safeParse(values)
+    const validatedValues = contactSchema.safeParse(values)
     if (!validatedValues.success) {
       console.error('Invalid values', validatedValues.error)
       return {

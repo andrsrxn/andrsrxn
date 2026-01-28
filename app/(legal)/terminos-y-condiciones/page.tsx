@@ -45,8 +45,8 @@ export default function page() {
         </p>
         <p>
           El responsable de este sitio web es:{' '}
-          <strong className='text-foreground'>Carlos Andrés Raxón Castañeda</strong> con número de
-          NIT: <strong className='text-foreground'>452194-6</strong>. Para cualquier pregunta o
+          <strong className='text-foreground'>{COMPANY.LEGAL_NAME}</strong> con número de NIT:{' '}
+          <strong className='text-foreground'>{COMPANY.NIT}</strong>. Para cualquier pregunta o
           inquietud, puedes contactarme directamente a través del link en la sección de Contacto.
         </p>
         <Separator className='mt-12' />

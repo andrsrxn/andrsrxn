@@ -49,10 +49,9 @@ export default function page() {
         </h2>
         <p>
           El responsable del tratamiento de los datos personales recopilados a través de este sitio
-          web es: <strong className='text-foreground'>Carlos Andrés Raxón Castañeda</strong> con
-          número de NIT: <strong className='text-foreground'>452194-6</strong>. Para cualquier
-          pregunta o inquietud, puedes contactarme directamente a través del link en la sección de
-          Contacto.
+          web es: <strong className='text-foreground'>{COMPANY.LEGAL_NAME}</strong> con número de
+          NIT: <strong className='text-foreground'>{COMPANY.NIT}</strong>. Para cualquier pregunta o
+          inquietud, puedes contactarme directamente a través del link en la sección de Contacto.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>Información que Recopilamos</h2>

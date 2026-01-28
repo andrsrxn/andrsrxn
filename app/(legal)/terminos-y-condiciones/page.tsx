@@ -221,7 +221,7 @@ export default function page() {
           un banner en el sitio web de cualquier cambio significativo publicando la nueva política
           en esta página.
         </p>
-        <h2 className='text-foreground font-bold uppercase'>15. Contacto</h2>
+        <h2 className='text-foreground font-bold uppercase'>Contacto</h2>
         <p>
           Si tienes alguna pregunta sobre estos Términos y Condiciones de Uso, por favor, contáctame
           en:{' '}

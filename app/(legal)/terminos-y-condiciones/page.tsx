@@ -37,7 +37,7 @@ export default function page() {
         </h1>
 
         <p>
-          Bienvenidos al sitio web personal de Andrés Raxón. Al acceder y utilizar este sitio web,
+          Bienvenidos al sitio web {COMPANY.COMMERCIAL_NAME}. Al acceder y utilizar este sitio web,
           aceptas y te comprometes a cumplir con la totalidad de los siguientes Términos y
           Condiciones de Uso. Si no estás de acuerdo con alguna parte de estos términos, por favor,
           no utilices este sitio web. Estos términos y condiciones aplican a todos los visitantes,
@@ -45,18 +45,20 @@ export default function page() {
         </p>
         <p>
           El responsable de este sitio web es:{' '}
-          <strong className='text-foreground'>{COMPANY.LEGAL_NAME}</strong> con número de NIT:{' '}
-          <strong className='text-foreground'>{COMPANY.NIT}</strong>. Para cualquier pregunta o
-          inquietud, puedes contactarme directamente a través del link en la sección de Contacto.
+          <strong className='text-foreground'>{COMPANY.LEGAL_NAME}</strong>, persona individual
+          dedicada a la prestación de servicios profesionales con número de NIT:{' '}
+          <strong className='text-foreground'>{COMPANY.NIT}</strong>, ubicado en{' '}
+          {COMPANY.ADDRESS.COUNTRY}. Para cualquier pregunta o inquietud, puedes contactarme
+          directamente a través del link en la sección de Contacto.
         </p>
         <Separator className='mt-12' />
 
         <h2 className='text-foreground font-bold uppercase'>Descripción de Servicios</h2>
         <p>
           Este sitio web funciona como un portafolio digital, una plataforma informativa para
-          mostrar los proyectos realizados y las capacidades creativas de Andrés Raxón. Los
-          servicios de diseño, dirección creativa y estrategia se ofrecen de forma profesional. La
-          contratación de estos servicios está sujeta a la negociación y firma de un{' '}
+          mostrar los proyectos realizados y las capacidades creativas de {COMPANY.COMMERCIAL_NAME}.
+          Los servicios de diseño, dirección creativa y estrategia se ofrecen de forma profesional.
+          La contratación de estos servicios está sujeta a la negociación y firma de un{' '}
           <strong className='text-foreground'>contrato de servicios</strong> por separado, que
           detallará el alcance, los entregables, el cronograma y los términos de pago específicos
           del proyecto.
@@ -66,12 +68,12 @@ export default function page() {
         <p>
           Todo el contenido presente en este sitio web, incluyendo, pero no limitado a, textos,
           gráficos, logos, íconos, imágenes, clips de audio y video, proyectos de portafolio y su
-          compilación, es propiedad exclusiva de Andrés Raxón o de sus respectivos licenciantes y
-          está protegido por las leyes de propiedad intelectual de Guatemala y las leyes
-          internacionales. La marca personal de Andrés Raxón y cualquier otro logo, nombre de
-          servicio o eslogan relacionado son marcas comerciales de Andrés Raxón y no pueden ser
-          copiados, imitados o usados, en su totalidad o en parte, sin nuestro permiso previo por
-          escrito.
+          compilación, es propiedad exclusiva de {COMPANY.COMMERCIAL_NAME} o de sus respectivos
+          licenciantes y está protegido por las leyes de propiedad intelectual de Guatemala y las
+          leyes internacionales. La marca personal de {COMPANY.COMMERCIAL_NAME} y cualquier otro
+          logo, nombre de servicio o eslogan relacionado son marcas comerciales de{' '}
+          {COMPANY.COMMERCIAL_NAME} y no pueden ser copiados, imitados o usados, en su totalidad o
+          en parte, sin nuestro permiso previo por escrito.
         </p>
         <p>
           Los proyectos mostrados en este portafolio son el resultado de colaboraciones con clientes
@@ -80,7 +82,7 @@ export default function page() {
           mostrados pertenece a sus respectivos clientes, a menos que se indique lo contrario. Queda
           estrictamente prohibida la reproducción, distribución, modificación, exhibición pública o
           uso no autorizado de cualquier contenido de este sitio web sin el consentimiento expreso
-          por escrito de Andrés Raxón.
+          por escrito de {COMPANY.COMMERCIAL_NAME}.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>Uso del Sitio Web</h2>
@@ -107,8 +109,8 @@ export default function page() {
         <h2 className='text-foreground font-bold uppercase'>Enlaces a Sitios de Terceros</h2>
         <p>
           Nuestro sitio web puede contener enlaces a sitios web de terceros que no son propiedad ni
-          están controlados por Andrés Raxón. No tenemos control sobre, y no asumimos ninguna
-          responsabilidad por, el contenido, las políticas de privacidad o las prácticas de
+          están controlados por {COMPANY.COMMERCIAL_NAME}. No tenemos control sobre, y no asumimos
+          ninguna responsabilidad por, el contenido, las políticas de privacidad o las prácticas de
           cualquier sitio web de terceros. Reconoces y aceptas que no seremos responsables, directa
           o indirectamente, de ningún daño o pérdida causada por o en conexión con el uso o la
           confianza en dicho contenido, bienes o servicios disponibles en o a través de dichos
@@ -120,12 +122,12 @@ export default function page() {
         </h2>
         <p>
           Si proporcionas contenido, comentarios, ideas, sugerencias o cualquier otro material (en
-          conjunto, "Envío") a través del sitio web, otorgas a Andrés Raxón una licencia no
-          exclusiva, perpetua, irrevocable, libre de regalías, sublicenciable y mundial para usar,
-          reproducir, modificar, adaptar, publicar, traducir, crear obras derivadas de, distribuir y
-          mostrar dicho Envío en cualquier forma, medio o tecnología, en todo o en parte, sin
-          necesidad de compensación ni notificación. Este punto aplica a los mensajes enviados por
-          el formulario de contacto.
+          conjunto, "Envío") a través del sitio web, otorgas a {COMPANY.COMMERCIAL_NAME} una
+          licencia no exclusiva, perpetua, irrevocable, libre de regalías, sublicenciable y mundial
+          para usar, reproducir, modificar, adaptar, publicar, traducir, crear obras derivadas de,
+          distribuir y mostrar dicho Envío en cualquier forma, medio o tecnología, en todo o en
+          parte, sin necesidad de compensación ni notificación. Este punto aplica a los mensajes
+          enviados por el formulario de contacto.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>
@@ -140,20 +142,20 @@ export default function page() {
           riesgo.
         </p>
         <p>
-          En la medida máxima permitida por la ley aplicable, Andrés Raxón no será responsable de
-          ningún daño de cualquier tipo que surja del uso de este sitio, incluyendo, pero no
-          limitado a, daños directos, indirectos, incidentales, punitivos y consecuentes, ni de la
-          pérdida de datos o de beneficios.
+          En la medida máxima permitida por la ley aplicable, {COMPANY.COMMERCIAL_NAME} no será
+          responsable de ningún daño de cualquier tipo que surja del uso de este sitio, incluyendo,
+          pero no limitado a, daños directos, indirectos, incidentales, punitivos y consecuentes, ni
+          de la pérdida de datos o de beneficios.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>Indemnización</h2>
         <p>
           Aceptas{' '}
           <strong className='text-foreground'>indemnizar y eximir de responsabilidad</strong> a
-          Andrés Raxón, sus afiliados y sus respectivos directores, oficiales, agentes y empleados
-          de y contra cualquier reclamo, demanda, daños, pérdidas, costos, responsabilidades y
-          gastos, incluyendo honorarios de abogados, que surjan de tu uso de o tu incapacidad para
-          usar el sitio web.
+          {COMPANY.COMMERCIAL_NAME}, sus afiliados y sus respectivos directores, oficiales, agentes
+          y empleados de y contra cualquier reclamo, demanda, daños, pérdidas, costos,
+          responsabilidades y gastos, incluyendo honorarios de abogados, que surjan de tu uso de o
+          tu incapacidad para usar el sitio web.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>
@@ -178,10 +180,10 @@ export default function page() {
 
         <h2 className='text-foreground font-bold uppercase'>No Renuncia</h2>
         <p>
-          El hecho de que Andrés Raxón no ejerza o aplique cualquier derecho o disposición de estos
-          Términos no constituirá una renuncia a dicho derecho o disposición. Cualquier renuncia a
-          una disposición de estos Términos debe ser por escrito y firmada por una persona
-          autorizada para actuar en nombre de Andrés Raxón.
+          El hecho de que {COMPANY.COMMERCIAL_NAME} no ejerza o aplique cualquier derecho o
+          disposición de estos Términos no constituirá una renuncia a dicho derecho o disposición.
+          Cualquier renuncia a una disposición de estos Términos debe ser por escrito y firmada por
+          una persona autorizada para actuar en nombre de {COMPANY.COMMERCIAL_NAME}.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>Terminación del Uso</h2>
@@ -196,10 +198,10 @@ export default function page() {
 
         <h2 className='text-foreground font-bold uppercase'>Disposiciones Generales</h2>
         <p>
-          Estos Términos constituyen el acuerdo completo entre tú y Andrés Raxón con respecto al
-          sitio web. La no ejecución de cualquier derecho o disposición de estos Términos no
-          constituirá una renuncia a dicho derecho o disposición. Si alguna disposición de estos
-          Términos es considerada inválida o inaplicable por un tribunal, las disposiciones
+          Estos Términos constituyen el acuerdo completo entre tú y {COMPANY.COMMERCIAL_NAME} con
+          respecto al sitio web. La no ejecución de cualquier derecho o disposición de estos
+          Términos no constituirá una renuncia a dicho derecho o disposición. Si alguna disposición
+          de estos Términos es considerada inválida o inaplicable por un tribunal, las disposiciones
           restantes de estos Términos permanecerán en vigor. La{' '}
           <strong className='text-foreground'>cláusula de divisibilidad</strong> garantiza que la
           anulación de una parte no afectará al resto del documento.

@@ -37,9 +37,9 @@ export default function page() {
         </h1>
 
         <p>
-          En el sitio web personal de Andrés Raxón, la privacidad de nuestros usuarios es una
-          prioridad fundamental. Esta Política de Privacidad describe cómo recopilamos, utilizamos y
-          protegemos la información personal que nos proporcionas y la que es generada
+          En el sitio web personal de {COMPANY.LEGAL_NAME}, la privacidad de nuestros usuarios es
+          una prioridad fundamental. Esta Política de Privacidad describe cómo recopilamos,
+          utilizamos y protegemos la información personal que nos proporcionas y la que es generada
           automáticamente cuando utilizas nuestros servicios en línea.
         </p>
         <Separator className='mt-12' />
@@ -49,9 +49,11 @@ export default function page() {
         </h2>
         <p>
           El responsable del tratamiento de los datos personales recopilados a través de este sitio
-          web es: <strong className='text-foreground'>{COMPANY.LEGAL_NAME}</strong> con número de
-          NIT: <strong className='text-foreground'>{COMPANY.NIT}</strong>. Para cualquier pregunta o
-          inquietud, puedes contactarme directamente a través del link en la sección de Contacto.
+          web es: <strong className='text-foreground'>{COMPANY.LEGAL_NAME}</strong>, persona
+          individual dedicada a la prestación de servicios profesionales con número de NIT:{' '}
+          <strong className='text-foreground'>{COMPANY.NIT}</strong>, ubicado en{' '}
+          {COMPANY.ADDRESS.COUNTRY}. Para cualquier pregunta o inquietud, puedes contactarme
+          directamente a través del link en la sección de Contacto.
         </p>
 
         <h2 className='text-foreground font-bold uppercase'>Información que Recopilamos</h2>

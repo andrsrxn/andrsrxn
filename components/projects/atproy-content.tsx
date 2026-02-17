@@ -2,6 +2,7 @@ import { SafariWindow } from '@/components/backgrounds/safari-mockup'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
+import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const AtproyContent = () => {
@@ -133,7 +134,7 @@ export const AtproyContent = () => {
       />
       <Separator className='my-16' />
       <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>Andrés Raxón</strong>
+        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
       </p>
     </ResponsiveSheetContent>
   )

@@ -2,6 +2,7 @@ import { SafariWindow } from '@/components/backgrounds/safari-mockup'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
+import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const IcpjsContent = () => {
@@ -76,23 +77,8 @@ export const IcpjsContent = () => {
           </div>
         </div>
       </div>
-      <div className='grid gap-22 overflow-x-hidden py-22 pb-2'>
-        <Image
-          includePlaceholder={false}
-          className='w-4/5 max-w-sm'
-          src={project.IMAGES.TYPOGRAPHY_1.URL}
-          alt={project.IMAGES.TYPOGRAPHY_1.ALT}
-        />
-        <Image
-          includePlaceholder={false}
-          className='w-4/5 max-w-sm'
-          src={project.IMAGES.TYPOGRAPHY_2.URL}
-          alt={project.IMAGES.TYPOGRAPHY_2.ALT}
-        />
-      </div>
 
-      <Separator className='my-16' />
-      <div className='tablet:flex-row tablet:h-[600px] flex h-auto flex-col'>
+      <div className='tablet:flex-row tablet:h-[600px] flex h-auto flex-col pt-12'>
         <div className='tablet:p-20 flex items-center justify-center border p-12'>
           <Image
             includePlaceholder={false}
@@ -120,7 +106,7 @@ export const IcpjsContent = () => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col'>
+      <div className='flex flex-col pb-12'>
         <div className=''>
           <div className='tablet:p-18 border px-8 py-12'>
             <Image
@@ -157,7 +143,24 @@ export const IcpjsContent = () => {
           </div>
         </div>
       </div>
+
+      <div className='grid gap-22 overflow-x-hidden pt-12 pb-4'>
+        <Image
+          includePlaceholder={false}
+          className='w-4/5 max-w-sm'
+          src={project.IMAGES.TYPOGRAPHY_1.URL}
+          alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+        />
+        <Image
+          includePlaceholder={false}
+          className='w-4/5 max-w-sm'
+          src={project.IMAGES.TYPOGRAPHY_2.URL}
+          alt={project.IMAGES.TYPOGRAPHY_2.ALT}
+        />
+      </div>
+
       <Separator className='my-16' />
+
       <div className='grid gap-6'>
         <Image
           includePlaceholder={false}
@@ -191,7 +194,7 @@ export const IcpjsContent = () => {
       />
       <Separator className='my-16' />
       <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>Andrés Raxón</strong>
+        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
       </p>
     </ResponsiveSheetContent>
   )

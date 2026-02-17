@@ -201,7 +201,7 @@
 //     </div>
 //     <Separator className='my-16' />
 //     <p className='tablet:text-lg text-center'>
-//       Un proyecto de <strong>Andrés Raxón</strong>
+//       Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
 //     </p>
 //   </ResponsiveSheetContent>
 // )

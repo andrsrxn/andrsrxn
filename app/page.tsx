@@ -1,14 +1,14 @@
 /** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: <explanation> */
-import { IconBrandWhatsapp, IconPlus } from '@tabler/icons-react'
+import { IconBrandWhatsapp } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
-import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
+import { VIVETContent } from '@/components/projects/vivet-content'
 import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
@@ -102,10 +102,10 @@ export default function Home() {
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
                 <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
+                  {PROJECTS.VIVET_REBRANDING.CLIENT} - {PROJECTS.VIVET_REBRANDING.INDUSTRY}
                 </span>
                 <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
+                  {PROJECTS.VIVET_REBRANDING.SUMMARY}
                 </p>
               </div>
             </InView>
@@ -113,29 +113,26 @@ export default function Home() {
               <InView
                 from={{ opacity: 0 }}
                 to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
-                    loading='eager'
-                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
+                <video
+                  autoPlay
+                  muted
+                  controls={false}
+                  loop
+                  playsInline
+                  className='bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover'>
+                  <source src={PROJECTS.VIVET_REBRANDING.IMAGES.BANNERS.URL} type='video/mp4' />
+                </video>
               </InView>
               <ResponsiveSheet>
-                <ResponsiveSheetTrigger>
-                  <Button
-                    className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                    variant='secondary'>
-                    Ver proyecto completo <IconPlus />
-                  </Button>
-                </ResponsiveSheetTrigger>
+                <InView
+                  viewOptions={{
+                    start: 'top 105%',
+                  }}
+                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
+                  <ResponsiveSheetTrigger />
+                </InView>
 
-                <AtproyContent />
+                <VIVETContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
@@ -174,13 +171,7 @@ export default function Home() {
                     start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
+                  <ResponsiveSheetTrigger />
                 </InView>
                 <BonzerContent />
               </ResponsiveSheet>
@@ -205,7 +196,7 @@ export default function Home() {
                   controls={false}
                   loop
                   playsInline
-                  className='animated-polygon bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover will-change-[clip-path]'>
+                  className='bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover will-change-[clip-path]'>
                   <source
                     src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
                     type='video/mp4'
@@ -218,13 +209,7 @@ export default function Home() {
                     start: 'top 105%',
                   }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger>
-                    <Button
-                      className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
-                      variant='secondary'>
-                      Ver proyecto completo <IconPlus />
-                    </Button>
-                  </ResponsiveSheetTrigger>
+                  <ResponsiveSheetTrigger />
                 </InView>
                 <IcpjsContent />
               </ResponsiveSheet>
@@ -232,7 +217,7 @@ export default function Home() {
           </ScrollPolygonContainer>
         </div>
 
-        <Separator className='container mx-auto my-10 w-11/12!' />
+        <Separator className='container mx-auto my-20 w-11/12!' />
       </section>
       <section>
         <MoreProjects className='-mt-1 mb-12' />

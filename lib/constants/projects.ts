@@ -2,11 +2,32 @@ import { IMAGES } from '@/lib/constants/paths'
 import { SERVICES } from '@/lib/constants/services'
 
 export const PROJECTS = {
+  VIVET_REBRANDING: {
+    SLUG: 'vivet-rebranding',
+    CLIENT: 'VIVET',
+    INDUSTRY: 'Streetwear de lujo',
+    SUMMARY: 'Propuesta de Rebranding y Clothing',
+    DESCRIPTION: [
+      'VIVET by Kai Cenat. Una entidad visual y cultural que representa el Street Wear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan "WE ARE ETERNAL"',
+
+      'No persigue la relevancia, define identidad.',
+
+      'Demostración de la nueva identidad visual y los outfits personalizados principalmente con el símbolo de marca, desgaste controlado, telas pesadas, iluminación baja y composición dominante con poses estáticas y dinámicas, según el propósito de comunicación.',
+    ],
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.REBRANDING.TITLE,
+      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.SOCIAL_MEDIA_POSTS.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.PACKAGING.TITLE,
+      SERVICES.MARKETING.SUBSERVICES.VIDEO_EDITING.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.VIVET,
+  },
   ATPROY_BRAND_REFRESH: {
     SLUG: 'grupo-atproy-actualizacion-de-marca',
     CLIENT: 'Grupo ATProy',
     INDUSTRY: 'Ingeniería eléctrica y telecomunicaciones',
-    SUMMARY: 'Actualización de Marca y Desarrollo Web',
+    SUMMARY: 'Actualización de Marca y Sitio Web',
     DESCRIPTION: [
       'Con una trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.',
       'Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del sitio web, con el objetivo de facilitar la información de sus servicios y proyectos realizados a lo largo de su historia y un medio de contacto para crecer su experiencia con más clientes.',
@@ -109,22 +130,5 @@ export const PROJECTS = {
       SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
     ],
     IMAGES: IMAGES.PROJECTS.SOLAR_GROUP,
-  },
-
-  TRANSPORTIISA_VISUAL_IDENTITY: {
-    SLUG: 'transportii-s-a-identidad-visual',
-    CLIENT: 'Transportii S.A.',
-    INDUSTRY: 'Ingeniería eléctrica y telecomunicaciones',
-    SUMMARY: 'Nueva Identidad Visual',
-    DESCRIPTION: [
-      'Colaboramos con Transportii S.A., una de las empresas de ingeniería eléctrica más importantes de Guatemala, quienes buscan refinar y modernizar su marca sin perder reconocimiento.',
-      'El avance tecnológico de su industria demanda mantenerse en constante actualización, por lo que garantiza que su marca se mantenga al margen de la innovación y crezca integralmente en el futuro.',
-    ],
-    SERVICES: [
-      SERVICES.BRAND.SUBSERVICES.BRAND_REFRESH.TITLE,
-      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
-      SERVICES.MARKETING.SUBSERVICES.MOTION_GRAPHICS.TITLE,
-    ],
-    IMAGES: IMAGES.PROJECTS.TRANSPORTIISA,
   },
 }

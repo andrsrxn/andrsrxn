@@ -1,6 +1,7 @@
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
+import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const ThePrincipalContent = () => {
@@ -32,7 +33,7 @@ export const ThePrincipalContent = () => {
             />
           </div>
           <div className='flex w-full'>
-            <div className='tablet:p-12 grow border p-8'>
+            <div className='tablet:p-12 aspect-square grow border p-8'>
               <Image
                 includePlaceholder={false}
                 className='aspect-square'
@@ -40,7 +41,7 @@ export const ThePrincipalContent = () => {
                 alt={project.IMAGES.SYMBOL.ALT}
               />
             </div>
-            <div className='tablet:p-12 grow border p-8'>
+            <div className='tablet:p-12 aspect-square grow border p-8'>
               <Image
                 includePlaceholder={false}
                 className='aspect-square'
@@ -48,7 +49,7 @@ export const ThePrincipalContent = () => {
                 alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
               />
             </div>
-            <div className='tablet:p-12 grow border bg-white p-8'>
+            <div className='tablet:p-12 aspect-square grow border bg-white p-8'>
               <Image
                 includePlaceholder={false}
                 className='aspect-square'
@@ -86,7 +87,7 @@ export const ThePrincipalContent = () => {
         />
       </div>
 
-      <div className='grid gap-6 overflow-hidden'>
+      <div className='grid w-full gap-6 overflow-hidden'>
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.APP.URL}
@@ -106,7 +107,7 @@ export const ThePrincipalContent = () => {
 
       <Separator className='my-16' />
       <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>Andrés Raxón</strong>
+        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
       </p>
     </ResponsiveSheetContent>
   )

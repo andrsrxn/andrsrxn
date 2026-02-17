@@ -1,6 +1,7 @@
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
+import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const BonzerContent = () => {
@@ -14,7 +15,7 @@ export const BonzerContent = () => {
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div className='tablet:flex w-full'>
-        <div className='grow border p-8'>
+        <div className='aspect-video grow border p-8'>
           <Image
             includePlaceholder={false}
             className='aspect-video'
@@ -22,7 +23,7 @@ export const BonzerContent = () => {
             alt={project.IMAGES.LOGO.ALT}
           />
         </div>
-        <div className='grow border p-8'>
+        <div className='aspect-video grow border p-8'>
           <Image
             includePlaceholder={false}
             className='aspect-video'
@@ -32,7 +33,7 @@ export const BonzerContent = () => {
         </div>
       </div>
       <div className='flex w-full'>
-        <div className='grow border p-12'>
+        <div className='aspect-square grow border p-12'>
           <Image
             includePlaceholder={false}
             className='aspect-square'
@@ -40,7 +41,7 @@ export const BonzerContent = () => {
             alt={project.IMAGES.SYMBOL_ALTERNATIVE.ALT}
           />
         </div>
-        <div className='grow border p-12'>
+        <div className='aspect-square grow border p-12'>
           <Image
             includePlaceholder={false}
             className='aspect-square'
@@ -49,7 +50,7 @@ export const BonzerContent = () => {
           />
         </div>
       </div>
-      <div className='my-12'>
+      <div className='my-12 aspect-video'>
         <Image
           includePlaceholder={false}
           className='aspect-video'
@@ -122,7 +123,7 @@ export const BonzerContent = () => {
 
       <Separator className='my-16' />
       <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>Andrés Raxón</strong>
+        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
       </p>
     </ResponsiveSheetContent>
   )

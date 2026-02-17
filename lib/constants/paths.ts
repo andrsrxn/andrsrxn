@@ -64,6 +64,84 @@ export const IMAGES = {
     },
   },
   PROJECTS: {
+    VIVET: {
+      BANNERS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1771361709/vivet-banners_ijxbom.mp4',
+        ALT: '',
+      },
+      BANNER_SMALL: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359959/banner_0.5x_yiyhrg.webp',
+        ALT: 'Banner de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      BANNER: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359961/banner_zdymnf.webp',
+        ALT: 'Banner de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      BANNER_2: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359961/banner-1_0.5x_i7xldl.webp',
+        ALT: 'Banner secundario de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      BANNER_3: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359961/banner-2_0.5x_kcebi3.webp',
+        ALT: 'Banner terciario de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      LOGO: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359642/logo_nafity.svg',
+        ALT: 'Logo de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      SYMBOL: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359643/symbol_cmii5o.svg',
+        ALT: 'Símbolo de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      LOGO_CONTRUCTION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359957/logo-construction_asrp5g.webp',
+        ALT: 'Construcción del logo de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      SYMBOL_CONTRUCTION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359957/symbol-contruction_vmlinn.webp',
+        ALT: 'Construcción del símbolo de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      TYPOGRAPHY_1: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359957/typography-1_mzkfxc.webp',
+        ALT: 'Tipografía de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      TYPOGRAPHY_2: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359958/typography-2_nkidxe.webp',
+        ALT: 'Tipografía de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      COLOR_1: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359967/color-1_koct8h.webp',
+        ALT: 'Color principal de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      VEST: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359963/clothing-1_qe5vt0.webp',
+        ALT: 'Chaleco masculino con el símbolo de marca de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      SKI_MASK: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359965/clothing-4_jueqnq.webp',
+        ALT: 'Pasamontañas con el símbolo de marca de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      JACKET: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359964/clothing-3_wegunz.webp',
+        ALT: 'Chaqueta con el símbolo de marca de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      JEANS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359966/clothing-5_rxmnep.webp',
+        ALT: 'Pantalones desgastados con el símbolo de marca de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      SHIRT: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359967/clothing-6_q4ktqp.webp',
+        ALT: 'Camiseta con el símbolo de marca de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      BAG: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771359963/clothing-2_k0nidi.webp',
+        ALT: 'Bolsa con el símbolo de marca de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+      PATTERN: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1771361540/pattern_khak85.svg',
+        ALT: 'Patrón conformado por elementos del símbolo de la propuesta de Rebranding para VIVET by Kai Cenat',
+      },
+    },
     ATPROY: {
       BANNER_COMPARISON: null,
       BANNER_SMALL: {
@@ -242,57 +320,7 @@ export const IMAGES = {
         ALT: 'Representacion de stickers bordados para diferentes usos internos con el símbolo al centro.',
       },
     },
-    TRANSPORTIISA: {
-      BANNER_SMALL: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561849/banner-small_adhxp8.webp',
-        ALT: 'Torre eléctrica vista desde abajo con el logo de Transportii S.A. en fondo blanco ubicado en la esquina inferior.',
-      },
-      BANNER: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561846/banner_vuxwce.webp',
-        ALT: 'Torre eléctrica vista desde abajo con el logo de Transportii S.A. en fondo blanco ubicado en la esquina inferior.',
-      },
-      BANNER_COMPARISON: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561847/banner-comparison_oomysh.webp',
-        ALT: 'Comparación del logo actual a la izquierda con el logo propuesto en el Rebranding a la derecha.',
-      },
-      ADS: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561843/ads_cbobrp.webp',
-        ALT: 'Valla publicitaria con el texto "Transportando energía eléctrica eficiente, renovable y sin fronteras." y la url al sitio web por debajo; una imagen representativa a la derecha con el logo de Transportii S.A.',
-      },
-      ON_FABRIC: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561845/algodon_rmurzb.webp',
-        ALT: 'Logo de Transportii S.A. enmarcado en tela para uso interno y casos especiales.',
-      },
-      CARDS: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561831/cards_hhglvp.webp',
-        ALT: 'Tarjetas de presentación con el logo en la parte trasera y en la parte delantera el texto de "Líderes en el desarrollo del sector eléctrico y de construcción", medios de contacto y dirección.',
-      },
-      LOGO: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561825/logo_1_fqmttz.svg',
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en color negro.',
-      },
-      LOGO_ALTERNATIVE: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561827/logo-alternative_1_p9d4sn.svg',
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en color blanco.',
-      },
-      LOGO_POSITIVE: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561834/logo-positive_1_ae6x2o.svg',
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en una sola tinta (Negra).',
-      },
-      LOGO_NEGATIVE: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561830/logo-negative_1_wc6pwd.svg',
-        ALT: 'Logo de Transportii S.A. conformado por el símbolo por encima y por debajo el nombre Transportii S.A. y eslogan "Transmitimos energía" en una sola tinta (Blanca).',
-      },
 
-      COLOR_1: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561823/color-1_ioj5j7.svg',
-        ALT: 'Color principal en base al color Pantone 3553 C (Azul)',
-      },
-      TYPOGRAPHY_1: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765561842/typography-1_nanexe.svg',
-        ALT: 'Tipografía principal Aileron en los pesos de regular, semibold, bold, black.',
-      },
-    },
     ICEMENE: {
       BANNER_SMALL: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1765564836/banner-small_dznmzp.webp',

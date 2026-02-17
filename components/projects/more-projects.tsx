@@ -4,6 +4,7 @@ import type { ComponentProps } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
+import { AtproyContent } from '@/components/projects/atproy-content'
 import { IcemeneContent } from '@/components/projects/icemene-content'
 import { SolarGroupContent } from '@/components/projects/solar-group-content'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
@@ -58,7 +59,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger size='sm' />
                 </InView>
-                <ThePrincipalContent />
+                <AtproyContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>

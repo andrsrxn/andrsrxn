@@ -55,8 +55,8 @@ export const SERVICES = {
     },
   },
   MARKETING: {
-    TITLE: 'Marketing Digital',
-    SLUG: 'marketing-digital',
+    TITLE: 'Marketing',
+    SLUG: 'marketing',
 
     SUBSERVICES: {
       SOCIAL_MEDIA_POSTS: {

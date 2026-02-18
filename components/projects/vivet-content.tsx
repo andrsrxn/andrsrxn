@@ -16,19 +16,19 @@ export const VIVETContent = () => {
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div className='grid gap-8'>
         <Image
-          className='w-auto border border-[#464742]'
+          className='aspect-video w-auto border border-[#464742]'
           src={project.IMAGES.LOGO_CONTRUCTION.URL}
           alt={project.IMAGES.LOGO_CONTRUCTION.ALT}
         />
         <div className='laptop:grid-cols-2 grid gap-8'>
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.COLOR_1.URL}
             alt={project.IMAGES.COLOR_1.ALT}
           />
           <Image
             includePlaceholder={false}
-            className='h-full border border-[#464742] object-cover'
+            className='aspect-square h-full border border-[#464742] object-cover'
             src={project.IMAGES.SYMBOL_CONTRUCTION.URL}
             alt={project.IMAGES.SYMBOL_CONTRUCTION.ALT}
           />
@@ -45,7 +45,11 @@ export const VIVETContent = () => {
           alt={project.IMAGES.TYPOGRAPHY_2.ALT}
         />
 
-        <Image src={project.IMAGES.BANNER_2.URL} alt={project.IMAGES.BANNER_2.ALT} />
+        <Image
+          className='aspect-video'
+          src={project.IMAGES.BANNER_2.URL}
+          alt={project.IMAGES.BANNER_2.ALT}
+        />
         <Image
           className='my-4'
           includePlaceholder={false}
@@ -55,37 +59,41 @@ export const VIVETContent = () => {
 
         <div className='laptop:grid-cols-2 grid gap-8'>
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.VEST.URL}
             alt={project.IMAGES.VEST.ALT}
           />
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.BAG.URL}
             alt={project.IMAGES.BAG.ALT}
           />
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.JACKET.URL}
             alt={project.IMAGES.JACKET.ALT}
           />
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.JEANS.URL}
             alt={project.IMAGES.JEANS.ALT}
           />
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.SHIRT.URL}
             alt={project.IMAGES.SHIRT.ALT}
           />
           <Image
-            className='border border-[#464742]'
+            className='aspect-square border border-[#464742]'
             src={project.IMAGES.SKI_MASK.URL}
             alt={project.IMAGES.SKI_MASK.ALT}
           />
         </div>
-        <Image src={project.IMAGES.BANNER_3.URL} alt={project.IMAGES.BANNER_3.ALT} />
+        <Image
+          className='aspect-video'
+          src={project.IMAGES.BANNER_3.URL}
+          alt={project.IMAGES.BANNER_3.ALT}
+        />
       </div>
       <Separator className='my-16' />
 

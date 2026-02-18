@@ -13,6 +13,7 @@ import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
 import { ServicesCarousel } from '@/components/shared/services-carousel'
+import { VIVETVideo } from '@/components/shared/vivet-video'
 import { Button } from '@/components/ui/button'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
@@ -113,15 +114,7 @@ export default function Home() {
               <InView
                 from={{ opacity: 0 }}
                 to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <video
-                  autoPlay
-                  muted
-                  controls={false}
-                  loop
-                  playsInline
-                  className='bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover'>
-                  <source src={PROJECTS.VIVET_REBRANDING.IMAGES.BANNERS.URL} type='video/mp4' />
-                </video>
+                <VIVETVideo />
               </InView>
               <ResponsiveSheet>
                 <InView

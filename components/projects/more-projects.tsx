@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
-import { AtproyContent } from '@/components/projects/atproy-content'
+import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcemeneContent } from '@/components/projects/icemene-content'
 import { SolarGroupContent } from '@/components/projects/solar-group-content'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
@@ -27,10 +27,10 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
             <InView>
               <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
                 <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full text-sm leading-tight'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
+                  {PROJECTS.BONZER_BRANDING.CLIENT} - {PROJECTS.BONZER_BRANDING.INDUSTRY}
                 </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
+                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
+                  {PROJECTS.BONZER_BRANDING.SUMMARY}
                 </h3>
               </div>
             </InView>
@@ -40,12 +40,12 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                 to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
                 <picture>
                   <source
-                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
+                    srcSet={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
                     media='(min-width: 64rem)'
                   />
                   <Image
-                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
+                    src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
                     loading='eager'
                     className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
                   />
@@ -59,7 +59,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger size='sm' />
                 </InView>
-                <AtproyContent />
+                <BonzerContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
@@ -70,7 +70,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   {PROJECTS.THEPRINCIPAL_BRANDING.CLIENT} -{' '}
                   {PROJECTS.THEPRINCIPAL_BRANDING.INDUSTRY}
                 </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl'>
+                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
                   {PROJECTS.THEPRINCIPAL_BRANDING.SUMMARY}
                 </h3>
               </div>
@@ -110,7 +110,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                 <span className='text-muted-foreground tablet:text-base desktop:text-lg line-clamp-1 block w-full text-sm leading-tight'>
                   {PROJECTS.ICEMENE_REBRANDING.CLIENT} - {PROJECTS.ICEMENE_REBRANDING.INDUSTRY}
                 </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl'>
+                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
                   {PROJECTS.ICEMENE_REBRANDING.SUMMARY}
                 </h3>
               </div>
@@ -152,7 +152,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
                   {PROJECTS.SOLAR_GROUP_REBRANDING.CLIENT} -{' '}
                   {PROJECTS.SOLAR_GROUP_REBRANDING.INDUSTRY}
                 </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl'>
+                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
                   {PROJECTS.SOLAR_GROUP_REBRANDING.SUMMARY}
                 </h3>
               </div>

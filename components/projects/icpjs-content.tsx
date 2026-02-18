@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { SafariWindow } from '@/components/backgrounds/safari-mockup'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
@@ -15,6 +16,18 @@ export const IcpjsContent = () => {
       description={project.DESCRIPTION}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      <div className='-mt-2 mb-12 block'>
+        <p>
+          <Link
+            prefetch={false}
+            className='text-foreground inline-flex items-center gap-2 leading-none font-medium underline decoration-1 underline-offset-2'
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://icpsj.vercel.app/'>
+            https://icpsj.vercel.app/
+          </Link>
+        </p>
+      </div>
       <div>
         <video
           autoPlay

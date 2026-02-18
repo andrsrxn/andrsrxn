@@ -46,7 +46,7 @@ export const PROJECTS = {
     SLUG: 'icpsj-branding',
     CLIENT: 'La Presencia del Señor Jesús',
     INDUSTRY: 'Iglesia evangélica',
-    SUMMARY: 'Branding, Desarrollo Web y Redes Sociales',
+    SUMMARY: 'Branding, Sitio Web y Redes Sociales',
     SERVICES: [
       SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
       SERVICES.WEB_DEV.SUBSERVICES.FULL_PAGE_DEV.TITLE,

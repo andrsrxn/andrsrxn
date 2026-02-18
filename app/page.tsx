@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
-import { BonzerContent } from '@/components/projects/bonzer-content'
+import { AtproyContent } from '@/components/projects/atproy-content'
 import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
 import { VIVETContent } from '@/components/projects/vivet-content'
@@ -134,10 +134,10 @@ export default function Home() {
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
                 <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
-                  {PROJECTS.BONZER_BRANDING.CLIENT} - {PROJECTS.BONZER_BRANDING.INDUSTRY}
+                  {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
                 </span>
                 <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.BONZER_BRANDING.SUMMARY}
+                  {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
                 </p>
               </div>
             </InView>
@@ -147,12 +147,12 @@ export default function Home() {
                 to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
                 <picture>
                   <source
-                    srcSet={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
+                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
                     media='(min-width: 64rem)'
                   />
                   <Image
-                    src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
+                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
+                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
                     loading='eager'
                     className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
                   />
@@ -166,7 +166,7 @@ export default function Home() {
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
-                <BonzerContent />
+                <AtproyContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>

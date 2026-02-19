@@ -55,8 +55,9 @@ export default function Home() {
               Director Creativo
             </span>
           </h1>
-          <p className='text-muted-foreground display:text-xl laptop:text-base text-sm leading-none!'>
-            Obtén 10% de descuento en tu primera contratación
+          <p className='text-muted-foreground display:text-xl laptop:text-base max-w-2xl text-center text-sm leading-normal text-pretty'>
+            Me especializo en la creación de Branding moderno, Desarrollo Web de impacto y material
+            de Marketing destacable.
           </p>
           <div className='mt-2 flex flex-wrap items-center gap-2'>
             <div className='relative overflow-hidden rounded-full p-[2px]'>
@@ -74,6 +75,7 @@ export default function Home() {
                 <Link href='#contacto'>Contratar Servicios</Link>
               </Button>
             </div>
+
             <div className='relative w-max shrink-0 overflow-hidden rounded-full p-[2px]'>
               <span
                 className={cn(
@@ -94,6 +96,10 @@ export default function Home() {
               </Button>
             </div>
           </div>
+
+          <p className='text-muted-foreground mt-2 max-w-2xl text-center text-sm leading-normal text-pretty'>
+            Obtén 10% de descuento en la primera contratación
+          </p>
         </div>
         <ServicesCarousel />
       </section>

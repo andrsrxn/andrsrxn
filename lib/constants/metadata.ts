@@ -16,6 +16,17 @@ export const baseMetadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  keywords: [
+    'Director creativo',
+    'desarrollo de sitio web',
+    'diseño de logo',
+    'branding guatemala',
+    'motion graphics',
+    'edición de video profesional',
+    'diseñador gráfico guatemala',
+    'programador guatemala',
+    'programador Frontend',
+  ],
   applicationName: COMPANY.NAME,
   referrer: 'strict-origin-when-cross-origin',
   description: COMPANY.DESCRIPTION,

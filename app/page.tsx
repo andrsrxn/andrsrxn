@@ -1,4 +1,5 @@
-/** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: <explanation> */
+/** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: One page */
+
 import { IconBrandWhatsapp } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'

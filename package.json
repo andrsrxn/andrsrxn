@@ -14,10 +14,11 @@
     "lint": "biome check && echo Lint check finished",
     "lint:write": "biome check --write && echo Lint check finished",
     "typecheck": "tsc --noEmit && echo Typecheck finished",
-    "format": "prettier . --write \"**/*.{ts,tsx,js,jsx,json}\" && echo Format check finished"
+    "format": "prettier . --write \"**/*.{ts,tsx,js,jsx,json}\" && echo Format check finished",
+    "doctor": "pnpm dlx react-doctor@latest ."
   },
   "engines": {
-    "node": "^22",
+    "node": "^24",
     "pnpm": "^10"
   },
   "dependencies": {

@@ -20,7 +20,7 @@ export const VIVETContent = () => {
           src={project.IMAGES.LOGO_CONTRUCTION.URL}
           alt={project.IMAGES.LOGO_CONTRUCTION.ALT}
         />
-        <div className='laptop:grid-cols-2 grid gap-8'>
+        <div className='laptop:grid-cols-2 grid gap-8 overflow-hidden'>
           <Image
             className='aspect-square border border-[#464742]'
             src={project.IMAGES.COLOR_1.URL}
@@ -28,7 +28,7 @@ export const VIVETContent = () => {
           />
           <Image
             includePlaceholder={false}
-            className='aspect-square h-full border border-[#464742] object-cover'
+            className='block aspect-square h-full border border-[#464742] object-cover object-center'
             src={project.IMAGES.SYMBOL_CONTRUCTION.URL}
             alt={project.IMAGES.SYMBOL_CONTRUCTION.ALT}
           />

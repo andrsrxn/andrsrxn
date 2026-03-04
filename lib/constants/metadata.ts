@@ -76,9 +76,7 @@ export const baseMetadata: Metadata = {
     statusBarStyle: 'default',
     title: COMPANY.NAME,
   },
-  other: {
-    'impact-site-verification': '03581542-ff76-4ec5-8baa-11ae56e96a4c',
-  },
+
   icons: {
     icon: [
       {

@@ -112,8 +112,8 @@ export const ContactForm = () => {
                       Empresa
                     </span>{' '}
                     <span className='text-muted-foreground desktop:text-base text-sm leading-tight font-normal text-wrap'>
-                      Persona
-                      <span className='block'>jurídica</span>
+                      Negocio
+                      <span className='block'>formal</span>
                     </span>
                     <ChoiceBoxSingleIndicator className='absolute top-1.5 right-1.5' />
                   </ChoiceBoxSingleItem>

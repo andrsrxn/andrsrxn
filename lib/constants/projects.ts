@@ -1,12 +1,38 @@
 import { IMAGES } from '@/lib/constants/paths'
 import { SERVICES } from '@/lib/constants/services'
 
+export const PROJECT_TYPES = {
+  PROPOSAL: 'Propuesta',
+  CASE_STUDY: 'Caso de estudio',
+  NORMAL: '',
+}
+
 export const PROJECTS = {
+  THE_CHOICE_UIUX_DESIGN_WEBSITE: {
+    SLUG: 'the-choice-uiux-design-y-sitio-web',
+    CLIENT: 'The Choice',
+    TYPE: PROJECT_TYPES.CASE_STUDY,
+    INDUSTRY: 'Restaurante y panadería',
+    SUMMARY: 'Diseño UI/UX y Desarrollo Web',
+    DESCRIPTION: [
+      'El diseño de The Choice implementa una jerarquía visual sólida fundamentada en un sistema de tipografía con escala 1.2 que mejora la legibilidad al aplicar la Ley de Continuidad en la lectura. El flujo de navegación está optimizado para reducir la carga cognitiva del usuario al identificar la acción que desee realizar.',
+      'El flujo de reservaciones se ha creado siguiendo la Ley de Hick, fragmentando un proceso complejo en pasos secuenciales (Selección -> Detalles -> Pago -> Éxito), siendo este el flujo prioritario de los usuarios.',
+      'Para enfatizar el la usabilidad del diseño UI/UX se tradujo a código creando una demo interactiva, dinámica y completa del sitio, en donde se puede integrar cualquier plataforma de reservaciones por medio de una API con un proceso automatizado y personalizado sin abandonar el sitio.',
+      'La arquitectura del sitio web se realizó con el Generador de Sitios Estáticos de Next.js, utilizando componentes reutilizables, sistema de tokens, accesibilidad (WCAG) niveles AA y AAA, optimización SEO y Copywriting; factores fundamentales para un sitio optimizado y escalable.',
+    ],
+    SERVICES: [
+      SERVICES.WEB_DEV.SUBSERVICES.UI_UX_DESIGN.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.FULL_PAGE_DEV.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.SEO.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.THE_CHOICE,
+  },
   VIVET_REBRANDING: {
     SLUG: 'vivet-rebranding',
     CLIENT: 'VIVET',
+    TYPE: PROJECT_TYPES.PROPOSAL,
     INDUSTRY: 'Streetwear de lujo',
-    SUMMARY: 'Propuesta de Rebranding y Clothing',
+    SUMMARY: 'Rebranding y Clothing',
     DESCRIPTION: [
       'VIVET by Kai Cenat. Una entidad visual y cultural que representa el Street Wear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan "WE ARE ETERNAL"',
 
@@ -26,11 +52,12 @@ export const PROJECTS = {
   ATPROY_BRAND_REFRESH: {
     SLUG: 'grupo-atproy-actualizacion-de-marca',
     CLIENT: 'Grupo ATProy',
+    TYPE: PROJECT_TYPES.NORMAL,
     INDUSTRY: 'Ingeniería eléctrica y telecomunicaciones',
     SUMMARY: 'Actualización de Marca y Sitio Web',
     DESCRIPTION: [
       'Con una trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.',
-      'Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del sitio web, con el objetivo de facilitar la información de sus servicios y proyectos realizados a lo largo de su historia y un medio de contacto para crecer su experiencia con más clientes.',
+      'Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del Sitio Web con Astro para facilitar la información de sus servicios y proyectos realizados a lo largo de su historia, siendo un medio de contacto vital para aumentar su alcance y posicionamiento en el mercado.',
     ],
     SERVICES: [
       SERVICES.BRAND.SUBSERVICES.BRAND_REFRESH.TITLE,
@@ -46,6 +73,7 @@ export const PROJECTS = {
     SLUG: 'icpsj-branding',
     CLIENT: 'La Presencia del Señor Jesús',
     INDUSTRY: 'Iglesia evangélica',
+    TYPE: PROJECT_TYPES.NORMAL,
     SUMMARY: 'Branding, Sitio Web y Redes Sociales',
     SERVICES: [
       SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
@@ -57,7 +85,7 @@ export const PROJECTS = {
     ],
     DESCRIPTION: [
       'Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.',
-      'Se desarrolló un Sitio Web (Blog) en inglés y español, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes.',
+      'Se desarrolló un Sitio Web (Blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes.',
     ],
     IMAGES: IMAGES.PROJECTS.ICPSJ,
   },
@@ -66,6 +94,7 @@ export const PROJECTS = {
     SLUG: 'bonzer-branding',
     CLIENT: 'Bonzer',
     INDUSTRY: 'Estética y cuidado personal',
+    TYPE: PROJECT_TYPES.NORMAL,
     SUMMARY: 'Branding, Packaging y Redes Sociales',
     DESCRIPTION: [
       'Bonzer es un concepto de marca enfocada en productos naturales para el cuidado y bienestar personal en jóvenes y adultos, generando cambios visibles en poco tiempo.',
@@ -84,7 +113,8 @@ export const PROJECTS = {
     SLUG: 'icemene-rebranding',
     CLIENT: 'ICEMENE',
     INDUSTRY: 'Joyería y accesorios',
-    SUMMARY: 'Propuesta de Rebranding',
+    TYPE: PROJECT_TYPES.PROPOSAL,
+    SUMMARY: 'Rebranding y Packaging',
     DESCRIPTION: [
       'Se mejoró la calidad gráfica de ICEMENE, una tienda de joyería y accesorios masculinos, alineando su personalidad con la marca para reflejar la elegancia y calidad que lo caracteriza.',
       'Por medio del Rebranding se actualiza la estrategia de marca que impulsará sus decisiones a futuro más allá del diseño, tanto digital y en medios físicos.',
@@ -100,6 +130,7 @@ export const PROJECTS = {
     SLUG: 'theprincipal-branding',
     CLIENT: 'ThePrincipal',
     INDUSTRY: 'Blog online',
+    TYPE: PROJECT_TYPES.NORMAL,
     SUMMARY: 'Branding y Diseño UI/UX',
     DESCRIPTION: [
       'ThePrincipal es una plataforma en línea de auto aprendizaje inspirada en la lectura de los periódicos combinada con la interacción dinámica de los usuarios en la web.',
@@ -119,16 +150,14 @@ export const PROJECTS = {
     SLUG: 'solar-group-guatemala-rebranding',
     CLIENT: 'Solar Group Guatemala',
     INDUSTRY: 'Ingeniería eléctrica',
-    SUMMARY: 'Propuesta de Rebranding',
+    TYPE: PROJECT_TYPES.PROPOSAL,
+    SUMMARY: 'Actualización de Identidad Visual',
     DESCRIPTION: [
       'Se creó una nueva oportunidad de crecimiento en el mercado para Solar Group Guatemala con una marca consistente y fácilmente reconocible en todas sus aplicaciones.',
       'La marca se distingue por medio de la innovación, claridad del mensaje y reconocimiento constante, proporcionándole un mejor posicionamiento en el mercado.',
       'Se revitalizó su Identidad Visual creando un universo gráfico sólido y coherente que destaque sus servicios junto con su amplia trayectoria, adaptándola a las necesidades modernas de su industria.',
     ],
-    SERVICES: [
-      SERVICES.BRAND.SUBSERVICES.REBRANDING.TITLE,
-      SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE,
-    ],
+    SERVICES: [SERVICES.BRAND.SUBSERVICES.VISUAL_IDENTITY.TITLE],
     IMAGES: IMAGES.PROJECTS.SOLAR_GROUP,
   },
 }

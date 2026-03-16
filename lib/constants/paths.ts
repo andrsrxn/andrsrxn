@@ -142,6 +142,77 @@ export const IMAGES = {
         ALT: 'Patrón conformado por elementos del símbolo de la propuesta de Rebranding para VIVET by Kai Cenat',
       },
     },
+    THE_CHOICE: {
+      BANNER_COMPARISON: null,
+      BANNER_SMALL: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/banner-small_ts8tyl.webp',
+        ALT: 'Sitio web de The Choice en computadora y celular con Wireframes',
+      },
+      BANNER: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/banner_svoc39.webp',
+        ALT: 'Sitio web de The Choice en computadora y celular con Wireframes',
+      },
+      WEB_WITH_WIREFRAME: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/web-with-wireframe_wx0w89.webp',
+        ALT: 'Sitio web de The Choice en computadora con la mitad del Wireframe',
+      },
+      MAIN_PAGE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/main-page-first-part_kjsuhf.webp',
+        ALT: 'Página de inicio del sitio web de The Choice',
+      },
+      RESERVATIONS_PAGE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/reservations-page_yzlkrz.webp',
+        ALT: 'Página de reservaciones del sitio web de The Choice',
+      },
+      PAYMENT_RESERVATIONS_PAGE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/reservation-payment-page_rp6j2f.webp',
+        ALT: 'Página de pago para reservaciones del sitio web de The Choice',
+      },
+      SUCCESS_PAYMENT_RESERVATIONS_PAGE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/success-reservation-payment-page_tmzz0o.webp',
+        ALT: 'Página de mensaje de éxito para reservciones del sitio web de The Choice',
+      },
+      RESERVATIONS_FLOW: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760248/reservation-flow_umxka3.webp',
+        ALT: 'Flujo del usuario para hacer una reservación en el sitioweb de The Choice',
+      },
+      TYPOGRAPHIES: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/typography_u3i9vo.webp',
+        ALT: 'Tipografías utilizadas en el Diseño UI/UX del sitio web de The Choice',
+      },
+      TYPOGRAPHY_SCALES: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772843792/typography-scale_izdptl.webp',
+        ALT: 'Escala tipográfica utilizada en el Diseño UI/UX del sitio web de The Choice',
+      },
+      BUTTON_COMPOSITION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772846222/button-composition_n5iwsa.webp',
+        ALT: 'Composición interna del componente Botón creado en el Diseño UI/UX del sitio web de The Choice',
+      },
+      USER_PERSONA: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1773013571/user-persona_zvmspa.webp',
+        ALT: 'User Persona del sitio web de The Choice',
+      },
+      BUTTON_VARIANTS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772846222/button-variants_tkrn6t.webp',
+        ALT: 'Variantes del componente Botón creado en el Diseño UI/UX del sitio web de The Choice',
+      },
+      MACKBOOK_MOCKUP: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/mackbook-pro_di84bt.webp',
+        ALT: 'Mackbook Pro mockup',
+      },
+      MACKBOOK_WEB_MOCKUP: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772845681/mackbook-mockup_jso6y6.webp',
+        ALT: 'Sitio web de The Choice en Mackbook Pro',
+      },
+      COLOR_PALETTE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760248/palette_bx5h2x.webp',
+        ALT: 'Escala de luces y sombras de la paleta de color utilizada en el Diseño UI/UX del sitio web de The Choice',
+      },
+      COLOR_PALETTE_TOKENS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760248/palette-tokens_auce9h.webp',
+        ALT: 'Tokens de diseño de color utilizados en el Diseño UI/UX del sitio web de The Choice',
+      },
+    },
     ATPROY: {
       BANNER_COMPARISON: null,
       BANNER_SMALL: {

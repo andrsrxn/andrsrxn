@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/drawer'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
+import { PROJECT_TYPES } from '@/lib/constants/projects'
+import { cn } from '@/lib/utils'
 
 interface ResponsiveSheetContentProps extends ComponentProps<typeof DrawerContent> {
   title: string
@@ -22,6 +24,8 @@ interface ResponsiveSheetContentProps extends ComponentProps<typeof DrawerConten
   services: string[]
   bannerUrl: string
   bannerAlt: string
+  projectType: string
+  overflow?: boolean
 }
 
 export function ResponsiveSheet({ children, open, ...props }: ComponentProps<typeof Drawer>) {
@@ -55,7 +59,9 @@ export function ResponsiveSheetTrigger({ size = 'base' }: { size?: 'sm' | 'base'
 export function ResponsiveSheetContent({
   title,
   children,
+  overflow = false,
   client,
+  projectType,
   description,
   services,
   bannerUrl,
@@ -73,6 +79,9 @@ export function ResponsiveSheetContent({
           </span>
           <DrawerTitle className='tablet:text-5xl desktop:w-11/12 text-4xl'>{title}</DrawerTitle>
           <div className='tablet:mt-2 flex flex-wrap items-center gap-2'>
+            {projectType !== PROJECT_TYPES.NORMAL ? (
+              <Badge className='desktop:text-sm'>{projectType}</Badge>
+            ) : null}
             {services.map(service => {
               return (
                 <Badge variant='secondary' className='desktop:text-sm' key={service}>
@@ -85,12 +94,17 @@ export function ResponsiveSheetContent({
           <Image
             src={bannerUrl}
             alt={bannerAlt}
-            className='bg-accent desktop:mx-0 desktop:w-11/12 tablet:mt-4 mx-auto mt-2 aspect-video object-cover'
+            className='bg-accent desktop:mx-0 desktop:w-11/12 tablet:mt-4 mt-2 aspect-video max-w-2xl object-cover'
           />
         </DrawerHeader>
         <Separator className='desktop:hidden mx-auto my-4 w-11/12!' />
 
-        <div className='desktop:mt-0 desktop:pt-0 relative overflow-x-clip pt-6 pb-20'>
+        <div
+          className={cn(
+            'desktop:mt-0 desktop:pt-0 relative pt-6 pb-20',
+            overflow ? 'overflow-x-visible' : 'overflow-x-clip'
+          )}
+          data-responsive-sheet-overflow>
           <div className='mb-8 grid gap-4'>
             {description && description.length > 0
               ? description.map((text, i) => (

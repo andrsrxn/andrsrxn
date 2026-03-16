@@ -9,6 +9,7 @@ import { IcemeneContent } from '@/components/projects/icemene-content'
 import { SolarGroupContent } from '@/components/projects/solar-group-content'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
+import { Badge } from '@/components/ui/badge'
 import { Image } from '@/components/ui/image'
 import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
@@ -148,7 +149,10 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg line-clamp-1 block w-full text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 text-sm leading-tight'>
+                  <Badge variant='destructive' className='desktop:text-sm'>
+                    {PROJECTS.SOLAR_GROUP_REBRANDING.TYPE}
+                  </Badge>{' '}
                   {PROJECTS.SOLAR_GROUP_REBRANDING.CLIENT} -{' '}
                   {PROJECTS.SOLAR_GROUP_REBRANDING.INDUSTRY}
                 </span>

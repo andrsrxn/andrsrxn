@@ -8,6 +8,7 @@ export const IcemeneContent = () => {
   const project = PROJECTS.ICEMENE_REBRANDING
   return (
     <ResponsiveSheetContent
+      projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}
       title={project.SUMMARY}

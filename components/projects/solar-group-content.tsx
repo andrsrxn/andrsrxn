@@ -8,6 +8,7 @@ export const SolarGroupContent = () => {
   const project = PROJECTS.SOLAR_GROUP_REBRANDING
   return (
     <ResponsiveSheetContent
+      projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}
       title={project.SUMMARY}

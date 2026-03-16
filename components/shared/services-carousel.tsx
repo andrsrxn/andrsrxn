@@ -64,7 +64,7 @@ export function ServicesCarousel() {
   // Corrección para la iteración de las tarjetas del carrusel:
 
   return (
-    <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl tablet:overflow-visible mt-10 overflow-x-clip'>
+    <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl tablet:overflow-visible laptop:mt-16 mt-10 overflow-x-clip'>
       <div
         ref={scrollContainerRef}
         className='no-scrollbar tablet:snap-none tablet:gap-3 tablet:overflow-clip tablet:justify-center laptop:gap-5 flex snap-x snap-mandatory gap-2 overflow-auto p-1'>

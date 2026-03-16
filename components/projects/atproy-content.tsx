@@ -10,6 +10,7 @@ export const AtproyContent = () => {
   const project = PROJECTS.ATPROY_BRAND_REFRESH
   return (
     <ResponsiveSheetContent
+      projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}
       title={project.SUMMARY}
@@ -56,7 +57,7 @@ export const AtproyContent = () => {
         <div className='bg-[#AAC8B9] p-8'>
           <Image
             includePlaceholder={false}
-            className='h-28 w-auto'
+            className='h-28 w-auto invert'
             src={project.IMAGES.COLOR_4.URL}
             alt={project.IMAGES.COLOR_4.ALT}
           />

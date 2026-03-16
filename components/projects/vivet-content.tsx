@@ -8,6 +8,7 @@ export const VIVETContent = () => {
   const project = PROJECTS.VIVET_REBRANDING
   return (
     <ResponsiveSheetContent
+      projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}
       title={project.SUMMARY}
@@ -16,11 +17,11 @@ export const VIVETContent = () => {
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div className='grid gap-8'>
         <Image
-          className='aspect-video w-auto border border-[#464742]'
+          className='aspect-video w-full border border-[#464742]'
           src={project.IMAGES.LOGO_CONTRUCTION.URL}
           alt={project.IMAGES.LOGO_CONTRUCTION.ALT}
         />
-        <div className='laptop:grid-cols-2 grid gap-8 overflow-hidden'>
+        <div className='laptop:grid-cols-2 grid w-full gap-8 overflow-hidden'>
           <Image
             className='aspect-square border border-[#464742]'
             src={project.IMAGES.COLOR_1.URL}

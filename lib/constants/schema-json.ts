@@ -18,7 +18,7 @@ export const PERSON_SCHEMA: WithContext<Person> = {
   url: SITE.BASE_URL,
   name: COMPANY.NAME,
   description: COMPANY.DESCRIPTION,
-  jobTitle: 'Director Creativo',
+  jobTitle: 'Diseñador y Programador Web',
   image: IMAGES.BRAND.LOGO.PNG.URL,
   knowsAbout: COMPANY.SERVICES_SUMMARY,
   knowsLanguage: ['es-419', 'es', 'en-US', 'en-GB'],

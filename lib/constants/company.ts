@@ -1,10 +1,10 @@
 export const COMPANY = {
   NIT: '300625197',
-  NAME: 'Andrés Raxón - Director Creativo',
+  NAME: 'Andrés Raxón | Diseñador y Programador Web',
   COMMERCIAL_NAME: 'andrsrxn',
   LEGAL_NAME: 'Carlos Andrés Raxón Castañeda',
   DESCRIPTION:
-    'Director Creativo especializado en la creación de Branding moderno, Desarrollo Web de impacto y material de Marketing destacable.',
+    'Diseñador y Programador Web con experiencia en la creación de Branding moderno, Desarrollo Web de impacto y material de Marketing destacable.',
   SERVICES_SUMMARY: 'Branding, Desarrollo Web y Marketing',
 
   EMAIL_ADDRESSES: {

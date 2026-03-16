@@ -1,27 +1,31 @@
 import { IconAfterEffects } from '@/components/icons/brands/after-effects'
 import { IconAhrefs } from '@/components/icons/brands/ahrefs'
 import { IconAstro } from '@/components/icons/brands/astro'
+import { IconBiome } from '@/components/icons/brands/biome'
+import { IconBun } from '@/components/icons/brands/bun'
 import { IconCloudflare } from '@/components/icons/brands/cloudflare'
+import { IconDrizzle } from '@/components/icons/brands/drizzle-orm'
 import { IconElevenlabs } from '@/components/icons/brands/elevenlabs'
-import { IconExcalidraw } from '@/components/icons/brands/excalidraw'
 import { IconFigma } from '@/components/icons/brands/figma'
-import { IconFontshare } from '@/components/icons/brands/fontshare'
-import { IconGoogleMeet } from '@/components/icons/brands/google-meet'
+import { IconGithub } from '@/components/icons/brands/github'
 import { IconGSAP } from '@/components/icons/brands/gsap'
 import { IconHugginFace } from '@/components/icons/brands/huggin-face'
 import { IconIllustrator } from '@/components/icons/brands/illustrator'
 import { IconMotion } from '@/components/icons/brands/motion'
-import { IconNetlify } from '@/components/icons/brands/netlify'
 import { IconNextJS } from '@/components/icons/brands/nextjs'
 import { IconNotion } from '@/components/icons/brands/notion'
 import { IconPhotoshop } from '@/components/icons/brands/photoshop'
+import { IconPostgreSQL } from '@/components/icons/brands/postgresql'
 import { IconPremierePro } from '@/components/icons/brands/premiere'
 import { IconRadixUI } from '@/components/icons/brands/radix-ui'
 import { IconResend } from '@/components/icons/brands/resend'
-import { IconSERanking } from '@/components/icons/brands/se-ranking'
+
+import { IconSentry } from '@/components/icons/brands/sentry'
 import { IconSquoosh } from '@/components/icons/brands/squoosh'
 import { IconTailwind } from '@/components/icons/brands/tailwind'
+import { IconTurborepo } from '@/components/icons/brands/turborepo'
 import { IconVercel } from '@/components/icons/brands/vercel'
+import { IconVitest } from '@/components/icons/brands/vitest'
 
 export const DESIGN_TOOLS = {
   FIGMA: {
@@ -82,6 +86,13 @@ export const DESIGN_TOOLS = {
     ICON: IconTailwind,
     STROKE: 0,
   },
+  ASTRO: {
+    LABEL: 'Astro',
+    DESCRIPTION: 'Framework para sitios web estáticos',
+    URL: 'https://astro.build',
+    ICON: IconAstro,
+    STROKE: 0,
+  },
   NOTION: {
     LABEL: 'Notion',
     DESCRIPTION: 'Definición del proyecto y recursos',
@@ -97,13 +108,7 @@ export const DESIGN_TOOLS = {
     ICON: IconVercel,
     STROKE: 3,
   },
-  NETLIFY: {
-    LABEL: 'Netlify',
-    DESCRIPTION: 'Hosting de sitios estáticos',
-    URL: 'https://netlify.com',
-    ICON: IconNetlify,
-    STROKE: 0,
-  },
+
   RESEND: {
     LABEL: 'Resend',
     DESCRIPTION: 'Envío de correos transaccionales',
@@ -111,13 +116,7 @@ export const DESIGN_TOOLS = {
     ICON: IconResend,
     STROKE: 3,
   },
-  EXCALIDRAW: {
-    LABEL: 'Excalidraw',
-    DESCRIPTION: 'Creación de esquemas y diagramas',
-    URL: 'https://excalidraw.com',
-    ICON: IconExcalidraw,
-    STROKE: 0,
-  },
+
   GSAP: {
     LABEL: 'GSAP',
     DESCRIPTION: 'Animaciones y efectos en la web',
@@ -139,20 +138,7 @@ export const DESIGN_TOOLS = {
     ICON: IconRadixUI,
     STROKE: 1,
   },
-  GOOGLE_MEET: {
-    LABEL: 'Google Meet',
-    DESCRIPTION: 'Reuniones virtuales con clientes',
-    URL: 'https://meet.google.com',
-    ICON: IconGoogleMeet,
-    STROKE: 0,
-  },
-  ASTRO: {
-    LABEL: 'Astro',
-    DESCRIPTION: 'Framework para sitios web estáticos',
-    URL: 'https://astro.build',
-    ICON: IconAstro,
-    STROKE: 3,
-  },
+
   SQUOOSH: {
     LABEL: 'Squoosh',
     DESCRIPTION: 'Optimización de imágenes',
@@ -181,18 +167,63 @@ export const DESIGN_TOOLS = {
     ICON: IconMotion,
     STROKE: 3,
   },
-  SE_RANKING: {
-    LABEL: 'SE Ranking',
-    DESCRIPTION: 'Herramientas de SEO para la web',
-    URL: 'https://seranking.com/es/',
-    ICON: IconSERanking,
+
+  BIOME: {
+    LABEL: 'Biome',
+    DESCRIPTION: 'Linter y formateador de código',
+    URL: 'https://biome.dev',
+    ICON: IconBiome,
     STROKE: 0,
   },
-  FONT_SHARE: {
-    LABEL: 'Fontshare',
-    DESCRIPTION: 'Tipografías y fuentes de uso libre',
-    URL: 'https://fontshare.com/',
-    ICON: IconFontshare,
+
+  VITEST: {
+    LABEL: 'Vitest',
+    DESCRIPTION: 'Testing framework de código',
+    URL: 'https://vitest.dev',
+    ICON: IconVitest,
+    STROKE: 0,
+  },
+  GITHUB: {
+    LABEL: 'GitHub',
+    DESCRIPTION: 'Repositorio de código en la nube',
+    URL: 'https://github.com',
+    ICON: IconGithub,
+    STROKE: 0,
+  },
+  SENTRY: {
+    LABEL: 'Sentry',
+    DESCRIPTION: 'Monitorización de errores en tiempo real',
+    URL: 'https://sentry.io',
+    ICON: IconSentry,
+    STROKE: 0,
+  },
+  DRIZZLE: {
+    LABEL: 'Drizzle',
+    DESCRIPTION: 'ORM para bases de datos',
+    URL: 'https://orm.drizzle.team/',
+    ICON: IconDrizzle,
+    STROKE: 0,
+  },
+  BUN: {
+    LABEL: 'Bun',
+    DESCRIPTION: 'Tiempo de ejecución de JavaScript',
+    URL: 'https://bun.sh',
+    ICON: IconBun,
+    STROKE: 0,
+  },
+  TURBOREPO: {
+    LABEL: 'TurboRepo',
+    DESCRIPTION: 'Unificación de código para grandes proyectos',
+    URL: 'https://turborepo.dev',
+    ICON: IconTurborepo,
+    STROKE: 0,
+  },
+
+  POSTGRES: {
+    LABEL: 'Postgres',
+    DESCRIPTION: 'Base de datos relacional moderna',
+    URL: 'https://www.postgresql.org/',
+    ICON: IconPostgreSQL,
     STROKE: 0,
   },
 } as const

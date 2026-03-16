@@ -43,6 +43,9 @@ export const SERVICES = {
         TITLE: 'Sitio Web',
       },
 
+      SAAS: {
+        TITLE: 'SaaS (Frontend y Backend)',
+      },
       UI_UX_DESIGN: {
         TITLE: 'Diseño UI/UX',
       },

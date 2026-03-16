@@ -1,1 +1,1 @@
-Andrés Raxón - Director Creativo
+Andrés Raxón | Diseñador y Programador Web

@@ -23,6 +23,11 @@ export const COMPANY = {
       USER: 'andrsrxn',
       URL: 'https://wa.me/message/SZWJ4FNBEJHID1',
     },
+    LINKEDIN: {
+      LABEL: 'LinkedIn',
+      USER: 'andrsrxn',
+      URL: 'https://www.linkedin.com/in/andrsrxn/',
+    },
   },
   ADDRESS: {
     LOCALITY: 'Mixco',

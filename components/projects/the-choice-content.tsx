@@ -49,8 +49,8 @@ export const TheChoiceContent = () => {
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
       bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
       <div className='relative isolate grid gap-8 overflow-x-visible'>
-        {/* <div className='-mt-2 mb-12 block'>
-          <p>
+        <div className='-mt-2 mb-12 block'>
+          {/* <p>
             <Link
               prefetch={false}
               className='text-foreground inline-flex items-center gap-2 leading-none font-medium underline decoration-1 underline-offset-2'
@@ -59,8 +59,8 @@ export const TheChoiceContent = () => {
               href='https://thechoice.vercel.app/'>
               https://thechoice.vercel.app/
             </Link>
-          </p>
-        </div> */}
+          </p> */}
+        </div>
         <div className='flex flex-col items-center justify-center'>
           <Image
             ref={laptopRef}

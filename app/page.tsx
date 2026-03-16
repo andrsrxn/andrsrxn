@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: One page */
 
-import { IconBrandWhatsapp } from '@tabler/icons-react'
+import { IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
@@ -49,20 +49,20 @@ export default function Home() {
             />
           </picture>
         </div>
-        <div className='tablet:gap-6 animate-fade tablet:mt-44 display:mt-50 animation-duration-[800ms] relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-4 opacity-0 [animation-delay:500ms]'>
+        <div className='tablet:gap-6 animate-fade tablet:mt-40 display:mt-50 animation-duration-[800ms] relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-4 opacity-0 [animation-delay:500ms]'>
           <h1 className='text-center'>
             <span className='font-body tablet:text-lg display:text-2xl laptop:text-xl mb-2 block'>
               Andrés Raxón
             </span>
-            <span className='font-heading tablet:text-7xl desktop:max-w-5xl laptop:text-8xl laptop:max-w-2xl block max-w-md text-6xl leading-none!'>
+            <span className='font-heading tablet:text-7xl desktop:max-w-4xl laptop:text-8xl desktop:text-9xl laptop:max-w-2xl block max-w-md text-6xl leading-none!'>
               Diseñador y Programador Web
             </span>
           </h1>
-          <p className='text-muted-foreground display:text-xl tablet:text-base laptop:max-w-2xl desktop:max-w-3xl max-w-md text-center text-sm leading-normal text-pretty'>
+          <p className='text-muted-foreground desktop:text-xl tablet:text-base laptop:max-w-2xl desktop:max-w-3xl max-w-md text-center text-sm leading-normal text-pretty'>
             +2 años de experiencia como Profesional Independiente. Especializado en Branding
             moderno, Desarrollo Web de impacto y material de Marketing destacable.
           </p>
-          <div className='mt-2 flex flex-wrap items-center gap-2'>
+          <div className='mt-4 flex flex-wrap items-center gap-2'>
             <div className='relative overflow-hidden rounded-full p-[2px]'>
               <span
                 className={cn(
@@ -73,20 +73,18 @@ export default function Home() {
 
               <Button
                 asChild
-                size='lg'
+                size='default'
                 className='display:h-10 display:px-8 display:text-base relative max-w-fit'>
                 <Link href='#contacto'>Contratar Servicios</Link>
               </Button>
             </div>
 
-            <div className='relative w-max shrink-0 overflow-hidden rounded-full p-[2px]'>
-              <span
-                className={cn(
-                  'absolute inset-0 scale-[500%] animate-[spin_2s_linear_infinite]',
-                  'bg-[conic-gradient(from_90deg_at_50%_50%,#e300bf_0%,#0f00d3_50%,#e300bf_100%)]'
-                )}
-              />
-              <Button asChild size='icon' className='relative h-10 px-8'>
+            <div className='flex items-center gap-2'>
+              <Button
+                asChild
+                variant={'secondary'}
+                size='icon'
+                className='display:h-10 relative shrink-0'>
                 <Link
                   prefetch={false}
                   target='_blank'
@@ -95,6 +93,36 @@ export default function Home() {
                   rel='noopener noreferrer'
                   href={COMPANY.SOCIAL_MEDIA.WHATSAPP.URL}>
                   <IconBrandWhatsapp className='size-6' />{' '}
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant={'secondary'}
+                size='icon'
+                className='display:h-10 relative shrink-0'>
+                <Link
+                  prefetch={false}
+                  target='_blank'
+                  title={COMPANY.SOCIAL_MEDIA.INSTAGRAM.LABEL}
+                  aria-label={COMPANY.SOCIAL_MEDIA.INSTAGRAM.LABEL}
+                  rel='noopener noreferrer'
+                  href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
+                  <IconBrandInstagram className='size-6' />{' '}
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant={'secondary'}
+                size='icon'
+                className='display:h-10 relative shrink-0'>
+                <Link
+                  prefetch={false}
+                  target='_blank'
+                  title={COMPANY.SOCIAL_MEDIA.LINKEDIN.LABEL}
+                  aria-label={COMPANY.SOCIAL_MEDIA.LINKEDIN.LABEL}
+                  rel='noopener noreferrer'
+                  href={COMPANY.SOCIAL_MEDIA.LINKEDIN.URL}>
+                  <IconBrandLinkedin className='size-6' />{' '}
                 </Link>
               </Button>
             </div>
@@ -110,7 +138,7 @@ export default function Home() {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
                   <Badge className='desktop:text-sm'>
                     {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.TYPE}
                   </Badge>{' '}
@@ -156,7 +184,7 @@ export default function Home() {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
                   <Badge variant='destructive' className='desktop:text-sm'>
                     {PROJECTS.VIVET_REBRANDING.TYPE}
                   </Badge>{' '}
@@ -190,7 +218,7 @@ export default function Home() {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex truncate text-sm leading-tight'>
                   {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
                 </span>
                 <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
@@ -230,7 +258,7 @@ export default function Home() {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex truncate text-sm leading-tight'>
                   {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
                 </span>
                 <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>

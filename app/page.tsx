@@ -84,7 +84,7 @@ export default function Home() {
                 asChild
                 variant={'secondary'}
                 size='icon'
-                className='display:h-10 relative shrink-0'>
+                className='display:size-10 relative shrink-0'>
                 <Link
                   prefetch={false}
                   target='_blank'
@@ -99,7 +99,7 @@ export default function Home() {
                 asChild
                 variant={'secondary'}
                 size='icon'
-                className='display:h-10 relative shrink-0'>
+                className='display:size-10 relative shrink-0'>
                 <Link
                   prefetch={false}
                   target='_blank'
@@ -114,7 +114,7 @@ export default function Home() {
                 asChild
                 variant={'secondary'}
                 size='icon'
-                className='display:h-10 relative shrink-0'>
+                className='display:size-10 relative shrink-0'>
                 <Link
                   prefetch={false}
                   target='_blank'

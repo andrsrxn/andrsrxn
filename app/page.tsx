@@ -54,7 +54,7 @@ export default function Home() {
             <span className='font-body tablet:text-lg display:text-2xl laptop:text-xl mb-2 block'>
               Andrés Raxón
             </span>
-            <span className='font-heading tablet:text-7xl desktop:max-w-4xl laptop:text-8xl desktop:text-9xl laptop:max-w-2xl block max-w-md text-6xl leading-none!'>
+            <span className='font-heading tablet:text-7xl laptop:text-8xl laptop:max-w-2xl block max-w-md text-6xl leading-none!'>
               Diseñador y Programador Web
             </span>
           </h1>

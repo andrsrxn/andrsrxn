@@ -89,7 +89,7 @@ export function ServicesCarousel() {
                 <ul className='grid gap-1 pl-4'>
                   {Object.values(service.SUBSERVICES).map(subService => (
                     <li
-                      className='desktop:text-lg list-disc text-base leading-normal marker:text-neutral-600'
+                      className='desktop:text-lg tablet:text-sm laptop:text-base list-disc text-base leading-normal marker:text-neutral-600'
                       key={subService.TITLE}>
                       {subService.TITLE}
                     </li>

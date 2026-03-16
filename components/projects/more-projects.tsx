@@ -27,7 +27,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full truncate text-sm leading-tight'>
                   {PROJECTS.BONZER_BRANDING.CLIENT} - {PROJECTS.BONZER_BRANDING.INDUSTRY}
                 </span>
                 <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
@@ -108,7 +108,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg line-clamp-1 block w-full text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg line-clamp-1 block w-full truncate text-sm leading-tight'>
                   {PROJECTS.ICEMENE_REBRANDING.CLIENT} - {PROJECTS.ICEMENE_REBRANDING.INDUSTRY}
                 </span>
                 <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
@@ -149,7 +149,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 text-sm leading-tight'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
                   <Badge variant='destructive' className='desktop:text-sm'>
                     {PROJECTS.SOLAR_GROUP_REBRANDING.TYPE}
                   </Badge>{' '}

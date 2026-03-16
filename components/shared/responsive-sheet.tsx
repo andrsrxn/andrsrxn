@@ -41,7 +41,7 @@ export function ResponsiveSheetTrigger({ size = 'base' }: { size?: 'sm' | 'base'
     <DrawerTrigger asChild>
       {size === 'base' ? (
         <Button
-          className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 px-6!'
+          className='display:h-10 display:px-8 display:text-base display:bottom-6 absolute bottom-4 left-1/2 w-fit -translate-x-1/2 border-2 px-6!'
           variant='secondary'>
           Ver proyecto completo <IconPlus />
         </Button>

@@ -132,6 +132,7 @@ export const ContactForm = () => {
               <FormLabel>{typeName}</FormLabel>
               <FormControl>
                 <Input
+                  className='tablet:text-base'
                   disabled={pending}
                   placeholder={typeName === 'Nombre de la empresa' ? 'Acme S.A.' : 'José Perez'}
                   {...field}
@@ -149,7 +150,12 @@ export const ContactForm = () => {
             <FormItem>
               <FormLabel>Correo electrónico</FormLabel>
               <FormControl>
-                <Input disabled={pending} placeholder='nombre@dominio.com' {...field} />
+                <Input
+                  className='tablet:text-base'
+                  disabled={pending}
+                  placeholder='nombre@dominio.com'
+                  {...field}
+                />
               </FormControl>
 
               <FormMessage />
@@ -214,6 +220,7 @@ export const ContactForm = () => {
               </FormLabel>
               <FormControl>
                 <Textarea
+                  className='tablet:text-base'
                   disabled={pending}
                   placeholder='Detalles del proyecto, servicios en específico, necesidades de la marca, información relevante, etc...'
                   {...field}

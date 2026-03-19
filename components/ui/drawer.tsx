@@ -49,7 +49,7 @@ function DrawerContent({
       <DrawerPrimitive.Content
         data-slot='drawer-content'
         className={cn(
-          'group/drawer-content tablet:px-[10%] laptop:px-20 laptop:max-w-11/12 display:max-w-[1400px] fixed z-50 mx-auto flex h-auto max-w-4xl flex-col border-2 bg-neutral-900 px-[5%]',
+          'group/drawer-content tablet:px-[10%] laptop:px-20 laptop:max-w-11/12 display:max-w-(--breakpoint-display) fixed z-50 mx-auto flex h-auto max-w-4xl flex-col border-2 bg-neutral-900 px-[5%]',
           'data-[vaul-drawer-direction=top]:desktop:max-h-[90dvh] data-[vaul-drawer-direction=top]:inset-x-0 data-[vaul-drawer-direction=top]:top-0 data-[vaul-drawer-direction=top]:mb-24 data-[vaul-drawer-direction=top]:max-h-[85dvh] data-[vaul-drawer-direction=top]:rounded-b-none data-[vaul-drawer-direction=top]:border-b',
           'data-[vaul-drawer-direction=bottom]:desktop:max-h-[90dvh] data-[vaul-drawer-direction=bottom]:inset-x-0 data-[vaul-drawer-direction=bottom]:bottom-0 data-[vaul-drawer-direction=bottom]:mt-24 data-[vaul-drawer-direction=bottom]:max-h-[85dvh] data-[vaul-drawer-direction=bottom]:rounded-t-none data-[vaul-drawer-direction=bottom]:border-t',
           'data-[vaul-drawer-direction=right]:inset-y-0 data-[vaul-drawer-direction=right]:right-0 data-[vaul-drawer-direction=right]:w-3/4 data-[vaul-drawer-direction=right]:border-l data-[vaul-drawer-direction=right]:sm:max-w-sm',

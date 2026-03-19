@@ -49,7 +49,7 @@ export default function Home() {
             />
           </picture>
         </div>
-        <div className='tablet:gap-6 animate-fade tablet:mt-40 display:mt-50 animation-duration-[800ms] relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-4 opacity-0 [animation-delay:500ms]'>
+        <div className='tablet:gap-6 animate-fade tablet:mt-36 animation-duration-[800ms] relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-4 opacity-0 [animation-delay:500ms]'>
           <h1 className='text-center'>
             <span className='font-body tablet:text-lg display:text-2xl laptop:text-xl mb-2 block'>
               Andrés Raxón
@@ -132,6 +132,7 @@ export default function Home() {
       </section>
 
       <Separator className='container mx-auto my-20 w-11/12!' />
+
       {/* Projects */}
       <section className='tablet:mt-20 laptop:w-11/12 mx-auto mt-12 max-w-6xl'>
         <div className='tablet:gap-20 desktop:gap-40 flex flex-col gap-16'>
@@ -168,11 +169,7 @@ export default function Home() {
                 </picture>
               </InView>
               <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
+                <InView viewOptions={{ once: true, start: 'top 105%' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
 
@@ -203,9 +200,7 @@ export default function Home() {
               </InView>
               <ResponsiveSheet>
                 <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
+                  viewOptions={{ once: true, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
@@ -245,9 +240,7 @@ export default function Home() {
               </InView>
               <ResponsiveSheet>
                 <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
+                  viewOptions={{ once: true, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
@@ -274,7 +267,7 @@ export default function Home() {
                   controls={false}
                   loop
                   playsInline
-                  className='bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover will-change-[clip-path]'>
+                  className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-80 will-change-[clip-path]'>
                   <source
                     src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
                     type='video/mp4'
@@ -283,9 +276,7 @@ export default function Home() {
               </InView>
               <ResponsiveSheet>
                 <InView
-                  viewOptions={{
-                    start: 'top 105%',
-                  }}
+                  viewOptions={{ once: true, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
@@ -295,11 +286,11 @@ export default function Home() {
           </ScrollPolygonContainer>
         </div>
 
-        <Separator className='container mx-auto my-20 w-11/12!' />
+        <Separator className='container mx-auto my-16 w-11/12!' />
       </section>
 
       <section>
-        <MoreProjects className='-mt-1 mb-12' />
+        <MoreProjects className='mb-12' />
       </section>
 
       {/* Tools */}
@@ -330,7 +321,7 @@ export default function Home() {
       <section className='mb-16 outline-none' id='contacto'>
         <div className='desktop:max-w-3xl container mx-auto mb-3 h-max w-4/5 max-w-xl'>
           <h2 className='font-heading laptop:text-center tablet:text-5xl desktop:text-7xl text-center text-4xl outline-none'>
-            Comencemos a crear diseños memorables
+            Comencemos a crear proyectos memorables
           </h2>
         </div>
         <div>

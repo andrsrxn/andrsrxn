@@ -44,7 +44,6 @@ export const TheChoiceContent = () => {
       projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}
-      overflow
       title={project.SUMMARY}
       description={project.DESCRIPTION}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
@@ -62,7 +61,7 @@ export const TheChoiceContent = () => {
             </Link>
           </p>
         </div>
-        <div className='flex flex-col items-center justify-center'>
+        <div className='flex flex-col items-center justify-center overflow-x-clip'>
           <Image
             ref={laptopRef}
             className='tablet:top-[15%] tablet:scale-[115%] tablet:mask-r-from-88% tablet:mask-r-to-93% tablet:mask-l-from-88% tablet:mask-l-to-93% sticky top-[30%] z-50 origin-center object-contain'
@@ -161,7 +160,7 @@ export const TheChoiceContent = () => {
         <span className='text-foreground block text-lg font-semibold'>
           Demostración del componente Botón
         </span>
-        <div className='tablet:grid-cols-2 laptop:grid-cols-1 grid gap-12'>
+        <div className='tablet:grid-cols-2 laptop:grid-cols-1 laptop:gap-20 grid gap-12'>
           <Image
             includePlaceholder={false}
             src={project.IMAGES.BUTTON_VARIANTS.URL}
@@ -175,14 +174,10 @@ export const TheChoiceContent = () => {
             />
           </div>
         </div>
-        <div className='mt-12 grid gap-8 overflow-hidden'>
+        <div className='mt-12 grid w-full gap-8 overflow-hidden'>
+          <Image src={project.IMAGES.PERFORMANCE.URL} alt={project.IMAGES.PERFORMANCE.ALT} />
           <Image
-            className='scale-110 rounded-md'
-            src={project.IMAGES.MACKBOOK_WEB_MOCKUP.URL}
-            alt={project.IMAGES.MACKBOOK_WEB_MOCKUP.ALT}
-          />
-          <Image
-            className='scale-110'
+            className='mt-10 scale-110'
             src={project.IMAGES.MACKBOOK_WEB_MOCKUP.URL}
             alt={project.IMAGES.MACKBOOK_WEB_MOCKUP.ALT}
           />

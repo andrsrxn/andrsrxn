@@ -8,6 +8,7 @@ import { ParticlesBackground } from '@/components/backgrounds/particles'
 import { JsonLd } from '@/components/shared/json-ld'
 import { Image } from '@/components/ui/image'
 import { Toaster } from '@/components/ui/sonner'
+import { COMPANY } from '@/lib/constants/company'
 import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
 import { IMAGES } from '@/lib/constants/paths'
 import { PERSON_SCHEMA, SERVICES_SCHEMA, WEBSITE_SCHEMA } from '@/lib/constants/schema-json'
@@ -80,9 +81,9 @@ export default function RootLayout({
                 </Link>
               </li>
             </ul>
-            <div className='flex items-center justify-center gap-2'>
+            <div className='flex flex-wrap items-center justify-center gap-2'>
               <p className='text-muted-foreground shrink-0 text-center text-sm'>
-                &copy; 2025. Andrés Raxón - Director Creativo
+                &copy; {new Date().getFullYear()}. {COMPANY.NAME}
               </p>
 
               <Image

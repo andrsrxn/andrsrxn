@@ -4,8 +4,8 @@ import { SERVICES } from '@/lib/constants/services'
 export const PROJECT_TYPES = {
   PROPOSAL: 'Propuesta',
   CASE_STUDY: 'Caso de estudio',
-  NORMAL: '',
-}
+  NORMAL: 'Normal',
+} as const
 
 export const PROJECTS = {
   THE_CHOICE_UIUX_DESIGN_WEBSITE: {

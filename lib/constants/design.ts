@@ -5,11 +5,9 @@ import { IconBiome } from '@/components/icons/brands/biome'
 import { IconBun } from '@/components/icons/brands/bun'
 import { IconCloudflare } from '@/components/icons/brands/cloudflare'
 import { IconDrizzle } from '@/components/icons/brands/drizzle-orm'
-import { IconElevenlabs } from '@/components/icons/brands/elevenlabs'
 import { IconFigma } from '@/components/icons/brands/figma'
 import { IconGithub } from '@/components/icons/brands/github'
 import { IconGSAP } from '@/components/icons/brands/gsap'
-import { IconHugginFace } from '@/components/icons/brands/huggin-face'
 import { IconIllustrator } from '@/components/icons/brands/illustrator'
 import { IconMotion } from '@/components/icons/brands/motion'
 import { IconNextJS } from '@/components/icons/brands/nextjs'
@@ -19,9 +17,7 @@ import { IconPostgreSQL } from '@/components/icons/brands/postgresql'
 import { IconPremierePro } from '@/components/icons/brands/premiere'
 import { IconRadixUI } from '@/components/icons/brands/radix-ui'
 import { IconResend } from '@/components/icons/brands/resend'
-
 import { IconSentry } from '@/components/icons/brands/sentry'
-import { IconSquoosh } from '@/components/icons/brands/squoosh'
 import { IconTailwind } from '@/components/icons/brands/tailwind'
 import { IconTurborepo } from '@/components/icons/brands/turborepo'
 import { IconVercel } from '@/components/icons/brands/vercel'
@@ -137,28 +133,6 @@ export const DESIGN_TOOLS = {
     URL: 'https://radix-ui.com',
     ICON: IconRadixUI,
     STROKE: 1,
-  },
-
-  SQUOOSH: {
-    LABEL: 'Squoosh',
-    DESCRIPTION: 'Optimización de imágenes',
-    URL: 'https://squoosh.app',
-    ICON: IconSquoosh,
-    STROKE: 0,
-  },
-  ELEVENLABS: {
-    LABEL: 'Elevenlabs',
-    DESCRIPTION: 'Generación de voces para publicidad',
-    URL: 'https://elevenlabs.io',
-    ICON: IconElevenlabs,
-    STROKE: 0,
-  },
-  HUGGING_FACE: {
-    LABEL: 'Hugging Face',
-    DESCRIPTION: 'Herramientas de IA para diseño',
-    URL: 'https://hugginface.co',
-    ICON: IconHugginFace,
-    STROKE: 0,
   },
   MOTION: {
     LABEL: 'Motion',

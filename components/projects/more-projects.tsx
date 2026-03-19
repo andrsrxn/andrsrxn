@@ -12,199 +12,147 @@ import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/res
 import { Badge } from '@/components/ui/badge'
 import { Image } from '@/components/ui/image'
 import { COMPANY } from '@/lib/constants/company'
-import { PROJECTS } from '@/lib/constants/projects'
+import { PROJECT_TYPES, PROJECTS } from '@/lib/constants/projects'
 import { cn } from '@/lib/utils'
 
 interface MoreProyectsProps extends ComponentProps<'div'> {}
 
+interface ProjectSecondary {
+  bannerUrl: string
+  bannerAlt: string
+  bannerSmallUrl: string
+  client: string
+  type: (typeof PROJECT_TYPES)[keyof typeof PROJECT_TYPES]
+  industry: string
+  summary: string
+  content: React.ReactNode
+}
+
+export const MoreProjectsCard = ({
+  project: { bannerUrl, bannerAlt, bannerSmallUrl, client, type, industry, summary, content },
+}: {
+  project: ProjectSecondary
+}) => {
+  return (
+    <div className='laptop:gap-8 laptop:flex-col laptop:w-full container mx-auto flex w-11/12 gap-4'>
+      <ScrollPolygonContainer className='laptop:w-full w-[40%] shrink-0'>
+        <InView>
+          <picture>
+            <source srcSet={bannerUrl} media='(min-width: 64rem)' />
+            <Image
+              src={bannerSmallUrl}
+              alt={bannerAlt}
+              loading='eager'
+              className='bg-accent animated-polygon aspect-video object-cover'
+            />
+          </picture>
+        </InView>
+      </ScrollPolygonContainer>
+
+      <div className='flex w-fit flex-1 flex-col gap-1'>
+        <span className='text-muted-foreground tablet:text-base desktop:text-lg flex w-full items-center gap-3 text-sm leading-tight'>
+          {type !== PROJECT_TYPES.NORMAL ? (
+            <Badge
+              variant={type === PROJECT_TYPES.PROPOSAL ? 'destructive' : 'secondary'}
+              className='desktop:text-sm'>
+              {type}
+            </Badge>
+          ) : null}
+          <span className='truncate'>
+            {client} - {industry}
+          </span>
+        </span>
+        <h3 className='font-heading tablet:text-4xl desktop:text-5xl desktop:line-clamp-1 line-clamp-2 text-2xl leading-tight!'>
+          {summary}
+        </h3>
+        <div className='laptop:mt-4 mt-2 -ml-1'>
+          <ResponsiveSheet>
+            <ResponsiveSheetTrigger
+              className='tablet:text-sm laptop:text-base relative bottom-0 left-0 translate-none border-2 text-xs'
+              size='sm'
+            />
+
+            {content}
+          </ResponsiveSheet>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
   return (
     <div
-      className={cn('animate-fade-up desktop:container desktop:w-11/12 mx-auto', className)}
+      className={cn(
+        'animate-fade-up desktop:container desktop:w-11/12 laptop:overflow-visible mx-auto overflow-x-clip',
+        className
+      )}
       {...props}>
-      <InView>
-        <div className='tablet:grid-cols-2 tablet:gap-y-20 tablet:gap-x-12 desktop:gap-y-32 desktop:gap-x-16 grid gap-12'>
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full truncate text-sm leading-tight'>
-                  {PROJECTS.BONZER_BRANDING.CLIENT} - {PROJECTS.BONZER_BRANDING.INDUSTRY}
-                </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
-                  {PROJECTS.BONZER_BRANDING.SUMMARY}
-                </h3>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView
-                from={{ opacity: 0 }}
-                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.ALT}
-                    loading='eager'
-                    className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 100%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger size='sm' />
-                </InView>
-                <BonzerContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg block w-full truncate text-sm leading-tight'>
-                  {PROJECTS.THEPRINCIPAL_BRANDING.CLIENT} -{' '}
-                  {PROJECTS.THEPRINCIPAL_BRANDING.INDUSTRY}
-                </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
-                  {PROJECTS.THEPRINCIPAL_BRANDING.SUMMARY}
-                </h3>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView
-                from={{ opacity: 0 }}
-                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.ALT}
-                    loading='eager'
-                    className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 100%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger size='sm' />
-                </InView>
-                <ThePrincipalContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg line-clamp-1 block w-full truncate text-sm leading-tight'>
-                  {PROJECTS.ICEMENE_REBRANDING.CLIENT} - {PROJECTS.ICEMENE_REBRANDING.INDUSTRY}
-                </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
-                  {PROJECTS.ICEMENE_REBRANDING.SUMMARY}
-                </h3>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView
-                from={{ opacity: 0 }}
-                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.ALT}
-                    loading='eager'
-                    className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 100%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger size='sm' />
-                </InView>
-                <IcemeneContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
+      <div className='tablet:gap-20 laptop:gap-x-16 laptop:gap-y-24 laptop:grid-cols-2 laptop:grid desktop:gap-y-24 desktop:max-w-7xl desktop:gap-x-20 desktop:mx-auto grid gap-16'>
+        <MoreProjectsCard
+          project={{
+            type: PROJECTS.BONZER_BRANDING.TYPE,
+            bannerAlt: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.ALT,
+            bannerSmallUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL,
+            bannerUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL,
+            client: PROJECTS.BONZER_BRANDING.CLIENT,
+            industry: PROJECTS.BONZER_BRANDING.INDUSTRY,
+            summary: PROJECTS.BONZER_BRANDING.SUMMARY,
+            content: <BonzerContent />,
+          }}
+        />
 
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 desktop:px-0 flex w-full flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
-                  <Badge variant='destructive' className='desktop:text-sm'>
-                    {PROJECTS.SOLAR_GROUP_REBRANDING.TYPE}
-                  </Badge>{' '}
-                  {PROJECTS.SOLAR_GROUP_REBRANDING.CLIENT} -{' '}
-                  {PROJECTS.SOLAR_GROUP_REBRANDING.INDUSTRY}
-                </span>
-                <h3 className='font-heading laptop:text-5xl desktop:text-6xl line-clamp-1 text-3xl leading-tight'>
-                  {PROJECTS.SOLAR_GROUP_REBRANDING.SUMMARY}
-                </h3>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView
-                from={{ opacity: 0 }}
-                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER_SMALL.ALT}
-                    loading='eager'
-                    className='animated-polygon bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{
-                    start: 'top 100%',
-                  }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger size='sm' />
-                </InView>
-                <SolarGroupContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
-        </div>
-      </InView>
-      <InView>
-        <div className='desktop:mt-24 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
-          <Link
-            prefetch={false}
-            className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-1 rounded-full bg-neutral-900 px-6 py-3 text-base leading-none font-bold transition duration-75 hover:bg-neutral-800'
-            target='_blank'
-            rel='noopener noreferrer'
-            href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
-            <IconInstagram className='mr-1 size-[0.8em] scale-125' />
-            Ver más en Instagram <IconExternalLink className='tablet:size-5 size-4' />
-          </Link>
-        </div>
-      </InView>
+        <MoreProjectsCard
+          project={{
+            type: PROJECTS.THEPRINCIPAL_BRANDING.TYPE,
+            bannerAlt: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.ALT,
+            bannerSmallUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL,
+            bannerUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL,
+            client: PROJECTS.THEPRINCIPAL_BRANDING.CLIENT,
+            industry: PROJECTS.THEPRINCIPAL_BRANDING.INDUSTRY,
+            summary: PROJECTS.THEPRINCIPAL_BRANDING.SUMMARY,
+            content: <ThePrincipalContent />,
+          }}
+        />
+
+        <MoreProjectsCard
+          project={{
+            type: PROJECTS.ICEMENE_REBRANDING.TYPE,
+            bannerAlt: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.ALT,
+            bannerSmallUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL,
+            bannerUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL,
+            client: PROJECTS.ICEMENE_REBRANDING.CLIENT,
+            industry: PROJECTS.ICEMENE_REBRANDING.INDUSTRY,
+            summary: PROJECTS.ICEMENE_REBRANDING.SUMMARY,
+            content: <IcemeneContent />,
+          }}
+        />
+
+        <MoreProjectsCard
+          project={{
+            type: PROJECTS.SOLAR_GROUP_REBRANDING.TYPE,
+            bannerAlt: PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.ALT,
+            bannerSmallUrl: PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER_SMALL.URL,
+            bannerUrl: PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.URL,
+            client: PROJECTS.SOLAR_GROUP_REBRANDING.CLIENT,
+            industry: PROJECTS.SOLAR_GROUP_REBRANDING.INDUSTRY,
+            summary: PROJECTS.SOLAR_GROUP_REBRANDING.SUMMARY,
+            content: <SolarGroupContent />,
+          }}
+        />
+      </div>
+
+      <div className='desktop:mt-20 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
+        <Link
+          prefetch={false}
+          className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-1 rounded-full border-2 bg-neutral-900 px-6 py-3 text-base leading-none font-bold transition duration-75 hover:bg-neutral-800'
+          target='_blank'
+          rel='noopener noreferrer'
+          href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
+          <IconInstagram className='mr-1 size-[0.8em] scale-125' />
+          Ver más en Instagram <IconExternalLink className='tablet:size-5 size-4' />
+        </Link>
+      </div>
     </div>
   )
 }

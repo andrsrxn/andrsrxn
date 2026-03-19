@@ -21,7 +21,7 @@ export const VIVETVideo = () => {
       controls={false}
       loop
       playsInline
-      className='bg-accent desktop:w-11/12 mx-auto aspect-video border object-cover'>
+      className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-90 will-change-[clip-path]'>
       <source src={PROJECTS.VIVET_REBRANDING.IMAGES.BANNERS.URL} type='video/mp4' />
     </video>
   )

@@ -176,6 +176,10 @@ export const IMAGES = {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760248/reservation-flow_umxka3.webp',
         ALT: 'Flujo del usuario para hacer una reservación en el sitioweb de The Choice',
       },
+      PERFORMANCE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1773961415/performance_odjni4.png',
+        ALT: 'Performance del sitio web de The Choice',
+      },
       TYPOGRAPHIES: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1772760247/typography_u3i9vo.webp',
         ALT: 'Tipografías utilizadas en el Diseño UI/UX del sitio web de The Choice',

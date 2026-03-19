@@ -175,7 +175,12 @@ export const TheChoiceContent = () => {
             />
           </div>
         </div>
-        <div className='mt-12 overflow-hidden'>
+        <div className='mt-12 grid gap-8 overflow-hidden'>
+          <Image
+            className='scale-110 rounded-md'
+            src={project.IMAGES.MACKBOOK_WEB_MOCKUP.URL}
+            alt={project.IMAGES.MACKBOOK_WEB_MOCKUP.ALT}
+          />
           <Image
             className='scale-110'
             src={project.IMAGES.MACKBOOK_WEB_MOCKUP.URL}

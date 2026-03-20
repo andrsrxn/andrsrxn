@@ -142,7 +142,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
         />
       </div>
 
-      <div className='desktop:mt-20 desktop:mb-12 mt-18 mb-6 flex items-center justify-center'>
+      <div className='desktop:mt-28 desktop:mb-12 mt-20 mb-6 flex items-center justify-center'>
         <Link
           prefetch={false}
           className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-1 rounded-full border-2 bg-neutral-900 px-6 py-3 text-base leading-none font-bold transition duration-75 hover:bg-neutral-800'

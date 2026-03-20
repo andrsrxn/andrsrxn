@@ -293,13 +293,13 @@ export default function Home() {
 
       {/* Tools */}
       <section className='desktop:my-36 relative isolate my-30 overflow-hidden'>
-        <div className='wrapper tablet:w-1/2 laptop:w-full pointer-events-none absolute inset-0 z-500 mx-auto flex h-full w-4/5 flex-col items-center justify-center'>
+        <div className='wrapper tablet:w-70 laptop:w-full pointer-events-none absolute inset-0 z-500 mx-auto flex h-full w-[60%] flex-col items-center justify-center'>
           <h2 className='text-center'>
-            <span className='text-muted-foreground tablet:text-xl desktop:text-3xl desktop:mb-2 block text-lg'>
-              Las mejores herramientas,
+            <span className='text-muted-foreground tablet:text-xl desktop:text-2xl mb-2 block text-lg'>
+              Transformando ideas en proyectos únicos,
             </span>
-            <span className='font-heading tablet:text-5xl desktop:text-7xl block text-4xl'>
-              los mejores resultados
+            <span className='font-heading tablet:text-5xl desktop:text-6xl block text-4xl'>
+              con las mejores herramientas
             </span>
           </h2>
         </div>

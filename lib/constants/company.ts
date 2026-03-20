@@ -28,6 +28,11 @@ export const COMPANY = {
       USER: 'andrsrxn',
       URL: 'https://www.linkedin.com/in/andrsrxn/',
     },
+    GITHUB: {
+      LABEL: 'GitHub',
+      USER: 'andrsrxn',
+      URL: 'https://github.com/andrsrxn',
+    },
   },
   ADDRESS: {
     LOCALITY: 'Mixco',

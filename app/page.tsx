@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: One page */
 
-import { IconBrandInstagram, IconBrandLinkedin, IconBrandWhatsapp } from '@tabler/icons-react'
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
@@ -88,21 +88,6 @@ export default function Home() {
                 <Link
                   prefetch={false}
                   target='_blank'
-                  title={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
-                  aria-label={COMPANY.SOCIAL_MEDIA.WHATSAPP.LABEL}
-                  rel='noopener noreferrer'
-                  href={COMPANY.SOCIAL_MEDIA.WHATSAPP.URL}>
-                  <IconBrandWhatsapp className='size-6' />{' '}
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant={'secondary'}
-                size='icon'
-                className='display:size-10 relative shrink-0'>
-                <Link
-                  prefetch={false}
-                  target='_blank'
                   title={COMPANY.SOCIAL_MEDIA.INSTAGRAM.LABEL}
                   aria-label={COMPANY.SOCIAL_MEDIA.INSTAGRAM.LABEL}
                   rel='noopener noreferrer'
@@ -123,6 +108,21 @@ export default function Home() {
                   rel='noopener noreferrer'
                   href={COMPANY.SOCIAL_MEDIA.LINKEDIN.URL}>
                   <IconBrandLinkedin className='size-6' />{' '}
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant={'secondary'}
+                size='icon'
+                className='display:size-10 relative shrink-0'>
+                <Link
+                  prefetch={false}
+                  target='_blank'
+                  title={COMPANY.SOCIAL_MEDIA.GITHUB.LABEL}
+                  aria-label={COMPANY.SOCIAL_MEDIA.GITHUB.LABEL}
+                  rel='noopener noreferrer'
+                  href={COMPANY.SOCIAL_MEDIA.GITHUB.URL}>
+                  <IconBrandGithub className='size-6' />{' '}
                 </Link>
               </Button>
             </div>

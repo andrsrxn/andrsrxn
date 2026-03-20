@@ -267,7 +267,7 @@ export default function Home() {
                   controls={false}
                   loop
                   playsInline
-                  className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-80 will-change-[clip-path]'>
+                  className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-85 will-change-[clip-path]'>
                   <source
                     src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL}
                     type='video/mp4'
@@ -285,11 +285,9 @@ export default function Home() {
             </div>
           </ScrollPolygonContainer>
         </div>
-
-        <Separator className='container mx-auto my-16 w-11/12!' />
       </section>
 
-      <section>
+      <section className='laptop:mt-28 mt-24'>
         <MoreProjects className='mb-12' />
       </section>
 
@@ -297,22 +295,22 @@ export default function Home() {
       <section className='desktop:my-36 relative isolate my-30 overflow-hidden'>
         <div className='wrapper tablet:w-1/2 laptop:w-full pointer-events-none absolute inset-0 z-500 mx-auto flex h-full w-4/5 flex-col items-center justify-center'>
           <h2 className='text-center'>
-            <span className='text-muted-foreground tablet:text-xl desktop:text-2xl block text-lg'>
+            <span className='text-muted-foreground tablet:text-xl desktop:text-3xl desktop:mb-2 block text-lg'>
               Las mejores herramientas,
             </span>
-            <span className='font-heading tablet:text-5xl desktop:text-6xl block text-4xl'>
+            <span className='font-heading tablet:text-5xl desktop:text-7xl block text-4xl'>
               los mejores resultados
             </span>
           </h2>
         </div>
         <div
           aria-hidden
-          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-40 w-full bg-linear-to-b to-transparent'
+          className='from-background pointer-events-none absolute top-0 left-0 z-200 h-20 w-full bg-linear-to-b to-transparent'
         />
 
         <div
           aria-hidden
-          className='from-background pointer-events-none absolute bottom-0 left-0 z-200 h-40 w-full bg-linear-to-t to-transparent'
+          className='from-background pointer-events-none absolute bottom-0 left-0 z-200 h-20 w-full bg-linear-to-t to-transparent'
         />
         <OrbitingLogos />
       </section>

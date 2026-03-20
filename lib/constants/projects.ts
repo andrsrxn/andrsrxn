@@ -13,7 +13,7 @@ export const PROJECTS = {
     CLIENT: 'The Choice',
     TYPE: PROJECT_TYPES.CASE_STUDY,
     INDUSTRY: 'Restaurante y panadería',
-    SUMMARY: 'Diseño UI/UX y Desarrollo Web',
+    SUMMARY: 'Diseño UI/UX y Sitio Web',
     DESCRIPTION: [
       'El diseño de The Choice implementa una jerarquía visual sólida fundamentada en un sistema de tipografía con escala 1.2 que mejora la legibilidad al aplicar la Ley de Continuidad en la lectura. El flujo de navegación está optimizado para reducir la carga cognitiva del usuario al identificar la acción que desee realizar.',
       'El flujo de reservaciones se ha creado siguiendo la Ley de Hick, fragmentando un proceso complejo en pasos secuenciales (Selección -> Detalles -> Pago -> Éxito), siendo este el flujo prioritario de los usuarios.',

@@ -4,7 +4,7 @@ export const COMPANY = {
   COMMERCIAL_NAME: 'andrsrxn',
   LEGAL_NAME: 'Carlos Andrés Raxón Castañeda',
   DESCRIPTION:
-    'Diseñador y Programador Web con experiencia en la creación de Branding moderno, Desarrollo Web de impacto y material de Marketing destacable.',
+    'Diseñador y Programador Web especializado en Branding moderno y Desarrollo Web Frontend orientado en UI/UX.',
   SERVICES_SUMMARY: 'Branding, Desarrollo Web y Marketing',
 
   EMAIL_ADDRESSES: {

@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE.BASE_URL,
-      lastModified: new Date('2026-01-27').toISOString(),
+      lastModified: new Date('2026-03-19').toISOString(),
       changeFrequency: 'monthly',
       priority: 1,
     },

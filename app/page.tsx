@@ -59,8 +59,8 @@ export default function Home() {
             </span>
           </h1>
           <p className='text-muted-foreground desktop:text-xl tablet:text-base laptop:max-w-2xl desktop:max-w-3xl max-w-md text-center text-sm leading-normal text-pretty'>
-            +2 años de experiencia como Profesional Independiente. Especializado en Branding
-            moderno, Desarrollo Web de impacto y material de Marketing destacable.
+            +2 años de experiencia como Profesional Independiente. Especializado en Branding moderno
+            y Desarrollo Web Frontend orientado en UI/UX.
           </p>
           <div className='mt-4 flex flex-wrap items-center gap-2'>
             <div className='relative overflow-hidden rounded-full p-[2px]'>

@@ -31,7 +31,7 @@ export const ScrollPolygonContainer = ({ children, className }: ScrollPolygonCon
       scrollTrigger: {
         trigger: container,
         start: 'top bottom',
-        end: 'center center',
+        end: 'center 60%',
         scrub: true,
       },
     })

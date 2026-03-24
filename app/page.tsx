@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
-import { AtproyContent } from '@/components/projects/atproy-content'
+import { DesignSystemContent } from '@/components/projects/design-system-content'
 import { IcpjsContent } from '@/components/projects/icpjs-content'
 import { MoreProjects } from '@/components/projects/more-projects'
 import { TheChoiceContent } from '@/components/projects/the-choice-content'
@@ -169,11 +169,52 @@ export default function Home() {
                 </picture>
               </InView>
               <ResponsiveSheet>
-                <InView viewOptions={{ once: true, start: 'top 105%' }}>
+                <InView viewOptions={{ once: false, start: 'top 105%' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
 
                 <TheChoiceContent />
+              </ResponsiveSheet>
+            </div>
+          </ScrollPolygonContainer>
+
+          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
+            <InView>
+              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
+                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
+                  {PROJECTS.DESIGN_SYSTEM.CLIENT} - {PROJECTS.DESIGN_SYSTEM.INDUSTRY}
+                </span>
+                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                  {PROJECTS.DESIGN_SYSTEM.SUMMARY}
+                </p>
+              </div>
+            </InView>
+            <div className='relative'>
+              <InView
+                from={{ opacity: 0 }}
+                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
+                <video
+                  autoPlay
+                  muted
+                  controls={false}
+                  loop
+                  playsInline
+                  poster={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER.URL}
+                  className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-85 will-change-[clip-path]'>
+                  <source
+                    src={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER_ANIMATION.URL}
+                    type='video/webm'
+                  />
+                </video>
+              </InView>
+              <ResponsiveSheet>
+                <InView
+                  viewOptions={{ once: false, start: 'top 105%' }}
+                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
+                  <ResponsiveSheetTrigger />
+                </InView>
+
+                <DesignSystemContent />
               </ResponsiveSheet>
             </div>
           </ScrollPolygonContainer>
@@ -200,7 +241,7 @@ export default function Home() {
               </InView>
               <ResponsiveSheet>
                 <InView
-                  viewOptions={{ once: true, start: 'top 105%' }}
+                  viewOptions={{ once: false, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
@@ -210,44 +251,6 @@ export default function Home() {
             </div>
           </ScrollPolygonContainer>
 
-          <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex truncate text-sm leading-tight'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.CLIENT} - {PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY}
-                </p>
-              </div>
-            </InView>
-            <div className='relative'>
-              <InView
-                from={{ opacity: 0 }}
-                to={{ opacity: 1, duration: 0.3, ease: 'power1.inOut' }}>
-                <picture>
-                  <source
-                    srcSet={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
-                    media='(min-width: 64rem)'
-                  />
-                  <Image
-                    src={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
-                    alt={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.ALT}
-                    loading='eager'
-                    className='animated-polygon desktop:w-11/12 bg-accent mx-auto aspect-video object-cover will-change-[clip-path]'
-                  />
-                </picture>
-              </InView>
-              <ResponsiveSheet>
-                <InView
-                  viewOptions={{ once: true, start: 'top 105%' }}
-                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
-                  <ResponsiveSheetTrigger />
-                </InView>
-                <AtproyContent />
-              </ResponsiveSheet>
-            </div>
-          </ScrollPolygonContainer>
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
             <InView>
               <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
@@ -276,7 +279,7 @@ export default function Home() {
               </InView>
               <ResponsiveSheet>
                 <InView
-                  viewOptions={{ once: true, start: 'top 105%' }}
+                  viewOptions={{ once: false, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>

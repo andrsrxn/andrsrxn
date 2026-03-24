@@ -4,9 +4,9 @@ import type { ComponentProps } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
+import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcemeneContent } from '@/components/projects/icemene-content'
-import { SolarGroupContent } from '@/components/projects/solar-group-content'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
 import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
 import { Badge } from '@/components/ui/badge'
@@ -91,6 +91,19 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
       <div className='tablet:gap-20 laptop:gap-x-16 laptop:gap-y-24 laptop:grid-cols-2 laptop:grid desktop:gap-y-24 desktop:max-w-7xl desktop:gap-x-20 desktop:mx-auto grid gap-16'>
         <MoreProjectsCard
           project={{
+            type: PROJECTS.ATPROY_BRAND_REFRESH.TYPE,
+            bannerAlt: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.ALT,
+            bannerSmallUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL,
+            bannerUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL,
+            client: PROJECTS.ATPROY_BRAND_REFRESH.CLIENT,
+            industry: PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY,
+            summary: PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY,
+            content: <AtproyContent />,
+          }}
+        />
+
+        <MoreProjectsCard
+          project={{
             type: PROJECTS.BONZER_BRANDING.TYPE,
             bannerAlt: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.ALT,
             bannerSmallUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL,
@@ -125,19 +138,6 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
             industry: PROJECTS.ICEMENE_REBRANDING.INDUSTRY,
             summary: PROJECTS.ICEMENE_REBRANDING.SUMMARY,
             content: <IcemeneContent />,
-          }}
-        />
-
-        <MoreProjectsCard
-          project={{
-            type: PROJECTS.SOLAR_GROUP_REBRANDING.TYPE,
-            bannerAlt: PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.ALT,
-            bannerSmallUrl: PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER_SMALL.URL,
-            bannerUrl: PROJECTS.SOLAR_GROUP_REBRANDING.IMAGES.BANNER.URL,
-            client: PROJECTS.SOLAR_GROUP_REBRANDING.CLIENT,
-            industry: PROJECTS.SOLAR_GROUP_REBRANDING.INDUSTRY,
-            summary: PROJECTS.SOLAR_GROUP_REBRANDING.SUMMARY,
-            content: <SolarGroupContent />,
           }}
         />
       </div>

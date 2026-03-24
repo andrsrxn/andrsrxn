@@ -27,6 +27,26 @@ export const PROJECTS = {
     ],
     IMAGES: IMAGES.PROJECTS.THE_CHOICE,
   },
+  DESIGN_SYSTEM: {
+    SLUG: 'design-system',
+    CLIENT: 'Software as a Service (SaaS)',
+    TYPE: PROJECT_TYPES.NORMAL,
+    INDUSTRY: 'React + TypeScript',
+    SUMMARY: 'Sistema de Diseño y Componentes',
+    DESCRIPTION: [
+      'Un Sistema de Diseño opinionado, moderno y escalable construido con React, TypeScript y Tailwind CSS.',
+      'Provee más de 50 componentes diferentes para el desarrollo de aplicaciones web, con un sistema de tokens para colores, tipografía, espaciado, sombras y similares, componentes compuestos, estados y microinteracciones, patrones de diseño como Atomic Design, principios de UI/UX y accesibilidad (WCAG) niveles AA y AAA.',
+      'Se desarrolló un set de íconos Duotone personalizados de más de 500 elementos acorde al estilo del sistema, diseñados para múltiples propósitos y aplicaciones.',
+      'El rendimiento de los componentes está optimizado para ofrecer una experiencia fluida y responsive para navegadores modernos y dispositivos móviles.',
+    ],
+    SERVICES: [
+      SERVICES.BRAND.SUBSERVICES.DESIGN_SYSTEM.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.FULL_PAGE_DEV.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.UI_UX_DESIGN.TITLE,
+      SERVICES.WEB_DEV.SUBSERVICES.COMPONENTES.TITLE,
+    ],
+    IMAGES: IMAGES.PROJECTS.DESIGN_SYSTEM,
+  },
   VIVET_REBRANDING: {
     SLUG: 'vivet-rebranding',
     CLIENT: 'VIVET',

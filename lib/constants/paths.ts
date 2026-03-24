@@ -217,6 +217,65 @@ export const IMAGES = {
         ALT: 'Tokens de diseño de color utilizados en el Diseño UI/UX del sitio web de The Choice',
       },
     },
+    DESIGN_SYSTEM: {
+      BANNER_COMPARISON: null,
+      BANNER_SMALL: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1774230283/components-banner-upscaled_zlhtda.webp',
+        ALT: 'Colección de componentes parte de un Sistema de Diseño',
+      },
+      BANNER: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1774230283/components-banner-upscaled_zlhtda.webp',
+        ALT: 'Colección de componentes parte de un Sistema de Diseño',
+      },
+      BANNER_ANIMATION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774370229/components-banner_wtmlqh.webm',
+        ALT: 'Colección de componentes parte de un Sistema de Diseño',
+      },
+      TREE_VIEW: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374120/tree-view_a9se5q.webm',
+        ALT: 'Componente Tree View',
+      },
+      MULTI_SELECT: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374119/multi-select_pompuc.webm',
+        ALT: 'Componente Multi Select',
+      },
+      ALERT_DIALOG: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374121/alert-dialog_veciue.webm',
+        ALT: 'Componente Alert Dialog',
+      },
+      SYNCED_TABS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374119/synced-tabs_xptmpq.webm',
+        ALT: 'Componente Synced Tabs',
+      },
+      ACCORDION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374121/accordion_xljqhr.webm',
+        ALT: 'Componente Accordion',
+      },
+      CHOICEBOX: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/choichebox-single_cur7ss.webm',
+        ALT: 'Componente Choicebox',
+      },
+      AUTOCOMPLETE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374119/input-autocomplete_mr5uqe.webm',
+        ALT: 'Componente Autocomplete',
+      },
+      DROPDOWN: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/dropdown-menu_asqj3z.webm',
+        ALT: 'Componente Dropdown',
+      },
+      FORM: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/form_efdq04.webm',
+        ALT: 'Componente Form',
+      },
+      CALENDAR_RANGE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/date-picker-range_xl25ko.webm',
+        ALT: 'Componente Calendar Range',
+      },
+      VIDEO_PLAYER: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374120/video_kdpnj4.webm',
+        ALT: 'Componente Video Player',
+      },
+    },
     ATPROY: {
       BANNER_COMPARISON: null,
       BANNER_SMALL: {

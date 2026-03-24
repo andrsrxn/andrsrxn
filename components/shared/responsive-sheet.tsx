@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import {
   Drawer,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -90,6 +91,7 @@ export function ResponsiveSheetContent({
             {client}
           </span>
           <DrawerTitle className='tablet:text-5xl desktop:w-11/12 text-4xl'>{title}</DrawerTitle>
+          <DrawerDescription className='sr-only'>Descripción total del proyecto</DrawerDescription>
           <div className='tablet:mt-2 flex flex-wrap items-center gap-2'>
             {projectType !== PROJECT_TYPES.NORMAL ? (
               <Badge className='desktop:text-sm'>{projectType}</Badge>

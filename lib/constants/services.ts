@@ -25,6 +25,9 @@ export const SERVICES = {
       ICONOGRAPHY: {
         TITLE: 'Iconografía',
       },
+      DESIGN_SYSTEM: {
+        TITLE: 'Sistema de Diseño',
+      },
       BRAND_GUIDELINES: {
         TITLE: 'Manual de Marca',
       },
@@ -54,6 +57,9 @@ export const SERVICES = {
       },
       UX_AUDIT: {
         TITLE: 'Análisis UX',
+      },
+      COMPONENTES: {
+        TITLE: 'Librería de Componentes',
       },
     },
   },

@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin '@tailwindcss/typography';
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -38,23 +37,23 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-
   --animate-fade-down: fade-down 1s ease-in-out forwards;
   --animate-fade-up: fade-up 1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
   --animate-fade: fade 1s ease-in-out forwards;
   --animate-collapsible-down: collapsible-down 500ms ease-in-out forwards;
   --animate-collapsible-up: collapsible-up 500ms ease-in-out;
-
   --animate-orbit: orbit calc(var(--orbit-duration) * 1s) linear infinite;
 
   @keyframes collapsible-down {
     0% {
       height: 0;
     }
+
     100% {
       height: 'var(--radix-collapsible-content-height)';
     }
   }
+
   @keyframes collapsible-up {
     0% {
       height: 'var(--radix-collapsible-content-height)';
@@ -70,38 +69,42 @@
       opacity: 0;
       transform: translateY(-1.5rem);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
   @keyframes fade-up {
     from {
       opacity: 0;
       transform: translateY(1rem);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
   @keyframes fade {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
   }
+
   @keyframes orbit {
     from {
-      transform: rotate(calc(var(--orbit-angle) * 1deg)) translateY(calc(var(--orbit-radius) * 1px))
-        rotate(calc(var(--orbit-angle) * -1deg));
+      transform: rotate(calc(var(--orbit-angle) * 1deg)) translateY(calc(var(--orbit-radius) * 1px)) rotate(calc(var(--orbit-angle) * -1deg));
     }
+
     to {
-      transform: rotate(calc(var(--orbit-angle) * 1deg + 360deg))
-        translateY(calc(var(--orbit-radius) * 1px))
-        rotate(calc((var(--orbit-angle) * -1deg) - 360deg));
+      transform: rotate(calc(var(--orbit-angle) * 1deg + 360deg)) translateY(calc(var(--orbit-radius) * 1px)) rotate(calc((var(--orbit-angle) * -1deg) - 360deg));
     }
   }
 }
@@ -150,6 +153,7 @@
 }
 
 @layer base {
+
   *,
   ::after,
   ::before {
@@ -169,10 +173,14 @@
   }
 
   html {
-    scroll-behavior: smooth;
     font-size: 100%;
     overscroll-behavior: contain;
     color-scheme: dark;
+  }
+
+  html body[data-scroll-locked] {
+    overflow-y: scroll !important;
+    margin-right: 0px !important;
   }
 
   body {
@@ -198,69 +206,63 @@
 }
 
 @utility ease-gradient-to-rt {
-  background: linear-gradient(
-    to right,
-    hsl(0, 0%, 4%) 0%,
-    hsla(0, 0%, 4%, 0.987) 8.1%,
-    hsla(0, 0%, 4%, 0.951) 15.5%,
-    hsla(0, 0%, 4%, 0.896) 22.5%,
-    hsla(0, 0%, 4%, 0.825) 29%,
-    hsla(0, 0%, 4%, 0.741) 35.3%,
-    hsla(0, 0%, 4%, 0.648) 41.2%,
-    hsla(0, 0%, 4%, 0.55) 47.1%,
-    hsla(0, 0%, 4%, 0.45) 52.9%,
-    hsla(0, 0%, 4%, 0.352) 58.8%,
-    hsla(0, 0%, 4%, 0.259) 64.7%,
-    hsla(0, 0%, 4%, 0.175) 71%,
-    hsla(0, 0%, 4%, 0.104) 77.5%,
-    hsla(0, 0%, 4%, 0.049) 84.5%,
-    hsla(0, 0%, 4%, 0.013) 91.9%,
-    hsla(0, 0%, 4%, 0) 100%
-  );
+  background: linear-gradient(to right,
+      hsl(0, 0%, 4%) 0%,
+      hsla(0, 0%, 4%, 0.987) 8.1%,
+      hsla(0, 0%, 4%, 0.951) 15.5%,
+      hsla(0, 0%, 4%, 0.896) 22.5%,
+      hsla(0, 0%, 4%, 0.825) 29%,
+      hsla(0, 0%, 4%, 0.741) 35.3%,
+      hsla(0, 0%, 4%, 0.648) 41.2%,
+      hsla(0, 0%, 4%, 0.55) 47.1%,
+      hsla(0, 0%, 4%, 0.45) 52.9%,
+      hsla(0, 0%, 4%, 0.352) 58.8%,
+      hsla(0, 0%, 4%, 0.259) 64.7%,
+      hsla(0, 0%, 4%, 0.175) 71%,
+      hsla(0, 0%, 4%, 0.104) 77.5%,
+      hsla(0, 0%, 4%, 0.049) 84.5%,
+      hsla(0, 0%, 4%, 0.013) 91.9%,
+      hsla(0, 0%, 4%, 0) 100%);
 }
 
 @utility ease-gradient-to-lt {
-  background: linear-gradient(
-    to left,
-    hsl(0, 0%, 4%) 0%,
-    hsla(0, 0%, 4%, 0.987) 8.1%,
-    hsla(0, 0%, 4%, 0.951) 15.5%,
-    hsla(0, 0%, 4%, 0.896) 22.5%,
-    hsla(0, 0%, 4%, 0.825) 29%,
-    hsla(0, 0%, 4%, 0.741) 35.3%,
-    hsla(0, 0%, 4%, 0.648) 41.2%,
-    hsla(0, 0%, 4%, 0.55) 47.1%,
-    hsla(0, 0%, 4%, 0.45) 52.9%,
-    hsla(0, 0%, 4%, 0.352) 58.8%,
-    hsla(0, 0%, 4%, 0.259) 64.7%,
-    hsla(0, 0%, 4%, 0.175) 71%,
-    hsla(0, 0%, 4%, 0.104) 77.5%,
-    hsla(0, 0%, 4%, 0.049) 84.5%,
-    hsla(0, 0%, 4%, 0.013) 91.9%,
-    hsla(0, 0%, 4%, 0) 100%
-  );
+  background: linear-gradient(to left,
+      hsl(0, 0%, 4%) 0%,
+      hsla(0, 0%, 4%, 0.987) 8.1%,
+      hsla(0, 0%, 4%, 0.951) 15.5%,
+      hsla(0, 0%, 4%, 0.896) 22.5%,
+      hsla(0, 0%, 4%, 0.825) 29%,
+      hsla(0, 0%, 4%, 0.741) 35.3%,
+      hsla(0, 0%, 4%, 0.648) 41.2%,
+      hsla(0, 0%, 4%, 0.55) 47.1%,
+      hsla(0, 0%, 4%, 0.45) 52.9%,
+      hsla(0, 0%, 4%, 0.352) 58.8%,
+      hsla(0, 0%, 4%, 0.259) 64.7%,
+      hsla(0, 0%, 4%, 0.175) 71%,
+      hsla(0, 0%, 4%, 0.104) 77.5%,
+      hsla(0, 0%, 4%, 0.049) 84.5%,
+      hsla(0, 0%, 4%, 0.013) 91.9%,
+      hsla(0, 0%, 4%, 0) 100%);
 }
 
 @utility ease-gradient-to-t {
-  background: linear-gradient(
-    to top,
-    hsl(0, 0%, 9%) 0%,
-    hsla(0, 0%, 9%, 0.987) 8.1%,
-    hsla(0, 0%, 9%, 0.951) 15.5%,
-    hsla(0, 0%, 9%, 0.896) 22.5%,
-    hsla(0, 0%, 9%, 0.825) 29%,
-    hsla(0, 0%, 9%, 0.741) 35.3%,
-    hsla(0, 0%, 9%, 0.648) 41.2%,
-    hsla(0, 0%, 9%, 0.55) 47.1%,
-    hsla(0, 0%, 9%, 0.45) 52.9%,
-    hsla(0, 0%, 9%, 0.352) 58.8%,
-    hsla(0, 0%, 9%, 0.259) 64.7%,
-    hsla(0, 0%, 9%, 0.175) 71%,
-    hsla(0, 0%, 9%, 0.104) 77.5%,
-    hsla(0, 0%, 9%, 0.049) 84.5%,
-    hsla(0, 0%, 9%, 0.013) 91.9%,
-    hsla(0, 0%, 9%, 0) 100%
-  );
+  background: linear-gradient(to top,
+      hsl(0, 0%, 9%) 0%,
+      hsla(0, 0%, 9%, 0.987) 8.1%,
+      hsla(0, 0%, 9%, 0.951) 15.5%,
+      hsla(0, 0%, 9%, 0.896) 22.5%,
+      hsla(0, 0%, 9%, 0.825) 29%,
+      hsla(0, 0%, 9%, 0.741) 35.3%,
+      hsla(0, 0%, 9%, 0.648) 41.2%,
+      hsla(0, 0%, 9%, 0.55) 47.1%,
+      hsla(0, 0%, 9%, 0.45) 52.9%,
+      hsla(0, 0%, 9%, 0.352) 58.8%,
+      hsla(0, 0%, 9%, 0.259) 64.7%,
+      hsla(0, 0%, 9%, 0.175) 71%,
+      hsla(0, 0%, 9%, 0.104) 77.5%,
+      hsla(0, 0%, 9%, 0.049) 84.5%,
+      hsla(0, 0%, 9%, 0.013) 91.9%,
+      hsla(0, 0%, 9%, 0) 100%);
 }
 
 @utility no-scrollbar {
@@ -277,23 +279,24 @@
     counter-reset: heading-counter;
   }
 
-  .numbered-heading > h2,
-  .numbered-heading > h3,
-  .numbered-heading > h4,
-  .numbered-heading > h5,
-  .numbered-heading > h6 {
+  .numbered-heading>h2,
+  .numbered-heading>h3,
+  .numbered-heading>h4,
+  .numbered-heading>h5,
+  .numbered-heading>h6 {
     position: relative;
   }
 
-  .numbered-heading > h2::before,
-  .numbered-heading > h3::before,
-  .numbered-heading > h4::before,
-  .numbered-heading > h5::before,
-  .numbered-heading > h6::before {
+  .numbered-heading>h2::before,
+  .numbered-heading>h3::before,
+  .numbered-heading>h4::before,
+  .numbered-heading>h5::before,
+  .numbered-heading>h6::before {
     content: counter(heading-counter) '. ';
     counter-increment: heading-counter;
     display: inline-block;
-    margin-right: 0.5em; /* Adjust spacing as needed */
+    margin-right: 0.5em;
+    /* Adjust spacing as needed */
     font-weight: bold;
   }
 
@@ -304,6 +307,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::after,
   *::before {

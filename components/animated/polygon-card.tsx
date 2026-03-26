@@ -25,6 +25,7 @@ export const ScrollPolygonContainer = ({ children, className }: ScrollPolygonCon
 
     gsap.set(image, {
       clipPath: 'polygon(25% 25%, 75% 40%, 100% 100%, 0% 100%)',
+      opacity: 0,
     })
 
     const tl = gsap.timeline({
@@ -38,13 +39,14 @@ export const ScrollPolygonContainer = ({ children, className }: ScrollPolygonCon
 
     tl.to(image, {
       clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      opacity: 1,
       ease: 'power2.inOut',
     })
 
-    // Limpieza
     return () => {
+      console.log('kill')
       if (tl) {
-        tl.kill() // Esto también mata el ScrollTrigger asociado por defecto
+        tl.kill()
       }
     }
   }, [])

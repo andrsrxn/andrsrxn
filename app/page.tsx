@@ -200,7 +200,7 @@ export default function Home() {
                   loop
                   playsInline
                   poster={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER.URL}
-                  className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-85 will-change-[clip-path]'>
+                  className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-80 will-change-[clip-path]'>
                   <source
                     src={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER_ANIMATION.URL}
                     type='video/webm'

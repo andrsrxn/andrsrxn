@@ -92,31 +92,31 @@ export const TheChoiceContent = () => {
           <span className='text-foreground mb-4 block text-lg font-semibold'>
             Página principal y de reservación
           </span>
-          <div className='bg-accent flex w-full snap-x snap-mandatory gap-2 overflow-auto border p-3'>
-            <div className='flex h-auto w-[85%] shrink-0 snap-center'>
+          <div className='bg-accent flex w-full snap-x snap-mandatory gap-3 overflow-x-scroll border p-3'>
+            <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
-                className='h-fit object-contain object-top'
+                className='object-contain object-top'
                 src={project.IMAGES.MAIN_PAGE.URL}
                 alt={project.IMAGES.MAIN_PAGE.ALT}
               />
             </div>
-            <div className='flex h-auto w-[85%] shrink-0 snap-center'>
+            <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
-                className='h-fit object-contain object-top'
+                className='object-contain object-top'
                 src={project.IMAGES.RESERVATIONS_PAGE.URL}
                 alt={project.IMAGES.RESERVATIONS_PAGE.ALT}
               />
             </div>
-            <div className='flex h-auto w-[85%] shrink-0 snap-center'>
+            <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
-                className='h-fit object-contain object-top'
+                className='object-contain object-top'
                 src={project.IMAGES.PAYMENT_RESERVATIONS_PAGE.URL}
                 alt={project.IMAGES.PAYMENT_RESERVATIONS_PAGE.ALT}
               />
             </div>
-            <div className='flex h-auto w-[85%] shrink-0 snap-center'>
+            <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
-                className='h-fit object-contain object-top'
+                className='object-contain object-top'
                 src={project.IMAGES.SUCCESS_PAYMENT_RESERVATIONS_PAGE.URL}
                 alt={project.IMAGES.SUCCESS_PAYMENT_RESERVATIONS_PAGE.ALT}
               />

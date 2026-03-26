@@ -25,6 +25,7 @@
     "noFallthroughCasesInSwitch": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
     "plugins": [
       {
         "name": "next"

@@ -1,7 +1,6 @@
 import { IconExternalLink } from '@tabler/icons-react'
 import Link from 'next/link'
 import type { ComponentProps } from 'react'
-import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
 import { AtproyContent } from '@/components/projects/atproy-content'
@@ -36,17 +35,15 @@ export const MoreProjectsCard = ({
   return (
     <div className='laptop:gap-8 laptop:flex-col laptop:w-full container mx-auto flex w-11/12 gap-4'>
       <ScrollPolygonContainer className='laptop:w-full w-[40%] shrink-0'>
-        <InView>
-          <picture>
-            <source srcSet={bannerUrl} media='(min-width: 64rem)' />
-            <Image
-              src={bannerSmallUrl}
-              alt={bannerAlt}
-              loading='eager'
-              className='bg-accent animated-polygon aspect-video object-cover'
-            />
-          </picture>
-        </InView>
+        <picture>
+          <source srcSet={bannerUrl} media='(min-width: 64rem)' />
+          <Image
+            src={bannerSmallUrl}
+            alt={bannerAlt}
+            loading='eager'
+            className='bg-accent animated-polygon aspect-video object-cover'
+          />
+        </picture>
       </ScrollPolygonContainer>
 
       <div className='flex w-fit flex-1 flex-col gap-1'>

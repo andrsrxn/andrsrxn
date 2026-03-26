@@ -25,13 +25,12 @@ export function InView({
   to = { opacity: 1, y: 0, duration: 0.5, ease: 'power1.inOut' },
   viewOptions = {
     once: true,
-    start: 'top 90%', // Inicia cuando el 80% del elemento está en la vista
+    start: 'top 90%',
   },
   as: Component = 'div',
 }: InViewProps) {
   const ref = useRef<HTMLDivElement>(null)
 
-  // Registra el plugin de ScrollTrigger una vez
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
   }, [])
@@ -42,10 +41,8 @@ export function InView({
       return
     }
 
-    // Establecer el estado inicial (from)
     gsap.set(element, from)
 
-    // Crear la animación con ScrollTrigger
     const animation = gsap.to(element, {
       ...to,
       scrollTrigger: {
@@ -55,11 +52,14 @@ export function InView({
       },
     })
 
-    // Función de limpieza para eliminar el ScrollTrigger
     return () => {
       animation.kill()
     }
   }, [from, to, viewOptions])
 
-  return <Component ref={ref}>{children}</Component>
+  return (
+    <Component className='opacity-0' ref={ref}>
+      {children}
+    </Component>
+  )
 }

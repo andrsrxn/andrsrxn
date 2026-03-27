@@ -10,6 +10,7 @@ export const DesignSystemContent = () => {
 
   return (
     <ResponsiveSheetContent
+      slug={project.SLUG}
       projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}

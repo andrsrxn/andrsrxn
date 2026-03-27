@@ -8,6 +8,7 @@ export const VIVETContent = () => {
   const project = PROJECTS.VIVET_REBRANDING
   return (
     <ResponsiveSheetContent
+      slug={project.SLUG}
       projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}

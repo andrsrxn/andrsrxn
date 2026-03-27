@@ -8,6 +8,7 @@ export const ThePrincipalContent = () => {
   const project = PROJECTS.THEPRINCIPAL_BRANDING
   return (
     <ResponsiveSheetContent
+      slug={project.SLUG}
       projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}

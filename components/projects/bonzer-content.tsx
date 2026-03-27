@@ -8,6 +8,7 @@ export const BonzerContent = () => {
   const project = PROJECTS.BONZER_BRANDING
   return (
     <ResponsiveSheetContent
+      slug={project.SLUG}
       projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}

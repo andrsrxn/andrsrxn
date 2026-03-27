@@ -13,7 +13,8 @@ import { TheChoiceContent } from '@/components/projects/the-choice-content'
 import { VIVETContent } from '@/components/projects/vivet-content'
 import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
-import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
+import { ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
+import { ResponsiveSheetWrapper } from '@/components/shared/responsive-sheet-wrapper'
 import { ServicesCarousel } from '@/components/shared/services-carousel'
 import { VIVETVideo } from '@/components/shared/vivet-video'
 import { Badge } from '@/components/ui/badge'
@@ -23,6 +24,7 @@ import { Separator } from '@/components/ui/separator'
 import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/paths'
 import { PROJECTS } from '@/lib/constants/projects'
+import { SITE } from '@/lib/constants/site'
 import { cn } from '@/lib/utils'
 
 export default function Home() {
@@ -75,7 +77,7 @@ export default function Home() {
                 asChild
                 size='default'
                 className='display:h-10 display:px-8 display:text-base relative max-w-fit'>
-                <Link href='#contacto'>Contratar Servicios</Link>
+                <a href={`${SITE.BASE_URL}#contacto`}>Contratar Servicios</a>
               </Button>
             </div>
 
@@ -137,20 +139,21 @@ export default function Home() {
       <section className='tablet:mt-20 laptop:w-11/12 mx-auto mt-12 max-w-6xl'>
         <div className='tablet:gap-20 desktop:gap-40 flex flex-col gap-16'>
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
-                  <Badge className='desktop:text-sm'>
-                    {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.TYPE}
-                  </Badge>{' '}
-                  {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.CLIENT} -{' '}
-                  {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.SUMMARY}
-                </p>
-              </div>
-            </InView>
+            <div
+              className='tablet:gap-3 flex flex-col gap-1 px-[5%]'
+              id={PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.SLUG}>
+              <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
+                <Badge className='desktop:text-sm'>
+                  {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.TYPE}
+                </Badge>{' '}
+                {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.CLIENT} -{' '}
+                {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.INDUSTRY}
+              </span>
+              <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                {PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.SUMMARY}
+              </p>
+            </div>
+
             <div className='relative'>
               <InView
                 from={{ opacity: 0 }}
@@ -168,27 +171,32 @@ export default function Home() {
                   />
                 </picture>
               </InView>
-              <ResponsiveSheet>
-                <InView viewOptions={{ once: false, start: 'top 105%' }}>
+
+              <ResponsiveSheetWrapper slug={PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.SLUG}>
+                <InView
+                  viewOptions={{ once: false, start: 'top 105%' }}
+                  from={{ opacity: 0, y: 20 }}
+                  to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
 
                 <TheChoiceContent />
-              </ResponsiveSheet>
+              </ResponsiveSheetWrapper>
             </div>
           </ScrollPolygonContainer>
 
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
-                  {PROJECTS.DESIGN_SYSTEM.CLIENT} - {PROJECTS.DESIGN_SYSTEM.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.DESIGN_SYSTEM.SUMMARY}
-                </p>
-              </div>
-            </InView>
+            <div
+              className='tablet:gap-3 flex flex-col gap-1 px-[5%]'
+              id={PROJECTS.DESIGN_SYSTEM.SLUG}>
+              <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
+                {PROJECTS.DESIGN_SYSTEM.CLIENT} - {PROJECTS.DESIGN_SYSTEM.INDUSTRY}
+              </span>
+              <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                {PROJECTS.DESIGN_SYSTEM.SUMMARY}
+              </p>
+            </div>
+
             <div className='relative'>
               <InView
                 from={{ opacity: 0 }}
@@ -207,7 +215,7 @@ export default function Home() {
                   />
                 </video>
               </InView>
-              <ResponsiveSheet>
+              <ResponsiveSheetWrapper slug={PROJECTS.DESIGN_SYSTEM.SLUG}>
                 <InView
                   viewOptions={{ once: false, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
@@ -215,31 +223,32 @@ export default function Home() {
                 </InView>
 
                 <DesignSystemContent />
-              </ResponsiveSheet>
+              </ResponsiveSheetWrapper>
             </div>
           </ScrollPolygonContainer>
 
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
-                  <Badge variant='destructive' className='desktop:text-sm'>
-                    {PROJECTS.VIVET_REBRANDING.TYPE}
-                  </Badge>{' '}
-                  {PROJECTS.VIVET_REBRANDING.CLIENT} - {PROJECTS.VIVET_REBRANDING.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.VIVET_REBRANDING.SUMMARY}
-                </p>
-              </div>
-            </InView>
+            <div
+              className='tablet:gap-3 flex flex-col gap-1 px-[5%]'
+              id={PROJECTS.VIVET_REBRANDING.SLUG}>
+              <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
+                <Badge variant='destructive' className='desktop:text-sm'>
+                  {PROJECTS.VIVET_REBRANDING.TYPE}
+                </Badge>{' '}
+                {PROJECTS.VIVET_REBRANDING.CLIENT} - {PROJECTS.VIVET_REBRANDING.INDUSTRY}
+              </span>
+              <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                {PROJECTS.VIVET_REBRANDING.SUMMARY}
+              </p>
+            </div>
+
             <div className='relative'>
               <InView
                 from={{ opacity: 0 }}
                 to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
                 <VIVETVideo />
               </InView>
-              <ResponsiveSheet>
+              <ResponsiveSheetWrapper slug={PROJECTS.VIVET_REBRANDING.SLUG}>
                 <InView
                   viewOptions={{ once: false, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
@@ -247,21 +256,22 @@ export default function Home() {
                 </InView>
 
                 <VIVETContent />
-              </ResponsiveSheet>
+              </ResponsiveSheetWrapper>
             </div>
           </ScrollPolygonContainer>
 
           <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-            <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-              <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]'>
-                <span className='text-muted-foreground tablet:text-base desktop:text-lg flex truncate text-sm leading-tight'>
-                  {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
-                </span>
-                <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
-                  {PROJECTS.ICPSJ_BRANDING.SUMMARY}
-                </p>
-              </div>
-            </InView>
+            <div
+              className='tablet:gap-3 flex flex-col gap-1 px-[5%]'
+              id={PROJECTS.ICPSJ_BRANDING.SLUG}>
+              <span className='text-muted-foreground tablet:text-base desktop:text-lg flex truncate text-sm leading-tight'>
+                {PROJECTS.ICPSJ_BRANDING.CLIENT} - {PROJECTS.ICPSJ_BRANDING.INDUSTRY}
+              </span>
+              <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>
+                {PROJECTS.ICPSJ_BRANDING.SUMMARY}
+              </p>
+            </div>
+
             <div className='relative'>
               <InView>
                 <video
@@ -277,14 +287,14 @@ export default function Home() {
                   />
                 </video>
               </InView>
-              <ResponsiveSheet>
+              <ResponsiveSheetWrapper slug={PROJECTS.ICPSJ_BRANDING.SLUG}>
                 <InView
                   viewOptions={{ once: false, start: 'top 105%' }}
                   to={{ opacity: 1, y: 0, duration: 0.3, ease: 'power1.inOut' }}>
                   <ResponsiveSheetTrigger />
                 </InView>
                 <IcpjsContent />
-              </ResponsiveSheet>
+              </ResponsiveSheetWrapper>
             </div>
           </ScrollPolygonContainer>
         </div>

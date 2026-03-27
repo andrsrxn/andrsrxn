@@ -1,13 +1,15 @@
 import { IconExternalLink } from '@tabler/icons-react'
 import Link from 'next/link'
 import type { ComponentProps } from 'react'
+import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcemeneContent } from '@/components/projects/icemene-content'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
-import { ResponsiveSheet, ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
+import { ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
+import { ResponsiveSheetWrapper } from '@/components/shared/responsive-sheet-wrapper'
 import { Badge } from '@/components/ui/badge'
 import { Image } from '@/components/ui/image'
 import { COMPANY } from '@/lib/constants/company'
@@ -25,25 +27,28 @@ interface ProjectSecondary {
   industry: string
   summary: string
   content: React.ReactNode
+  slug: string
 }
 
 export const MoreProjectsCard = ({
-  project: { bannerUrl, bannerAlt, bannerSmallUrl, client, type, industry, summary, content },
+  project: { bannerUrl, bannerAlt, bannerSmallUrl, client, type, industry, summary, content, slug },
 }: {
   project: ProjectSecondary
 }) => {
   return (
     <div className='laptop:gap-8 laptop:flex-col laptop:w-full container mx-auto flex w-11/12 gap-4'>
       <ScrollPolygonContainer className='laptop:w-full w-[40%] shrink-0'>
-        <picture>
-          <source srcSet={bannerUrl} media='(min-width: 64rem)' />
-          <Image
-            src={bannerSmallUrl}
-            alt={bannerAlt}
-            loading='eager'
-            className='bg-accent animated-polygon aspect-video object-cover'
-          />
-        </picture>
+        <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
+          <picture>
+            <source srcSet={bannerUrl} media='(min-width: 64rem)' />
+            <Image
+              src={bannerSmallUrl}
+              alt={bannerAlt}
+              loading='eager'
+              className='bg-accent animated-polygon aspect-video object-cover'
+            />
+          </picture>
+        </InView>
       </ScrollPolygonContainer>
 
       <div className='flex w-fit flex-1 flex-col gap-1'>
@@ -63,14 +68,14 @@ export const MoreProjectsCard = ({
           {summary}
         </h3>
         <div className='laptop:mt-4 mt-2 -ml-1'>
-          <ResponsiveSheet>
+          <ResponsiveSheetWrapper slug={slug}>
             <ResponsiveSheetTrigger
               className='tablet:text-sm laptop:text-base relative bottom-0 left-0 translate-none border-2 text-xs'
               size='sm'
             />
 
             {content}
-          </ResponsiveSheet>
+          </ResponsiveSheetWrapper>
         </div>
       </div>
     </div>
@@ -88,6 +93,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
       <div className='tablet:gap-20 laptop:gap-x-16 laptop:gap-y-24 laptop:grid-cols-2 laptop:grid desktop:gap-y-24 desktop:max-w-7xl desktop:gap-x-20 desktop:mx-auto grid gap-16'>
         <MoreProjectsCard
           project={{
+            slug: PROJECTS.ATPROY_BRAND_REFRESH.SLUG,
             type: PROJECTS.ATPROY_BRAND_REFRESH.TYPE,
             bannerAlt: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.ALT,
             bannerSmallUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL,
@@ -101,6 +107,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
 
         <MoreProjectsCard
           project={{
+            slug: PROJECTS.BONZER_BRANDING.SLUG,
             type: PROJECTS.BONZER_BRANDING.TYPE,
             bannerAlt: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.ALT,
             bannerSmallUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL,
@@ -114,6 +121,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
 
         <MoreProjectsCard
           project={{
+            slug: PROJECTS.THEPRINCIPAL_BRANDING.SLUG,
             type: PROJECTS.THEPRINCIPAL_BRANDING.TYPE,
             bannerAlt: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.ALT,
             bannerSmallUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL,
@@ -127,6 +135,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
 
         <MoreProjectsCard
           project={{
+            slug: PROJECTS.ICEMENE_REBRANDING.SLUG,
             type: PROJECTS.ICEMENE_REBRANDING.TYPE,
             bannerAlt: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.ALT,
             bannerSmallUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL,

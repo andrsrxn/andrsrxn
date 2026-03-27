@@ -10,6 +10,7 @@ export const IcpjsContent = () => {
   const project = PROJECTS.ICPSJ_BRANDING
   return (
     <ResponsiveSheetContent
+      slug={project.SLUG}
       projectType={project.TYPE}
       client={`${project.CLIENT} - ${project.INDUSTRY}`}
       services={project.SERVICES}

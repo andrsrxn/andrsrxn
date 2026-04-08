@@ -1,6 +1,7 @@
 'use client'
 
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
+import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
 import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
@@ -23,6 +24,42 @@ export const DesignSystemContent = () => {
           <p className='text-foreground text-base italic'>Próximamente URL disponible...</p>
         </div>
         <Separator className='my-6' />
+
+        <div className='relative overflow-x-clip'>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            +400 íconos duotone personalizados
+          </span>
+          <Image
+            includePlaceholder={false}
+            className='aspect-video'
+            src={project.IMAGES.ICONS.URL}
+            alt={project.IMAGES.ICONS.ALT}
+          />
+        </div>
+        <div className='relative overflow-x-clip'>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            Paleta de colores
+          </span>
+          <Image
+            includePlaceholder={false}
+            className='aspect-video'
+            src={project.IMAGES.PALETTE.URL}
+            alt={project.IMAGES.PALETTE.ALT}
+          />
+        </div>
+        <div className='relative overflow-x-clip'>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            Tipografía y escala tipográfica
+          </span>
+          <Image
+            includePlaceholder={false}
+            className='aspect-video'
+            src={project.IMAGES.TYPOGRAPHY.URL}
+            alt={project.IMAGES.TYPOGRAPHY.ALT}
+          />
+        </div>
+        <Separator className='my-8' />
+
         <h3 className='text-foreground mb-4 block text-2xl font-semibold'>
           Showcase de algunos componentes
         </h3>

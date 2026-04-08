@@ -221,15 +221,27 @@ export const IMAGES = {
       BANNER_COMPARISON: null,
       BANNER_SMALL: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1774230283/components-banner-upscaled_zlhtda.webp',
-        ALT: 'Colección de componentes parte de un Sistema de Diseño',
+        ALT: 'Colección de componentes parte del Sistema de Diseño',
       },
       BANNER: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1774230283/components-banner-upscaled_zlhtda.webp',
-        ALT: 'Colección de componentes parte de un Sistema de Diseño',
+        ALT: 'Colección de componentes parte del Sistema de Diseño',
       },
       BANNER_ANIMATION: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774370229/components-banner_wtmlqh.webm',
-        ALT: 'Colección de componentes parte de un Sistema de Diseño',
+        ALT: 'Colección de componentes parte del Sistema de Diseño',
+      },
+      PALETTE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1775606733/banner-colors_tiqg1x.webp',
+        ALT: 'Paleta de colores parte del Sistema de Diseño',
+      },
+      TYPOGRAPHY: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1775606732/banner-typography_epa0bn.webp',
+        ALT: 'Tipografía parte del Sistema de Diseño',
+      },
+      ICONS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1775606732/banner-icons_h6zxca.webp',
+        ALT: 'Íconos parte del Sistema de Diseño',
       },
       TREE_VIEW: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374120/tree-view_a9se5q.webm',

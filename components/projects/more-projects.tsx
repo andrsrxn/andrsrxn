@@ -1,6 +1,7 @@
 import { IconExternalLink } from '@tabler/icons-react'
 import Link from 'next/link'
-import type { ComponentProps } from 'react'
+import { getTranslations } from 'next-intl/server'
+import type { ComponentProps, ReactNode } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
@@ -13,7 +14,7 @@ import { ResponsiveSheetWrapper } from '@/components/shared/responsive-sheet-wra
 import { Badge } from '@/components/ui/badge'
 import { Image } from '@/components/ui/image'
 import { COMPANY } from '@/lib/constants/company'
-import { PROJECT_TYPES, PROJECTS } from '@/lib/constants/projects'
+import { PROJECT_TYPES, PROJECTS, type ProjectType } from '@/lib/constants/projects'
 import { cn } from '@/lib/utils'
 
 interface MoreProyectsProps extends ComponentProps<'div'> {}
@@ -23,18 +24,19 @@ interface ProjectSecondary {
   bannerAlt: string
   bannerSmallUrl: string
   client: string
-  type: (typeof PROJECT_TYPES)[keyof typeof PROJECT_TYPES]
+  type: ProjectType
   industry: string
   summary: string
-  content: React.ReactNode
+  content: ReactNode
   slug: string
 }
 
-export const MoreProjectsCard = ({
+export const MoreProjectsCard = async ({
   project: { bannerUrl, bannerAlt, bannerSmallUrl, client, type, industry, summary, content, slug },
 }: {
   project: ProjectSecondary
 }) => {
+  const tProjects = await getTranslations('projects')
   return (
     <div className='laptop:gap-8 laptop:flex-col laptop:w-full container mx-auto flex w-11/12 gap-4'>
       <ScrollPolygonContainer className='laptop:w-full w-[40%] shrink-0'>
@@ -57,7 +59,7 @@ export const MoreProjectsCard = ({
             <Badge
               variant={type === PROJECT_TYPES.PROPOSAL ? 'destructive' : 'secondary'}
               className='desktop:text-sm'>
-              {type}
+              {tProjects(`type.${type}`)}
             </Badge>
           ) : null}
           <span className='truncate'>
@@ -82,7 +84,10 @@ export const MoreProjectsCard = ({
   )
 }
 
-export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
+export const MoreProjects = async ({ className, ...props }: MoreProyectsProps) => {
+  const tProjects = await getTranslations('projects')
+  const tHomePage = await getTranslations('homePage.projects')
+
   return (
     <div
       className={cn(
@@ -93,56 +98,56 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
       <div className='tablet:gap-20 laptop:gap-x-16 laptop:gap-y-24 laptop:grid-cols-2 laptop:grid desktop:gap-y-24 desktop:max-w-7xl desktop:gap-x-20 desktop:mx-auto grid gap-16'>
         <MoreProjectsCard
           project={{
-            slug: PROJECTS.ATPROY_BRAND_REFRESH.SLUG,
+            slug: tProjects('atproy.slug'),
             type: PROJECTS.ATPROY_BRAND_REFRESH.TYPE,
-            bannerAlt: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.ALT,
+            bannerAlt: tProjects('atproy.images.bannerSmall'),
             bannerSmallUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL,
             bannerUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL,
-            client: PROJECTS.ATPROY_BRAND_REFRESH.CLIENT,
-            industry: PROJECTS.ATPROY_BRAND_REFRESH.INDUSTRY,
-            summary: PROJECTS.ATPROY_BRAND_REFRESH.SUMMARY,
+            client: tProjects('atproy.client'),
+            industry: tProjects('atproy.industry'),
+            summary: tProjects('atproy.summary'),
             content: <AtproyContent />,
           }}
         />
 
         <MoreProjectsCard
           project={{
-            slug: PROJECTS.BONZER_BRANDING.SLUG,
+            slug: tProjects('bonzer.slug'),
             type: PROJECTS.BONZER_BRANDING.TYPE,
-            bannerAlt: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.ALT,
+            bannerAlt: tProjects('bonzer.images.bannerSmall'),
             bannerSmallUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL,
             bannerUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL,
-            client: PROJECTS.BONZER_BRANDING.CLIENT,
-            industry: PROJECTS.BONZER_BRANDING.INDUSTRY,
-            summary: PROJECTS.BONZER_BRANDING.SUMMARY,
+            client: tProjects('bonzer.client'),
+            industry: tProjects('bonzer.industry'),
+            summary: tProjects('bonzer.summary'),
             content: <BonzerContent />,
           }}
         />
 
         <MoreProjectsCard
           project={{
-            slug: PROJECTS.THEPRINCIPAL_BRANDING.SLUG,
+            slug: tProjects('theprincipal.slug'),
             type: PROJECTS.THEPRINCIPAL_BRANDING.TYPE,
-            bannerAlt: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.ALT,
+            bannerAlt: tProjects('theprincipal.images.bannerSmall'),
             bannerSmallUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL,
             bannerUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL,
-            client: PROJECTS.THEPRINCIPAL_BRANDING.CLIENT,
-            industry: PROJECTS.THEPRINCIPAL_BRANDING.INDUSTRY,
-            summary: PROJECTS.THEPRINCIPAL_BRANDING.SUMMARY,
+            client: tProjects('theprincipal.client'),
+            industry: tProjects('theprincipal.industry'),
+            summary: tProjects('theprincipal.summary'),
             content: <ThePrincipalContent />,
           }}
         />
 
         <MoreProjectsCard
           project={{
-            slug: PROJECTS.ICEMENE_REBRANDING.SLUG,
+            slug: tProjects('icemene.slug'),
             type: PROJECTS.ICEMENE_REBRANDING.TYPE,
-            bannerAlt: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.ALT,
+            bannerAlt: tProjects('icemene.images.bannerSmall'),
             bannerSmallUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL,
             bannerUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL,
-            client: PROJECTS.ICEMENE_REBRANDING.CLIENT,
-            industry: PROJECTS.ICEMENE_REBRANDING.INDUSTRY,
-            summary: PROJECTS.ICEMENE_REBRANDING.SUMMARY,
+            client: tProjects('icemene.client'),
+            industry: tProjects('icemene.industry'),
+            summary: tProjects('icemene.summary'),
             content: <IcemeneContent />,
           }}
         />
@@ -156,7 +161,7 @@ export const MoreProjects = ({ className, ...props }: MoreProyectsProps) => {
           rel='noopener noreferrer'
           href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
           <IconInstagram className='mr-1 size-[0.8em] scale-125' />
-          Ver más en Instagram <IconExternalLink className='tablet:size-5 size-4' />
+          {tHomePage('viewMoreInstagram')} <IconExternalLink className='tablet:size-5 size-4' />
         </Link>
       </div>
     </div>

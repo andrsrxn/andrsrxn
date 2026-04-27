@@ -1,99 +1,99 @@
 export const SERVICES = {
   BRAND: {
-    TITLE: 'Branding',
+    TITLE: 'brand.title',
     SLUG: 'branding',
 
     SUBSERVICES: {
       BRANDING: {
-        TITLE: 'Branding',
+        TITLE: 'brand.subservices.branding',
       },
       BRAND_REFRESH: {
-        TITLE: 'Actualización de Marca',
+        TITLE: 'brand.subservices.brandRefresh',
       },
       REBRANDING: {
-        TITLE: 'Rebranding',
+        TITLE: 'brand.subservices.rebranding',
       },
       BRAND_STRATEGY: {
-        TITLE: 'Estrategia de Marca',
+        TITLE: 'brand.subservices.brandStrategy',
       },
       NAMING: {
-        TITLE: 'Naming',
+        TITLE: 'brand.subservices.naming',
       },
       VISUAL_IDENTITY: {
-        TITLE: 'Identidad Visual',
+        TITLE: 'brand.subservices.visualIdentity',
       },
       ICONOGRAPHY: {
-        TITLE: 'Iconografía',
+        TITLE: 'brand.subservices.iconography',
       },
       DESIGN_SYSTEM: {
-        TITLE: 'Sistema de Diseño',
+        TITLE: 'brand.subservices.designSystem',
       },
       BRAND_GUIDELINES: {
-        TITLE: 'Manual de Marca',
+        TITLE: 'brand.subservices.brandGuidelines',
       },
     },
   },
 
   WEB_DEV: {
-    TITLE: 'Desarrollo Web',
-    SLUG: 'desarrollo-web',
+    TITLE: 'webDev.title',
+    SLUG: 'web-dev',
 
     SUBSERVICES: {
       LANDING_PAGE_DEV: {
-        TITLE: 'Landing Page',
+        TITLE: 'webDev.subservices.landingPageDev',
       },
       FULL_PAGE_DEV: {
-        TITLE: 'Sitio Web',
+        TITLE: 'webDev.subservices.fullPageDev',
       },
 
       SAAS: {
-        TITLE: 'SaaS (Frontend y Backend)',
+        TITLE: 'webDev.subservices.saas',
       },
       UI_UX_DESIGN: {
-        TITLE: 'Diseño UI/UX',
+        TITLE: 'webDev.subservices.uiUxDesign',
       },
       SEO: {
-        TITLE: 'Optimización SEO',
+        TITLE: 'webDev.subservices.seo',
       },
       UX_AUDIT: {
-        TITLE: 'Análisis UX',
+        TITLE: 'webDev.subservices.uxAudit',
       },
       COMPONENTES: {
-        TITLE: 'Librería de Componentes',
+        TITLE: 'webDev.subservices.componentes',
       },
     },
   },
   MARKETING: {
-    TITLE: 'Marketing',
+    TITLE: 'marketing.title',
     SLUG: 'marketing',
 
     SUBSERVICES: {
       SOCIAL_MEDIA_POSTS: {
-        TITLE: 'Posts para Redes Sociales',
+        TITLE: 'marketing.subservices.socialMediaPosts',
       },
       VIDEO_EDITING: {
-        TITLE: 'Edición de Video',
+        TITLE: 'marketing.subservices.videoEditing',
       },
       MOTION_GRAPHICS: {
-        TITLE: 'Motion Graphics',
+        TITLE: 'marketing.subservices.motionGraphics',
       },
       COPYWRITING: {
-        TITLE: 'Copywriting',
+        TITLE: 'marketing.subservices.copywriting',
       },
       PACKAGING: {
-        TITLE: 'Packaging',
+        TITLE: 'marketing.subservices.packaging',
       },
       STATIONERY: {
-        TITLE: 'Material Corporativo',
+        TITLE: 'marketing.subservices.stationery',
       },
       SLIDESHOW: {
-        TITLE: 'Presentaciones de Diapositivas',
+        TITLE: 'marketing.subservices.slideshow',
       },
       FLYERS: {
-        TITLE: 'Material Promocional',
+        TITLE: 'marketing.subservices.flyers',
       },
       MENU: {
-        TITLE: 'Menú de Restaurante',
+        TITLE: 'marketing.subservices.menu',
       },
     },
   },

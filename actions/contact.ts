@@ -2,6 +2,7 @@
 
 import { checkBotId } from 'botid/server'
 import { headers } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import type { z } from 'zod'
 import { ContactEmailTemplate } from '@/components/email/contact-email'
 import { emailClient } from '@/lib/config/email'
@@ -16,6 +17,7 @@ const REGEX_IP = /, /
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const SendContactMessage = async (values: z.infer<typeof contactSchema>) => {
+  const tErrors = await getTranslations('homePage.contact.form.errors')
   try {
     const verification = await checkBotId()
 
@@ -23,8 +25,8 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
       console.error('Bot detected', verification)
       return {
         success: false,
-        message: 'Acceso denegado',
-        description: 'Dispositivo no autorizado para enviar mensajes',
+        message: tErrors('deviceDenied.title'),
+        description: tErrors('deviceDenied.description'),
       }
     }
 
@@ -33,8 +35,8 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
       console.error('Invalid values', validatedValues.error)
       return {
         success: false,
-        message: 'Mensaje enviado con éxito',
-        description: 'Nuestro equipo se comunicará contigo lo más pronto posible',
+        message: tErrors('success.title'),
+        description: tErrors('success.description'),
       }
     }
 
@@ -51,8 +53,8 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
       console.error('Invalid ip or user agent', 'ip:', ip, 'userAgent:', userAgent)
       return {
         success: false,
-        message: 'Dispositivo no aceptado',
-        description: 'No se puede enviar el mensaje desde este dispositivo',
+        message: tErrors('deviceDenied.title'),
+        description: tErrors('deviceDenied.description'),
       }
     }
     const res = await fetch(`https://api.ipquery.io/${ip}?format=json`)
@@ -60,8 +62,8 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
       console.error('Invalid ip validation', 'ip:', ip)
       return {
         success: false,
-        message: 'Dispositivo no aceptado',
-        description: 'No se puede enviar el mensaje desde este dispositivo',
+        message: tErrors('deviceDenied.title'),
+        description: tErrors('deviceDenied.description'),
       }
     }
     const {
@@ -82,8 +84,8 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
       )
       return {
         success: false,
-        message: 'Dispositivo no aceptado',
-        description: 'No se puede enviar el mensaje desde este dispositivo',
+        message: tErrors('deviceDenied.title'),
+        description: tErrors('deviceDenied.description'),
       }
     }
 
@@ -116,23 +118,23 @@ export const SendContactMessage = async (values: z.infer<typeof contactSchema>) 
 
       return {
         success: false,
-        message: 'No se pudo enviar tu mensaje',
-        description: 'Ocurrió un error inesperado. Por favor, intentalo más tarde',
+        message: tErrors('unexpected.title'),
+        description: tErrors('unexpected.description'),
       }
     }
 
     return {
       success: true,
-      message: 'Mensaje enviado con éxito',
-      description: 'Me comunicaré contigo lo más pronto posible.',
+      message: tErrors('success.title'),
+      description: tErrors('success.description'),
     }
   } catch (error) {
     console.error(`Server error: ${error}`)
 
     return {
       success: false,
-      message: 'No se pudo enviar tu mensaje',
-      description: 'Ocurrió un error inesperado. Por favor, intentalo más tarde',
+      message: tErrors('unexpected.title'),
+      description: tErrors('unexpected.description'),
     }
   }
 }

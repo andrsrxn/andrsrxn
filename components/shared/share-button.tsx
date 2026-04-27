@@ -7,9 +7,16 @@ import { cn } from '@/lib/utils'
 
 interface ShareButtonProps extends ComponentProps<typeof Button> {
   url: string
+  copiedText: string
 }
 
-export const ShareButton = ({ url, className, children, ...props }: ShareButtonProps) => {
+export const ShareButton = ({
+  url,
+  className,
+  children,
+  copiedText,
+  ...props
+}: ShareButtonProps) => {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -30,7 +37,7 @@ export const ShareButton = ({ url, className, children, ...props }: ShareButtonP
         <IconShare className='animate-in fade-in duration-300 ease-in-out' />
       )}
 
-      {copied ? 'Copiado' : children}
+      {copied ? copiedText : children}
     </Button>
   )
 }

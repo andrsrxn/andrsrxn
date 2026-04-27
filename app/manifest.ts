@@ -1,13 +1,21 @@
 import type { MetadataRoute } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/paths'
 import { SITE } from '@/lib/constants/site'
 
-export default function manifest(): MetadataRoute.Manifest {
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const locale = 'es'
+
+  const t = await getTranslations({
+    locale,
+    namespace: 'company',
+  })
+
   return {
     name: COMPANY.NAME,
     short_name: COMPANY.NAME,
-    description: COMPANY.DESCRIPTION,
+    description: t('description'),
     start_url: '/',
     display: 'standalone',
     background_color: SITE.SEO.COLOR_BACKGROUND,

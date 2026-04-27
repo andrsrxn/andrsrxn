@@ -3,6 +3,7 @@
 
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { useEffect, useRef, useState } from 'react'
 import { SERVICES } from '@/lib/constants/services'
 import { useMediaQuery } from '@/lib/hooks/use-media-query'
@@ -15,7 +16,6 @@ export function ServicesCarousel() {
   const isTablet = useMediaQuery('(min-width: 768px)')
   const [activeCardIndex, setActiveCardIndex] = useState(0)
 
-  // Function to scroll to the selected card
   const scrollToCard = (index: number) => {
     if (scrollContainerRef.current) {
       const cardElement = scrollContainerRef.current.children[index] as HTMLElement
@@ -30,11 +30,10 @@ export function ServicesCarousel() {
     }
   }
 
-  // Set up an IntersectionObserver to detect the active card on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
-        // biome-ignore lint/complexity/noForEach: for not useful
+        // biome-ignore lint/complexity/noForEach: for is not useful here
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const index = Number(entry.target.getAttribute('data-index'))
@@ -45,7 +44,7 @@ export function ServicesCarousel() {
       {
         root: scrollContainerRef.current,
         rootMargin: '0px',
-        threshold: 0.5, // The active card is when 50% of it is visible
+        threshold: 0.5,
       }
     )
 
@@ -56,12 +55,11 @@ export function ServicesCarousel() {
       })
     }
 
-    // Cleanup observer on component unmount
     return () => observer.disconnect()
   }, [])
   const delays = ['[animation-delay:750ms]', '[animation-delay:850ms]', '[animation-delay:950ms]']
 
-  // Corrección para la iteración de las tarjetas del carrusel:
+  const tServices = useTranslations('services')
 
   return (
     <div className='laptop:container laptop:w-11/12 laptop:mx-auto laptop:max-w-6xl desktop:max-w-7xl tablet:overflow-visible laptop:mt-16 mt-10 overflow-x-clip'>
@@ -80,18 +78,17 @@ export function ServicesCarousel() {
                 delays[index],
                 !isActive && 'tablet:scale-100 scale-95'
               )}
-              role='group'
-              aria-label={`Servicio de ${service.TITLE}`}>
+              role='group'>
               <div className='laptop:items-center laptop:gap-6 flex flex-col gap-4'>
                 <h2 className='font-heading tablet:text-3xl laptop:text-4xl desktop:text-5xl text-center text-4xl'>
-                  {service.TITLE}
+                  {tServices(service.TITLE)}
                 </h2>
                 <ul className='grid gap-1 pl-4'>
                   {Object.values(service.SUBSERVICES).map(subService => (
                     <li
                       className='desktop:text-lg tablet:text-sm laptop:text-base list-disc text-base leading-normal marker:text-neutral-600'
                       key={subService.TITLE}>
-                      {subService.TITLE}
+                      {tServices(subService.TITLE)}
                     </li>
                   ))}
                 </ul>

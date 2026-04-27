@@ -1,31 +1,24 @@
-import type { Person, ProfessionalService, WebSite, WithContext } from 'schema-dts'
+import type { Person, ProfessionalService, WebSite } from 'schema-dts'
 import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/paths'
 import { SITE } from '@/lib/constants/site'
 
-export const WEBSITE_SCHEMA: WithContext<WebSite> = {
-  '@context': 'https://schema.org',
+export const WEBSITE_SCHEMA: WebSite = {
   '@type': 'WebSite',
   url: SITE.BASE_URL,
   name: COMPANY.NAME,
-  description: COMPANY.DESCRIPTION,
-  inLanguage: 'es',
-}
+} as const
 
-export const PERSON_SCHEMA: WithContext<Person> = {
-  '@context': 'https://schema.org',
+export const PERSON_SCHEMA: Person = {
   '@type': 'Person',
   url: SITE.BASE_URL,
   name: COMPANY.NAME,
-  description: COMPANY.DESCRIPTION,
   jobTitle: 'Diseñador y Programador Web',
   image: IMAGES.BRAND.LOGO.PNG.URL,
-  knowsAbout: COMPANY.SERVICES_SUMMARY,
   knowsLanguage: ['es-419', 'es', 'en-US', 'en-GB'],
-}
+} as const
 
-export const SERVICES_SCHEMA: WithContext<ProfessionalService> = {
-  '@context': 'https://schema.org',
+export const SERVICES_SCHEMA: ProfessionalService = {
   '@type': 'ProfessionalService',
   url: SITE.BASE_URL,
   name: COMPANY.NAME,
@@ -42,4 +35,4 @@ export const SERVICES_SCHEMA: WithContext<ProfessionalService> = {
     addressCountry: COMPANY.ADDRESS.COUNTRY,
   },
   priceRange: '$$$',
-}
+} as const

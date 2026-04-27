@@ -1,23 +1,30 @@
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { SafariWindow } from '@/components/backgrounds/safari-mockup'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const AtproyContent = () => {
   const project = PROJECTS.ATPROY_BRAND_REFRESH
+  const tServices = useTranslations('services')
+  const t = useTranslations('projects.atproy')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [t('description.paragraph1'), t('description.paragraph2')]
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      services={services}
+      title={t('summary')}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div>
         <div className='-mt-2 mb-12 block'>
           <p>
@@ -36,7 +43,7 @@ export const AtproyContent = () => {
             includePlaceholder={false}
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_1.URL}
-            alt={project.IMAGES.COLOR_1.ALT}
+            alt={t('images.color1')}
           />
         </div>
         <div className='bg-[#00A6E2] p-8 pb-20'>
@@ -44,7 +51,7 @@ export const AtproyContent = () => {
             includePlaceholder={false}
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_2.URL}
-            alt={project.IMAGES.COLOR_2.ALT}
+            alt={t('images.color2')}
           />
         </div>
         <div className='bg-[#00943C] p-8 pb-16'>
@@ -52,7 +59,7 @@ export const AtproyContent = () => {
             includePlaceholder={false}
             className='h-28 w-auto'
             src={project.IMAGES.COLOR_3.URL}
-            alt={project.IMAGES.COLOR_3.ALT}
+            alt={t('images.color3')}
           />
         </div>
         <div className='bg-[#AAC8B9] p-8'>
@@ -60,7 +67,7 @@ export const AtproyContent = () => {
             includePlaceholder={false}
             className='h-28 w-auto invert'
             src={project.IMAGES.COLOR_4.URL}
-            alt={project.IMAGES.COLOR_4.ALT}
+            alt={t('images.color4')}
           />
         </div>
       </div>
@@ -69,20 +76,20 @@ export const AtproyContent = () => {
           includePlaceholder={false}
           className='w-4/5 max-w-xs'
           src={project.IMAGES.TYPOGRAPHY_WHITE.URL}
-          alt={project.IMAGES.TYPOGRAPHY_WHITE.ALT}
+          alt={t('images.typographyWhite')}
         />
         <div className='mx-auto my-14 grid origin-center scale-[120%] overflow-hidden'>
           <Image
             includePlaceholder={false}
             className='h-10 mask-x-from-70% mask-x-to-90% object-cover object-left'
             src={project.IMAGES.ABC_WHITE.URL}
-            alt={project.IMAGES.ABC_WHITE.ALT}
+            alt={t('images.abcWhite')}
           />
           <Image
             includePlaceholder={false}
             className='h-10 mask-x-from-70% mask-x-to-90% object-cover object-right'
             src={project.IMAGES.ABC_WHITE.URL}
-            alt={project.IMAGES.ABC_WHITE.ALT}
+            alt={t('images.abcWhite')}
           />
         </div>
       </div>
@@ -90,13 +97,13 @@ export const AtproyContent = () => {
         <Image
           includePlaceholder={false}
           src={project.IMAGES.LOGO_RESPONSIVE_VERTICAL.URL}
-          alt={project.IMAGES.LOGO_RESPONSIVE_VERTICAL.ALT}
+          alt={t('images.logoResponsiveVertical')}
           className='laptop:hidden mx-auto max-w-md'
         />
         <Image
           includePlaceholder={false}
           src={project.IMAGES.LOGO_RESPONSIVE.URL}
-          alt={project.IMAGES.LOGO_RESPONSIVE.ALT}
+          alt={t('images.logoResponsive')}
           className='laptop:block hidden'
         />
       </div>
@@ -105,28 +112,28 @@ export const AtproyContent = () => {
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.BUSINESS_CARD.URL}
-          alt={project.IMAGES.BUSINESS_CARD.ALT}
+          alt={t('images.businessCard')}
         />
         <Image
           className='aspect-square'
           src={project.IMAGES.POLO_FRONT.URL}
-          alt={project.IMAGES.POLO_FRONT.ALT}
+          alt={t('images.poloFront')}
         />
         <Image
           className='aspect-video'
           src={project.IMAGES.BILLBOARD.URL}
-          alt={project.IMAGES.BILLBOARD.ALT}
+          alt={t('images.billboard')}
         />
         <div>
           <Image
             className='aspect-video object-cover object-left'
             src={project.IMAGES.FAVICON_DARK.URL}
-            alt={project.IMAGES.FAVICON_DARK.ALT}
+            alt={t('images.faviconDark')}
           />
           <Image
             className='aspect-video object-cover object-left'
             src={project.IMAGES.FAVICON_LIGHT.URL}
-            alt={project.IMAGES.FAVICON_LIGHT.ALT}
+            alt={t('images.faviconLight')}
           />
         </div>
       </div>
@@ -135,7 +142,7 @@ export const AtproyContent = () => {
           className='h-16 object-contain object-center'
           includePlaceholder={false}
           src={project.IMAGES.PATTERN.URL}
-          alt={project.IMAGES.PATTERN.ALT}
+          alt={t('images.pattern')}
         />
       </div>
       <Separator className='my-16' />
@@ -148,9 +155,7 @@ export const AtproyContent = () => {
         imageHeight={3500}
       />
       <Separator className='my-16' />
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

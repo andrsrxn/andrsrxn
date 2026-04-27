@@ -1,11 +1,8 @@
 export const COMPANY = {
   NIT: '300625197',
-  NAME: 'Andrés Raxón | Diseñador y Programador Web',
+  NAME: 'Andrés Raxón',
   COMMERCIAL_NAME: 'andrsrxn',
   LEGAL_NAME: 'Carlos Andrés Raxón Castañeda',
-  DESCRIPTION:
-    'Diseñador y Programador Web especializado en Branding moderno y Desarrollo Web Frontend orientado en UI/UX.',
-  SERVICES_SUMMARY: 'Branding, Desarrollo Web y Marketing',
 
   EMAIL_ADDRESSES: {
     VERIFIED_SENDING: 'updates',

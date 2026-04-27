@@ -1,6 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useTranslations } from 'next-intl'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import type { z } from 'zod'
@@ -25,13 +26,16 @@ import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/sonner'
 import { Textarea } from '@/components/ui/textarea'
 import { SERVICES } from '@/lib/constants/services'
-import { contactSchema } from '@/lib/schemas/contact-schema'
+import { contactSchema, translateError } from '@/lib/schemas/contact-schema'
 import { cn } from '@/lib/utils'
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const ContactForm = () => {
-  const [typeName, setTypeName] = useState('Nombre(s) y apellido(s)')
+  const t = useTranslations('homePage.contact.form')
+  const tErrors = useTranslations('homePage.contact.form.errors.fields')
+  const [typeName, setTypeName] = useState(t('fields.nameOrCompany.labelFreelancer'))
   const [pending, startTransition] = useTransition()
+  const tServices = useTranslations('services')
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -61,8 +65,8 @@ export const ContactForm = () => {
           description: response.description,
         })
       } catch {
-        toast.error('No se pudo enviar tu mensaje', {
-          description: 'Ocurrió un error inesperado. Por favor, intentalo más tarde',
+        toast.error(t('errors.unexpected.title'), {
+          description: t('errors.unexpected.description'),
         })
       }
     })
@@ -78,14 +82,16 @@ export const ContactForm = () => {
           name='clientType'
           render={({ field: { value, onChange, ...rest } }) => (
             <FormItem>
-              <FormLabel>Tipo de cliente</FormLabel>
+              <FormLabel>{t('fields.clientType.label')}</FormLabel>
               <FormControl>
                 <ChoiceBoxSingle
                   className='group grid w-full grid-cols-2 gap-4'
                   value={value ?? ''}
                   onValueChange={val => {
                     setTypeName(
-                      val === 'Empresa' ? 'Nombre de la empresa' : 'Nombre(s) y apellido(s)'
+                      val === 'company'
+                        ? t('fields.nameOrCompany.labelCompany')
+                        : t('fields.nameOrCompany.labelFreelancer')
                     )
                     onChange(val)
                   }}>
@@ -93,13 +99,14 @@ export const ContactForm = () => {
                     {...rest}
                     disabled={pending || rest.disabled}
                     className='relative grid w-full gap-1 border p-4'
-                    value='Freelancer'>
+                    value='freelancer'>
                     <span className='desktop:text-base mb-2 block text-center text-sm leading-none font-medium'>
-                      Freelancer
+                      {t('fields.clientType.freelancer')}
                     </span>
                     <span className='text-muted-foreground desktop:text-base text-sm leading-tight font-normal text-wrap'>
-                      Trabajador
-                      <span className='block'>independiente</span>
+                      {t.rich('fields.clientType.freelancerDescription', {
+                        span: chunks => <span className='block'>{chunks}</span>,
+                      })}
                     </span>
                     <ChoiceBoxSingleIndicator className='absolute top-1.5 right-1.5' />
                   </ChoiceBoxSingleItem>
@@ -107,20 +114,23 @@ export const ContactForm = () => {
                     {...rest}
                     disabled={pending || rest.disabled}
                     className='relative grid w-full gap-1 border p-4'
-                    value='Empresa'>
+                    value='company'>
                     <span className='desktop:text-base mb-2 block text-center text-sm leading-none font-medium'>
-                      Empresa
+                      {t('fields.clientType.company')}
                     </span>{' '}
                     <span className='text-muted-foreground desktop:text-base text-sm leading-tight font-normal text-wrap'>
-                      Negocio
-                      <span className='block'>formal</span>
+                      {t.rich('fields.clientType.companyDescription', {
+                        span: chunks => <span className='block'>{chunks}</span>,
+                      })}
                     </span>
                     <ChoiceBoxSingleIndicator className='absolute top-1.5 right-1.5' />
                   </ChoiceBoxSingleItem>
                 </ChoiceBoxSingle>
               </FormControl>
 
-              <FormMessage />
+              <FormMessage>
+                {translateError(tErrors, form.formState.errors.clientType?.message)}
+              </FormMessage>
             </FormItem>
           )}
         />
@@ -134,12 +144,18 @@ export const ContactForm = () => {
                 <Input
                   className='tablet:text-base'
                   disabled={pending}
-                  placeholder={typeName === 'Nombre de la empresa' ? 'Acme S.A.' : 'José Perez'}
+                  placeholder={
+                    typeName === t('fields.nameOrCompany.labelCompany')
+                      ? t('fields.nameOrCompany.placeholderCompany')
+                      : t('fields.nameOrCompany.placeholderFreelancer')
+                  }
                   {...field}
                 />
               </FormControl>
 
-              <FormMessage />
+              <FormMessage>
+                {translateError(tErrors, form.formState.errors.fullName?.message)}
+              </FormMessage>
             </FormItem>
           )}
         />
@@ -148,17 +164,19 @@ export const ContactForm = () => {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Correo electrónico</FormLabel>
+              <FormLabel>{t('fields.email.label')}</FormLabel>
               <FormControl>
                 <Input
                   className='tablet:text-base'
                   disabled={pending}
-                  placeholder='nombre@dominio.com'
+                  placeholder={t('fields.email.placeholder')}
                   {...field}
                 />
               </FormControl>
 
-              <FormMessage />
+              <FormMessage>
+                {translateError(tErrors, form.formState.errors.email?.message)}
+              </FormMessage>
             </FormItem>
           )}
         />
@@ -169,10 +187,8 @@ export const ContactForm = () => {
             return (
               <div>
                 <FormItem>
-                  <FormLabel>Servicios que te interesan</FormLabel>
-                  <FormDescription>
-                    Puedes agregar más detalles en Comentarios sobre lo que necesitas.
-                  </FormDescription>
+                  <FormLabel>{t('fields.services.label')}</FormLabel>
+                  <FormDescription>{t('fields.services.description')}</FormDescription>
                   <FormControl>
                     <div>
                       <div className='mt-3 mb-5 flex flex-col justify-between gap-6'>
@@ -183,11 +199,11 @@ export const ContactForm = () => {
                               id={`ch-${SERVICE.SLUG}`}
                               disabled={pending}
                               onBlur={rest.onBlur}
-                              checked={rest.value?.includes(SERVICE.TITLE)}
+                              checked={rest.value?.includes(SERVICE.SLUG)}
                               onCheckedChange={checked => {
                                 return checked
-                                  ? rest.onChange([...rest.value, SERVICE.TITLE])
-                                  : rest.onChange(rest.value.filter(val => val !== SERVICE.TITLE))
+                                  ? rest.onChange([...rest.value, SERVICE.SLUG])
+                                  : rest.onChange(rest.value.filter(val => val !== SERVICE.SLUG))
                               }}
                             />
 
@@ -197,14 +213,16 @@ export const ContactForm = () => {
                                 'cursor-pointer',
                                 pending && 'opacity-disabled pointer-events-none'
                               )}>
-                              {SERVICE.TITLE}
+                              {tServices(SERVICE.TITLE)}
                             </FormLabel>
                           </div>
                         ))}
                       </div>
                     </div>
                   </FormControl>
-                  <FormMessage className='-mt-4' />
+                  <FormMessage className='-mt-4'>
+                    {translateError(tErrors, form.formState.errors.services?.message)}
+                  </FormMessage>
                 </FormItem>
               </div>
             )
@@ -216,24 +234,28 @@ export const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel>
-                Comentarios <span className='font-normal'>(opcional)</span>
+                {t.rich('fields.comments.label', {
+                  span: chunks => <span className='font-normal'>{chunks}</span>,
+                })}
               </FormLabel>
               <FormControl>
                 <Textarea
                   className='tablet:text-base'
                   disabled={pending}
-                  placeholder='Detalles del proyecto, servicios en específico, necesidades de la marca, información relevante, etc...'
+                  placeholder={t('fields.comments.placeholder')}
                   {...field}
                 />
               </FormControl>
 
-              <FormMessage />
+              <FormMessage>
+                {translateError(tErrors, form.formState.errors.comments?.message)}
+              </FormMessage>
             </FormItem>
           )}
         />
 
         <Button type='submit' className='mt-4 rounded-none' size='lg' disabled={pending}>
-          {pending ? 'Enviando...' : 'Contactar'}
+          {pending ? t('fields.submitButton.sending') : t('fields.submitButton.label')}
         </Button>
       </form>
     </Form>

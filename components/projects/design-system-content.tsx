@@ -1,72 +1,84 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const DesignSystemContent = () => {
   const project = PROJECTS.DESIGN_SYSTEM
+  const t = useTranslations('projects.designSystem')
+  const tServices = useTranslations('services')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [
+    t('description.paragraph1'),
+    t('description.paragraph2'),
+    t('description.paragraph3'),
+    t('description.paragraph4'),
+  ]
 
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      services={services}
+      title={t('summary')}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div className='relative isolate grid gap-8 overflow-x-visible'>
         <div className='-mt-2 block'>
-          <p className='text-foreground text-base italic'>Próximamente URL disponible...</p>
+          <p className='text-foreground text-base italic'>{t('content.urlSoon')}</p>
         </div>
         <Separator className='my-6' />
 
         <div className='relative overflow-x-clip'>
           <span className='text-foreground mb-4 block text-lg font-semibold'>
-            +400 íconos duotone personalizados
+            {t('content.icons')}
           </span>
           <Image
             includePlaceholder={false}
             className='aspect-video'
             src={project.IMAGES.ICONS.URL}
-            alt={project.IMAGES.ICONS.ALT}
+            alt={t('images.icons')}
           />
         </div>
         <div className='relative overflow-x-clip'>
           <span className='text-foreground mb-4 block text-lg font-semibold'>
-            Paleta de colores
+            {t('content.palette')}
           </span>
           <Image
             includePlaceholder={false}
             className='aspect-video'
             src={project.IMAGES.PALETTE.URL}
-            alt={project.IMAGES.PALETTE.ALT}
+            alt={t('images.palette')}
           />
         </div>
         <div className='relative overflow-x-clip'>
           <span className='text-foreground mb-4 block text-lg font-semibold'>
-            Tipografía y escala tipográfica
+            {t('content.typography')}
           </span>
           <Image
             includePlaceholder={false}
             className='aspect-video'
             src={project.IMAGES.TYPOGRAPHY.URL}
-            alt={project.IMAGES.TYPOGRAPHY.ALT}
+            alt={t('images.typography')}
           />
         </div>
         <Separator className='my-8' />
 
         <h3 className='text-foreground mb-4 block text-2xl font-semibold'>
-          Showcase de algunos componentes
+          {t('content.components')}
         </h3>
 
         <div className='relative overflow-x-clip'>
           <span className='text-foreground mb-4 block text-lg font-semibold'>
-            Video Player estilo YouTube
+            {t('content.videoPlayer')}
           </span>
           <div>
             <video
@@ -82,7 +94,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Synced Tabs</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.syncedTabs')}
+          </span>
           <div>
             <video
               autoPlay
@@ -98,7 +112,9 @@ export const DesignSystemContent = () => {
         </div>
 
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Autocomplete</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.autocomplete')}
+          </span>
           <div>
             <video
               autoPlay
@@ -113,7 +129,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Dropdown</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.dropdown')}
+          </span>
           <div>
             <video
               autoPlay
@@ -128,7 +146,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Form</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.form')}
+          </span>
           <div>
             <video
               autoPlay
@@ -143,7 +163,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Calendar Range</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.calendarRange')}
+          </span>
           <div>
             <video
               autoPlay
@@ -158,7 +180,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Accordion</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.accordion')}
+          </span>
           <div>
             <video
               autoPlay
@@ -173,7 +197,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Choicebox</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.choiceBox')}
+          </span>
           <div>
             <video
               autoPlay
@@ -188,7 +214,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Tree View</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.treeView')}
+          </span>
           <div>
             <video
               autoPlay
@@ -203,7 +231,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Multi Select</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.multiSelect')}
+          </span>
           <div>
             <video
               autoPlay
@@ -218,7 +248,9 @@ export const DesignSystemContent = () => {
           </div>
         </div>
         <div className='relative overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>Alert Dialog</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.alertDialog')}
+          </span>
           <div>
             <video
               autoPlay
@@ -238,7 +270,7 @@ export const DesignSystemContent = () => {
           <div>
             <div className='absolute inset-0 flex size-full items-center justify-center bg-black/60'>
               <span className='text-foreground mb-4 block text-3xl font-medium italic'>
-                Proximamente...
+                {t('content.soon')}
               </span>
             </div>
             <video
@@ -256,9 +288,7 @@ export const DesignSystemContent = () => {
       </div>
       <Separator className='my-16' />
 
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

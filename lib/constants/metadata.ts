@@ -16,22 +16,13 @@ export const baseMetadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  keywords: [
-    'diseñador y programador web',
-    'desarrollo web',
-    'branding',
-    'motion graphics',
-    'edición de video',
-    'diseñador gráfico',
-    'programador',
-    'programador frontend',
-  ],
+
   applicationName: COMPANY.NAME,
   referrer: 'strict-origin-when-cross-origin',
-  description: COMPANY.DESCRIPTION,
+
   openGraph: {
     title: COMPANY.NAME,
-    description: COMPANY.DESCRIPTION,
+
     siteName: COMPANY.NAME,
     url: '/',
     images: [
@@ -39,7 +30,6 @@ export const baseMetadata: Metadata = {
         url: IMAGES.BRAND.BANNER_SOCIAL.PNG.URL,
         width: 1200,
         height: 630,
-        alt: 'Logo de Marca Personal al centro con un gradiente por detrás simulando la superficie de un planeta en un fondo negro',
       },
     ],
     locale: 'es',
@@ -49,7 +39,7 @@ export const baseMetadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: COMPANY.NAME,
-    description: COMPANY.DESCRIPTION,
+
     images: [IMAGES.BRAND.BANNER_SOCIAL.PNG.URL],
   },
   robots: {

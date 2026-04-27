@@ -1,0 +1,681 @@
+{
+  "company": {
+    "jobPosition": "Diseñador y Programador Web",
+    "description": "+2 años de experiencia como Profesional Independiente. Especializado en Branding moderno y Desarrollo Web Frontend orientado en UI/UX",
+    "servicesSummary": "Branding, Desarrollo Web y Marketing"
+  },
+  "privacyPage": {
+    "link": "Política de Privacidad",
+    "title": "Política de Privacidad",
+    "metadata": {
+      "description": "Verifica como manejamos tus datos personales y las cookies que utilizamos en el sitio web."
+    },
+    "content": {
+      "intro": "En el sitio web personal de {legalName}, la privacidad de nuestros usuarios es una prioridad fundamental. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que nos proporcionas y la que es generada automáticamente cuando utilizas nuestros servicios en línea.",
+      "identity": {
+        "title": "Identidad del Responsable del Tratamiento de Datos",
+        "description": "El responsable del tratamiento de los datos personales recopilados a través de este sitio web es: {legalName}, persona individual dedicada a la prestación de servicios profesionales con número de NIT: {nit}, ubicado en {country}. Para cualquier pregunta o inquietud, puedes contactarme directamente a través del link en la sección de Contacto."
+      },
+      "dataCollection": {
+        "title": "Información que Recopilamos",
+        "intro": "Recopilamos dos tipos de información:",
+        "direct": {
+          "title": "Información que nos proporcionas directamente",
+          "description": "Cuando utilizas nuestro formulario de contacto para solicitar información sobre servicios o proyectos, recopilamos la siguiente información:",
+          "item1": "Nombre de la persona o empresa",
+          "item2": "Dirección de correo electrónico",
+          "item3": "Tipo de persona (individual o empresa)",
+          "item4": "Lista de servicios de interés",
+          "item5": "Comentarios o mensajes",
+          "footer": "Esta información es esencial para poder responder a tus consultas, proporcionar cotizaciones y, en última instancia, para comunicarnos contigo sobre los servicios que solicitas."
+        },
+        "automatic": {
+          "title": "Información recopilada automáticamente",
+          "description": "Al igual que la mayoría de los sitios web, nuestros servicios de hosting y de red de entrega de contenido recopilan automáticamente cierta información sobre tu visita. Esta información no te identifica directamente como individuo y se utiliza para fines de seguridad y rendimiento. Los datos que pueden ser recopilados incluyen, mas no limitados a:",
+          "item1": "Dirección IP",
+          "item2": "Tipo y versión del navegador (User Agent)",
+          "item3": "Páginas visitadas en el sitio",
+          "item4": "Fecha y hora de acceso"
+        }
+      },
+      "dataUsage": {
+        "title": "Uso de la Información Recopilada",
+        "intro": "La información recopilada se utiliza con los siguientes propósitos:",
+        "item1": "Para responder a tus solicitudes y proporcionarte los servicios o cotizaciones solicitadas.",
+        "item2": "Para mejorar la calidad, seguridad y funcionalidad de nuestro sitio web.",
+        "item3": "Para analizar el tráfico del sitio y entender cómo los usuarios interactúan con nuestros servicios.",
+        "item4": "Para proteger el sitio contra actividades fraudulentas o maliciosas."
+      },
+      "dataSharing": {
+        "title": "Compartir tu Información",
+        "description": "Tu información personal es privada y no la vendemos, alquilamos ni la compartimos con terceros para fines de marketing. Sin embargo, tu información puede ser compartida con servicios de terceros que utilizamos para operar nuestro sitio web, como Vercel y Cloudflare, únicamente en la medida necesaria para que ellos puedan proporcionarnos servicios de hosting, seguridad y red de entrega de contenido."
+      },
+      "cookies": {
+        "title": "Uso de Cookies y Tecnologías Similares",
+        "description": "Nuestro sitio web utiliza tecnologías esenciales para su funcionamiento y seguridad. Estas tecnologías, incluyendo cookies, son utilizadas por nuestros proveedores de servicios para garantizar que el sitio esté protegido y funcione correctamente. No utilizamos cookies para fines de marketing o para rastrear tu actividad de navegación con fines publicitarios.",
+        "thirdParty": {
+          "title": "Cookies de Terceros",
+          "intro": "Utilizamos servicios de terceros para mejorar la seguridad y el rendimiento de nuestro sitio web. Al usar nuestro sitio, estos proveedores pueden establecer cookies para fines estrictamente funcionales y de seguridad. Específicamente:",
+          "cloudflare": "Utiliza cookies para identificar el tráfico malicioso y proteger el sitio contra ataques. Estas cookies son esenciales y no pueden ser deshabilitadas sin afectar la seguridad de la página.",
+          "vercel": "Como plataforma de hosting, Vercel puede utilizar cookies para gestionar funciones técnicas, aunque para un sitio de portafolio estático como el tuyo, su uso es limitado. Te notificaremos si agregamos funcionalidades que requieran el uso de cookies para el seguimiento o la personalización.",
+          "footer": "Al utilizar este sitio web, aceptas el uso de estas cookies funcionales y de seguridad. Puedes gestionar las cookies a través de la configuración de tu navegador, aunque esto podría afectar la funcionalidad de algunas partes del sitio."
+        }
+      },
+      "dataSecurity": {
+        "title": "Seguridad de los Datos",
+        "description": "Implementamos medidas de seguridad para proteger la información que recopilamos, incluyendo la encriptación de los datos en tránsito. Sin embargo, ningún método de transmisión por internet o de almacenamiento electrónico es 100% seguro. No podemos garantizar la seguridad absoluta de tus datos, pero nos comprometemos a tomar todas las precauciones razonables para protegerlos."
+      },
+      "yourRights": {
+        "title": "Tus Derechos",
+        "description": "Tienes el derecho de acceder, corregir, actualizar o solicitar la eliminación de tu información personal en cualquier momento. Si deseas ejercer estos derechos, por favor, contáctame a través de la información de contacto provista al final de esta política."
+      },
+      "changes": {
+        "title": "Cambios a Esta Política de Privacidad",
+        "description": "Esta política puede ser actualizada ocasionalmente para reflejar cambios en nuestras prácticas o por razones operativas, legales o regulatorias. Te notificaremos por medio de un banner en el sitio web de cualquier cambio significativo publicando la nueva política en esta página."
+      },
+      "contact": {
+        "title": "Contacto",
+        "description": "Si tienes alguna pregunta sobre esta Política de Privacidad, por favor, contáctame en:"
+      }
+    }
+  },
+  "termsPage": {
+    "link": "Términos y Condiciones",
+    "title": "Términos y Condiciones",
+    "metadata": {
+      "description": "Definimos reglas de uso y utilización del sitio web para asegurar el cumplimiento correcto de tus derechos y obligaciones en él."
+    },
+    "content": {
+      "intro1": "Bienvenido al sitio web de {commercialName}. Al acceder y utilizar este sitio web, usted acepta y se compromete a cumplir con todos los siguientes Términos y Condiciones de Uso. Si no está de acuerdo con alguna parte de estos términos, por favor no utilice este sitio web. Estos términos y condiciones se aplican a todos los visitantes, usuarios y otras personas que accedan o utilicen el servicio.",
+      "intro2": "La persona responsable de este sitio web es: {legalName}, un individuo dedicado a la prestación de servicios profesionales con Número de Identificación Tributaria (NIT): {nit}, ubicado en {country}. Para cualquier pregunta o inquietud, puede contactarme directamente a través del enlace en la sección de Contacto.",
+      "services": {
+        "title": "Descripción de Servicios",
+        "description": "Este sitio web funciona como un portafolio digital, una plataforma informativa para mostrar proyectos completados y las capacidades creativas de {commercialName}. Se ofrecen servicios de diseño, dirección creativa y estrategia de manera profesional. La contratación de estos servicios está sujeta a la negociación y firma de un contrato de servicios independiente, el cual detallará el alcance, entregables, cronograma y términos de pago específicos del proyecto."
+      },
+      "intellectualProperty": {
+        "title": "Propiedad Intelectual",
+        "description1": "Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos, logotipos, iconos, imágenes, clips de audio y video, proyectos de portafolio y su compilación, es propiedad exclusiva de {commercialName} o sus respectivos licenciantes y está protegido por las leyes de propiedad intelectual de Guatemala y leyes internacionales. La marca personal de {commercialName} y cualquier otro logotipo, nombre de servicio o eslogan relacionado son marcas comerciales de {commercialName} y no pueden ser copiadas, imitadas o utilizadas, en todo o en parte, sin nuestro permiso previo por escrito.",
+        "description2": "Los proyectos mostrados en este portafolio son el resultado de colaboraciones con clientes y se presentan con fines ilustrativos de las habilidades y servicios ofrecidos. La propiedad intelectual de los proyectos finales mostrados pertenece a sus respectivos clientes, a menos que se indique lo contrario. Está estrictamente prohibida la reproducción, distribución, modificación, exhibición pública o uso no autorizado de cualquier contenido de este sitio web sin el consentimiento previo por escrito de {commercialName}."
+      },
+      "siteUse": {
+        "title": "Uso del Sitio Web",
+        "intro": "El uso del sitio web está destinado a fines informativos y de contacto. No puede usar el sitio web para fines ilegales o no autorizados. Usted acepta no usar el sitio para los siguientes propósitos:",
+        "item1": "Difamar, abusar, acosar, amenazar o violar de cualquier otra forma los derechos legales de otros.",
+        "item2": "Publicar, distribuir o difundir cualquier material o información que sea inapropiado, profano, difamatorio, obsceno, indecente o ilegal.",
+        "item3": "Subir archivos que contengan virus, archivos corruptos o cualquier otro software o programa similar que pueda dañar el funcionamiento del sitio web o de la computadora de otros.",
+        "item4": "Spamming o enviar correos electrónicos no solicitados."
+      },
+      "thirdPartyLinks": {
+        "title": "Enlaces a Sitios de Terceros",
+        "description": "Nuestro sitio web puede contener enlaces a sitios web de terceros que no son propiedad ni están controlados por {commercialName}. No tenemos control sobre, y no asumimos responsabilidad por, el contenido, las políticas de privacidad o las prácticas de cualquier sitio web de terceros. Usted reconoce y acepta que no seremos responsables, directa o indirectamente, de ningún daño o pérdida causado por o en conexión con el uso o la dependencia de dicho contenido, bienes o servicios disponibles en o a través de dichos sitios web."
+      },
+      "userContent": {
+        "title": "Política de Contenido Generado por el Usuario",
+        "description": "Si usted proporciona contenido, comentarios, ideas, sugerencias o cualquier otro material (colectivamente, \"Envío\") a través del sitio web, usted otorga a {commercialName} una licencia no exclusiva, perpetua, irrevocable, libre de regalías, sublicenseable y mundial para usar, reproducir, modificar, adaptar, publicar, traducir, crear trabajos derivados de, distribuir y mostrar dicho Envío en cualquier forma, medio o tecnología, en todo o en parte, sin necesidad de compensación o notificación. Esto se aplica a los mensajes enviados a través del formulario de contacto."
+      },
+      "disclaimer": {
+        "title": "Renuncia de Garantías y Limitación de Responsabilidad",
+        "description1": "El sitio web se proporciona \"tal cual\" y \"según disponibilidad\". Andrés Raxón no ofrece garantías, expresas o implícitas, con respecto al funcionamiento del sitio o la información, contenido, materiales o productos incluidos en él. No garantizamos que el sitio será ininterrumpido o libre de errores. El uso del sitio es bajo su propio riesgo.",
+        "description2": "En la máxima medida permitida por la ley aplicable, {commercialName} no será responsable de ningún daño de ningún tipo que surja del uso de este sitio, incluyendo pero no limitado a daños directos, indirectos, incidentales, punitivos y consecuentes, o pérdida de datos o ganancias."
+      },
+      "indemnification": {
+        "title": "Indemnización",
+        "description": "Usted acepta indemnizar y eximir de responsabilidad a {commercialName}, sus afiliados y sus respectivos directores, funcionarios, agentes y empleados de y contra cualquier reclamo, demanda, daño, pérdida, costo, responsabilidad y gasto, incluidos los honorarios de abogados, que surjan de su uso o incapacidad para usar el sitio web."
+      },
+      "governingLaw": {
+        "title": "Ley Aplicable y Resolución de Disputas",
+        "description": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la República de Guatemala, sin dar efecto a sus principios de conflicto de leyes. Cualquier disputa, controversia o reclamo que surja de o esté relacionado con estos Términos se resolverá por los tribunales competentes en la Ciudad de Guatemala. Antes de iniciar cualquier acción legal, ambas partes acuerdan intentar resolver la disputa mediante negociación de buena fe."
+      },
+      "severability": {
+        "title": "Independencia de Disposiciones",
+        "description": "Si alguna disposición de estos Términos es declarada inválida o inaplicable por un tribunal, las disposiciones restantes de los Términos permanecerán en pleno vigor y efecto. La disposición inválida se modificará en la medida mínima necesaria para hacerla válida y exigible de manera que se logre la intención original de las partes."
+      },
+      "noWaiver": {
+        "title": "No Renuncia",
+        "description": "El hecho de que {commercialName} no ejerza o haga cumplir algún derecho o disposición de estos Términos no constituirá una renuncia a dicho derecho o disposición. Cualquier renuncia a una disposición de estos Términos debe ser por escrito y firmada por una persona autorizada para actuar en nombre de {commercialName}."
+      },
+      "termination": {
+        "title": "Terminación del Uso",
+        "description": "Nos reservamos el derecho de suspender o cancelar su acceso a nuestro sitio web, sin previo aviso, por cualquier motivo, incluyendo sin limitación, el incumplimiento de estos Términos y Condiciones. Todas las disposiciones de los Términos que por su naturaleza deban sobrevivir a la terminación, sobrevivirán a la terminación, incluyendo sin limitación, las disposiciones de propiedad, las renuncias de garantía, la indemnización y las limitaciones de responsabilidad."
+      },
+      "generalProvisions": {
+        "title": "Disposiciones Generales",
+        "description": "Estos Términos constituyen el acuerdo completo entre usted y {commercialName} con respecto al sitio web. El hecho de no ejercer ningún derecho o disposición de estos Términos no constituirá una renuncia a dicho derecho o disposición. Si alguna disposición de estos Términos se considera inválida o inaplicable por un tribunal, las disposiciones restantes de estos Términos permanecerán en vigor. La cláusula de divisibilidad garantiza que la invalidación de una parte no afecte el resto del documento."
+      },
+      "modifications": {
+        "title": "Modificaciones a los Términos",
+        "description": "Nos reservamos el derecho, a nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Al continuar accediendo o utilizando nuestro sitio web después de que esas revisiones entren en vigor, usted acepta estar sujeto a los términos revisados. Si no está de acuerdo con los nuevos términos, deje de usar el sitio web."
+      },
+      "changes": {
+        "title": "Cambios a estos Términos y Condiciones de Uso",
+        "description": "Esta política puede actualizarse ocasionalmente para reflejar cambios en nuestras prácticas o por razones operativas, legales o regulatorias. Le notificaremos de cualquier cambio significativo a través de un banner en el sitio web publicando la nueva política en esta página."
+      },
+      "contact": {
+        "title": "Contacto",
+        "description": "Si tienes alguna pregunta sobre estos Términos y Condiciones de Uso, por favor contáctame en:"
+      }
+    }
+  },
+  "notFoundPage": {
+    "link": "Regresar al inicio",
+    "title": "Página no encontrada"
+  },
+  "errorPage": {
+    "action": "Volver a intentar",
+    "title": "Error crítico"
+  },
+  "homePage": {
+    "metadata": {
+      "keywords": "Diseñador y Programador Web, Desarrollo Web, Branding, Motion Graphics, Edición de Video, Diseñador Gráfico, Programador, Programador Frontend, Programador Fullstack"
+    },
+    "hero": {
+      "cta": "Contratar Servicios"
+    },
+    "projects": {
+      "viewMoreInstagram": "Ver más en Instagram"
+    },
+    "designTools": {
+      "title1": "Transformando ideas en proyectos únicos,",
+      "title2": "con las mejores herramientas"
+    },
+    "contact": {
+      "title": "Comencemos a crear proyectos memorables",
+      "description": " Comunícate conmigo por medio de: <email>email</email>, <instagram>Instagram</instagram>,<whatsapp>Whatsapp</whatsapp> o llenando el siguiente formulario.",
+      "form": {
+        "errors": {
+          "unexpected": {
+            "title": "No se pudo enviar tu mensaje",
+            "description": "Ocurrió un error inesperado. Por favor, intentalo más tarde"
+          },
+          "deviceDenied": {
+            "title": "Acceso denegado",
+            "description": "Dispositivo no autorizado para enviar mensajes"
+          },
+          "success": {
+            "title": "Mensaje enviado con éxito",
+            "description": "Me comunicaré contigo lo más pronto posible"
+          },
+          "fields": {
+            "invalidType": "Tipo no aceptado",
+            "clientType": {
+              "required": "Selecciona una de las opciones"
+            },
+            "fullName": {
+              "required": "Agrega tu nombre o el de tu empresa",
+              "invalid": "Caracteres no aceptados",
+              "max": "Máximo de 50 caracteres"
+            },
+            "email": {
+              "required": "Agrega tu correo electrónico",
+              "invalid": "Correo electrónico no válido",
+              "noTags": "No se aceptan tags en el email"
+            },
+            "services": {
+              "required": "Selecciona al menos un servicio",
+              "invalid": "Servicio no aceptado"
+            },
+            "comments": {
+              "max": "Máximo de 500 characteres"
+            }
+          }
+        },
+        "fields": {
+          "clientType": {
+            "label": "Tipo de cliente",
+            "freelancer": "Freelancer",
+            "freelancerDescription": "Trabajador <span>independiente</span>",
+            "company": "Empresa",
+            "companyDescription": "Negocio <span>formal</span>"
+          },
+          "nameOrCompany": {
+            "labelCompany": "Nombre de la empresa",
+            "labelFreelancer": "Nombre(s) y apellido(s)",
+            "placeholderCompany": "Acme S.A.",
+            "placeholderFreelancer": "José Perez"
+          },
+          "email": {
+            "label": "Correo electrónico",
+            "placeholder": "nombre@dominio.com"
+          },
+          "services": {
+            "label": "Servicios que te interesan",
+            "description": "Puedes agregar más detalles en Comentarios sobre lo que necesitas."
+          },
+          "comments": {
+            "label": "Comentarios <span>(Opcional)</span>",
+            "placeholder": "Detalles del proyecto, servicios en específico, necesidades de la marca, información relevante, etc..."
+          },
+          "submitButton": {
+            "label": "Contactar",
+            "sending": "Enviando..."
+          }
+        }
+      }
+    }
+  },
+  "services": {
+    "brand": {
+      "title": "Branding",
+      "subservices": {
+        "branding": "Branding",
+        "brandRefresh": "Actualización de Marca",
+        "rebranding": "Rebranding",
+        "brandStrategy": "Estrategia de Marca",
+        "naming": "Naming",
+        "visualIdentity": "Identidad Visual",
+        "iconography": "Iconografía",
+        "designSystem": "Sistema de Diseño",
+        "brandGuidelines": "Manual de Marca"
+      }
+    },
+    "webDev": {
+      "title": "Desarrollo Web",
+      "subservices": {
+        "landingPageDev": "Landing Page",
+        "fullPageDev": "Sitio Web",
+        "saas": "SaaS (Frontend y Backend)",
+        "uiUxDesign": "Diseño UI/UX",
+        "seo": "Optimización SEO",
+        "uxAudit": "Análisis UX",
+        "componentes": "Librería de Componentes"
+      }
+    },
+    "marketing": {
+      "title": "Marketing",
+      "subservices": {
+        "socialMediaPosts": "Posts para Redes Sociales",
+        "videoEditing": "Edición de Video",
+        "motionGraphics": "Motion Graphics",
+        "copywriting": "Copywriting",
+        "packaging": "Packaging",
+        "stationery": "Material Corporativo",
+        "slideshow": "Presentaciones de Diapositivas",
+        "flyers": "Material Promocional",
+        "menu": "Menú de Restaurante"
+      }
+    }
+  },
+  "designTools": {
+    "figma": {
+      "description": "Wireframes, UI/UX, Manuales de marca, etc."
+    },
+    "cloudflare": {
+      "description": "Seguridad, almacenamiento y optimización"
+    },
+    "premierePro": {
+      "description": "Edición de video"
+    },
+    "photoshop": {
+      "description": "Edición de fotografía y mockups"
+    },
+    "illustrator": {
+      "description": "Creación de vectores e ilustraciones"
+    },
+    "afterEffects": {
+      "description": "Animaciones y Motion Graphics"
+    },
+
+    "nextJs": {
+      "description": "Desarrollo de sitios web dinámicos"
+    },
+
+    "tailwindCss": {
+      "description": "Framework de estilos CSS"
+    },
+    "astro": {
+      "description": "Framework para sitios web estáticos"
+    },
+    "notion": {
+      "description": "Definición del proyecto y recursos"
+    },
+
+    "vercel": {
+      "description": "Hosting de proyectos Next.js"
+    },
+
+    "resend": {
+      "description": "Envío de correos transaccionales"
+    },
+
+    "gsap": {
+      "description": "Animaciones y efectos en la web"
+    },
+    "aHrefs": {
+      "description": "Estadísticas de los sitos web"
+    },
+    "radixUi": {
+      "description": "Componentes reutilizables para la web"
+    },
+    "motion": {
+      "description": "Animaciones y efectos en la web"
+    },
+
+    "biome": {
+      "description": "Linter y formateador de código"
+    },
+
+    "vitest": {
+      "description": "Testing framework de código"
+    },
+    "github": {
+      "description": "Repositorio de código en la nube"
+    },
+    "sentry": {
+      "description": "Monitorización de errores en tiempo real"
+    },
+    "drizzle": {
+      "description": "ORM para bases de datos"
+    },
+    "bun": {
+      "description": "Tiempo de ejecución de JavaScript"
+    },
+    "turboRepo": {
+      "description": "Unificación de código para grandes proyectos"
+    },
+
+    "postgres": {
+      "description": "Base de datos relacional moderna"
+    }
+  },
+  "projects": {
+    "signature": "Un proyecto de",
+    "ctaCard": "Ver Proyecto Completo",
+    "copyLink": "Copiar Enlace",
+    "linkCopied": "Enlace copiado",
+    "projectDescription": "Descripción completa del proyecto",
+    "type": {
+      "caseStudy": "Caso de Estudio",
+      "normal": "Normal",
+      "proposal": "Propuesta"
+    },
+    "vivet": {
+      "slug": "vivet-rebranding",
+      "client": "VIVET",
+      "industry": "Streetwear de lujo",
+      "summary": "Rebranding y Clothing",
+      "description": {
+        "paragraph1": "VIVET by Kai Cenat. Una entidad visual y cultural que representa el Street Wear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan \"WE ARE ETERNAL\"",
+        "paragraph2": "No persigue la relevancia, define identidad.",
+        "paragraph3": "Demostración de la nueva identidad visual y los outfits personalizados principalmente con el símbolo de marca, desgaste controlado, telas pesadas, iluminación baja y composición dominante con poses estáticas y dinámicas, según el propósito de comunicación."
+      },
+
+      "images": {
+        "bannerSmall": "Banner de la propuesta de Rebranding",
+        "banner": "Banner de la propuesta de Rebranding",
+        "banner2": "Banner secundario de la propuesta de Rebranding",
+        "banner3": "Banner terciario de la propuesta de Rebranding",
+        "logo": "Logo de la marca",
+        "symbol": "Símbolo de la marca",
+        "logoConstruction": "Construcción del logo de la marca",
+        "symbolConstruction": "Construcción del símbolo de la marca",
+        "typography1": "Tipografía principal de la marca",
+        "typography2": "Tipografía secundaria de la marca",
+        "color1": "Paleta de colores de la marca",
+        "vest": "Chaleco masculino con el símbolo de marca",
+        "skiMask": "Pasamontañas con el símbolo de marca",
+        "jacket": "Chaqueta con el símbolo de marca",
+        "jeans": "Pantalones desgastados con el símbolo de marca",
+        "shirt": "Camiseta con el símbolo de marca",
+        "bag": "Bolsa con el símbolo de marca",
+        "pattern": "Patrón conformado por elementos del símbolo de la marca"
+      }
+    },
+    "thechoice": {
+      "slug": "the-choice-uiux-design-y-sitio-web",
+      "client": "The Choice",
+      "industry": "Restaurante y panadería",
+      "summary": "Diseño UI/UX y Sitio Web",
+      "description": {
+        "paragraph1": "El diseño de The Choice implementa una jerarquía visual sólida fundamentada en un sistema de tipografía con escala 1.2 que mejora la legibilidad al aplicar la Ley de Continuidad en la lectura. El flujo de navegación está optimizado para reducir la carga cognitiva del usuario al identificar la acción que desee realizar.",
+        "paragraph2": "El flujo de reservaciones se ha creado siguiendo la Ley de Hick, fragmentando un proceso complejo en pasos secuenciales (Selección -> Detalles -> Pago -> Éxito), siendo este el flujo prioritario de los usuarios.",
+        "paragraph3": "Para enfatizar el la usabilidad del diseño UI/UX se tradujo a código creando una demo interactiva, dinámica y completa del sitio, en donde se puede integrar cualquier plataforma de reservaciones por medio de una API con un proceso automatizado y personalizado sin abandonar el sitio.",
+        "paragraph4": "La arquitectura del sitio web se realizó con el Generador de Sitios Estáticos de Next.js, utilizando componentes reutilizables, sistema de tokens, accesibilidad (WCAG) niveles AA y AAA, optimización SEO y Copywriting; factores fundamentales para un sitio optimizado y escalable."
+      },
+      "content": {
+        "userPersona": "User Persona",
+        "homePage": "Página Principal y de Reservación",
+        "reservationFlow": "Flujo de Usuario para Hacer una Reservación",
+        "designSystem": "Sistema de Diseño",
+        "typographies": "Tipografías",
+        "typographyScale": "Escala de Tipografías",
+        "colorPalette": "Paleta de Colores",
+        "tokens": "Tokens de Colores",
+        "buttonDemo": "Demostración del Componente Botón"
+      },
+      "images": {
+        "bannerSmall": "Sitio web en computadora y celular con Wireframes",
+        "banner": "Sitio web en computadora y celular con Wireframes",
+        "webWithWireframe": "Sitio web en computadora con la mitad del Wireframe",
+        "mainPage": "Página de inicio del sitio web",
+        "reservationsPage": "Página de reservaciones del sitio web",
+        "paymentReservationsPage": "Página de pago para reservaciones del sitio web",
+        "successPaymentReservationsPage": "Página de mensaje de éxito para reservciones del sitio web",
+        "reservationsFlow": "Flujo del usuario para hacer una reservación en el sitioweb",
+        "performance": "Performance del sitio web",
+        "typographies": "Tipografías",
+        "typographyScales": "Escala tipográfica",
+        "buttonComposition": "Composición interna del componente Botón",
+        "userPersona": "User Persona",
+        "buttonVariants": "Variantes del componente Botón",
+        "mackbookMockup": "Mackbook Pro mockup",
+        "mackbookWebMockup": "Sitio web  en Mackbook Pro",
+        "colorPalette": "Escala de luces y sombras de la paleta de color",
+        "colorPaletteTokens": "Tokens de diseño de color de la paleta de color"
+      }
+    },
+    "designSystem": {
+      "slug": "design-system",
+      "client": "Software as a Service (SaaS)",
+      "industry": "React + TypeScript",
+      "summary": "Sistema de Diseño y Componentes",
+      "description": {
+        "paragraph1": "Un Sistema de Diseño opinionado, moderno y escalable construido con React, TypeScript y Tailwind CSS.",
+        "paragraph2": "Provee más de 50 componentes diferentes para el desarrollo de aplicaciones web, con un sistema de tokens para colores, tipografía, espaciado, sombras y similares, componentes compuestos, estados y microinteracciones, patrones de diseño como Atomic Design, principios de UI/UX y accesibilidad (WCAG) niveles AA y AAA.",
+        "paragraph3": "Se desarrolló un set de íconos Duotone personalizados de más de 400 elementos acorde al estilo del sistema, diseñados para múltiples propósitos y aplicaciones.",
+        "paragraph4": "El rendimiento de los componentes está optimizado para ofrecer una experiencia fluida y responsive para navegadores modernos y dispositivos móviles."
+      },
+      "content": {
+        "urlSoon": "Próximamente URL disponible...",
+        "icons": "+400 Íconos Duotone Personalizados",
+        "palette": "Paleta de Colores",
+        "typography": "Tipografía y Escala Tipográfica",
+        "components": "Showcase de Algunos Componentes",
+        "videoPlayer": "Video Player estilo YouTube",
+        "syncedTabs": "Synced Tabs",
+        "autocomplete": "Autocomplete",
+        "dropdown": "Dropdown",
+        "form": "Form",
+        "calendarRange": "Calendar Range",
+        "accordion": "Accordion",
+        "choiceBox": "ChoiceBox",
+        "treeView": "TreeView",
+        "multiSelect": "MultiSelect",
+        "alertDialog": "AlertDialog",
+        "soon": "Proximamente..."
+      },
+      "images": {
+        "bannerSmall": "Colección de componentes parte del Sistema de Diseño",
+        "banner": "Componentes parte del Sistema de Diseño",
+        "bannerAnimation": "Colección de componentes parte del Sistema de Diseño",
+        "palette": "Paleta de colores parte del Sistema de Diseño",
+        "typography": "Tipografía parte del Sistema de Diseño",
+        "icons": "Íconos parte del Sistema de Diseño"
+      }
+    },
+    "atproy": {
+      "slug": "grupo-atproy-actualizacion-de-marca",
+      "client": "Grupo ATProy",
+      "industry": "Ingeniería eléctrica y telecomunicaciones",
+      "summary": "Actualización de Marca y Sitio Web",
+      "description": {
+        "paragraph1": "Con una trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.",
+        "paragraph2": "Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del Sitio Web con Astro para facilitar la información de sus servicios y proyectos realizados a lo largo de su historia, siendo un medio de contacto vital para aumentar su alcance y posicionamiento en el mercado."
+      },
+      "images": {
+        "bannerSmall": "Banner oficial con el logo y símbolo",
+        "banner": "Banner oficial con el logo y símbolo",
+        "abcWhite": "Ejemplo de la tipografía Inter aplicada en el abecedario",
+        "color1": "Color principal (Azul oscuro)",
+        "color2": "Color secundario (Celeste)",
+        "color3": "Color secundario (Verde oscuro)",
+        "color4": "Color secundario (Gris verdoso)",
+        "logoResponsive": "Dimensión del logo según la escala de aplicación",
+        "logoResponsiveVertical": "Dimensión del logo según la escala de aplicación",
+        "pattern": "Patrón de marca basado en la construcción del símbolo y la paleta de colores",
+        "billboard": "Publicidad en vallas publicitarias",
+        "businessCard": "Tarjetas de presentación",
+        "faviconDark": "Representación del símbolo como ícono del sitio web",
+        "faviconLight": "Representación del símbolo como ícono del sitio web",
+        "poloFront": "Camisa tipo polo con detalles del color principal",
+        "web": "Página principal del sitio web",
+        "typographyWhite": "Tipografía Inter con los diferentes pesos a utilizar",
+        "logo": "Logo principal en vertical",
+        "logoHorizontal": "Logo principal en horizontal",
+        "symbol": "Símbolo de marca"
+      }
+    },
+    "icpsj": {
+      "slug": "icpsj-branding",
+      "client": "La Presencia del Señor Jesús",
+      "industry": "Iglesia evangélica",
+      "summary": "Branding, Sitio Web y Redes Sociales",
+      "description": {
+        "paragraph1": "Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.",
+        "paragraph2": "Se desarrolló un Sitio Web (Blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes."
+      },
+      "images": {
+        "bannerSmall": "Banner oficial de la Iglesia",
+        "banner": "Banner oficial de la Iglesia",
+        "web": "Página principal del sitio web (Blog)",
+        "logo": "Logo de la Iglesia",
+        "logoInverted": "Logo invertido",
+        "logoNegative": "Logo en negativo",
+        "logoPositive": "Logo en positivo",
+        "symbol": "Símbolo de la Iglesia",
+        "symbolNegative": "Símbolo en negativo",
+        "symbolPositive": "Símbolo en positivo",
+        "bibleStudy": "Representación de un estudio bíblico proyectado en una pantalla gigante",
+        "color1": "Color principal (Naranja)",
+        "color2": "Color secundario (Rojo)",
+        "color3": "Color secundario (Amarillo)",
+        "instagramPosts": "Representación de 3 diferentes Post en la red social Instagram",
+        "palette1": "Sombras del color principal (Naranja)",
+        "palette2": "Sombras del color secundario (Rojo)",
+        "palette3": "Sombras del color secundario (Amarillo)",
+        "signLight": "Representación del logo a una sola tinta en un letrero LED",
+        "typography1": "Tipografía principal Merriwheter",
+        "typography2": "Tipografía secundaria Open Sans",
+        "stickers": "Representacion de stickers bordados con el símbolo al centro"
+      }
+    },
+    "icemene": {
+      "slug": "icemene-rebranding",
+      "client": "ICEMENE",
+      "industry": "Joyería y accesorios",
+      "summary": "Rebranding y Packaging",
+      "description": {
+        "paragraph1": "Se mejoró la calidad gráfica de ICEMENE, una tienda de joyería y accesorios masculinos, alineando su personalidad con la marca para reflejar la elegancia y calidad que lo caracteriza.",
+        "paragraph2": "Por medio del Rebranding se actualiza la estrategia de marca que impulsará sus decisiones a futuro más allá del diseño, tanto digital y en medios físicos."
+      },
+      "images": {
+        "bannerSmall": "Logo centrado de ICEMENE con el patrón oficial de marca por debajo",
+        "banner": "Logo centrado de ICEMENE con el patrón oficial de marca por debajo",
+        "bannerComparison": "Comparación del logo actual con el logo propuesto en el Rebranding",
+        "color1": "Color secundario Silken (Gris azulado)",
+        "color2": "Color secundario Mist (Gris)",
+        "color3": "Color secundario Golden (Oro)",
+        "color4": "Color principal alternativo Cream (Blanco crema)",
+        "color5": "Color principal alternativo Cream (Blanco crema)",
+        "logo": "Logo de la marca",
+        "logoAlternative": "Logo de la marca en blanco",
+        "symbol": "Símbolo de la marca",
+        "symbolAlternative": "Símbolo de la marca en blanco",
+        "package": "Paquete para envíos de productos",
+        "shoppingBag": "Bolsa de compras",
+        "sign": "Letrero con el símbolo de la marca en blanco sobre fondo negro",
+        "box": "Caja para empaque de productos con el símbolo de la marca",
+        "typography1": "Tipografía principal Audrey en los pesos de medium y bold para titulares",
+        "typography2": "Tipografía secundaria Archivo en los pesos de regular, semibold, bold y black para cuerpo del texto",
+        "pattern": "Patrón de la marca en base a repetición continua horizontal sin espacios del símbolo"
+      }
+    },
+    "theprincipal": {
+      "slug": "theprincipal-branding",
+      "client": "ThePrincipal",
+      "industry": "Blog online",
+      "summary": "Branding y Diseño UI/UX",
+      "description": {
+        "paragraph1": "ThePrincipal es una plataforma en línea de auto aprendizaje inspirada en la lectura de los periódicos combinada con la interacción dinámica de los usuarios en la web.",
+        "paragraph2": "El valor del conocimiento online debe estar acompañado de una marca que respalde la experiencia de aprender y descubrir.",
+        "paragraph3": "La plataforma incluye cursos, artículos, resúmenes de temas relevantes e históricos y herramientas en línea; facilita el seguimiento de los cursos, la publicación automatizada de los temas, búsqueda avanzada por categorías, entre otros, totalmente gratis."
+      },
+      "images": {
+        "bannerSmall": "Logo de ThePrincipal con dos imágenes de estudiantes",
+        "banner": "Logo de ThePrincipal con dos imágenes de estudiantes",
+        "logo": "Logo de la marca",
+        "logoAlternative": "Logo de la marca en blanco",
+        "logoPositive": "Logo en positivo",
+        "logoNegative": "Logo en negativo",
+        "symbol": "Símbolo de la marca",
+        "symbolPositive": "Símbolo en positivo",
+        "symbolNegative": "Símbolo en negativo",
+        "typography1": "Tipografía principal General Sans",
+        "color1": "Color principal de la marca",
+        "doodle": "Illustración decorativa de un trazado hecho a mano con el color principal",
+        "app": "Ícono de la marca en un iPhone",
+        "laptop1": "Representación de la página principal de la plataforma visualizada en una laptop",
+        "laptop2": "Representación de uno de los artículos en la categoría Diseño visualizada en una laptop"
+      }
+    },
+    "bonzer": {
+      "slug": "bonzer-branding",
+      "client": "Bonzer",
+      "industry": "Estética y cuidado personal",
+      "summary": "Branding, Packaging y Redes Sociales",
+      "description": {
+        "paragraph1": "Bonzer es un concepto de marca enfocada en productos naturales para el cuidado y bienestar personal en jóvenes y adultos, generando cambios visibles en poco tiempo.",
+        "paragraph2": "El Branding realizado permite enfatizar la personalidad vibrante y cercana de Bonzer, aumentando la fidelidad del mercado y facilidad de reconocimiento con respecto a la competencia, principalmente en los elementos gráficos que acompañan los distintos medios de publicidad."
+      },
+      "images": {
+        "bannerSmall": "Logo de Bonzer centrado con la ilustración representativa del símbolo en la parte inferior",
+        "banner": "Logo de Bonzer centrado con la ilustración representativa del símbolo en la parte inferior",
+        "color1": "Color principal (Aqua)",
+        "ads1": "Publicidad en formato vertical de uno de los productos propuestos Body Cream",
+        "ads2": "Publicidad en formato vertical de uno de los productos propuestos Gel para el cabello",
+        "ads3": "Publicidad en formato horizontal de uno de los productos propuestos Body Cream",
+        "illustration": "Ilustración principal de la marca basada en la decoración principal de la marca",
+        "logo": "Logo de la marca",
+        "logoAlternative": "Logo de la marca en blanco",
+        "symbol": "Símbolo de la marca",
+        "symbolAlternative": "Símbolo de la marca en blanco",
+        "symbolConstruction": "Construcción del símbolo con líneas delimitadoras alrededor",
+        "typography1": "Tipografía principal Melodrama bold",
+        "typography2": "Tipgorafía secundaria Inter"
+      }
+    },
+    "solarGroup": {
+      "slug": "solar-group-guatemala-rebranding",
+      "client": "Solar Group Guatemala",
+      "industry": "Ingeniería eléctrica",
+      "summary": "Actualización de Identidad Visual",
+      "description": {
+        "paragraph1": "Se creó una nueva oportunidad de crecimiento en el mercado para Solar Group Guatemala con una marca consistente y fácilmente reconocible en todas sus aplicaciones.",
+        "paragraph2": "La marca se distingue por medio de la innovación, claridad del mensaje y reconocimiento constante, proporcionándole un mejor posicionamiento en el mercado.",
+        "paragraph3": "Se revitalizó su Identidad Visual creando un universo gráfico sólido y coherente que destaque sus servicios junto con su amplia trayectoria, adaptándola a las necesidades modernas de su industria."
+      },
+      "images": {
+        "bannerSmall": "Logo de Solar Group Guatemala centrado con el símbolo decorando alrededor",
+        "banner": "Logo de Solar Group Guatemala centrado con el símbolo decorando alrededor",
+        "bannerComparison": "Comparación del logo actual con el propuesto en el Rebranding",
+        "abc": "Representación de los distintos pesos de la tipografía principal",
+        "logo": "Logo de la marca",
+        "logoAlternative": "Logo de la marca en blanco",
+        "logoConstruction": "Construcción del logo con líneas delimitadoras alrededor y espacio de respeto",
+        "logoPositive": "Logo en positivo",
+        "logoNegative": "Logo en negativo",
+        "color1": "Color primario (Naranja)",
+        "typography1": "Tipografía principal Montserrat"
+      }
+    }
+  }
+}

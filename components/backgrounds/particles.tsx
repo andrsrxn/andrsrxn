@@ -10,21 +10,14 @@ interface MousePosition {
 }
 
 function MousePosition(): MousePosition {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({
-    x: 0,
-    y: 0,
-  })
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY })
     }
-
     window.addEventListener('mousemove', handleMouseMove)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
+    return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
   return mousePosition
@@ -44,19 +37,14 @@ interface ParticlesProps extends ComponentPropsWithoutRef<'div'> {
 
 function hexToRgb(hex: string): number[] {
   let _hex = hex.replace('#', '')
-
   if (_hex.length === 3) {
-    _hex = hex
+    _hex = _hex
       .split('')
       .map(char => char + char)
       .join('')
   }
-
   const hexInt = Number.parseInt(_hex, 16)
-  const red = (hexInt >> 16) & 255
-  const green = (hexInt >> 8) & 255
-  const blue = hexInt & 255
-  return [red, green, blue]
+  return [(hexInt >> 16) & 255, (hexInt >> 8) & 255, hexInt & 255]
 }
 
 interface Circle {
@@ -72,10 +60,10 @@ interface Circle {
   magnetism: number
 }
 
-// biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed for now
+// biome-ignore lint/complexity/noExcessiveLinesPerFunction: calculations
 export const ParticlesBackground = ({
   className = '',
-  quantity = 130,
+  quantity = 150,
   staticity = 30,
   ease = 50,
   size = 0.4,
@@ -95,9 +83,13 @@ export const ParticlesBackground = ({
   const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1
   const rafID = useRef<number | null>(null)
   const resizeTimeout = useRef<NodeJS.Timeout>(null)
+  // Pre-compute the rgb string once per color change — avoids per-frame allocation
+  const rgbString = useRef<string>('')
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: not necessary to include it
   useEffect(() => {
+    rgbString.current = hexToRgb(color).join(', ')
+
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext('2d')
     }
@@ -108,9 +100,7 @@ export const ParticlesBackground = ({
       if (resizeTimeout.current) {
         clearTimeout(resizeTimeout.current)
       }
-      resizeTimeout.current = setTimeout(() => {
-        initCanvas()
-      }, 200)
+      resizeTimeout.current = setTimeout(initCanvas, 200)
     }
 
     window.addEventListener('resize', handleResize)
@@ -125,6 +115,7 @@ export const ParticlesBackground = ({
       window.removeEventListener('resize', handleResize)
     }
   }, [color])
+
   // biome-ignore lint/correctness/useExhaustiveDependencies: not necessary to include it
   useEffect(() => {
     onMouseMove()
@@ -137,7 +128,6 @@ export const ParticlesBackground = ({
 
   const initCanvas = () => {
     resizeCanvas()
-    drawParticles()
   }
 
   const onMouseMove = () => {
@@ -146,8 +136,7 @@ export const ParticlesBackground = ({
       const { w, h } = canvasSize.current
       const x = mousePosition.x - rect.left - w / 2
       const y = mousePosition.y - rect.top - h / 2
-      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2
-      if (inside) {
+      if (x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2) {
         mouse.current.x = x
         mouse.current.y = y
       }
@@ -165,41 +154,25 @@ export const ParticlesBackground = ({
       canvasRef.current.style.height = `${canvasSize.current.h}px`
       context.current.scale(dpr, dpr)
 
-      // Clear existing particles and create new ones with exact quantity
       circles.current = []
       for (let i = 0; i < quantity; i++) {
-        const circle = circleParams()
-        drawCircle(circle)
+        drawCircle(circleParams())
       }
     }
   }
 
-  const circleParams = (): Circle => {
-    const x = Math.floor(Math.random() * canvasSize.current.w)
-    const y = Math.floor(Math.random() * canvasSize.current.h)
-    const translateX = 0
-    const translateY = 0
-    const pSize = Math.floor(Math.random() * 2) + size
-    const alpha = 0
-    const targetAlpha = Number.parseFloat((Math.random() * 0.6 + 0.1).toFixed(1))
-    const dx = (Math.random() - 0.5) * 0.1
-    const dy = (Math.random() - 0.5) * 0.1
-    const magnetism = 0.1 + Math.random() * 4
-    return {
-      x,
-      y,
-      translateX,
-      translateY,
-      size: pSize,
-      alpha,
-      targetAlpha,
-      dx,
-      dy,
-      magnetism,
-    }
-  }
-
-  const rgb = hexToRgb(color)
+  const circleParams = (): Circle => ({
+    x: Math.floor(Math.random() * canvasSize.current.w),
+    y: Math.floor(Math.random() * canvasSize.current.h),
+    translateX: 0,
+    translateY: 0,
+    size: Math.floor(Math.random() * 2) + size,
+    alpha: 0,
+    targetAlpha: Number.parseFloat((Math.random() * 0.6 + 0.1).toFixed(1)),
+    dx: (Math.random() - 0.5) * 0.1,
+    dy: (Math.random() - 0.5) * 0.1,
+    magnetism: 0.1 + Math.random() * 4,
+  })
 
   const drawCircle = (circle: Circle, update = false) => {
     if (context.current) {
@@ -207,10 +180,9 @@ export const ParticlesBackground = ({
       context.current.translate(translateX, translateY)
       context.current.beginPath()
       context.current.arc(x, y, size, 0, 2 * Math.PI)
-      context.current.fillStyle = `rgba(${rgb.join(', ')}, ${alpha})`
+      context.current.fillStyle = `rgba(${rgbString.current}, ${alpha})`
       context.current.fill()
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0)
-
       if (!update) {
         circles.current.push(circle)
       }
@@ -223,46 +195,34 @@ export const ParticlesBackground = ({
     }
   }
 
-  const drawParticles = () => {
-    clearContext()
-    const particleCount = quantity
-    for (let i = 0; i < particleCount; i++) {
-      const circle = circleParams()
-      drawCircle(circle)
-    }
-  }
-
-  const remapValue = (
-    value: number,
-    start1: number,
-    end1: number,
-    start2: number,
-    end2: number
-  ): number => {
-    const remapped = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2
-    return remapped > 0 ? remapped : 0
-  }
-
   const animate = () => {
     clearContext()
-    circles.current.forEach((circle: Circle, i: number) => {
-      // Handle the alpha value
-      const edge = [
-        circle.x + circle.translateX - circle.size, // distance from left edge
-        canvasSize.current.w - circle.x - circle.translateX - circle.size, // distance from right edge
-        circle.y + circle.translateY - circle.size, // distance from top edge
-        canvasSize.current.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
-      ]
-      const closestEdge = edge.reduce((a, b) => Math.min(a, b))
-      const remapClosestEdge = Number.parseFloat(remapValue(closestEdge, 0, 20, 0, 1).toFixed(2))
+    const { w, h } = canvasSize.current
+
+    // Iterate in reverse so splice doesn't skip the next element
+    for (let i = circles.current.length - 1; i >= 0; i--) {
+      const circle = circles.current[i]
+
+      if (!circle) {
+        continue
+      }
+
+      const closestEdge = Math.min(
+        circle.x + circle.translateX - circle.size,
+        w - circle.x - circle.translateX - circle.size,
+        circle.y + circle.translateY - circle.size,
+        h - circle.y - circle.translateY - circle.size
+      )
+
+      // Inline remap: ((value - 0) * (1 - 0)) / (20 - 0) + 0  →  clamp to [0, 1]
+      const remapClosestEdge = Math.min(1, Math.max(0, closestEdge / 20))
+
       if (remapClosestEdge > 1) {
-        circle.alpha += 0.02
-        if (circle.alpha > circle.targetAlpha) {
-          circle.alpha = circle.targetAlpha
-        }
+        circle.alpha = Math.min(circle.alpha + 0.02, circle.targetAlpha)
       } else {
         circle.alpha = circle.targetAlpha * remapClosestEdge
       }
+
       circle.x += circle.dx + vx
       circle.y += circle.dy + vy
       circle.translateX +=
@@ -272,20 +232,17 @@ export const ParticlesBackground = ({
 
       drawCircle(circle, true)
 
-      // circle gets out of the canvas
       if (
         circle.x < -circle.size ||
-        circle.x > canvasSize.current.w + circle.size ||
+        circle.x > w + circle.size ||
         circle.y < -circle.size ||
-        circle.y > canvasSize.current.h + circle.size
+        circle.y > h + circle.size
       ) {
-        // remove the circle from the array
         circles.current.splice(i, 1)
-        // create a new circle
-        const newCircle = circleParams()
-        drawCircle(newCircle)
+        drawCircle(circleParams())
       }
-    })
+    }
+
     rafID.current = window.requestAnimationFrame(animate)
   }
 

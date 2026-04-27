@@ -1,28 +1,35 @@
+import { useTranslations } from 'next-intl'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const BonzerContent = () => {
   const project = PROJECTS.BONZER_BRANDING
+  const tServices = useTranslations('services')
+  const t = useTranslations('projects.bonzer')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [t('description.paragraph1'), t('description.paragraph2')]
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      services={services}
+      title={t('summary')}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div className='tablet:flex w-full'>
         <div className='aspect-video grow border p-8'>
           <Image
             includePlaceholder={false}
             className='aspect-video'
             src={project.IMAGES.LOGO.URL}
-            alt={project.IMAGES.LOGO.ALT}
+            alt={t('images.logo')}
           />
         </div>
         <div className='aspect-video grow border p-8'>
@@ -30,7 +37,7 @@ export const BonzerContent = () => {
             includePlaceholder={false}
             className='aspect-video'
             src={project.IMAGES.LOGO_ALTERNATIVE.URL}
-            alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
+            alt={t('images.logoAlternative')}
           />
         </div>
       </div>
@@ -40,7 +47,7 @@ export const BonzerContent = () => {
             includePlaceholder={false}
             className='aspect-square'
             src={project.IMAGES.SYMBOL_ALTERNATIVE.URL}
-            alt={project.IMAGES.SYMBOL_ALTERNATIVE.ALT}
+            alt={t('images.symbolAlternative')}
           />
         </div>
         <div className='aspect-square grow border p-12'>
@@ -48,7 +55,7 @@ export const BonzerContent = () => {
             includePlaceholder={false}
             className='aspect-square'
             src={project.IMAGES.SYMBOL.URL}
-            alt={project.IMAGES.SYMBOL.ALT}
+            alt={t('images.symbol')}
           />
         </div>
       </div>
@@ -57,7 +64,7 @@ export const BonzerContent = () => {
           includePlaceholder={false}
           className='aspect-video'
           src={project.IMAGES.SYMBOL_CONSTRUCTION.URL}
-          alt={project.IMAGES.SYMBOL_CONSTRUCTION.ALT}
+          alt={t('images.symbolConstruction')}
         />
       </div>
 
@@ -66,7 +73,7 @@ export const BonzerContent = () => {
           includePlaceholder={false}
           className='h-56 w-auto'
           src={project.IMAGES.COLOR_1.URL}
-          alt={project.IMAGES.COLOR_1.ALT}
+          alt={t('images.color1')}
         />
       </div>
 
@@ -76,7 +83,7 @@ export const BonzerContent = () => {
             includePlaceholder={false}
             className='tablet:w-full w-2/3'
             src={project.IMAGES.TYPOGRAPHY_1.URL}
-            alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+            alt={t('images.typography1')}
           />
           <p className='text-muted-foreground'>
             Melodrama es una elección audaz y muy efectiva para el posicionamiento de una marca
@@ -88,7 +95,7 @@ export const BonzerContent = () => {
             includePlaceholder={false}
             className='tablet:w-1/2 w-2/5'
             src={project.IMAGES.TYPOGRAPHY_2.URL}
-            alt={project.IMAGES.TYPOGRAPHY_2.ALT}
+            alt={t('images.typography2')}
           />
           <p className='text-muted-foreground'>
             Inter es una tipografía Sans-Serif moderna, diseñada meticulosamente para ser altamente
@@ -101,32 +108,18 @@ export const BonzerContent = () => {
         includePlaceholder={false}
         className='my-12 aspect-video object-contain'
         src={project.IMAGES.ILLUSTRATION.URL}
-        alt={project.IMAGES.ILLUSTRATION.ALT}
+        alt={t('images.illustration')}
       />
 
       <div className='grid gap-6'>
-        <Image
-          className='bg-accent'
-          src={project.IMAGES.ADS_3.URL}
-          alt={project.IMAGES.ADS_3.ALT}
-        />
+        <Image className='bg-accent' src={project.IMAGES.ADS_3.URL} alt={t('images.ads3')} />
 
-        <Image
-          className='bg-accent'
-          src={project.IMAGES.ADS_1.URL}
-          alt={project.IMAGES.ADS_1.ALT}
-        />
-        <Image
-          className='bg-accent'
-          src={project.IMAGES.ADS_2.URL}
-          alt={project.IMAGES.ADS_2.ALT}
-        />
+        <Image className='bg-accent' src={project.IMAGES.ADS_1.URL} alt={t('images.ads1')} />
+        <Image className='bg-accent' src={project.IMAGES.ADS_2.URL} alt={t('images.ads2')} />
       </div>
 
       <Separator className='my-16' />
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

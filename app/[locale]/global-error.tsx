@@ -1,6 +1,7 @@
 'use client'
 
 import { IconRefresh } from '@tabler/icons-react'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { fontBody, fontHeading } from '@/lib/fonts'
 
@@ -10,6 +11,8 @@ export default function ErrorPage({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  const t = useTranslations('errorPage')
+
   return (
     <html lang='es' className='dark'>
       <body className={`${fontHeading.variable} ${fontBody.variable} antialiased`}>
@@ -19,10 +22,10 @@ export default function ErrorPage({
               500
             </span>
             <h1 className='font-heading tablet:text-7xl desktop:text-8xl text-center text-6xl'>
-              Error Crítico
+              {t('title')}
             </h1>
             <Button className='mt-2' onClick={reset}>
-              Volver a intentar <IconRefresh className='size-4' />
+              {t('action')} <IconRefresh className='size-4' />
             </Button>
           </div>
         </main>

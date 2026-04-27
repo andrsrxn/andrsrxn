@@ -1,21 +1,28 @@
+import { useTranslations } from 'next-intl'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const ThePrincipalContent = () => {
   const project = PROJECTS.THEPRINCIPAL_BRANDING
+  const tServices = useTranslations('services')
+  const t = useTranslations('projects.theprincipal')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [t('description.paragraph1'), t('description.paragraph2')]
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      services={services}
+      title={t('summary')}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div>
         <div>
           <div className='tablet:p-16 border bg-white px-8 py-12'>
@@ -23,7 +30,7 @@ export const ThePrincipalContent = () => {
               includePlaceholder={false}
               className='w-full'
               src={project.IMAGES.LOGO.URL}
-              alt={project.IMAGES.LOGO.ALT}
+              alt={t('images.logo')}
             />
           </div>
           <div className='tablet:p-16 border px-8 py-12'>
@@ -31,7 +38,7 @@ export const ThePrincipalContent = () => {
               includePlaceholder={false}
               className='w-full'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
-              alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
+              alt={t('images.logoAlternative')}
             />
           </div>
           <div className='flex w-full'>
@@ -40,7 +47,7 @@ export const ThePrincipalContent = () => {
                 includePlaceholder={false}
                 className='aspect-square'
                 src={project.IMAGES.SYMBOL.URL}
-                alt={project.IMAGES.SYMBOL.ALT}
+                alt={t('images.symbol')}
               />
             </div>
             <div className='tablet:p-12 aspect-square grow border p-8'>
@@ -48,7 +55,7 @@ export const ThePrincipalContent = () => {
                 includePlaceholder={false}
                 className='aspect-square'
                 src={project.IMAGES.SYMBOL_NEGATIVE.URL}
-                alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
+                alt={t('images.symbolNegative')}
               />
             </div>
             <div className='tablet:p-12 aspect-square grow border bg-white p-8'>
@@ -56,7 +63,7 @@ export const ThePrincipalContent = () => {
                 includePlaceholder={false}
                 className='aspect-square'
                 src={project.IMAGES.SYMBOL_POSITIVE.URL}
-                alt={project.IMAGES.SYMBOL_POSITIVE.ALT}
+                alt={t('images.symbolPositive')}
               />
             </div>
           </div>
@@ -67,7 +74,7 @@ export const ThePrincipalContent = () => {
               includePlaceholder={false}
               className='tablet:w-1/3 w-1/2'
               src={project.IMAGES.COLOR_1.URL}
-              alt={project.IMAGES.COLOR_1.ALT}
+              alt={t('images.color1')}
             />
           </div>
         </div>
@@ -77,7 +84,7 @@ export const ThePrincipalContent = () => {
           includePlaceholder={false}
           className='w-full'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
-          alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+          alt={t('images.typography1')}
         />
       </div>
 
@@ -85,7 +92,7 @@ export const ThePrincipalContent = () => {
         <Image
           includePlaceholder={false}
           src={project.IMAGES.DOODLE.URL}
-          alt={project.IMAGES.DOODLE.ALT}
+          alt={t('images.doodle')}
         />
       </div>
 
@@ -93,24 +100,22 @@ export const ThePrincipalContent = () => {
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.APP.URL}
-          alt={project.IMAGES.APP.ALT}
+          alt={t('images.app')}
         />
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.LAPTOP_1.URL}
-          alt={project.IMAGES.LAPTOP_1.ALT}
+          alt={t('images.laptop1')}
         />
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.LAPTOP_2.URL}
-          alt={project.IMAGES.LAPTOP_2.ALT}
+          alt={t('images.laptop2')}
         />
       </div>
 
       <Separator className='my-16' />
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

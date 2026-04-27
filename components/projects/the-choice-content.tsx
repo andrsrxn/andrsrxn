@@ -1,17 +1,29 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { useEffect, useRef } from 'react'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const TheChoiceContent = () => {
   const project = PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE
   const laptopRef = useRef<HTMLImageElement>(null)
   const wireframeRef = useRef<HTMLDivElement>(null)
+  const tServices = useTranslations('services')
+  const t = useTranslations('projects.thechoice')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [
+    t('description.paragraph1'),
+    t('description.paragraph2'),
+    t('description.paragraph3'),
+    t('description.paragraph4'),
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,14 +53,14 @@ export const TheChoiceContent = () => {
 
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      services={services}
+      title={t('summary')}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div className='relative isolate grid gap-8 overflow-x-visible'>
         <div className='-mt-2 mb-12 block'>
           <p>
@@ -68,127 +80,135 @@ export const TheChoiceContent = () => {
             className='tablet:top-[15%] tablet:scale-[115%] tablet:mask-r-from-88% tablet:mask-r-to-93% tablet:mask-l-from-88% tablet:mask-l-to-93% sticky top-[30%] z-50 origin-center object-contain'
             includePlaceholder={false}
             src={project.IMAGES.MACKBOOK_MOCKUP.URL}
-            alt={project.IMAGES.MACKBOOK_MOCKUP.ALT}
+            alt={t('images.mackbookMockup')}
           />
           <div ref={wireframeRef} className='tablet:-mt-[70%] -mt-[65%] pb-[20%]'>
             <Image
               className='tablet:w-[87%] mx-auto w-[75%] rounded-lg object-contain'
               includePlaceholder={false}
               src={project.IMAGES.WEB_WITH_WIREFRAME.URL}
-              alt={project.IMAGES.WEB_WITH_WIREFRAME.ALT}
+              alt={t('images.webWithWireframe')}
             />
           </div>
         </div>
 
         <div className='relative mt-20 overflow-x-clip'>
-          <span className='text-foreground mb-4 block text-lg font-semibold'>User Persona</span>
+          <span className='text-foreground mb-4 block text-lg font-semibold'>
+            {t('content.userPersona')}
+          </span>
           <div>
             <Image
               className='mb-20'
               includePlaceholder={false}
               src={project.IMAGES.USER_PERSONA.URL}
-              alt={project.IMAGES.USER_PERSONA.ALT}
+              alt={t('images.userPersona')}
             />
           </div>
           <span className='text-foreground mb-4 block text-lg font-semibold'>
-            Página principal y de reservación
+            {t('content.homePage')}
           </span>
           <div className='bg-accent flex w-full snap-x snap-mandatory gap-3 overflow-x-scroll border p-3'>
             <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
                 className='object-contain object-top'
                 src={project.IMAGES.MAIN_PAGE.URL}
-                alt={project.IMAGES.MAIN_PAGE.ALT}
+                alt={t('images.mainPage')}
               />
             </div>
             <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
                 className='object-contain object-top'
                 src={project.IMAGES.RESERVATIONS_PAGE.URL}
-                alt={project.IMAGES.RESERVATIONS_PAGE.ALT}
+                alt={t('images.reservationsPage')}
               />
             </div>
             <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
                 className='object-contain object-top'
                 src={project.IMAGES.PAYMENT_RESERVATIONS_PAGE.URL}
-                alt={project.IMAGES.PAYMENT_RESERVATIONS_PAGE.ALT}
+                alt={t('images.paymentReservationsPage')}
               />
             </div>
             <div className='flex w-[85%] shrink-0 snap-center'>
               <Image
                 className='object-contain object-top'
                 src={project.IMAGES.SUCCESS_PAYMENT_RESERVATIONS_PAGE.URL}
-                alt={project.IMAGES.SUCCESS_PAYMENT_RESERVATIONS_PAGE.ALT}
+                alt={t('images.successPaymentReservationsPage')}
               />
             </div>
           </div>
         </div>
         <span className='text-foreground mt-10 block text-lg font-semibold'>
-          Flujo de usuario para hacer una reservación
+          {t('content.reservationFlow')}
         </span>
         <Image
           className='object-contain'
           includePlaceholder={false}
           src={project.IMAGES.RESERVATIONS_FLOW.URL}
-          alt={project.IMAGES.RESERVATIONS_FLOW.ALT}
+          alt={t('images.reservationsFlow')}
         />
         <Separator className='mt-6 mb-10' />
 
-        <span className='text-foreground block text-2xl font-semibold'>Sistema de Diseño</span>
-        <span className='text-foreground block text-lg font-semibold'>Tipografías</span>
+        <span className='text-foreground block text-2xl font-semibold'>
+          {t('content.designSystem')}
+        </span>
+        <span className='text-foreground block text-lg font-semibold'>
+          {t('content.typographies')}
+        </span>
         <Image
           className='border p-2 pt-6 pb-1'
           src={project.IMAGES.TYPOGRAPHIES.URL}
-          alt={project.IMAGES.TYPOGRAPHIES.ALT}
+          alt={t('images.typographies')}
         />
-        <span className='text-foreground block text-lg font-semibold'>Escala Tipográfica</span>
+        <span className='text-foreground block text-lg font-semibold'>
+          {t('content.typographyScale')}
+        </span>
         <Image
           className='border mask-r-from-60% mask-r-to-100% p-2 pb-6'
           src={project.IMAGES.TYPOGRAPHY_SCALES.URL}
-          alt={project.IMAGES.TYPOGRAPHY_SCALES.ALT}
+          alt={t('images.typographyScales')}
         />
 
-        <span className='text-foreground block text-lg font-semibold'>Paleta de Colores</span>
-        <Image src={project.IMAGES.COLOR_PALETTE.URL} alt={project.IMAGES.COLOR_PALETTE.ALT} />
-        <span className='text-foreground block text-lg font-semibold'>Tokens de Colores</span>
+        <span className='text-foreground block text-lg font-semibold'>
+          {t('content.colorPalette')}
+        </span>
+        <Image src={project.IMAGES.COLOR_PALETTE.URL} alt={t('images.colorPalette')} />
+        <span className='text-foreground block text-lg font-semibold'>{t('content.tokens')}</span>
         <Image
           includePlaceholder={false}
           className='mb-4'
           src={project.IMAGES.COLOR_PALETTE_TOKENS.URL}
-          alt={project.IMAGES.COLOR_PALETTE_TOKENS.ALT}
+          alt={t('images.colorPaletteTokens')}
         />
         <span className='text-foreground block text-lg font-semibold'>
-          Demostración del componente Botón
+          {t('content.buttonDemo')}
         </span>
         <div className='tablet:grid-cols-2 laptop:grid-cols-1 laptop:gap-20 grid gap-12'>
           <Image
             includePlaceholder={false}
             src={project.IMAGES.BUTTON_VARIANTS.URL}
-            alt={project.IMAGES.BUTTON_VARIANTS.ALT}
+            alt={t('images.buttonVariants')}
           />
           <div className='flex items-center justify-center'>
             <Image
               includePlaceholder={false}
               src={project.IMAGES.BUTTON_COMPOSITION.URL}
-              alt={project.IMAGES.BUTTON_COMPOSITION.ALT}
+              alt={t('images.buttonComposition')}
             />
           </div>
         </div>
         <div className='mt-12 grid w-full gap-8 overflow-hidden'>
-          <Image src={project.IMAGES.PERFORMANCE.URL} alt={project.IMAGES.PERFORMANCE.ALT} />
+          <Image src={project.IMAGES.PERFORMANCE.URL} alt={t('images.performance')} />
           <Image
             className='mt-10 scale-110'
             src={project.IMAGES.MACKBOOK_WEB_MOCKUP.URL}
-            alt={project.IMAGES.MACKBOOK_WEB_MOCKUP.ALT}
+            alt={t('images.mackbookWebMockup')}
           />
         </div>
       </div>
       <Separator className='my-16' />
 
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

@@ -1,12 +1,13 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import type { ComponentProps } from 'react'
 import { ShareButton } from '@/components/shared/share-button'
 import { Badge } from '@/components/ui/badge'
 import { DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle } from '@/components/ui/drawer'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { PROJECT_TYPES } from '@/lib/constants/projects'
+import { PROJECT_TYPES, type ProjectType } from '@/lib/constants/projects'
 import { SITE } from '@/lib/constants/site'
 import { cn } from '@/lib/utils'
 
@@ -18,7 +19,7 @@ interface ResponsiveSheetContentProps extends ComponentProps<typeof DrawerConten
   services: string[]
   bannerUrl: string
   bannerAlt: string
-  projectType: string
+  projectType: ProjectType
   overflow?: boolean
   slug: string
 }
@@ -36,6 +37,8 @@ export function ResponsiveSheetContent({
   slug,
   ...props
 }: ResponsiveSheetContentProps) {
+  const tProjects = useTranslations('projects')
+
   return (
     <DrawerContent
       onCloseAutoFocus={e => {
@@ -48,14 +51,20 @@ export function ResponsiveSheetContent({
         className='desktop:grid desktop:gap-12 desktop:grid-cols-2 desktop:mt-6 relative overflow-y-auto'
         data-lenis-prevent>
         <DrawerHeader className='desktop:sticky desktop:top-0 desktop:pt-0 desktop:h-max'>
-          <span className='text-muted-foreground tablet:text-base desktop:text-lg flex text-left text-sm leading-tight'>
+          <span className='text-muted-foreground tablet:text-base flex text-left text-sm leading-tight'>
             {client}
           </span>
           <DrawerTitle className='tablet:text-5xl desktop:w-11/12 text-4xl'>{title}</DrawerTitle>
-          <DrawerDescription className='sr-only'>Descripción total del proyecto</DrawerDescription>
+          <DrawerDescription className='sr-only'>
+            {tProjects('projectDescription')}
+          </DrawerDescription>
           <div className='tablet:mt-2 flex flex-wrap items-center gap-2'>
             {projectType !== PROJECT_TYPES.NORMAL ? (
-              <Badge className='desktop:text-sm'>{projectType}</Badge>
+              <Badge
+                variant={projectType === PROJECT_TYPES.PROPOSAL ? 'destructive' : 'default'}
+                className='desktop:text-sm'>
+                {tProjects(`type.${projectType}`)}
+              </Badge>
             ) : null}
             {services.map(service => {
               return (
@@ -72,9 +81,10 @@ export function ResponsiveSheetContent({
             className='bg-accent desktop:mx-0 desktop:w-11/12 tablet:mt-4 mt-2 aspect-video max-w-2xl object-cover'
           />
           <ShareButton
+            copiedText={tProjects('linkCopied')}
             className='desktop:w-11/12 laptop:text-base laptop:h-10 mt-4 max-w-2xl'
             url={`${SITE.BASE_URL}#${slug}`}>
-            Copiar enlace
+            {tProjects('copyLink')}
           </ShareButton>
         </DrawerHeader>
         <Separator className='desktop:hidden mx-auto my-4 w-11/12!' />

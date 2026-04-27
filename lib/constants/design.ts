@@ -26,42 +26,42 @@ import { IconVitest } from '@/components/icons/brands/vitest'
 export const DESIGN_TOOLS = {
   FIGMA: {
     LABEL: 'Figma',
-    DESCRIPTION: 'Wireframes, UI/UX, Manuales de marca, etc.',
+    DESCRIPTION: 'figma.description',
     URL: 'https://figma.com',
     ICON: IconFigma,
     STROKE: 0,
   },
   CLOUDFLARE: {
     LABEL: 'Cloudflare',
-    DESCRIPTION: 'Seguridad, almacenamiento y optimización',
+    DESCRIPTION: 'cloudflare.description',
     URL: 'https://cloudflare.com',
     ICON: IconCloudflare,
     STROKE: 0,
   },
   PREMIERE_PRO: {
     LABEL: 'Premiere Pro',
-    DESCRIPTION: 'Edición de video',
+    DESCRIPTION: 'premierePro.description',
     URL: 'https://www.adobe.com/la/products/premiere.html',
     ICON: IconPremierePro,
     STROKE: 0,
   },
   PHOTOSHOP: {
     LABEL: 'Photoshop',
-    DESCRIPTION: 'Edición de fotografía y mockups',
+    DESCRIPTION: 'photoshop.description',
     URL: 'https://www.adobe.com/la/products/photoshop.html',
     ICON: IconPhotoshop,
     STROKE: 0,
   },
   ILLUSTRATOR: {
     LABEL: 'Illustrator',
-    DESCRIPTION: 'Creación de vectores e ilustraciones',
+    DESCRIPTION: 'illustrator.description',
     URL: 'https://www.adobe.com/la/products/illustrator.html',
     ICON: IconIllustrator,
     STROKE: 0,
   },
   AFTER_EFFECTS: {
     LABEL: 'After Effects',
-    DESCRIPTION: 'Animaciones y Motion Graphics',
+    DESCRIPTION: 'afterEffects.description',
     URL: 'https://www.adobe.com/la/products/aftereffects.html',
     ICON: IconAfterEffects,
     STROKE: 0,
@@ -69,7 +69,7 @@ export const DESIGN_TOOLS = {
 
   NEXT_JS: {
     LABEL: 'Next.js',
-    DESCRIPTION: 'Desarrollo de sitios web dinámicos',
+    DESCRIPTION: 'nextJs.description',
     URL: 'https://vercel.com/frameworks/nextjs',
     ICON: IconNextJS,
     STROKE: 0,
@@ -77,21 +77,21 @@ export const DESIGN_TOOLS = {
 
   TAILWIND_CSS: {
     LABEL: 'TailwindCSS',
-    DESCRIPTION: 'Framework de estilos CSS',
+    DESCRIPTION: 'tailwindCss.description',
     URL: 'https://tailwind.com',
     ICON: IconTailwind,
     STROKE: 0,
   },
   ASTRO: {
     LABEL: 'Astro',
-    DESCRIPTION: 'Framework para sitios web estáticos',
+    DESCRIPTION: 'astro.description',
     URL: 'https://astro.build',
     ICON: IconAstro,
     STROKE: 0,
   },
   NOTION: {
     LABEL: 'Notion',
-    DESCRIPTION: 'Definición del proyecto y recursos',
+    DESCRIPTION: 'notion.description',
     URL: 'https://notion.com',
     ICON: IconNotion,
     STROKE: 0,
@@ -99,7 +99,7 @@ export const DESIGN_TOOLS = {
 
   VERCEL: {
     LABEL: 'Vercel',
-    DESCRIPTION: 'Hosting de proyectos Next.js',
+    DESCRIPTION: 'vercel.description',
     URL: 'https://vercel.com',
     ICON: IconVercel,
     STROKE: 3,
@@ -107,7 +107,7 @@ export const DESIGN_TOOLS = {
 
   RESEND: {
     LABEL: 'Resend',
-    DESCRIPTION: 'Envío de correos transaccionales',
+    DESCRIPTION: 'resend.description',
     URL: 'https://resend.com',
     ICON: IconResend,
     STROKE: 3,
@@ -115,28 +115,28 @@ export const DESIGN_TOOLS = {
 
   GSAP: {
     LABEL: 'GSAP',
-    DESCRIPTION: 'Animaciones y efectos en la web',
+    DESCRIPTION: 'gsap.description',
     URL: 'https://gsap.com',
     ICON: IconGSAP,
     STROKE: 0,
   },
   AHREFS: {
     LABEL: 'Ahrefs',
-    DESCRIPTION: 'Estadísticas de los sitos web',
+    DESCRIPTION: 'aHrefs.description',
     URL: 'https://ahrefs.com/web-analytics',
     ICON: IconAhrefs,
     STROKE: 0,
   },
   RADIX_UI: {
     LABEL: 'Radix UI',
-    DESCRIPTION: 'Componentes para la web',
+    DESCRIPTION: 'radixUi.description',
     URL: 'https://radix-ui.com',
     ICON: IconRadixUI,
     STROKE: 1,
   },
   MOTION: {
     LABEL: 'Motion',
-    DESCRIPTION: 'Animaciones y efectos en la web',
+    DESCRIPTION: 'motion.description',
     URL: 'https://motion.dev',
     ICON: IconMotion,
     STROKE: 3,
@@ -144,7 +144,7 @@ export const DESIGN_TOOLS = {
 
   BIOME: {
     LABEL: 'Biome',
-    DESCRIPTION: 'Linter y formateador de código',
+    DESCRIPTION: 'biome.description',
     URL: 'https://biome.dev',
     ICON: IconBiome,
     STROKE: 0,
@@ -152,42 +152,42 @@ export const DESIGN_TOOLS = {
 
   VITEST: {
     LABEL: 'Vitest',
-    DESCRIPTION: 'Testing framework de código',
+    DESCRIPTION: 'vitest.description',
     URL: 'https://vitest.dev',
     ICON: IconVitest,
     STROKE: 0,
   },
   GITHUB: {
     LABEL: 'GitHub',
-    DESCRIPTION: 'Repositorio de código en la nube',
+    DESCRIPTION: 'github.description',
     URL: 'https://github.com',
     ICON: IconGithub,
     STROKE: 0,
   },
   SENTRY: {
     LABEL: 'Sentry',
-    DESCRIPTION: 'Monitorización de errores en tiempo real',
+    DESCRIPTION: 'sentry.description',
     URL: 'https://sentry.io',
     ICON: IconSentry,
     STROKE: 0,
   },
   DRIZZLE: {
     LABEL: 'Drizzle',
-    DESCRIPTION: 'ORM para bases de datos',
+    DESCRIPTION: 'drizzle.description',
     URL: 'https://orm.drizzle.team/',
     ICON: IconDrizzle,
     STROKE: 0,
   },
   BUN: {
     LABEL: 'Bun',
-    DESCRIPTION: 'Tiempo de ejecución de JavaScript',
+    DESCRIPTION: 'bun.description',
     URL: 'https://bun.sh',
     ICON: IconBun,
     STROKE: 0,
   },
   TURBOREPO: {
     LABEL: 'TurboRepo',
-    DESCRIPTION: 'Unificación de código para grandes proyectos',
+    DESCRIPTION: 'turboRepo.description',
     URL: 'https://turborepo.dev',
     ICON: IconTurborepo,
     STROKE: 0,
@@ -195,7 +195,7 @@ export const DESIGN_TOOLS = {
 
   POSTGRES: {
     LABEL: 'Postgres',
-    DESCRIPTION: 'Base de datos relacional moderna',
+    DESCRIPTION: 'postgres.description',
     URL: 'https://www.postgresql.org/',
     ICON: IconPostgreSQL,
     STROKE: 0,

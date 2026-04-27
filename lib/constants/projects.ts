@@ -2,10 +2,12 @@ import { IMAGES } from '@/lib/constants/paths'
 import { SERVICES } from '@/lib/constants/services'
 
 export const PROJECT_TYPES = {
-  PROPOSAL: 'Propuesta',
-  CASE_STUDY: 'Caso de estudio',
-  NORMAL: 'Normal',
+  PROPOSAL: 'proposal',
+  CASE_STUDY: 'caseStudy',
+  NORMAL: 'normal',
 } as const
+
+export type ProjectType = (typeof PROJECT_TYPES)[keyof typeof PROJECT_TYPES]
 
 export const PROJECTS = {
   THE_CHOICE_UIUX_DESIGN_WEBSITE: {
@@ -95,6 +97,10 @@ export const PROJECTS = {
     INDUSTRY: 'Iglesia evangélica',
     TYPE: PROJECT_TYPES.NORMAL,
     SUMMARY: 'Branding, Sitio Web y Redes Sociales',
+    DESCRIPTION: [
+      'Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.',
+      'Se desarrolló un Sitio Web (Blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes.',
+    ],
     SERVICES: [
       SERVICES.BRAND.SUBSERVICES.BRANDING.TITLE,
       SERVICES.WEB_DEV.SUBSERVICES.FULL_PAGE_DEV.TITLE,
@@ -102,10 +108,6 @@ export const PROJECTS = {
       SERVICES.MARKETING.SUBSERVICES.MOTION_GRAPHICS.TITLE,
       SERVICES.MARKETING.SUBSERVICES.SOCIAL_MEDIA_POSTS.TITLE,
       SERVICES.MARKETING.SUBSERVICES.COPYWRITING.TITLE,
-    ],
-    DESCRIPTION: [
-      'Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.',
-      'Se desarrolló un Sitio Web (Blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes.',
     ],
     IMAGES: IMAGES.PROJECTS.ICPSJ,
   },

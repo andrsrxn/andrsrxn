@@ -6,9 +6,9 @@ import { type ElementType, type ReactNode, useEffect, useRef } from 'react'
 
 export interface InViewProps {
   children: ReactNode
-  from?: gsap.TweenVars // Estado inicial de la animación
-  to?: gsap.TweenVars // Estado final de la animación
-  // Opciones de ScrollTrigger.
+  from?: gsap.TweenVars
+  to?: gsap.TweenVars
+
   viewOptions?: {
     once?: boolean
     start?: string

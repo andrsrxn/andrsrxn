@@ -1,26 +1,35 @@
+import { useTranslations } from 'next-intl'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
 export const IcemeneContent = () => {
   const project = PROJECTS.ICEMENE_REBRANDING
+
+  const tServices = useTranslations('services')
+  const t = useTranslations('projects.icemene')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [t('description.paragraph1'), t('description.paragraph2')]
+
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      title={t('summary')}
+      services={services}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div>
         <Image
           className='aspect-video'
           src={project.IMAGES.BANNER_COMPARISON.URL}
-          alt={project.IMAGES.BANNER_COMPARISON.ALT}
+          alt={t('images.bannerComparison')}
         />
         <Separator className='my-12' />
         <div>
@@ -29,7 +38,7 @@ export const IcemeneContent = () => {
               includePlaceholder={false}
               className='aspect-video'
               src={project.IMAGES.LOGO.URL}
-              alt={project.IMAGES.LOGO.ALT}
+              alt={t('images.logo')}
             />
           </div>
           <div className='tablet:p-20 border p-16'>
@@ -37,7 +46,7 @@ export const IcemeneContent = () => {
               includePlaceholder={false}
               className='aspect-video'
               src={project.IMAGES.LOGO_ALTERNATIVE.URL}
-              alt={project.IMAGES.LOGO_ALTERNATIVE.ALT}
+              alt={t('images.logoAlternative')}
             />
           </div>
           <div className='flex w-full'>
@@ -46,7 +55,7 @@ export const IcemeneContent = () => {
                 includePlaceholder={false}
                 className='aspect-square h-40'
                 src={project.IMAGES.SYMBOL.URL}
-                alt={project.IMAGES.SYMBOL.ALT}
+                alt={t('images.symbol')}
               />
             </div>
             <div className='tablet:p-20 grow border p-12'>
@@ -54,7 +63,7 @@ export const IcemeneContent = () => {
                 includePlaceholder={false}
                 className='aspect-square h-40'
                 src={project.IMAGES.SYMBOL_ALTERNATIVE.URL}
-                alt={project.IMAGES.SYMBOL_ALTERNATIVE.ALT}
+                alt={t('images.symbolAlternative')}
               />
             </div>
           </div>
@@ -65,7 +74,7 @@ export const IcemeneContent = () => {
               includePlaceholder={false}
               className='w-40'
               src={project.IMAGES.COLOR_1.URL}
-              alt={project.IMAGES.COLOR_1.ALT}
+              alt={t('images.color1')}
             />
           </div>
           <div className='bg-[#fffcf2] p-12'>
@@ -73,7 +82,7 @@ export const IcemeneContent = () => {
               includePlaceholder={false}
               className='w-40'
               src={project.IMAGES.COLOR_2.URL}
-              alt={project.IMAGES.COLOR_2.ALT}
+              alt={t('images.color2')}
             />
           </div>
           <div className='tablet:grid-cols-3 grid'>
@@ -82,7 +91,7 @@ export const IcemeneContent = () => {
                 includePlaceholder={false}
                 className='w-40 object-cover'
                 src={project.IMAGES.COLOR_3.URL}
-                alt={project.IMAGES.COLOR_3.ALT}
+                alt={t('images.color3')}
               />
             </div>
             <div className='h-full bg-[#e8eddf] p-12'>
@@ -90,7 +99,7 @@ export const IcemeneContent = () => {
                 includePlaceholder={false}
                 className='w-40 object-cover'
                 src={project.IMAGES.COLOR_4.URL}
-                alt={project.IMAGES.COLOR_4.ALT}
+                alt={t('images.color4')}
               />
             </div>
             <div className='h-full bg-[#f5cb5c] p-12'>
@@ -98,7 +107,7 @@ export const IcemeneContent = () => {
                 includePlaceholder={false}
                 className='w-40 object-cover'
                 src={project.IMAGES.COLOR_5.URL}
-                alt={project.IMAGES.COLOR_5.ALT}
+                alt={t('images.color5')}
               />
             </div>
           </div>
@@ -109,13 +118,13 @@ export const IcemeneContent = () => {
           includePlaceholder={false}
           className='w-1/2'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
-          alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+          alt={t('images.typography1')}
         />
         <Image
           includePlaceholder={false}
           className='w-1/2'
           src={project.IMAGES.TYPOGRAPHY_2.URL}
-          alt={project.IMAGES.TYPOGRAPHY_2.ALT}
+          alt={t('images.typography2')}
         />
       </div>
       <div className='overflow-hidden pb-16'>
@@ -123,36 +132,34 @@ export const IcemeneContent = () => {
           includePlaceholder={false}
           className='h-30 object-cover'
           src={project.IMAGES.PATTERN.URL}
-          alt={project.IMAGES.PATTERN.ALT}
+          alt={t('images.pattern')}
         />
       </div>
       <div className='grid gap-6 overflow-hidden'>
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.SIGN.URL}
-          alt={project.IMAGES.SIGN.ALT}
+          alt={t('images.sign')}
         />
         <Image
           className='aspect-square object-cover'
           src={project.IMAGES.SHOPPING_BAG.URL}
-          alt={project.IMAGES.SHOPPING_BAG.ALT}
+          alt={t('images.shoppingBag')}
         />
         <Image
           className='aspect-square object-cover'
           src={project.IMAGES.BOX.URL}
-          alt={project.IMAGES.BOX.ALT}
+          alt={t('images.box')}
         />
         <Image
           className='aspect-square object-cover'
           src={project.IMAGES.PACKAGE.URL}
-          alt={project.IMAGES.PACKAGE.ALT}
+          alt={t('images.package')}
         />
       </div>
 
       <Separator className='my-16' />
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

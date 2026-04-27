@@ -1,23 +1,30 @@
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { SafariWindow } from '@/components/backgrounds/safari-mockup'
+import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
-import { COMPANY } from '@/lib/constants/company'
 import { PROJECTS } from '@/lib/constants/projects'
 
-export const IcpjsContent = () => {
+export const IcpsjContent = () => {
   const project = PROJECTS.ICPSJ_BRANDING
+  const tServices = useTranslations('services')
+  const t = useTranslations('projects.icpsj')
+
+  const services = project.SERVICES.map(service => tServices(service))
+
+  const paragraphs = [t('description.paragraph1'), t('description.paragraph2')]
   return (
     <ResponsiveSheetContent
-      slug={project.SLUG}
+      slug={t('slug')}
       projectType={project.TYPE}
-      client={`${project.CLIENT} - ${project.INDUSTRY}`}
-      services={project.SERVICES}
-      title={project.SUMMARY}
-      description={project.DESCRIPTION}
+      client={`${t('client')} - ${t('industry')}`}
+      services={services}
+      title={t('summary')}
+      description={paragraphs}
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
-      bannerAlt={project.IMAGES.BANNER_SMALL.ALT}>
+      bannerAlt={t('images.bannerSmall')}>
       <div className='-mt-2 mb-12 block'>
         <p>
           <Link
@@ -47,14 +54,14 @@ export const IcpjsContent = () => {
               includePlaceholder={false}
               className='h-32 w-auto'
               src={project.IMAGES.COLOR_1.URL}
-              alt={project.IMAGES.COLOR_1.ALT}
+              alt={t('images.color1')}
             />
           </div>
           <Image
             includePlaceholder={false}
             className='object-cover'
             src={project.IMAGES.PALETTE_1.URL}
-            alt={project.IMAGES.PALETTE_1.ALT}
+            alt={t('images.palette1')}
           />
         </div>
         <div className='flex w-full justify-between'>
@@ -64,14 +71,14 @@ export const IcpjsContent = () => {
                 includePlaceholder={false}
                 className='h-32 w-auto'
                 src={project.IMAGES.COLOR_2.URL}
-                alt={project.IMAGES.COLOR_2.ALT}
+                alt={t('images.color2')}
               />
             </div>
             <Image
               includePlaceholder={false}
               className='object-cover'
               src={project.IMAGES.PALETTE_2.URL}
-              alt={project.IMAGES.PALETTE_2.ALT}
+              alt={t('images.palette2')}
             />
           </div>
           <div className='w-full'>
@@ -80,14 +87,14 @@ export const IcpjsContent = () => {
                 includePlaceholder={false}
                 className='h-32 w-auto'
                 src={project.IMAGES.COLOR_3.URL}
-                alt={project.IMAGES.COLOR_3.ALT}
+                alt={t('images.color3')}
               />
             </div>
             <Image
               includePlaceholder={false}
               className='object-cover'
               src={project.IMAGES.PALETTE_3.URL}
-              alt={project.IMAGES.PALETTE_3.ALT}
+              alt={t('images.palette3')}
             />
           </div>
         </div>
@@ -99,7 +106,7 @@ export const IcpjsContent = () => {
             includePlaceholder={false}
             className='tablet:h-auto h-40'
             src={project.IMAGES.SYMBOL.URL}
-            alt={project.IMAGES.SYMBOL.ALT}
+            alt={t('images.symbol')}
           />
         </div>
         <div className='h-full'>
@@ -108,7 +115,7 @@ export const IcpjsContent = () => {
               includePlaceholder={false}
               className='tablet:h-auto h-40'
               src={project.IMAGES.SYMBOL_NEGATIVE.URL}
-              alt={project.IMAGES.SYMBOL_NEGATIVE.ALT}
+              alt={t('images.symbolNegative')}
             />
           </div>
           <div className='tablet:p-20 flex h-1/2 items-center justify-center border bg-white p-12'>
@@ -116,7 +123,7 @@ export const IcpjsContent = () => {
               includePlaceholder={false}
               className='tablet:h-auto h-40'
               src={project.IMAGES.SYMBOL_POSITIVE.URL}
-              alt={project.IMAGES.SYMBOL_POSITIVE.ALT}
+              alt={t('images.symbolPositive')}
             />
           </div>
         </div>
@@ -128,14 +135,14 @@ export const IcpjsContent = () => {
               includePlaceholder={false}
               className='h-auto'
               src={project.IMAGES.LOGO_INVERTED.URL}
-              alt={project.IMAGES.LOGO_INVERTED.ALT}
+              alt={t('images.logoInverted')}
             />
           </div>
           <div className='tablet:p-18 border bg-white px-8 py-12'>
             <Image
               includePlaceholder={false}
               src={project.IMAGES.LOGO.URL}
-              alt={project.IMAGES.LOGO.ALT}
+              alt={t('images.logo')}
             />
           </div>
         </div>
@@ -145,7 +152,7 @@ export const IcpjsContent = () => {
               includePlaceholder={false}
               className='h-auto'
               src={project.IMAGES.LOGO_NEGATIVE.URL}
-              alt={project.IMAGES.LOGO_NEGATIVE.ALT}
+              alt={t('images.logoNegative')}
             />
           </div>
           <div className='border bg-white px-8 py-12'>
@@ -153,7 +160,7 @@ export const IcpjsContent = () => {
               includePlaceholder={false}
               className='h-auto'
               src={project.IMAGES.LOGO_POSITIVE.URL}
-              alt={project.IMAGES.LOGO_POSITIVE.ALT}
+              alt={t('images.logoPositive')}
             />
           </div>
         </div>
@@ -164,13 +171,13 @@ export const IcpjsContent = () => {
           includePlaceholder={false}
           className='w-4/5 max-w-sm'
           src={project.IMAGES.TYPOGRAPHY_1.URL}
-          alt={project.IMAGES.TYPOGRAPHY_1.ALT}
+          alt={t('images.typography1')}
         />
         <Image
           includePlaceholder={false}
           className='w-4/5 max-w-sm'
           src={project.IMAGES.TYPOGRAPHY_2.URL}
-          alt={project.IMAGES.TYPOGRAPHY_2.ALT}
+          alt={t('images.typography2')}
         />
       </div>
 
@@ -180,22 +187,22 @@ export const IcpjsContent = () => {
         <Image
           includePlaceholder={false}
           src={project.IMAGES.INSTAGRAM_POSTS.URL}
-          alt={project.IMAGES.INSTAGRAM_POSTS.ALT}
+          alt={t('images.instagramPosts')}
         />
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.BIBLE_STUDY.URL}
-          alt={project.IMAGES.BIBLE_STUDY.ALT}
+          alt={t('images.bibleStudy')}
         />
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.SIGN_LIGHT.URL}
-          alt={project.IMAGES.SIGN_LIGHT.ALT}
+          alt={t('images.signLight')}
         />
         <Image
           className='aspect-video object-cover'
           src={project.IMAGES.STICKERS.URL}
-          alt={project.IMAGES.SIGN_LIGHT.ALT}
+          alt={t('images.stickers')}
         />
       </div>
 
@@ -208,9 +215,7 @@ export const IcpjsContent = () => {
         imageHeight={3500}
       />
       <Separator className='my-16' />
-      <p className='tablet:text-lg text-center'>
-        Un proyecto de <strong>{COMPANY.COMMERCIAL_NAME}</strong>
-      </p>
+      <Signature />
     </ResponsiveSheetContent>
   )
 }

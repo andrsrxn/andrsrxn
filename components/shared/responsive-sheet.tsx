@@ -1,10 +1,10 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: accepted */
 
 import { IconPlus } from '@tabler/icons-react'
+import { useTranslations } from 'next-intl'
 import { ResponsiveSheetContent as ResponsiveSheetContentBase } from '@/components/shared/responsive-sheet-content'
 import { Button } from '@/components/ui/button'
 import { DrawerTrigger } from '@/components/ui/drawer'
-
 import { cn } from '@/lib/utils'
 
 export function ResponsiveSheetTrigger({
@@ -14,6 +14,7 @@ export function ResponsiveSheetTrigger({
   className?: string
   size?: 'sm' | 'base'
 }) {
+  const t = useTranslations('projects')
   return (
     <DrawerTrigger asChild>
       {size === 'base' ? (
@@ -23,7 +24,7 @@ export function ResponsiveSheetTrigger({
             className
           )}
           variant='secondary'>
-          Ver proyecto completo <IconPlus />
+          {t('ctaCard')} <IconPlus />
         </Button>
       ) : (
         <Button
@@ -32,7 +33,7 @@ export function ResponsiveSheetTrigger({
             className
           )}
           variant='secondary'>
-          Ver proyecto completo <IconPlus />
+          {t('ctaCard')} <IconPlus />
         </Button>
       )}
     </DrawerTrigger>

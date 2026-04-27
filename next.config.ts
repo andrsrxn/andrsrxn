@@ -4,6 +4,7 @@
 
 import { withBotId } from 'botid/next/config'
 import type { NextConfig } from 'next'
+import createNextIntlPlugin from 'next-intl/plugin'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -83,7 +84,7 @@ const nextConfig: NextConfig = {
       dynamic: 60,
     },
   },
-  typedRoutes: true,
+  typedRoutes: false,
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -98,4 +99,11 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default withBotId(nextConfig)
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './i18n/request.ts',
+  experimental: {
+    createMessagesDeclaration: './i18n/messages/es.json',
+  },
+})
+
+export default withBotId(withNextIntl(nextConfig))

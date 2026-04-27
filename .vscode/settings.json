@@ -5,6 +5,8 @@
     "source.removeUnusedImports": "explicit",
     "source.organizeImports.biome": "explicit"
   },
+  "i18n-ally.localesPaths": ["./i18n/messages"],
+  "i18n-ally.keystyle": "nested",
   "github.copilot.chat.commitMessageGeneration.instructions": [
     { "text": "Use conventional commit format: type(scope): description." },
     { "text": "Use imperative mood: 'Add feature' not 'Added feature'." },

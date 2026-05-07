@@ -31,7 +31,7 @@ interface ProjectSecondary {
   slug: string
 }
 
-export const MoreProjectsCard = async ({
+const MoreProjectsCard = async ({
   project: { bannerUrl, bannerAlt, bannerSmallUrl, client, type, industry, summary, content, slug },
 }: {
   project: ProjectSecondary

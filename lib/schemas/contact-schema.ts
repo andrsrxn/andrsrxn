@@ -17,7 +17,7 @@ const SERVICES_SLUGS = Object.values(SERVICES).map(service => service.SLUG) as [
   ...Service[],
 ]
 
-export const FORM_ERROR_KEYS = [
+const FORM_ERROR_KEYS = [
   'invalidType',
   'clientType.required',
   'fullName.required',
@@ -31,7 +31,7 @@ export const FORM_ERROR_KEYS = [
   'comments.max',
 ] as const
 
-export type FormErrorKey = (typeof FORM_ERROR_KEYS)[number]
+type FormErrorKey = (typeof FORM_ERROR_KEYS)[number]
 
 type TFunction = ReturnType<typeof useTranslations<'homePage.contact.form.errors.fields'>>
 

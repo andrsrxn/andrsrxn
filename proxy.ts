@@ -5,5 +5,5 @@ const proxy = createMiddleware(routing)
 export default proxy
 
 export const config = {
-  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
+  matcher: '/((?!api|_next/static|_next/image|.*\\.png$).*)',
 }

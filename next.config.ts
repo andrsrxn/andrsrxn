@@ -72,7 +72,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/((?!api|_next/static|_next/image|.*\\.png$).*)',
         headers,
       },
     ]

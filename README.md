@@ -1,1 +1,1 @@
-Andrés Raxón | Diseñador y Programador Web
+Andrés Raxón | Designer and Web Developer

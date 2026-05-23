@@ -1,7 +1,7 @@
 {
   "company": {
     "jobPosition": "Diseñador y Programador Web",
-    "description": "+2 años de experiencia como Profesional Independiente. Especializado en Branding moderno y Desarrollo Web Frontend orientado en UI/UX",
+    "description": "Más de 2 años de experiencia como profesional independiente. Especializado en branding moderno y desarrollo web Full Stack con enfoque en UI/UX",
     "servicesSummary": "Branding, Desarrollo Web y Marketing"
   },
   "privacyPage": {
@@ -169,7 +169,9 @@
       "keywords": "Diseñador y Programador Web, Desarrollo Web, Branding, Motion Graphics, Edición de Video, Diseñador Gráfico, Programador, Programador Frontend, Programador Fullstack"
     },
     "hero": {
-      "cta": "Contratar Servicios"
+      "cta": "Contratar Servicios",
+      "ctaCV": "Descargar CV",
+      "ctaCVEnglish": "Descargar CV (Inglés)"
     },
     "projects": {
       "viewMoreInstagram": "Ver más en Instagram"

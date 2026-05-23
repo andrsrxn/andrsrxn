@@ -9,6 +9,16 @@ export const COMPANY = {
     VERIFIED_RECEIVING: 'web',
     INFO: 'info',
   },
+  DOCS: {
+    CV: {
+      URL: '/docs/cv.pdf',
+      LABEL: 'Andrés Raxón - CV.pdf',
+    },
+    CV_EN: {
+      URL: '/docs/cv-english.pdf',
+      LABEL: 'Andrés Raxón - CV - English.pdf',
+    },
+  },
   SOCIAL_MEDIA: {
     INSTAGRAM: {
       LABEL: 'Instagram',

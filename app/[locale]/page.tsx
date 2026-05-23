@@ -1,6 +1,12 @@
 /** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: One page */
 
-import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react'
+import {
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconDownload,
+  IconFileCv,
+} from '@tabler/icons-react'
 import ReactLenis from 'lenis/react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -15,6 +21,12 @@ import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
 import { ServicesCarousel } from '@/components/shared/services-carousel'
 import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { Image } from '@/components/ui/image'
 import { Separator } from '@/components/ui/separator'
 import { routing } from '@/i18n/routing'
@@ -166,6 +178,38 @@ export default async function Home({ params }: PageProps) {
                   <IconBrandGithub className='size-6' />{' '}
                 </Link>
               </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant={'secondary'}
+                    size='icon'
+                    aria-label='Curriculum Vitae'
+                    title='Curriculum Vitae'
+                    className='display:size-10 relative shrink-0'>
+                    <IconFileCv className='size-6' />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent side='bottom' align='start' className='w-full'>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      prefetch={false}
+                      download={COMPANY.DOCS.CV.LABEL}
+                      href={COMPANY.DOCS.CV.URL}
+                      className='flex w-full items-center gap-2'>
+                      <IconDownload className='size-6' /> {tHomePage('hero.ctaCV')}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      prefetch={false}
+                      download={COMPANY.DOCS.CV_EN.LABEL}
+                      href={COMPANY.DOCS.CV_EN.URL}
+                      className='flex w-full items-center gap-2'>
+                      <IconDownload className='size-6' /> {tHomePage('hero.ctaCVEnglish')}
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         </div>

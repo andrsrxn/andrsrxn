@@ -1,7 +1,7 @@
 {
   "company": {
     "jobPosition": "Designer and Web Developer",
-    "description": "+2 years of experience as an Independent Professional. Specialized in modern Branding and Frontend Web Development oriented in UI/UX.",
+    "description": "More than 2 years of experience as a Freelancer. Specialized in modern branding and Full Stack web development with a focus on UI/UX",
     "servicesSummary": "Branding, Web Development and Marketing"
   },
   "privacyPage": {
@@ -169,7 +169,9 @@
       "keywords": "Designer and Web Developer, Web Development, Branding, Motion Graphics, Video Editing, Graphic Designer, Programmer, Frontend Programmer, Fullstack Programmer"
     },
     "hero": {
-      "cta": "Hire Services"
+      "cta": "Hire Services",
+      "ctaCV": "Download CV",
+      "ctaCVEnglish": "Download CV (English)"
     },
     "projects": {
       "viewMoreInstagram": "View More on Instagram"

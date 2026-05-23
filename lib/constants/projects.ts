@@ -34,7 +34,7 @@ export const PROJECTS = {
     CLIENT: 'Software as a Service (SaaS)',
     TYPE: PROJECT_TYPES.NORMAL,
     INDUSTRY: 'React + TypeScript',
-    SUMMARY: 'Sistema de Diseño y Componentes',
+    SUMMARY: 'Sistema de Diseño y Librería de Componentes',
     DESCRIPTION: [
       'Un Sistema de Diseño opinionado, moderno y escalable construido con React, TypeScript y Tailwind CSS.',
       'Provee más de 50 componentes diferentes para el desarrollo de aplicaciones web, con un sistema de tokens para colores, tipografía, espaciado, sombras y similares, componentes compuestos, estados y microinteracciones, patrones de diseño como Atomic Design, principios de UI/UX y accesibilidad (WCAG) niveles AA y AAA.',

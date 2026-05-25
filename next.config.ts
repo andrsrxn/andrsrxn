@@ -9,9 +9,7 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const isDev = process.env.NODE_ENV === 'development'
 
 const connectServices = 'https://va.vercel-scripts.com https://res.cloudinary.com'
-
 const scriptServices = 'https://va.vercel-scripts.com'
-
 const imgServices = 'https://res.cloudinary.com'
 
 const cspHeader = ` 
@@ -72,7 +70,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/((?!api|_next/static|_next/image|.*\\.png$|.*\\.pdf$).*)',
+        source: '/((?!api|_next|_vercel|url|.*\\..*).*)',
+
         headers,
       },
     ]

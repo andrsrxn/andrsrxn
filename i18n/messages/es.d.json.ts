@@ -393,6 +393,40 @@ declare const messages: {
       "normal": "Normal",
       "proposal": "Propuesta"
     },
+    "zentro": {
+      "slug": "zentro",
+      "client": "Zentro",
+      "industry": "Software as a Service (SaaS)",
+      "summary": "Aplicación de Notas Full Stack",
+      "description": {
+        "paragraph1": "Zentro es una aplicación de notas moderna y ultra-rápida diseñada para optimizar la organización personal y la productividad diaria. Cuenta con soporte para temas, atajos y uso por medio del teclado y un sistema de autenticación con Better Auth que integra cuentas de GitHub y Google.",
+        "paragraph2": "Una interfaz fluida de Drag and Drop basada en Fractional Indexing para reordenar notas. Frontend con Next.js 16, Tailwind CSS 4 y Shadcn UI; mutaciones optimistas con TanStack Query que garantizan una latencia casi nula.",
+        "paragraph3": "Su arquitectura se basa en un monorepo escalable (Turborepo). El backend en Node.js utiliza Hono RPC para sincronizar un tipado seguro de extremo a extremo, interactuando con PostgreSQL a través de Drizzle ORM.",
+        "paragraph4": "El ecosistema prioriza el máximo rendimiento y seguridad mediante estrategias avanzadas de caché, geolocalización por IP y protección CSRF. Respaldado por Unit Testing con Vitest, garantiza un despliegue robusto y continuo en Vercel."
+      },
+      "content": {
+        "seeRepository": "Ver Repositorio",
+        "features": "Funciones Destacadas",
+        "keyboard": "Control por Teclado",
+        "create": "Crear Nota Optimista",
+        "update": "Actualizar Contenido de una Nota",
+        "signOut": "Cerrar Sesión",
+        "dragDelete": "Eliminar Nota Arrastrando",
+        "reorder": "Reordenar Notas"
+      },
+      "images": {
+        "bannerSmall": "Banner con la aplicación de una laptop y un celular",
+        "banner": "Banner con la aplicación de una laptop y un celular",
+        "visualIdentity": "Elementos de la Identidad Visual",
+        "logoConstruction": "Construcción del Símbolo de la Marca",
+        "signIn": "Página de Inicio de Sesión",
+        "accountDropdown": "Menú Desplegable de la Cuenta",
+        "accountDialog": "Detalles de la Cuenta",
+        "shortcutsDialog": "Shortcuts de la App",
+        "emptyState": "Estado sin Notas",
+        "errorState": "Estado de Error"
+      }
+    },
     "vivet": {
       "slug": "vivet-rebranding",
       "client": "VIVET",
@@ -516,6 +550,9 @@ declare const messages: {
         "paragraph1": "Con una trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.",
         "paragraph2": "Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del Sitio Web con Astro para facilitar la información de sus servicios y proyectos realizados a lo largo de su historia, siendo un medio de contacto vital para aumentar su alcance y posicionamiento en el mercado."
       },
+      "content": {
+        "seeRepository": "Ver Repositorio"
+      },
       "images": {
         "bannerSmall": "Banner oficial con el logo y símbolo",
         "banner": "Banner oficial con el logo y símbolo",
@@ -547,6 +584,9 @@ declare const messages: {
       "description": {
         "paragraph1": "Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.",
         "paragraph2": "Se desarrolló un Sitio Web (Blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes."
+      },
+      "content": {
+        "seeRepository": "Ver Repositorio"
       },
       "images": {
         "bannerSmall": "Banner oficial de la Iglesia",

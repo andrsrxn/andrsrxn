@@ -7,7 +7,7 @@ import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { IconInstagram } from '@/components/icons/brands/instagram'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
-import { IcemeneContent } from '@/components/projects/icemene-content'
+import { IcpsjContent } from '@/components/projects/icpsj-content'
 import { ThePrincipalContent } from '@/components/projects/theprincipal-content'
 import { ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
 import { ResponsiveSheetWrapper } from '@/components/shared/responsive-sheet-wrapper'
@@ -29,27 +29,39 @@ interface ProjectSecondary {
   summary: string
   content: ReactNode
   slug: string
+  videoComponent?: ReactNode
 }
 
 const MoreProjectsCard = async ({
-  project: { bannerUrl, bannerAlt, bannerSmallUrl, client, type, industry, summary, content, slug },
-}: {
-  project: ProjectSecondary
-}) => {
+  bannerUrl,
+  videoComponent,
+  bannerAlt,
+  bannerSmallUrl,
+  client,
+  type,
+  industry,
+  summary,
+  content,
+  slug,
+}: ProjectSecondary) => {
   const tProjects = await getTranslations('projects')
   return (
     <div className='laptop:gap-8 laptop:flex-col laptop:w-full container mx-auto flex w-11/12 gap-4'>
       <ScrollPolygonContainer className='laptop:w-full w-[40%] shrink-0'>
         <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-          <picture>
-            <source srcSet={bannerUrl} media='(min-width: 64rem)' />
-            <Image
-              src={bannerSmallUrl}
-              alt={bannerAlt}
-              loading='eager'
-              className='bg-accent animated-polygon aspect-video object-cover'
-            />
-          </picture>
+          {videoComponent ? (
+            videoComponent
+          ) : (
+            <picture>
+              <source srcSet={bannerUrl} media='(min-width: 64rem)' />
+              <Image
+                src={bannerSmallUrl}
+                alt={bannerAlt}
+                loading='eager'
+                className='bg-accent animated-polygon aspect-video object-cover will-change-[clip-path]'
+              />
+            </picture>
+          )}
         </InView>
       </ScrollPolygonContainer>
 
@@ -97,59 +109,62 @@ export const MoreProjects = async ({ className, ...props }: MoreProyectsProps) =
       {...props}>
       <div className='tablet:gap-20 laptop:gap-x-16 laptop:gap-y-24 laptop:grid-cols-2 laptop:grid desktop:gap-y-24 desktop:max-w-7xl desktop:gap-x-20 desktop:mx-auto grid gap-16'>
         <MoreProjectsCard
-          project={{
-            slug: tProjects('atproy.slug'),
-            type: PROJECTS.ATPROY_BRAND_REFRESH.TYPE,
-            bannerAlt: tProjects('atproy.images.bannerSmall'),
-            bannerSmallUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL,
-            bannerUrl: PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL,
-            client: tProjects('atproy.client'),
-            industry: tProjects('atproy.industry'),
-            summary: tProjects('atproy.summary'),
-            content: <AtproyContent />,
-          }}
+          slug={tProjects('atproy.slug')}
+          type={PROJECTS.ATPROY_BRAND_REFRESH.TYPE}
+          bannerAlt={tProjects('atproy.images.bannerSmall')}
+          bannerSmallUrl={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER_SMALL.URL}
+          bannerUrl={PROJECTS.ATPROY_BRAND_REFRESH.IMAGES.BANNER.URL}
+          client={tProjects('atproy.client')}
+          industry={tProjects('atproy.industry')}
+          summary={tProjects('atproy.summary')}
+          content={<AtproyContent />}
+        />
+        <MoreProjectsCard
+          slug={tProjects('icpsj.slug')}
+          type={PROJECTS.ICPSJ_BRANDING.TYPE}
+          bannerAlt={tProjects('icpsj.images.bannerSmall')}
+          bannerSmallUrl={PROJECTS.ICPSJ_BRANDING.IMAGES.BANNER_SMALL.URL}
+          bannerUrl={PROJECTS.ICPSJ_BRANDING.IMAGES.BANNER.URL}
+          videoComponent={
+            <video
+              autoPlay
+              muted
+              controls={false}
+              loop
+              playsInline
+              poster={PROJECTS.ICPSJ_BRANDING.IMAGES.BANNER.URL}
+              className='bg-accent animated-polygon aspect-video border contrast-85 will-change-[clip-path]'>
+              <source src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL} type='video/mp4' />
+            </video>
+          }
+          client={tProjects('icpsj.client')}
+          industry={tProjects('icpsj.industry')}
+          summary={tProjects('icpsj.summary')}
+          content={<IcpsjContent />}
         />
 
         <MoreProjectsCard
-          project={{
-            slug: tProjects('bonzer.slug'),
-            type: PROJECTS.BONZER_BRANDING.TYPE,
-            bannerAlt: tProjects('bonzer.images.bannerSmall'),
-            bannerSmallUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL,
-            bannerUrl: PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL,
-            client: tProjects('bonzer.client'),
-            industry: tProjects('bonzer.industry'),
-            summary: tProjects('bonzer.summary'),
-            content: <BonzerContent />,
-          }}
+          slug={tProjects('bonzer.slug')}
+          type={PROJECTS.BONZER_BRANDING.TYPE}
+          bannerAlt={tProjects('bonzer.images.bannerSmall')}
+          bannerSmallUrl={PROJECTS.BONZER_BRANDING.IMAGES.BANNER_SMALL.URL}
+          bannerUrl={PROJECTS.BONZER_BRANDING.IMAGES.BANNER.URL}
+          client={tProjects('bonzer.client')}
+          industry={tProjects('bonzer.industry')}
+          summary={tProjects('bonzer.summary')}
+          content={<BonzerContent />}
         />
 
         <MoreProjectsCard
-          project={{
-            slug: tProjects('theprincipal.slug'),
-            type: PROJECTS.THEPRINCIPAL_BRANDING.TYPE,
-            bannerAlt: tProjects('theprincipal.images.bannerSmall'),
-            bannerSmallUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL,
-            bannerUrl: PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL,
-            client: tProjects('theprincipal.client'),
-            industry: tProjects('theprincipal.industry'),
-            summary: tProjects('theprincipal.summary'),
-            content: <ThePrincipalContent />,
-          }}
-        />
-
-        <MoreProjectsCard
-          project={{
-            slug: tProjects('icemene.slug'),
-            type: PROJECTS.ICEMENE_REBRANDING.TYPE,
-            bannerAlt: tProjects('icemene.images.bannerSmall'),
-            bannerSmallUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER_SMALL.URL,
-            bannerUrl: PROJECTS.ICEMENE_REBRANDING.IMAGES.BANNER.URL,
-            client: tProjects('icemene.client'),
-            industry: tProjects('icemene.industry'),
-            summary: tProjects('icemene.summary'),
-            content: <IcemeneContent />,
-          }}
+          slug={tProjects('theprincipal.slug')}
+          type={PROJECTS.THEPRINCIPAL_BRANDING.TYPE}
+          bannerAlt={tProjects('theprincipal.images.bannerSmall')}
+          bannerSmallUrl={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER_SMALL.URL}
+          bannerUrl={PROJECTS.THEPRINCIPAL_BRANDING.IMAGES.BANNER.URL}
+          client={tProjects('theprincipal.client')}
+          industry={tProjects('theprincipal.industry')}
+          summary={tProjects('theprincipal.summary')}
+          content={<ThePrincipalContent />}
         />
       </div>
 

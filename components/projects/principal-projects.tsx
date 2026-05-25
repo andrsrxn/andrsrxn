@@ -3,9 +3,9 @@ import type { ReactNode } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
 import { DesignSystemContent } from '@/components/projects/design-system-content'
-import { IcpsjContent } from '@/components/projects/icpsj-content'
 import { TheChoiceContent } from '@/components/projects/the-choice-content'
 import { VIVETContent } from '@/components/projects/vivet-content'
+import { ZentroContent } from '@/components/projects/zentro-content'
 import { ResponsiveSheetTrigger } from '@/components/shared/responsive-sheet'
 import { ResponsiveSheetWrapper } from '@/components/shared/responsive-sheet-wrapper'
 import { VIVETVideo } from '@/components/shared/vivet-video'
@@ -93,6 +93,18 @@ export const PrincipalProjects = async () => {
     <section className='tablet:mt-20 desktop:w-11/12 mx-auto mt-12 max-w-6xl'>
       <div className='tablet:gap-20 desktop:gap-40 flex flex-col gap-16'>
         <PrincipalProjectCard
+          type={PROJECTS.ZENTRO.TYPE}
+          slug={t('zentro.slug')}
+          client={t('zentro.client')}
+          industry={t('zentro.industry')}
+          summary={t('zentro.summary')}
+          bannerUrl={PROJECTS.ZENTRO.IMAGES.BANNER.URL}
+          bannerSmallUrl={PROJECTS.ZENTRO.IMAGES.BANNER_SMALL.URL}
+          bannerAlt={t('zentro.images.bannerSmall')}
+          content={<ZentroContent />}
+        />
+
+        <PrincipalProjectCard
           type={PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.TYPE}
           slug={t('thechoice.slug')}
           client={t('thechoice.client')}
@@ -139,30 +151,6 @@ export const PrincipalProjects = async () => {
           bannerAlt={t('vivet.images.bannerSmall')}
           videoComponent={<VIVETVideo />}
           content={<VIVETContent />}
-        />
-
-        <PrincipalProjectCard
-          type={PROJECTS.ICPSJ_BRANDING.TYPE}
-          slug={t('icpsj.slug')}
-          client={t('icpsj.client')}
-          industry={t('icpsj.industry')}
-          summary={t('icpsj.summary')}
-          bannerUrl={PROJECTS.ICPSJ_BRANDING.IMAGES.BANNER.URL}
-          bannerSmallUrl={PROJECTS.ICPSJ_BRANDING.IMAGES.BANNER_SMALL.URL}
-          bannerAlt={t('icpsj.images.bannerSmall')}
-          videoComponent={
-            <video
-              autoPlay
-              muted
-              controls={false}
-              loop
-              playsInline
-              poster={PROJECTS.ICPSJ_BRANDING.IMAGES.BANNER.URL}
-              className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-85 will-change-[clip-path]'>
-              <source src={PROJECTS.ICPSJ_BRANDING.IMAGES.LOGO_ANIMATION.URL} type='video/mp4' />
-            </video>
-          }
-          content={<IcpsjContent />}
         />
       </div>
     </section>

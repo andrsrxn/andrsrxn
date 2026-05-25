@@ -64,6 +64,73 @@ export const IMAGES = {
     },
   },
   PROJECTS: {
+    ZENTRO: {
+      BANNER_COMPARISON: null,
+      BANNER: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779723713/banner_ryysvb.webp',
+        ALT: 'banner',
+      },
+      BANNER_SMALL: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779723713/banner-small_swxehi.webp',
+        ALT: 'bannerSmall',
+      },
+      LOGO_CONSTRUCTION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671102/logo-construction_kxw7qy.webp',
+        ALT: 'logoConstruction',
+      },
+      VISUAL_IDENTITY: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671100/visual-identity_moacb5.webp',
+        ALT: 'visualIdentity',
+      },
+      SIGN_IN: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671100/sign-in_gstg0y.webp',
+        ALT: 'signIn',
+      },
+      ACCOUNT_DROPDOWN: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671103/account-dropdown_c6klya.webp',
+        ALT: 'accountDropdown',
+      },
+      ACCOUNT_DIALOG: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671104/account-dialog_qwdfef.webp',
+        ALT: 'accountDialog',
+      },
+      SHORTCUTS_DIALOG: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671101/shorcuts-dialog_ghdppo.webp',
+        ALT: 'shortcutsDialog',
+      },
+      EMPTY_STATE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671103/empty-state_y74bzb.webp',
+        ALT: 'emptyState',
+      },
+      ERROR_STATE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1779671103/error-state_xsu82d.webp',
+        ALT: 'errorState',
+      },
+      DRAG_DELETE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1779734439/drag-delete_yaqudb.webm',
+        ALT: '',
+      },
+      CREATE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1779734438/create_iv2hmu.webm',
+        ALT: '',
+      },
+      UPDATE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1779734437/update_w0nckr.webm',
+        ALT: '',
+      },
+      SIGN_OUT: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1779734437/sign-out_btoiuf.webm',
+        ALT: '',
+      },
+      KEYBOARD: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1779734436/keyboard_ossp8c.webm',
+        ALT: '',
+      },
+      REORDER: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1779734436/reorder_fzjioa.webm',
+        ALT: '',
+      },
+    },
     VIVET: {
       BANNERS: {
         URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1771361709/vivet-banners_ijxbom.mp4',

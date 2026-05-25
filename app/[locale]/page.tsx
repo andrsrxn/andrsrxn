@@ -226,7 +226,7 @@ export default async function Home({ params }: PageProps) {
       </section>
 
       <section className='laptop:mt-28 mt-24'>
-        <MoreProjects className='mb-12' />
+        <MoreProjects />
       </section>
 
       {/* Tools */}

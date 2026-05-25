@@ -274,7 +274,7 @@
       "title": "Web Development",
       "subservices": {
         "landingPageDev": "Landing Page",
-        "fullPageDev": "Full Page",
+        "fullPageDev": "Full Website",
         "saas": "SaaS (Frontend and Backend)",
         "uiUxDesign": "UI/UX Design",
         "seo": "SEO Optimization",
@@ -381,6 +381,40 @@
       "caseStudy": "Case Study",
       "normal": "Normal",
       "proposal": "Proposal"
+    },
+    "zentro": {
+      "slug": "zentro",
+      "client": "Zentro",
+      "industry": "Software as a Service (SaaS)",
+      "summary": "Full Stack Notes App",
+      "description": {
+        "paragraph1": "Zentro is a modern and ultra-fast note-taking app designed to optimize personal organization and daily productivity. It has support for themes, keyboard shortcuts and handling, and a secure authentication system using Better Auth that integrates GitHub and Google accounts.",
+        "paragraph2": "A fluid Drag and Drop interface based on fractional indexing to reorder notes. Built with Next.js 16, Tailwind CSS 4, and Shadcn UI, it uses optimistic mutations with TanStack Query that ensure almost zero perceived latency.",
+        "paragraph3": "Its architecture is based on a scalable monorepo (Turborepo). The backend in Node.js uses Hono RPC to synchronize end-to-end type safety, interacting with PostgreSQL via Drizzle ORM.",
+        "paragraph4": "The ecosystem prioritizes maximum performance and security through advanced caching strategies, IP geolocation, and CSRF protection. Backed by Unit Testing with Vitest, ensures a robust and continuous deployment on Vercel."
+      },
+      "content": {
+        "seeRepository": "See Repository",
+        "features": "Princial Features",
+        "keyboard": "Keyboard Control",
+        "create": "Optimistic Note Creation",
+        "update": "Update Note Content",
+        "signOut": "Sign Out",
+        "dragDelete": "Drag and Drop to Delete Note",
+        "reorder": "Reorder Notes"
+      },
+      "images": {
+        "bannerSmall": "Banner with the application on a laptop and phone",
+        "banner": "Banner with the application on a laptop and phone",
+        "visualIdentity": "Visual Identity Elements",
+        "logoConstruction": "Brand Symbol Construction",
+        "signIn": "Sign In Page",
+        "accountDropdown": "Account Dropdown Menu",
+        "accountDialog": "Account Details",
+        "shortcutsDialog": "App Shortcuts",
+        "emptyState": "No Notes State",
+        "errorState": "Error State"
+      }
     },
     "vivet": {
       "slug": "vivet-rebranding",
@@ -504,6 +538,9 @@
         "paragraph1": "With more than two decades of experience in the electrical engineering and telecommunications sector, Grupo ATProy undertakes large-scale projects throughout Central America.",
         "paragraph2": "Faced with the need for their Visual Identity to reflect their quality and standards of excellence, their brand was refined and consistency was established, accompanied by the creation of the Website with Astro to facilitate information about their services and projects carried out throughout their history, being a vital contact medium to increase their reach and market positioning."
       },
+      "content": {
+        "seeRepository": "See Repository"
+      },
       "images": {
         "bannerSmall": "Official banner with logo and symbol",
         "banner": "Official banner with logo and symbol",
@@ -535,6 +572,9 @@
       "description": {
         "paragraph1": "For the establishment of his church and community, the brand was developed from scratch, creating a coherent visual system that reflected its essence in its main communication channels.",
         "paragraph2": "A website (blog) was developed in English and Spanish with Astro, designed to centralize key information about the church, serve as a scheduling tool, offer details about services, and provide access to relevant Bible studies."
+      },
+      "content": {
+        "seeRepository": "See Repository"
       },
       "images": {
         "bannerSmall": "Official Church banner",

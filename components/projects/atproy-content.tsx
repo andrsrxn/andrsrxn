@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { SafariWindow } from '@/components/backgrounds/safari-mockup'
+import { IconGithub } from '@/components/icons/brands/github'
 import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
@@ -27,16 +28,24 @@ export const AtproyContent = () => {
       bannerAlt={t('images.bannerSmall')}>
       <div>
         <div className='-mt-2 mb-12 block'>
-          <p>
+          <div className='-mt-2 flex flex-wrap items-center gap-6'>
             <Link
               prefetch={false}
-              className='text-foreground inline-flex items-center gap-2 leading-none font-medium underline decoration-1 underline-offset-2'
+              className='text-foreground inline-flex shrink-0 items-center gap-2 text-base leading-none font-medium underline decoration-1 underline-offset-2'
               target='_blank'
               rel='noopener noreferrer'
-              href='https://atproy.vercel.app/'>
-              https://atproy.vercel.app/
+              href='https://atproy.vercel.app'>
+              https://atproy.vercel.app
             </Link>
-          </p>
+            <Link
+              prefetch={false}
+              className='text-foreground inline-flex shrink-0 items-center gap-2 text-base leading-none font-medium underline decoration-1 underline-offset-2'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/andrsrxn/atproy'>
+              <IconGithub className='size-4' /> {t('content.seeRepository')}
+            </Link>
+          </div>
         </div>
         <div className='bg-[#002F6D] p-8 pb-28'>
           <Image

@@ -59,13 +59,13 @@ export function ResponsiveSheetContent({
             {tProjects('projectDescription')}
           </DrawerDescription>
           <div className='tablet:mt-2 flex flex-wrap items-center gap-2'>
-            {projectType !== PROJECT_TYPES.NORMAL ? (
+            {projectType === PROJECT_TYPES.NORMAL ? null : (
               <Badge
                 variant={projectType === PROJECT_TYPES.PROPOSAL ? 'destructive' : 'default'}
                 className='desktop:text-sm'>
                 {tProjects(`type.${projectType}`)}
               </Badge>
-            ) : null}
+            )}
             {services.map(service => {
               return (
                 <Badge variant='secondary' className='desktop:text-sm' key={service}>

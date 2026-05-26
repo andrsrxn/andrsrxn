@@ -43,13 +43,13 @@ const PrincipalProjectCard = async ({
     <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
       <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]' id={slug}>
         <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
-          {type !== PROJECT_TYPES.NORMAL ? (
+          {type === PROJECT_TYPES.NORMAL ? null : (
             <Badge
               variant={type === PROJECT_TYPES.PROPOSAL ? 'destructive' : 'default'}
               className='desktop:text-sm'>
               {tProjects(`type.${type}`)}
             </Badge>
-          ) : null}{' '}
+          )}{' '}
           {client} - {industry}
         </span>
         <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>{summary}</p>
@@ -57,7 +57,7 @@ const PrincipalProjectCard = async ({
 
       <div className='relative'>
         <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-          {videoComponent ? (
+          {(await videoComponent) ? (
             videoComponent
           ) : (
             <picture>

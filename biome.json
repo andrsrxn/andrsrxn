@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
     "ignoreUnknown": false,
@@ -91,6 +91,14 @@
         "noNoninteractiveElementInteractions": "error"
       },
       "complexity": {
+        "noUselessCatchBinding": "error",
+        "useMaxParams": {
+          "level": "error",
+          "options": {
+            "max": 8
+          }
+        },
+        "noUselessUndefined": "error",
         "noBannedTypes": "error",
         "noExcessiveCognitiveComplexity": "error",
         "noForEach": "error",
@@ -143,6 +151,8 @@
         "useIndexOf": "error"
       },
       "correctness": {
+        "noUnresolvedImports": "off",
+        "noNextAsyncClientComponent": "error",
         "noPrivateImports": "error",
         "noUnknownTypeSelector": "error",
         "noNodejsModules": "off",
@@ -183,7 +193,7 @@
         "noUnsafeFinally": "error",
         "noUnsafeOptionalChaining": "error",
         "noUnusedFunctionParameters": "error",
-        "noUnusedImports": "error",
+        "noUnusedImports": "off",
         "noUnusedLabels": "error",
         "noUnusedPrivateClassMembers": "error",
         "noVoidTypeReturn": "error",
@@ -217,6 +227,8 @@
         "noBlankTarget": "error"
       },
       "style": {
+        "noJsxLiterals": "off",
+        "noMagicNumbers": "error",
         "useConsistentTypeDefinitions": "error",
         "useReactFunctionComponents": "error",
         "noCommonJs": "error",
@@ -336,6 +348,18 @@
         "useUnifiedTypeSignatures": "error"
       },
       "suspicious": {
+        "noDeprecatedImports": "error",
+        "noDuplicateDependencies": "error",
+        "noEmptySource": {
+          "level": "error",
+          "options": {
+            "allowComments": true
+          }
+        },
+        "noReactForwardRef": "error",
+        "useDeprecatedDate": "error",
+        "noImportCycles": "error",
+        "noUnusedExpressions": "error",
         "noNonNullAssertedOptionalChain": "error",
         "noBiomeFirstException": "error",
         "noUselessRegexBackrefs": "error",
@@ -438,14 +462,81 @@
         "useIterableCallbackReturn": "error"
       },
       "nursery": {
+        "noMisleadingReturnType": "error",
+        "noUnnecessaryTemplateExpression": "error",
+        "noUselessReturn": "error",
+        "useBaseline": "off",
+        "noExcessiveClassesPerFile": "off",
+        "noExcessiveLinesPerFile": "off",
+        "noExcessiveNestedCallbacks": "error",
+        "noExcessiveSelectorClasses": "error",
+        "noHexColors": "off",
+        "noInlineStyles": "off",
+        "useConsistentEnumValueType": "error",
+        "useGlobalThis": "off",
+        "useThisInClassMethods": "error",
+        "noBaseToString": "error",
+        "noComponentHookFactories": "error",
+        "noConditionalExpect": "error",
+        "noDivRegex": "error",
+        "noDrizzleDeleteWithoutWhere": "error",
+        "noDrizzleUpdateWithoutWhere": "error",
+        "noDeprecatedMediaType": "error",
+        "noDuplicateArgumentNames": "error",
+        "noDuplicateAttributes": "error",
+        "noDuplicateEnumValueNames": "error",
+        "noDuplicateEnumValues": "error",
+        "noDuplicateFieldDefinitionNames": "error",
+        "noDuplicateInputFieldNames": "error",
+        "noDuplicateSelectors": "error",
+        "noDuplicateVariableNames": "error",
+        "noEmptyObjectKeys": "error",
+        "noFloatingClasses": "error",
+        "noIdenticalTestTitle": "error",
+        "noImpliedEval": "error",
+        "noJsxLeakedDollar": "error",
+        "noLoopFunc": "error",
+        "noNestedPromises": "error",
+        "noReactStringRefs": "error",
+        "noRedundantDefaultExport": "error",
+        "noRootType": "error",
+        "noTopLevelLiterals": "error",
+        "noUnsafePlusOperands": "error",
+        "noUntrustedLicenses": "error",
+        "useUnicodeRegex": "error",
+        "useStringStartsEndsWith": "error",
+        "useReactAsyncServerFunction": "error",
+        "useRegexpTest": "error",
+        "useRequiredScripts": "error",
+        "useNamedCaptureGroup": "error",
+        "useMathMinMax": "error",
+        "useTestHooksInOrder": "error",
+        "useImportsFirst": "error",
+        "useArraySome": "error",
+        "useConsistentTestIt": "error",
+        "useDestructuring": "error",
+        "useDisposables": "error",
+        "useDomNodeTextContent": "error",
+        "useDomQuerySelector": "error",
+        "useErrorCause": "error",
+        "noUselessTypeConversion": "error",
+        "useConsistentMethodSignatures": "error",
+        "useExpect": "error",
+        "useInlineScriptId": "error",
+        "useReduceTypeParameter": "error",
+        "useIframeSandbox": "error",
+        "useNullishCoalescing": "error",
+        "useRegexpExec": "error",
+        "useTestHooksOnTop": "error",
+        "noAmbiguousAnchorText": "error",
+        "noMultiAssign": "error",
+        "noReturnAssign": "error",
+        "noScriptUrl": "error",
+        "noUndeclaredEnvVars": "error",
+        "useAwaitThenable": "error",
         "noContinue": "off",
         "noDuplicatedSpreadProps": "error",
-        "noEmptySource": {
-          "level": "error",
-          "options": {
-            "allowComments": true
-          }
-        },
+
         "noEqualsToNull": "error",
         "noForIn": "error",
         "noIncrementDecrement": "off",
@@ -456,31 +547,14 @@
         "noSyncScripts": "error",
         "noTernary": "off",
         "noUnknownAttribute": "error",
-        "noJsxLiterals": "off",
         "noShadow": "off",
-        "noUnusedExpressions": "off",
-        "noUselessCatchBinding": "error",
+
         "useArraySortCompare": "error",
-        "useConsistentArrowReturn": "off",
-        "useDeprecatedDate": "error",
         "useFind": "error",
         "useSpread": "error",
         "noMisusedPromises": "error",
-        "noReactForwardRef": "error",
-        "noDeprecatedImports": "error",
-        "noDuplicateDependencies": "error",
-        "noNextAsyncClientComponent": "error",
         "noUnnecessaryConditions": "error",
-        "useMaxParams": {
-          "level": "error",
-          "options": {
-            "max": 8
-          }
-        },
         "noFloatingPromises": "error",
-        "noImportCycles": "error",
-        "noUnresolvedImports": "off",
-        "noUselessUndefined": "error",
         "useExhaustiveSwitchCases": "error",
         "useExplicitType": "off",
         "useSortedClasses": "off"
@@ -581,6 +655,9 @@
         "rules": {
           "performance": {
             "noNamespaceImport": "off"
+          },
+          "style": {
+            "noMagicNumbers": "off"
           }
         }
       }

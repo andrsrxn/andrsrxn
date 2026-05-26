@@ -33,7 +33,7 @@ const cspHeader = `
 const headers = [
   {
     key: 'Content-Security-Policy',
-    value: cspHeader.replace(/\n/g, ''),
+    value: cspHeader.replace(/\n/gu, ''),
   },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'X-Frame-Options', value: 'DENY' },

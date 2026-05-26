@@ -1,9 +1,10 @@
+/** biome-ignore-all lint/style/noMagicNumbers: max characters */
 import type { useTranslations } from 'next-intl'
 import { z } from 'zod'
 import { SERVICES } from '@/lib/constants/services'
 import type { Service } from '@/lib/types/services'
 
-const REGEX_EMAIL_TAGS = /(^[^+]+)@/
+const REGEX_EMAIL_TAGS = /(?<tags>^[^+]+)@/u
 
 const CLIENT_TYPE = {
   freelancer: 'freelancer',
@@ -52,7 +53,7 @@ export const contactSchema = z.object({
     .string({ message: msg('invalidType'), invalid_type_error: msg('invalidType') })
     .min(1, { message: msg('fullName.required') })
     .max(50, { message: msg('fullName.max') })
-    .regex(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$/, { message: msg('fullName.invalid') }),
+    .regex(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$/u, { message: msg('fullName.invalid') }),
   email: z
     .string({ message: msg('invalidType'), invalid_type_error: msg('invalidType') })
     .email({ message: msg('email.invalid') })

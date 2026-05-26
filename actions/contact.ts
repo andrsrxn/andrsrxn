@@ -13,7 +13,7 @@ import { getUserAgent } from '@/lib/headers'
 import { contactSchema } from '@/lib/schemas/contact-schema'
 import type { GeolocationAPIResponse } from '@/lib/types/geo'
 
-const REGEX_IP = /, /
+const REGEX_IP = /, /u
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const SendContactMessage = async (values: z.infer<typeof contactSchema>) => {

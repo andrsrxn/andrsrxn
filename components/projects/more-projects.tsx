@@ -49,7 +49,7 @@ const MoreProjectsCard = async ({
     <div className='laptop:gap-8 laptop:flex-col laptop:w-full container mx-auto flex w-11/12 gap-4'>
       <ScrollPolygonContainer className='laptop:w-full w-[40%] shrink-0'>
         <InView from={{ opacity: 0 }} to={{ opacity: 1, duration: 0.5, ease: 'power1.inOut' }}>
-          {videoComponent ? (
+          {(await videoComponent) ? (
             videoComponent
           ) : (
             <picture>
@@ -67,13 +67,13 @@ const MoreProjectsCard = async ({
 
       <div className='flex w-fit flex-1 flex-col gap-1'>
         <span className='text-muted-foreground tablet:text-base desktop:text-lg flex w-full items-center gap-3 text-sm leading-tight'>
-          {type !== PROJECT_TYPES.NORMAL ? (
+          {type === PROJECT_TYPES.NORMAL ? null : (
             <Badge
               variant={type === PROJECT_TYPES.PROPOSAL ? 'destructive' : 'secondary'}
               className='desktop:text-sm'>
               {tProjects(`type.${type}`)}
             </Badge>
-          ) : null}
+          )}
           <span className='truncate'>
             {client} - {industry}
           </span>

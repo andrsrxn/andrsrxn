@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 const getHash = () =>
-  typeof window !== 'undefined' ? decodeURIComponent(window.location.hash.replace('#', '')) : ''
+  typeof window === 'undefined' ? '' : decodeURIComponent(window.location.hash.replace('#', ''))
 
 export const useHash = () => {
   const [hash, setHash] = useState(getHash())

@@ -383,10 +383,10 @@
       "proposal": "Proposal"
     },
     "zentro": {
-      "slug": "zentro",
+      "slug": "zentro-notes-app",
       "client": "Zentro",
       "industry": "Software as a Service (SaaS)",
-      "summary": "Full Stack Notes App",
+      "summary": "Notes App (Full Stack Monorepo)",
       "description": {
         "paragraph1": "Zentro is a modern and ultra-fast note-taking app designed to optimize personal organization and daily productivity. It has support for themes, keyboard shortcuts and handling, and a secure authentication system using Better Auth that integrates GitHub and Google accounts.",
         "paragraph2": "A fluid Drag and Drop interface based on fractional indexing to reorder notes. Built with Next.js 16, Tailwind CSS 4, and Shadcn UI, it uses optimistic mutations with TanStack Query that ensure almost zero perceived latency.",
@@ -417,20 +417,20 @@
       }
     },
     "vivet": {
-      "slug": "vivet-rebranding",
+      "slug": "vivet-visual-identity",
       "client": "VIVET",
       "industry": "Luxury Streetwear",
-      "summary": "Rebranding and Clothing",
+      "summary": "Visual Identity and Clothing",
       "description": {
         "paragraph1": "VIVET by Kai Cenat. A visual and cultural entity that represents luxury Street Wear, permanence and resistance through Dark Avant-Garde, the modification of the Baskerville Old Face typeface and the message reinforced with the slogan \"WE ARE ETERNAL\"",
         "paragraph2": "It does not pursue relevance, it defines identity.",
         "paragraph3": "Demonstration of the new visual identity and personalized outfits mainly with the brand symbol, controlled wear, heavy fabrics, low lighting and dominant composition with static and dynamic poses, according to the communication purpose."
       },
       "images": {
-        "bannerSmall": "Rebranding proposal banner",
-        "banner": "Rebranding proposal banner",
-        "banner2": "Secondary rebranding proposal banner",
-        "banner3": "Tertiary rebranding proposal banner",
+        "bannerSmall": "Visual Identity proposal banner",
+        "banner": "Visual Identity proposal banner",
+        "banner2": "Secondary Visual Identity proposal banner",
+        "banner3": "Tertiary Visual Identity proposal banner",
         "logo": "Brand logo",
         "symbol": "Brand symbol",
         "logoConstruction": "Brand logo construction",

@@ -391,10 +391,10 @@
       "proposal": "Propuesta"
     },
     "zentro": {
-      "slug": "zentro",
+      "slug": "zentro-app-de-notas",
       "client": "Zentro",
       "industry": "Software as a Service (SaaS)",
-      "summary": "Aplicación de Notas Full Stack",
+      "summary": "Aplicación de Notas (Monorepo Full Stack)",
       "description": {
         "paragraph1": "Zentro es una aplicación de notas moderna y ultra-rápida diseñada para optimizar la organización personal y la productividad diaria. Cuenta con soporte para temas, atajos y uso por medio del teclado y un sistema de autenticación con Better Auth que integra cuentas de GitHub y Google.",
         "paragraph2": "Una interfaz fluida de Drag and Drop basada en Fractional Indexing para reordenar notas. Frontend con Next.js 16, Tailwind CSS 4 y Shadcn UI; mutaciones optimistas con TanStack Query que garantizan una latencia casi nula.",
@@ -425,10 +425,10 @@
       }
     },
     "vivet": {
-      "slug": "vivet-rebranding",
+      "slug": "vivet-visual-identity",
       "client": "VIVET",
       "industry": "Streetwear de lujo",
-      "summary": "Rebranding y Clothing",
+      "summary": "Identidad Visual y Clothing",
       "description": {
         "paragraph1": "VIVET by Kai Cenat. Una entidad visual y cultural que representa el Street Wear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan \"WE ARE ETERNAL\"",
         "paragraph2": "No persigue la relevancia, define identidad.",
@@ -436,10 +436,10 @@
       },
 
       "images": {
-        "bannerSmall": "Banner de la propuesta de Rebranding",
-        "banner": "Banner de la propuesta de Rebranding",
-        "banner2": "Banner secundario de la propuesta de Rebranding",
-        "banner3": "Banner terciario de la propuesta de Rebranding",
+        "bannerSmall": "Banner de la propuesta de Identidad Visual",
+        "banner": "Banner de la propuesta de Identidad Visual",
+        "banner2": "Banner secundario de la propuesta de Identidad Visual",
+        "banner3": "Banner terciario de la propuesta de Identidad Visual",
         "logo": "Logo de la marca",
         "symbol": "Símbolo de la marca",
         "logoConstruction": "Construcción del logo de la marca",

@@ -41,7 +41,7 @@ const PrincipalProjectCard = async ({
   const tProjects = await getTranslations('projects')
   return (
     <ScrollPolygonContainer className='tablet:gap-6 relative flex flex-col gap-4'>
-      <div className='tablet:gap-3 flex flex-col gap-1 px-[5%]' id={slug}>
+      <div className='tablet:gap-3 desktop:px-[7%] flex flex-col gap-1 px-[5%]' id={slug}>
         <span className='text-muted-foreground tablet:text-base desktop:text-lg flex items-center gap-3 truncate text-sm leading-tight'>
           {type === PROJECT_TYPES.NORMAL ? null : (
             <Badge
@@ -52,7 +52,9 @@ const PrincipalProjectCard = async ({
           )}{' '}
           {client} - {industry}
         </span>
-        <p className='font-heading tablet:text-5xl desktop:text-7xl text-3xl'>{summary}</p>
+        <p className='font-heading tablet:text-5xl laptop:text-6xl desktop:text-7xl text-3xl'>
+          {summary}
+        </p>
       </div>
 
       <div className='relative'>
@@ -90,8 +92,8 @@ const PrincipalProjectCard = async ({
 export const PrincipalProjects = async () => {
   const t = await getTranslations('projects')
   return (
-    <section className='tablet:mt-20 desktop:w-11/12 mx-auto mt-12 max-w-6xl'>
-      <div className='tablet:gap-20 desktop:gap-40 flex flex-col gap-16'>
+    <div className='desktop:w-11/12 mx-auto max-w-5xl'>
+      <div className='tablet:gap-20 desktop:gap-32 flex flex-col gap-16'>
         <PrincipalProjectCard
           type={PROJECTS.ZENTRO.TYPE}
           slug={t('zentro.slug')}
@@ -153,6 +155,6 @@ export const PrincipalProjects = async () => {
           content={<VIVETContent />}
         />
       </div>
-    </section>
+    </div>
   )
 }

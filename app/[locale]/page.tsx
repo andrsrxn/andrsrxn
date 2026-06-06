@@ -216,7 +216,7 @@ export default async function Home({ params }: PageProps) {
         <ServicesCarousel />
       </section>
 
-      <Separator className='container mx-auto my-20 w-11/12!' />
+      <Separator className='container mx-auto my-24 w-11/12! max-w-7xl' />
 
       {/* Projects */}
       <section className='tablet:mt-20 laptop:w-11/12 mx-auto mt-12 max-w-6xl'>

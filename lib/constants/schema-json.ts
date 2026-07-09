@@ -13,7 +13,7 @@ export const PERSON_SCHEMA: Person = {
   '@type': 'Person',
   url: SITE.BASE_URL,
   name: COMPANY.NAME,
-  jobTitle: 'Diseñador y Programador Web',
+  jobTitle: 'Desarrollador Full Stack',
   image: IMAGES.BRAND.LOGO.PNG.URL,
   knowsLanguage: ['es-419', 'es', 'en-US', 'en-GB'],
 } as const

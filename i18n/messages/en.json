@@ -1,7 +1,7 @@
 {
   "company": {
-    "jobPosition": "Designer and Web Developer",
-    "description": "More than 2 years of experience as a Freelancer. Specialized in modern branding and Full Stack web development with a focus on UI/UX",
+    "jobPosition": "Full Stack Developer and Designer",
+    "description": "More than 2 years of experience as a Freelancer. Specialized in TypeScript and React to build modern web apps with a focus on UI/UX.",
     "servicesSummary": "Branding, Web Development and Marketing"
   },
   "privacyPage": {
@@ -166,7 +166,7 @@
   },
   "homePage": {
     "metadata": {
-      "keywords": "Designer and Web Developer, Web Development, Branding, Motion Graphics, Video Editing, Graphic Designer, Programmer, Frontend Programmer, Fullstack Programmer"
+      "keywords": "Web Developer, Web Development, Branding, Motion Graphics, Video Editing, Graphic Designer, Programmer, Frontend Programmer, Fullstack Programmer"
     },
     "hero": {
       "cta": "Hire Services",

@@ -3,8 +3,8 @@
 
 declare const messages: {
   "company": {
-    "jobPosition": "Diseñador y Programador Web",
-    "description": "Más de 2 años de experiencia como profesional independiente. Especializado en branding moderno y desarrollo web Full Stack con enfoque en UI/UX",
+    "jobPosition": "Desarrollador Full Stack y Diseñador",
+    "description": "Más de 2 años de experiencia como Freelancer. Especializado en TypeScript y React para construir aplicaciones web modernas con enfoque en UI/UX.",
     "servicesSummary": "Branding, Desarrollo Web y Marketing"
   },
   "privacyPage": {
@@ -169,7 +169,7 @@ declare const messages: {
   },
   "homePage": {
     "metadata": {
-      "keywords": "Diseñador y Programador Web, Desarrollo Web, Branding, Motion Graphics, Edición de Video, Diseñador Gráfico, Programador, Programador Frontend, Programador Fullstack"
+      "keywords": "Programador Web, Desarrollo Web, Branding, Motion Graphics, Edición de Video, Diseñador Gráfico, Programador, Programador Frontend, Programador Fullstack"
     },
     "hero": {
       "cta": "Contratar Servicios",

@@ -1,1 +1,1 @@
-Andrés Raxón | Designer and Web Developer
+Andrés Raxón | Full Stack Developer and Designer

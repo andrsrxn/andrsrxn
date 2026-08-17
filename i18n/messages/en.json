@@ -168,6 +168,10 @@
     "metadata": {
       "keywords": "Web Developer, Web Development, Branding, Motion Graphics, Video Editing, Graphic Designer, Programmer, Frontend Programmer, Fullstack Programmer"
     },
+    "navigation": {
+      "resources": "Resources",
+      "languageSwitcher": "Switch language"
+    },
     "hero": {
       "cta": "Hire Services",
       "ctaCV": "Download CV",
@@ -498,12 +502,13 @@
       "description": {
         "paragraph1": "An opinionated, modern and scalable Design System built with React, TypeScript and Tailwind CSS.",
         "paragraph2": "It provides more than 50 different components for the development of web applications, with a token system for colors, typography, spacing, shadows and similar, compound components, states and microinteractions, design patterns such as Atomic Design, UI/UX principles and accessibility (WCAG) levels AA and AAA.",
-        "paragraph3": "A set of more than 400 custom Duotone icons was developed according to the system's style, designed for multiple purposes and applications.",
+        "paragraph3": "An independent set of more than 800 duotone icons (andrsrxn/icons) was designed and developed according to the system's style, designed for multiple purposes and web applications.",
         "paragraph4": "The performance of the components is optimized to offer a fluid and responsive experience for modern browsers and mobile devices."
       },
       "content": {
-        "urlSoon": "URL will be available soon...",
-        "icons": "+400 Custom Duotone Icons",
+        "seeRepositoryIcons": "See Repository (andrsrxn/icons)",
+        "urlSoon": "Coming soon...",
+        "icons": "+800 Duotone Icons (andrsrxn/icons)",
         "palette": "Color Palette",
         "typography": "Typography and Typographic Scale",
         "components": "Showcase of Some Components",

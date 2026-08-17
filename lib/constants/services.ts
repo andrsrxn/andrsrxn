@@ -1,4 +1,33 @@
 export const SERVICES = {
+  WEB_DEV: {
+    TITLE: 'webDev.title',
+    SLUG: 'web-dev',
+
+    SUBSERVICES: {
+      LANDING_PAGE_DEV: {
+        TITLE: 'webDev.subservices.landingPageDev',
+      },
+      FULL_PAGE_DEV: {
+        TITLE: 'webDev.subservices.fullPageDev',
+      },
+
+      SAAS: {
+        TITLE: 'webDev.subservices.saas',
+      },
+      UI_UX_DESIGN: {
+        TITLE: 'webDev.subservices.uiUxDesign',
+      },
+      SEO: {
+        TITLE: 'webDev.subservices.seo',
+      },
+      UX_AUDIT: {
+        TITLE: 'webDev.subservices.uxAudit',
+      },
+      COMPONENTES: {
+        TITLE: 'webDev.subservices.componentes',
+      },
+    },
+  },
   BRAND: {
     TITLE: 'brand.title',
     SLUG: 'branding',
@@ -34,35 +63,6 @@ export const SERVICES = {
     },
   },
 
-  WEB_DEV: {
-    TITLE: 'webDev.title',
-    SLUG: 'web-dev',
-
-    SUBSERVICES: {
-      LANDING_PAGE_DEV: {
-        TITLE: 'webDev.subservices.landingPageDev',
-      },
-      FULL_PAGE_DEV: {
-        TITLE: 'webDev.subservices.fullPageDev',
-      },
-
-      SAAS: {
-        TITLE: 'webDev.subservices.saas',
-      },
-      UI_UX_DESIGN: {
-        TITLE: 'webDev.subservices.uiUxDesign',
-      },
-      SEO: {
-        TITLE: 'webDev.subservices.seo',
-      },
-      UX_AUDIT: {
-        TITLE: 'webDev.subservices.uxAudit',
-      },
-      COMPONENTES: {
-        TITLE: 'webDev.subservices.componentes',
-      },
-    },
-  },
   MARKETING: {
     TITLE: 'marketing.title',
     SLUG: 'marketing',

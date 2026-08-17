@@ -307,7 +307,7 @@ export const IMAGES = {
         ALT: 'typography',
       },
       ICONS: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1775606732/banner-icons_h6zxca.webp',
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1786932936/banner-small_jaq8xv.webp',
         ALT: 'icons',
       },
       TREE_VIEW: {

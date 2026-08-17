@@ -1,6 +1,6 @@
 'use client'
 
-import { IconX } from '@tabler/icons-react'
+import { IconX } from '@andrsrxn/icons'
 import type * as React from 'react'
 import { Drawer as DrawerPrimitive } from 'vaul'
 import { buttonVariants } from '@/components/ui/button'

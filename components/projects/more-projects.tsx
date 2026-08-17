@@ -1,4 +1,4 @@
-import { IconExternalLink } from '@tabler/icons-react'
+import { IconExternalLink } from '@andrsrxn/icons'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import type { ComponentProps, ReactNode } from 'react'

@@ -1,6 +1,6 @@
 'use client'
 
-import { type Locale, useLocale } from 'next-intl'
+import { type Locale, useLocale, useTranslations } from 'next-intl'
 import { useTransition } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -27,6 +27,7 @@ export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
   const router = useRouter()
   const pathname = usePathname()
   const [isPending, startTransition] = useTransition()
+  const tNav = useTranslations('homePage.navigation')
 
   const onSelect = (nextLocale: Locale) => {
     if (nextLocale === locale) {
@@ -44,7 +45,7 @@ export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
           variant='ghost'
           size='sm'
           disabled={isPending}
-          aria-label='Switch language'
+          aria-label={tNav('languageSwitcher')}
           className={cn(
             'h-8 w-20 rounded-none px-2 text-xs font-semibold tracking-widest',
             isPending && 'opacity-50',

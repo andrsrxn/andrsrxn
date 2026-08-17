@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: accepted */
 
-import { IconPlus } from '@tabler/icons-react'
+import { IconPlus } from '@andrsrxn/icons'
 import { useTranslations } from 'next-intl'
 import { ResponsiveSheetContent as ResponsiveSheetContentBase } from '@/components/shared/responsive-sheet-content'
 import { Button } from '@/components/ui/button'

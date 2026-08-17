@@ -1,6 +1,6 @@
 'use client'
 
-import { IconRefresh } from '@tabler/icons-react'
+import { IconResfresh as IconRefresh } from '@andrsrxn/icons'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 

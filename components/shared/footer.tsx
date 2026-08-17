@@ -1,3 +1,4 @@
+import { IconFlagGT } from '@andrsrxn/icons/flags'
 import { getTranslations } from 'next-intl/server'
 import { ParticlesBackground } from '@/components/backgrounds/particles'
 import { Image } from '@/components/ui/image'
@@ -10,8 +11,8 @@ export const Footer = async () => {
   const termsTranslation = await getTranslations('termsPage')
 
   return (
-    <footer className='relative z-0 mt-20 max-h-[700px] overflow-x-clip py-6'>
-      <ParticlesBackground className='laptop:w-full absolute bottom-0 left-0 z-0 h-[1000px] w-[220%] origin-center' />
+    <footer className='relative z-0 mt-20 max-h-175 overflow-x-clip py-6'>
+      <ParticlesBackground className='laptop:w-full absolute bottom-0 left-0 z-0 h-250 w-[220%] origin-center' />
 
       <div className='container mx-auto flex h-full w-11/12 flex-col justify-end gap-4'>
         <div className='flex items-center justify-center'>
@@ -46,13 +47,7 @@ export const Footer = async () => {
             &copy; {new Date().getFullYear()}. {COMPANY.NAME}
           </p>
 
-          <Image
-            src={IMAGES.FLAGS.GT.URL}
-            alt={IMAGES.FLAGS.GT.ALT}
-            title='Guatemala'
-            className='inline h-3 w-auto'
-            includePlaceholder={false}
-          />
+          <IconFlagGT />
         </div>
       </div>
     </footer>

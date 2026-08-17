@@ -1,6 +1,6 @@
 'use client'
 
-import { IconCheck, IconShare } from '@tabler/icons-react'
+import { IconCheck, IconShare } from '@andrsrxn/icons'
 import { type ComponentProps, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'

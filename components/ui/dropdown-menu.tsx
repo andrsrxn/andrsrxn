@@ -1,6 +1,6 @@
 'use client'
 
-import { IconCheck, IconChevronRight, IconCircle } from '@tabler/icons-react'
+import { IconCheck, IconChevronRight, IconCircle } from '@andrsrxn/icons'
 import { DropdownMenu as DropdownMenuPrimitive } from 'radix-ui'
 import { cn } from '@/lib/utils'
 

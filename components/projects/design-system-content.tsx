@@ -1,6 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { IconGithub } from '@/components/icons/brands/github'
 import { Signature } from '@/components/projects/signature'
 import { ResponsiveSheetContent } from '@/components/shared/responsive-sheet'
 import { Image } from '@/components/ui/image'
@@ -32,8 +34,18 @@ export const DesignSystemContent = () => {
       bannerUrl={project.IMAGES.BANNER_SMALL.URL}
       bannerAlt={t('images.bannerSmall')}>
       <div className='relative isolate grid gap-8 overflow-x-visible'>
-        <div className='-mt-2 block'>
+        <div className='-mt-2 grid gap-4'>
           <p className='text-foreground text-base italic'>{t('content.urlSoon')}</p>
+          <div>
+            <Link
+              prefetch={false}
+              className='text-foreground inline-flex shrink-0 items-center gap-2 text-base leading-none font-medium underline decoration-1 underline-offset-2'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/andrsrxn/atproy'>
+              <IconGithub className='size-4' /> {t('content.seeRepositoryIcons')}
+            </Link>
+          </div>
         </div>
         <Separator className='my-6' />
 

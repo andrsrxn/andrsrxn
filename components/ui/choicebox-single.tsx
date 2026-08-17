@@ -1,6 +1,6 @@
 'use client'
 
-import { IconCheck } from '@tabler/icons-react'
+import { IconCheck } from '@andrsrxn/icons'
 import {
   type ComponentProps,
   createContext,

@@ -1,4 +1,4 @@
-import { IconArrowRight } from '@tabler/icons-react'
+import { IconArrowRight } from '@andrsrxn/icons'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 

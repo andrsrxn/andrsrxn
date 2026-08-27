@@ -1,6 +1,6 @@
 'use client'
 
-import { IconResfresh as IconRefresh } from '@andrsrxn/icons'
+import { IconRefresh } from '@andrsrxn/icons'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { fontBody, fontHeading } from '@/lib/fonts'

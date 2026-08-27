@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: One page */
 
-import { IconDownload, IconFilePdf } from '@andrsrxn/icons'
+import { IconDownload, IconFileCv } from '@andrsrxn/icons'
 import ReactLenis from 'lenis/react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -202,7 +202,7 @@ export default async function Home({ params }: PageProps) {
                     aria-label='Curriculum Vitae'
                     title='Curriculum Vitae'
                     className='display:size-10 relative shrink-0'>
-                    <IconFilePdf className='size-6' />
+                    <IconFileCv className='size-6' />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side='bottom' align='start' className='w-full'>
@@ -212,7 +212,7 @@ export default async function Home({ params }: PageProps) {
                       download={COMPANY.DOCS.CV.LABEL}
                       href={COMPANY.DOCS.CV.URL}
                       className='flex w-full items-center gap-2'>
-                      <IconDownload className='size-6' /> {tHomePage('hero.ctaCV')}
+                      <IconDownload className='size-5' /> {tHomePage('hero.ctaCV')}
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -221,7 +221,7 @@ export default async function Home({ params }: PageProps) {
                       download={COMPANY.DOCS.CV_EN.LABEL}
                       href={COMPANY.DOCS.CV_EN.URL}
                       className='flex w-full items-center gap-2'>
-                      <IconDownload className='size-6' /> {tHomePage('hero.ctaCVEnglish')}
+                      <IconDownload className='size-5' /> {tHomePage('hero.ctaCVEnglish')}
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>

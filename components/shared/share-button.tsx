@@ -32,9 +32,9 @@ export const ShareButton = ({
       onClick={handleCopy}
       {...props}>
       {copied ? (
-        <IconCheck className='animate-in fade-in duration-300 ease-in-out' />
+        <IconCheck className='animate-in fade-in size-5 duration-300 ease-in-out' />
       ) : (
-        <IconShare className='animate-in fade-in duration-300 ease-in-out' />
+        <IconShare className='animate-in fade-in size-5 duration-300 ease-in-out' />
       )}
 
       {copied ? copiedText : children}

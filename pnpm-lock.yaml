@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@andrsrxn/icons':
-        specifier: 5.0.0
-        version: 5.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: 6.0.0
+        version: 6.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@gsap/react':
         specifier: 2.1.2
         version: 2.1.2(gsap@3.15.0)(react@19.2.6)
@@ -139,8 +139,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@andrsrxn/icons@5.0.0':
-    resolution: {integrity: sha512-2Xvkjh09xbPBw2Tbp4LLOZBULsJ/qP/WUEdrxG6DebzPpP5UpSEwkZN8pc/YrjUyayjtNQSb3ilzdQdDAfdMyw==}
+  '@andrsrxn/icons@6.0.0':
+    resolution: {integrity: sha512-2R+8ITl6uExCqEdgsxrDEd+Te4trsR6HvaI8xkymv7XruWMLbW9HNaNBpmeBSuqQtRxyVY9i50awfdZKQYJVAA==}
     engines: {node: ^24, pnpm: ^11}
     peerDependencies:
       react: ^19
@@ -2100,7 +2100,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@andrsrxn/icons@5.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@andrsrxn/icons@6.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)

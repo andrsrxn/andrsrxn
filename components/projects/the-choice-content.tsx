@@ -1,5 +1,6 @@
 'use client'
 
+import { IconExternalLink } from '@andrsrxn/icons'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useEffect, useRef } from 'react'
@@ -71,6 +72,7 @@ export const TheChoiceContent = () => {
               rel='noopener noreferrer'
               href='https://thechoicegt.vercel.app/'>
               https://thechoicegt.vercel.app/
+              <IconExternalLink className='size-4' />
             </Link>
           </p>
         </div>

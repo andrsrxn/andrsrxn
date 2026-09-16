@@ -1,3 +1,4 @@
+import { IconExternalLink } from '@andrsrxn/icons'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { SafariWindow } from '@/components/backgrounds/safari-mockup'
@@ -35,6 +36,7 @@ export const IcpsjContent = () => {
             rel='noopener noreferrer'
             href='https://icpsj.vercel.app'>
             https://icpsj.vercel.app
+            <IconExternalLink className='size-4' />
           </Link>
           <Link
             prefetch={false}

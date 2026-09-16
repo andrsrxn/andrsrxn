@@ -1,5 +1,6 @@
 'use client'
 
+import { IconExternalLink } from '@andrsrxn/icons'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { IconGithub } from '@/components/icons/brands/github'
@@ -42,6 +43,7 @@ export const ZentroContent = () => {
             rel='noopener noreferrer'
             href='https://zentro.andrsrxn.com'>
             https://zentro.andrsrxn.com
+            <IconExternalLink className='size-4' />
           </Link>
           <Link
             prefetch={false}

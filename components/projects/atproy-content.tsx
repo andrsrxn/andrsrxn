@@ -1,3 +1,4 @@
+import { IconExternalLink } from '@andrsrxn/icons'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { SafariWindow } from '@/components/backgrounds/safari-mockup'
@@ -36,6 +37,7 @@ export const AtproyContent = () => {
               rel='noopener noreferrer'
               href='https://atproy.vercel.app'>
               https://atproy.vercel.app
+              <IconExternalLink className='size-4' />
             </Link>
             <Link
               prefetch={false}

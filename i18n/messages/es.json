@@ -5,19 +5,19 @@
     "servicesSummary": "Branding, Desarrollo Web y Marketing"
   },
   "privacyPage": {
-    "link": "Política de Privacidad",
-    "title": "Política de Privacidad",
+    "link": "Política de privacidad",
+    "title": "Política de privacidad",
     "metadata": {
       "description": "Verifica como manejamos tus datos personales y las cookies que utilizamos en el sitio web."
     },
     "content": {
-      "intro": "En el sitio web personal de {legalName}, la privacidad de nuestros usuarios es una prioridad fundamental. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que nos proporcionas y la que es generada automáticamente cuando utilizas nuestros servicios en línea.",
+      "intro": "En el sitio web personal de {legalName}, la privacidad de nuestros usuarios es una prioridad fundamental. Esta política de privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que nos proporcionas y la que es generada automáticamente cuando utilizas nuestros servicios en línea.",
       "identity": {
-        "title": "Identidad del Responsable del Tratamiento de Datos",
+        "title": "Identidad del responsable del tratamiento de datos",
         "description": "El responsable del tratamiento de los datos personales recopilados a través de este sitio web es: {legalName}, persona individual dedicada a la prestación de servicios profesionales con número de NIT: {nit}, ubicado en {country}. Para cualquier pregunta o inquietud, puedes contactarme directamente a través del link en la sección de Contacto."
       },
       "dataCollection": {
-        "title": "Información que Recopilamos",
+        "title": "Información que recopilamos",
         "intro": "Recopilamos dos tipos de información:",
         "direct": {
           "title": "Información que nos proporcionas directamente",
@@ -39,7 +39,7 @@
         }
       },
       "dataUsage": {
-        "title": "Uso de la Información Recopilada",
+        "title": "Uso de la información recopilada",
         "intro": "La información recopilada se utiliza con los siguientes propósitos:",
         "item1": "Para responder a tus solicitudes y proporcionarte los servicios o cotizaciones solicitadas.",
         "item2": "Para mejorar la calidad, seguridad y funcionalidad de nuestro sitio web.",
@@ -47,14 +47,14 @@
         "item4": "Para proteger el sitio contra actividades fraudulentas o maliciosas."
       },
       "dataSharing": {
-        "title": "Compartir tu Información",
+        "title": "Compartir tu información",
         "description": "Tu información personal es privada y no la vendemos, alquilamos ni la compartimos con terceros para fines de marketing. Sin embargo, tu información puede ser compartida con servicios de terceros que utilizamos para operar nuestro sitio web, como Vercel y Cloudflare, únicamente en la medida necesaria para que ellos puedan proporcionarnos servicios de hosting, seguridad y red de entrega de contenido."
       },
       "cookies": {
-        "title": "Uso de Cookies y Tecnologías Similares",
+        "title": "Uso de cookies y tecnologías similares",
         "description": "Nuestro sitio web utiliza tecnologías esenciales para su funcionamiento y seguridad. Estas tecnologías, incluyendo cookies, son utilizadas por nuestros proveedores de servicios para garantizar que el sitio esté protegido y funcione correctamente. No utilizamos cookies para fines de marketing o para rastrear tu actividad de navegación con fines publicitarios.",
         "thirdParty": {
-          "title": "Cookies de Terceros",
+          "title": "Cookies de terceros",
           "intro": "Utilizamos servicios de terceros para mejorar la seguridad y el rendimiento de nuestro sitio web. Al usar nuestro sitio, estos proveedores pueden establecer cookies para fines estrictamente funcionales y de seguridad. Específicamente:",
           "cloudflare": "Utiliza cookies para identificar el tráfico malicioso y proteger el sitio contra ataques. Estas cookies son esenciales y no pueden ser deshabilitadas sin afectar la seguridad de la página.",
           "vercel": "Como plataforma de hosting, Vercel puede utilizar cookies para gestionar funciones técnicas, aunque para un sitio de portafolio estático como el tuyo, su uso es limitado. Te notificaremos si agregamos funcionalidades que requieran el uso de cookies para el seguimiento o la personalización.",
@@ -62,15 +62,15 @@
         }
       },
       "dataSecurity": {
-        "title": "Seguridad de los Datos",
+        "title": "Seguridad de los datos",
         "description": "Implementamos medidas de seguridad para proteger la información que recopilamos, incluyendo la encriptación de los datos en tránsito. Sin embargo, ningún método de transmisión por internet o de almacenamiento electrónico es 100% seguro. No podemos garantizar la seguridad absoluta de tus datos, pero nos comprometemos a tomar todas las precauciones razonables para protegerlos."
       },
       "yourRights": {
-        "title": "Tus Derechos",
+        "title": "Tus derechos",
         "description": "Tienes el derecho de acceder, corregir, actualizar o solicitar la eliminación de tu información personal en cualquier momento. Si deseas ejercer estos derechos, por favor, contáctame a través de la información de contacto provista al final de esta política."
       },
       "changes": {
-        "title": "Cambios a Esta Política de Privacidad",
+        "title": "Cambios a esta política de privacidad",
         "description": "Esta política puede ser actualizada ocasionalmente para reflejar cambios en nuestras prácticas o por razones operativas, legales o regulatorias. Te notificaremos por medio de un banner en el sitio web de cualquier cambio significativo publicando la nueva política en esta página."
       },
       "contact": {
@@ -80,25 +80,25 @@
     }
   },
   "termsPage": {
-    "link": "Términos y Condiciones",
-    "title": "Términos y Condiciones",
+    "link": "Términos y condiciones",
+    "title": "Términos y condiciones",
     "metadata": {
       "description": "Definimos reglas de uso y utilización del sitio web para asegurar el cumplimiento correcto de tus derechos y obligaciones en él."
     },
     "content": {
-      "intro1": "Bienvenido al sitio web de {commercialName}. Al acceder y utilizar este sitio web, usted acepta y se compromete a cumplir con todos los siguientes Términos y Condiciones de Uso. Si no está de acuerdo con alguna parte de estos términos, por favor no utilice este sitio web. Estos términos y condiciones se aplican a todos los visitantes, usuarios y otras personas que accedan o utilicen el servicio.",
-      "intro2": "La persona responsable de este sitio web es: {legalName}, un individuo dedicado a la prestación de servicios profesionales con Número de Identificación Tributaria (NIT): {nit}, ubicado en {country}. Para cualquier pregunta o inquietud, puede contactarme directamente a través del enlace en la sección de Contacto.",
+      "intro1": "Bienvenido al sitio web de {commercialName}. Al acceder y utilizar este sitio web, aceptas y te comprometes a cumplir con todos los siguientes términos y condiciones de Uso. Si no estás de acuerdo con alguna parte de estos términos, por favor no utilices este sitio web. Estos términos y condiciones se aplican a todos los visitantes, usuarios y otras personas que accedan o utilicen el servicio.",
+      "intro2": "La persona responsable de este sitio web es: {legalName}, un individuo dedicado a la prestación de servicios profesionales con Número de Identificación Tributaria (NIT): {nit}, ubicado en {country}. Para cualquier pregunta o inquietud, puedes contactarme directamente a través del enlace en la sección de Contacto.",
       "services": {
-        "title": "Descripción de Servicios",
+        "title": "Descripción de servicios",
         "description": "Este sitio web funciona como un portafolio digital, una plataforma informativa para mostrar proyectos completados y las capacidades creativas de {commercialName}. Se ofrecen servicios de diseño, dirección creativa y estrategia de manera profesional. La contratación de estos servicios está sujeta a la negociación y firma de un contrato de servicios independiente, el cual detallará el alcance, entregables, cronograma y términos de pago específicos del proyecto."
       },
       "intellectualProperty": {
-        "title": "Propiedad Intelectual",
+        "title": "Propiedad intelectual",
         "description1": "Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos, logotipos, iconos, imágenes, clips de audio y video, proyectos de portafolio y su compilación, es propiedad exclusiva de {commercialName} o sus respectivos licenciantes y está protegido por las leyes de propiedad intelectual de Guatemala y leyes internacionales. La marca personal de {commercialName} y cualquier otro logotipo, nombre de servicio o eslogan relacionado son marcas comerciales de {commercialName} y no pueden ser copiadas, imitadas o utilizadas, en todo o en parte, sin nuestro permiso previo por escrito.",
         "description2": "Los proyectos mostrados en este portafolio son el resultado de colaboraciones con clientes y se presentan con fines ilustrativos de las habilidades y servicios ofrecidos. La propiedad intelectual de los proyectos finales mostrados pertenece a sus respectivos clientes, a menos que se indique lo contrario. Está estrictamente prohibida la reproducción, distribución, modificación, exhibición pública o uso no autorizado de cualquier contenido de este sitio web sin el consentimiento previo por escrito de {commercialName}."
       },
       "siteUse": {
-        "title": "Uso del Sitio Web",
+        "title": "Uso del sitio web",
         "intro": "El uso del sitio web está destinado a fines informativos y de contacto. No puede usar el sitio web para fines ilegales o no autorizados. Usted acepta no usar el sitio para los siguientes propósitos:",
         "item1": "Difamar, abusar, acosar, amenazar o violar de cualquier otra forma los derechos legales de otros.",
         "item2": "Publicar, distribuir o difundir cualquier material o información que sea inapropiado, profano, difamatorio, obsceno, indecente o ilegal.",
@@ -106,15 +106,15 @@
         "item4": "Spamming o enviar correos electrónicos no solicitados."
       },
       "thirdPartyLinks": {
-        "title": "Enlaces a Sitios de Terceros",
+        "title": "Enlaces a sitios de terceros",
         "description": "Nuestro sitio web puede contener enlaces a sitios web de terceros que no son propiedad ni están controlados por {commercialName}. No tenemos control sobre, y no asumimos responsabilidad por, el contenido, las políticas de privacidad o las prácticas de cualquier sitio web de terceros. Usted reconoce y acepta que no seremos responsables, directa o indirectamente, de ningún daño o pérdida causado por o en conexión con el uso o la dependencia de dicho contenido, bienes o servicios disponibles en o a través de dichos sitios web."
       },
       "userContent": {
-        "title": "Política de Contenido Generado por el Usuario",
+        "title": "Política de contenido generado por el usuario",
         "description": "Si usted proporciona contenido, comentarios, ideas, sugerencias o cualquier otro material (colectivamente, \"Envío\") a través del sitio web, usted otorga a {commercialName} una licencia no exclusiva, perpetua, irrevocable, libre de regalías, sublicenseable y mundial para usar, reproducir, modificar, adaptar, publicar, traducir, crear trabajos derivados de, distribuir y mostrar dicho Envío en cualquier forma, medio o tecnología, en todo o en parte, sin necesidad de compensación o notificación. Esto se aplica a los mensajes enviados a través del formulario de contacto."
       },
       "disclaimer": {
-        "title": "Renuncia de Garantías y Limitación de Responsabilidad",
+        "title": "Renuncia de garantías y limitación de responsabilidad",
         "description1": "El sitio web se proporciona \"tal cual\" y \"según disponibilidad\". Andrés Raxón no ofrece garantías, expresas o implícitas, con respecto al funcionamiento del sitio o la información, contenido, materiales o productos incluidos en él. No garantizamos que el sitio será ininterrumpido o libre de errores. El uso del sitio es bajo su propio riesgo.",
         "description2": "En la máxima medida permitida por la ley aplicable, {commercialName} no será responsable de ningún daño de ningún tipo que surja del uso de este sitio, incluyendo pero no limitado a daños directos, indirectos, incidentales, punitivos y consecuentes, o pérdida de datos o ganancias."
       },
@@ -123,36 +123,36 @@
         "description": "Usted acepta indemnizar y eximir de responsabilidad a {commercialName}, sus afiliados y sus respectivos directores, funcionarios, agentes y empleados de y contra cualquier reclamo, demanda, daño, pérdida, costo, responsabilidad y gasto, incluidos los honorarios de abogados, que surjan de su uso o incapacidad para usar el sitio web."
       },
       "governingLaw": {
-        "title": "Ley Aplicable y Resolución de Disputas",
+        "title": "Ley aplicable y resolución de disputas",
         "description": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la República de Guatemala, sin dar efecto a sus principios de conflicto de leyes. Cualquier disputa, controversia o reclamo que surja de o esté relacionado con estos Términos se resolverá por los tribunales competentes en la Ciudad de Guatemala. Antes de iniciar cualquier acción legal, ambas partes acuerdan intentar resolver la disputa mediante negociación de buena fe."
       },
       "severability": {
-        "title": "Independencia de Disposiciones",
+        "title": "Independencia de disposiciones",
         "description": "Si alguna disposición de estos Términos es declarada inválida o inaplicable por un tribunal, las disposiciones restantes de los Términos permanecerán en pleno vigor y efecto. La disposición inválida se modificará en la medida mínima necesaria para hacerla válida y exigible de manera que se logre la intención original de las partes."
       },
       "noWaiver": {
-        "title": "No Renuncia",
+        "title": "No renuncia",
         "description": "El hecho de que {commercialName} no ejerza o haga cumplir algún derecho o disposición de estos Términos no constituirá una renuncia a dicho derecho o disposición. Cualquier renuncia a una disposición de estos Términos debe ser por escrito y firmada por una persona autorizada para actuar en nombre de {commercialName}."
       },
       "termination": {
-        "title": "Terminación del Uso",
+        "title": "Terminación del uso",
         "description": "Nos reservamos el derecho de suspender o cancelar su acceso a nuestro sitio web, sin previo aviso, por cualquier motivo, incluyendo sin limitación, el incumplimiento de estos Términos y Condiciones. Todas las disposiciones de los Términos que por su naturaleza deban sobrevivir a la terminación, sobrevivirán a la terminación, incluyendo sin limitación, las disposiciones de propiedad, las renuncias de garantía, la indemnización y las limitaciones de responsabilidad."
       },
       "generalProvisions": {
-        "title": "Disposiciones Generales",
+        "title": "Disposiciones generales",
         "description": "Estos Términos constituyen el acuerdo completo entre usted y {commercialName} con respecto al sitio web. El hecho de no ejercer ningún derecho o disposición de estos Términos no constituirá una renuncia a dicho derecho o disposición. Si alguna disposición de estos Términos se considera inválida o inaplicable por un tribunal, las disposiciones restantes de estos Términos permanecerán en vigor. La cláusula de divisibilidad garantiza que la invalidación de una parte no afecte el resto del documento."
       },
       "modifications": {
-        "title": "Modificaciones a los Términos",
+        "title": "Modificaciones a los términos",
         "description": "Nos reservamos el derecho, a nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Al continuar accediendo o utilizando nuestro sitio web después de que esas revisiones entren en vigor, usted acepta estar sujeto a los términos revisados. Si no está de acuerdo con los nuevos términos, deje de usar el sitio web."
       },
       "changes": {
-        "title": "Cambios a estos Términos y Condiciones de Uso",
+        "title": "Cambios a estos términos y condiciones de uso",
         "description": "Esta política puede actualizarse ocasionalmente para reflejar cambios en nuestras prácticas o por razones operativas, legales o regulatorias. Le notificaremos de cualquier cambio significativo a través de un banner en el sitio web publicando la nueva política en esta página."
       },
       "contact": {
         "title": "Contacto",
-        "description": "Si tienes alguna pregunta sobre estos Términos y Condiciones de Uso, por favor contáctame en:"
+        "description": "Si tienes alguna pregunta sobre estos términos y condiciones de uso, por favor contáctame en:"
       }
     }
   },
@@ -166,14 +166,14 @@
   },
   "homePage": {
     "metadata": {
-      "keywords": "Programador Web, Desarrollo Web, Branding, Motion Graphics, Edición de Video, Diseñador Gráfico, Programador, Programador Frontend, Programador Fullstack"
+      "keywords": "Programador Web, Desarrollo Web, Branding, Motion Graphics, Edición de bideo, Diseñador Gráfico, Programador, Programador Frontend, Programador Fullstack"
     },
     "navigation": {
       "resources": "Recursos",
       "languageSwitcher": "Cambiar idioma"
     },
     "hero": {
-      "cta": "Contratar Servicios",
+      "cta": "Contratar",
       "ctaCV": "Descargar CV",
       "ctaCVEnglish": "Descargar CV (Inglés)"
     },
@@ -385,20 +385,47 @@
   },
   "projects": {
     "signature": "Un proyecto de",
-    "ctaCard": "Ver Proyecto Completo",
-    "copyLink": "Copiar Enlace",
+    "ctaCard": "Ver proyecto completo",
+    "copyLink": "Copiar enlace",
     "linkCopied": "Enlace copiado",
     "projectDescription": "Descripción completa del proyecto",
     "type": {
-      "caseStudy": "Caso de Estudio",
+      "caseStudy": "Caso de estudio",
       "normal": "Normal",
       "proposal": "Propuesta"
+    },
+    "icons": {
+      "slug": "andrsrxn-icons",
+      "client": "andrsrxn/icons",
+      "industry": "Open source",
+      "summary": "Librería de +1,000 íconos duotone para React",
+      "description": {
+        "paragraph1": "Librería de NPM tree-shakable, con más de 1,000 iconos duotone de UI y más de 250 banderas. Tipada y accesible por defecto, construida con trazos y formas reales en lugar de paths aplanados, lo que hace que cada icono sea controlable individualmente y esté listo para animarse.",
+        "paragraph2": "Incluye un sistema lógico compatible con RTL, con variantes direccionales e iconos exclusivos para RTL. Se distribuye mediante un monorepo con Turborepo que separa el paquete publicado, los assets originales y el sitio de documentación.",
+        "paragraph3": "Changesets gestiona el versionado semántico y los changelogs, npm Trusted Publishing (OIDC) para publicaciones seguras y verificadas, y GitHub Actions ejecuta linting, type check y testing.",
+        "paragraph4": "La documentación en Next.js ofrece un catálogo con búsqueda por categoría, etiqueta y nombre sincronizada con la URL, modales de detalle por icono, personalización en vivo del SVG con opciones de copiar o descargar, y páginas de ejemplos que muestran los iconos dentro de componentes reales."
+      },
+      "content": {
+        "seeRepository": "Ver repositorio"
+      },
+      "images": {
+        "bannerSmall": "Banner con el catálogo de íconos",
+        "banner": "Banner con el catálogo de íconos",
+        "iconGrid": "Catálogo de íconos con barra lateral y búsqueda",
+        "iconModal": "Intercepting Modal con detalles de los íconos",
+        "iconCustomization": "Adaptación del color y grosor del trazo para descarga",
+        "iconKeyline": "Keyline utilizada para los íconos",
+        "rtl": "Ejemplo de ícono compatible con RTL",
+        "flags": "Iconos de banderas",
+        "iconFlag": "Grupos de íconos (UI y banderas)",
+        "examples": "Páginas de ejemplos con casos de uso reales"
+      }
     },
     "zentro": {
       "slug": "zentro-app-de-notas",
       "client": "Zentro",
       "industry": "Software as a Service (SaaS)",
-      "summary": "Aplicación de Notas (Monorepo Full Stack)",
+      "summary": "Aplicación de notas (Full Stack monorepo)",
       "description": {
         "paragraph1": "Zentro es una aplicación de notas moderna y ultra-rápida diseñada para optimizar la organización personal y la productividad diaria. Cuenta con soporte para temas, atajos y uso por medio del teclado y un sistema de autenticación con Better Auth que integra cuentas de GitHub y Google.",
         "paragraph2": "Una interfaz fluida de Drag and Drop basada en Fractional Indexing para reordenar notas. Frontend con Next.js 16, Tailwind CSS 4 y Shadcn UI; mutaciones optimistas con TanStack Query que garantizan una latencia casi nula.",
@@ -406,14 +433,14 @@
         "paragraph4": "El ecosistema prioriza el máximo rendimiento y seguridad mediante estrategias avanzadas de caché, geolocalización por IP y protección CSRF. Respaldado por Unit Testing con Vitest, garantiza un despliegue robusto y continuo en Vercel."
       },
       "content": {
-        "seeRepository": "Ver Repositorio",
-        "features": "Funciones Destacadas",
-        "keyboard": "Control por Teclado",
-        "create": "Crear Nota Optimista",
-        "update": "Actualizar Contenido de una Nota",
-        "signOut": "Cerrar Sesión",
-        "dragDelete": "Eliminar Nota Arrastrando",
-        "reorder": "Reordenar Notas"
+        "seeRepository": "Ver repositorio",
+        "features": "Funciones destacadas",
+        "keyboard": "Control por teclado",
+        "create": "Crear nota optimista",
+        "update": "Actualizar contenido de una nota",
+        "signOut": "Cerrar sesión",
+        "dragDelete": "Eliminar nota arrastrando",
+        "reorder": "Reordenar notas"
       },
       "images": {
         "bannerSmall": "Banner con la aplicación de una laptop y un celular",
@@ -432,9 +459,9 @@
       "slug": "vivet-visual-identity",
       "client": "VIVET",
       "industry": "Streetwear de lujo",
-      "summary": "Identidad Visual y Clothing",
+      "summary": "Identidad Visual y clothing",
       "description": {
-        "paragraph1": "VIVET by Kai Cenat. Una entidad visual y cultural que representa el Street Wear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan \"WE ARE ETERNAL\"",
+        "paragraph1": "VIVET by Kai Cenat. Una entidad visual y cultural que representa el Streetwear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan \"WE ARE ETERNAL\"",
         "paragraph2": "No persigue la relevancia, define identidad.",
         "paragraph3": "Demostración de la nueva identidad visual y los outfits personalizados principalmente con el símbolo de marca, desgaste controlado, telas pesadas, iluminación baja y composición dominante con poses estáticas y dinámicas, según el propósito de comunicación."
       },
@@ -464,15 +491,15 @@
       "slug": "the-choice-uiux-design-y-sitio-web",
       "client": "The Choice",
       "industry": "Restaurante y panadería",
-      "summary": "Diseño UI/UX y Sitio Web",
+      "summary": "Diseño UI/UX y sitio web",
       "description": {
         "paragraph1": "El diseño de The Choice implementa una jerarquía visual sólida fundamentada en un sistema de tipografía con escala 1.2 que mejora la legibilidad al aplicar la Ley de Continuidad en la lectura. El flujo de navegación está optimizado para reducir la carga cognitiva del usuario al identificar la acción que desee realizar.",
-        "paragraph2": "El flujo de reservaciones se ha creado siguiendo la Ley de Hick, fragmentando un proceso complejo en pasos secuenciales (Selección -> Detalles -> Pago -> Éxito), siendo este el flujo prioritario de los usuarios.",
+        "paragraph2": "El flujo de reservaciones se ha creado siguiendo la Ley de Hick, fragmentando un proceso complejo en pasos secuenciales (Selección, Detalles, Pago y Éxito), siendo este el flujo prioritario de los usuarios.",
         "paragraph3": "Para enfatizar el la usabilidad del diseño UI/UX se tradujo a código creando una demo interactiva, dinámica y completa del sitio, en donde se puede integrar cualquier plataforma de reservaciones por medio de una API con un proceso automatizado y personalizado sin abandonar el sitio.",
         "paragraph4": "La arquitectura del sitio web se realizó con el Generador de Sitios Estáticos de Next.js, utilizando componentes reutilizables, sistema de tokens, accesibilidad (WCAG) niveles AA y AAA, optimización SEO y Copywriting; factores fundamentales para un sitio optimizado y escalable."
       },
       "content": {
-        "userPersona": "User Persona",
+        "userPersona": "User persona",
         "homePage": "Página Principal y de Reservación",
         "reservationFlow": "Flujo de Usuario para Hacer una Reservación",
         "designSystem": "Sistema de Diseño",
@@ -503,57 +530,17 @@
         "colorPaletteTokens": "Tokens de diseño de color de la paleta de color"
       }
     },
-    "designSystem": {
-      "slug": "design-system",
-      "client": "Software as a Service (SaaS)",
-      "industry": "React + TypeScript",
-      "summary": "Sistema de Diseño y Componentes",
-      "description": {
-        "paragraph1": "Un Sistema de Diseño opinionado, moderno y escalable construido con React, TypeScript y Tailwind CSS.",
-        "paragraph2": "Provee más de 50 componentes diferentes para el desarrollo de aplicaciones web, con un sistema de tokens para colores, tipografía, espaciado, sombras y similares, componentes compuestos, estados y microinteracciones, patrones de diseño como Atomic Design, principios de UI/UX y accesibilidad (WCAG) niveles AA y AAA.",
-        "paragraph3": "Se diseñó y desarrolló un set independiente de más de 800 íconos duotone (andrsrxn/icons) acorde al estilo del sistema, diseñados para múltiples propósitos y aplicaciones web.",
-        "paragraph4": "El rendimiento de los componentes está optimizado para ofrecer una experiencia fluida y responsive para navegadores modernos y dispositivos móviles."
-      },
-      "content": {
-        "seeRepositoryIcons": "Ver Repositorio (andrsrxn/icons)",
-        "urlSoon": "Próximamente disponible...",
-        "icons": "+800 Íconos Duotone (andrsrxn/icons)",
-        "palette": "Paleta de Colores",
-        "typography": "Tipografía y Escala Tipográfica",
-        "components": "Showcase de Algunos Componentes",
-        "videoPlayer": "Video Player estilo YouTube",
-        "syncedTabs": "Synced Tabs",
-        "autocomplete": "Autocomplete",
-        "dropdown": "Dropdown",
-        "form": "Form",
-        "calendarRange": "Calendar Range",
-        "accordion": "Accordion",
-        "choiceBox": "ChoiceBox",
-        "treeView": "TreeView",
-        "multiSelect": "MultiSelect",
-        "alertDialog": "AlertDialog",
-        "soon": "Proximamente..."
-      },
-      "images": {
-        "bannerSmall": "Colección de componentes parte del Sistema de Diseño",
-        "banner": "Componentes parte del Sistema de Diseño",
-        "bannerAnimation": "Colección de componentes parte del Sistema de Diseño",
-        "palette": "Paleta de colores parte del Sistema de Diseño",
-        "typography": "Tipografía parte del Sistema de Diseño",
-        "icons": "Íconos parte del Sistema de Diseño"
-      }
-    },
     "atproy": {
       "slug": "grupo-atproy-actualizacion-de-marca",
       "client": "Grupo ATProy",
       "industry": "Ingeniería eléctrica y telecomunicaciones",
-      "summary": "Actualización de Marca y Sitio Web",
+      "summary": "Actualización de Marca y sitio web",
       "description": {
         "paragraph1": "Con una trayectoria de más de dos décadas en el sector de Ingeniería eléctrica y Telecomunicaciones, Grupo ATProy realiza proyectos de gran magnitud a lo largo de Centroamérica.",
-        "paragraph2": "Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del Sitio Web con Astro para facilitar la información de sus servicios y proyectos realizados a lo largo de su historia, siendo un medio de contacto vital para aumentar su alcance y posicionamiento en el mercado."
+        "paragraph2": "Ante la necesidad de que su Identidad Visual reflejara la calidad y estándares de excelencia, se refinó y estableció consistencia en su marca acompañado de la creación del sitio web con Astro para facilitar la información de sus servicios y proyectos realizados a lo largo de su historia, siendo un medio de contacto vital para aumentar su alcance y posicionamiento en el mercado."
       },
       "content": {
-        "seeRepository": "Ver Repositorio"
+        "seeRepository": "Ver repositorio"
       },
       "images": {
         "bannerSmall": "Banner oficial con el logo y símbolo",
@@ -582,13 +569,13 @@
       "slug": "icpsj-branding",
       "client": "La Presencia del Señor Jesús",
       "industry": "Iglesia evangélica",
-      "summary": "Branding, Sitio Web y Redes Sociales",
+      "summary": "Branding, sitio web y redes sociales",
       "description": {
         "paragraph1": "Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.",
-        "paragraph2": "Se desarrolló un Sitio Web (Blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes."
+        "paragraph2": "Se desarrolló un sitio web (blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes."
       },
       "content": {
-        "seeRepository": "Ver Repositorio"
+        "seeRepository": "Ver repositorio"
       },
       "images": {
         "bannerSmall": "Banner oficial de la Iglesia",
@@ -678,7 +665,7 @@
       "slug": "bonzer-branding",
       "client": "Bonzer",
       "industry": "Estética y cuidado personal",
-      "summary": "Branding, Packaging y Redes Sociales",
+      "summary": "Branding, Packaging y redes sociales",
       "description": {
         "paragraph1": "Bonzer es un concepto de marca enfocada en productos naturales para el cuidado y bienestar personal en jóvenes y adultos, generando cambios visibles en poco tiempo.",
         "paragraph2": "El Branding realizado permite enfatizar la personalidad vibrante y cercana de Bonzer, aumentando la fidelidad del mercado y facilidad de reconocimiento con respecto a la competencia, principalmente en los elementos gráficos que acompañan los distintos medios de publicidad."
@@ -703,7 +690,7 @@
     "solarGroup": {
       "slug": "solar-group-guatemala-rebranding",
       "client": "Solar Group Guatemala",
-      "industry": "Ingeniería eléctrica",
+      "industry": "Energía solar",
       "summary": "Actualización de Identidad Visual",
       "description": {
         "paragraph1": "Se creó una nueva oportunidad de crecimiento en el mercado para Solar Group Guatemala con una marca consistente y fácilmente reconocible en todas sus aplicaciones.",

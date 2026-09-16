@@ -284,75 +284,47 @@ export const IMAGES = {
         ALT: 'colorPaletteTokens',
       },
     },
-    DESIGN_SYSTEM: {
+    ICONS: {
       BANNER_COMPARISON: null,
       BANNER_SMALL: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1774230283/components-banner-upscaled_zlhtda.webp',
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789257331/banner-small_jaq8xv.webp',
         ALT: 'bannerSmall',
       },
       BANNER: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1774230283/components-banner-upscaled_zlhtda.webp',
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789257319/banner_z0k7vx.webp',
         ALT: 'banner',
       },
-      BANNER_ANIMATION: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774370229/components-banner_wtmlqh.webm',
-        ALT: 'bannerAnimation',
+      ICON_MODAL: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/icon-modal_x9ft4p.webp',
+        ALT: 'iconModal',
       },
-      PALETTE: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1775606733/banner-colors_tiqg1x.webp',
-        ALT: 'palette',
+      ICON_KEYLINE: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591333/icon-keyline_dcvrnz.webp',
+        ALT: 'iconKeyline',
       },
-      TYPOGRAPHY: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1775606732/banner-typography_epa0bn.webp',
-        ALT: 'typography',
+      EXAMPLES: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/examples_ak4rea.webp',
+        ALT: 'examples',
       },
-      ICONS: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1786932936/banner-small_jaq8xv.webp',
-        ALT: 'icons',
+      ICON_FLAG: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/icon-flag_qxb2zu.webp',
+        ALT: 'iconFlag',
       },
-      TREE_VIEW: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374120/tree-view_a9se5q.webm',
-        ALT: '',
+      ICON_GRID: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/icon-grid_ggfgpn.webp',
+        ALT: 'iconGrid',
       },
-      MULTI_SELECT: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374119/multi-select_pompuc.webm',
-        ALT: '',
+      RTL_ICON: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/rtl-icon_zyjfdk.webp',
+        ALT: 'rtlIcon',
       },
-      ALERT_DIALOG: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374121/alert-dialog_veciue.webm',
-        ALT: '',
+      FLAGS: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/flags_jpmgqi.webp',
+        ALT: 'flags',
       },
-      SYNCED_TABS: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374119/synced-tabs_xptmpq.webm',
-        ALT: '',
-      },
-      ACCORDION: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374121/accordion_xljqhr.webm',
-        ALT: '',
-      },
-      CHOICEBOX: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/choichebox-single_cur7ss.webm',
-        ALT: '',
-      },
-      AUTOCOMPLETE: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374119/input-autocomplete_mr5uqe.webm',
-        ALT: '',
-      },
-      DROPDOWN: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/dropdown-menu_asqj3z.webm',
-        ALT: '',
-      },
-      FORM: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/form_efdq04.webm',
-        ALT: '',
-      },
-      CALENDAR_RANGE: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374118/date-picker-range_xl25ko.webm',
-        ALT: '',
-      },
-      VIDEO_PLAYER: {
-        URL: 'https://res.cloudinary.com/dq5nfyajn/video/upload/v1774374120/video_kdpnj4.webm',
-        ALT: '',
+      ICON_CUSTOMIZATION: {
+        URL: 'https://res.cloudinary.com/dq5nfyajn/image/upload/v1789591334/icon-customization_kxbd8w.webp',
+        ALT: 'iconCustomization',
       },
     },
     ATPROY: {

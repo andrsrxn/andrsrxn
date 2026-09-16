@@ -5,19 +5,19 @@
     "servicesSummary": "Branding, Web Development and Marketing"
   },
   "privacyPage": {
-    "link": "Privacy Policy",
-    "title": "Privacy Policy",
+    "link": "Privacy policy",
+    "title": "Privacy policy",
     "metadata": {
       "description": "Check how we handle your personal data and the cookies we use on the website."
     },
     "content": {
-      "intro": "On the personal website of {legalName}, the privacy of our users is a fundamental priority. This Privacy Policy describes how we collect, use, and protect the personal information you provide and the information that is automatically generated when you use our online services.",
+      "intro": "On the personal website of {legalName}, the privacy of our users is a fundamental priority. This privacy policy describes how we collect, use, and protect the personal information you provide and the information that is automatically generated when you use our online services.",
       "identity": {
-        "title": "Identity of the Data Controller",
+        "title": "Identity of the data controller",
         "description": "The data controller for the personal data collected through this website is: {legalName}, an individual dedicated to providing professional services with tax identification number (NIT): {nit}, located in {country}. For any questions or concerns, you can contact me directly through the link in the Contact section."
       },
       "dataCollection": {
-        "title": "Information We Collect",
+        "title": "Information we collect",
         "intro": "We collect two types of information:",
         "direct": {
           "title": "Information you provide directly",
@@ -39,7 +39,7 @@
         }
       },
       "dataUsage": {
-        "title": "Use of Collected Information",
+        "title": "Use of collected information",
         "intro": "The information collected is used for the following purposes:",
         "item1": "To respond to your requests and provide you with the requested services or quotes.",
         "item2": "To improve the quality, security, and functionality of our website.",
@@ -47,14 +47,14 @@
         "item4": "To protect the site against fraudulent or malicious activities."
       },
       "dataSharing": {
-        "title": "Sharing Your Information",
+        "title": "Sharing your information",
         "description": "Your personal information is private and we do not sell, rent, or share it with third parties for marketing purposes. However, your information may be shared with third-party services we use to operate our website, such as Vercel and Cloudflare, only to the extent necessary for them to provide us with hosting, security, and content delivery network services."
       },
       "cookies": {
-        "title": "Use of Cookies and Similar Technologies",
+        "title": "Use of cookies and similar technologies",
         "description": "Our website uses technologies essential for its operation and security. These technologies, including cookies, are used by our service providers to ensure that the site is protected and functions correctly. We do not use cookies for marketing purposes or to track your browsing activity for advertising purposes.",
         "thirdParty": {
-          "title": "Third-Party Cookies",
+          "title": "Third-party cookies",
           "intro": "We use third-party services to improve the security and performance of our website. When using our site, these providers may set cookies for strictly functional and security purposes. Specifically:",
           "cloudflare": "Uses cookies to identify malicious traffic and protect the site against attacks. These cookies are essential and cannot be disabled without affecting the security of the page.",
           "vercel": "As a hosting platform, Vercel may use cookies to manage technical functions, although for a static portfolio site like yours, its use is limited. We will notify you if we add functionalities that require the use of cookies for tracking or personalization.",
@@ -62,26 +62,26 @@
         }
       },
       "dataSecurity": {
-        "title": "Data Security",
+        "title": "Data security",
         "description": "We implement security measures to protect the information we collect, including data encryption in transit. However, no method of internet transmission or electronic storage is 100% secure. We cannot guarantee the absolute security of your data, but we are committed to taking all reasonable precautions to protect it."
       },
       "yourRights": {
-        "title": "Your Rights",
+        "title": "Your rights",
         "description": "You have the right to access, correct, update, or request the deletion of your personal information at any time. If you wish to exercise these rights, please contact me through the contact information provided at the end of this policy."
       },
       "changes": {
-        "title": "Changes to This Privacy Policy",
+        "title": "Changes to this privacy policy",
         "description": "This policy may be updated occasionally to reflect changes in our practices or for operational, legal, or regulatory reasons. We will notify you of any significant changes through a banner on the website by posting the new policy on this page."
       },
       "contact": {
         "title": "Contact",
-        "description": "If you have any questions about this Privacy Policy, please contact me at:"
+        "description": "If you have any questions about this privacy policy, please contact me at:"
       }
     }
   },
   "termsPage": {
-    "link": "Terms and Conditions",
-    "title": "Terms and Conditions",
+    "link": "Terms and conditions",
+    "title": "Terms and conditions",
     "metadata": {
       "description": "We define the rules of use and utilization of the website to ensure the correct compliance of your rights and obligations in it."
     },
@@ -89,16 +89,16 @@
       "intro1": "Welcome to the {commercialName} website. By accessing and using this website, you agree to and are bound by all of the following Terms and Conditions of Use. If you do not agree with any part of these terms, please do not use this website. These terms and conditions apply to all visitors, users, and others who access or use the service.",
       "intro2": "The person responsible for this website is: {legalName}, an individual dedicated to providing professional services with tax identification number (NIT): {nit}, located in {country}. For any questions or concerns, you can contact me directly through the link in the Contact section.",
       "services": {
-        "title": "Description of Services",
+        "title": "Description of services",
         "description": "This website functions as a digital portfolio, an informational platform to showcase completed projects and the creative capabilities of {commercialName}. Design, creative direction, and strategy services are offered professionally. The hiring of these services is subject to the negotiation and signing of a separate service contract, which will detail the scope, deliverables, timeline, and specific payment terms of the project."
       },
       "intellectualProperty": {
-        "title": "Intellectual Property",
+        "title": "Intellectual property",
         "description1": "All content on this website, including but not limited to texts, graphics, logos, icons, images, audio and video clips, portfolio projects and their compilation, is the exclusive property of {commercialName} or its respective licensors and is protected by the intellectual property laws of Guatemala and international laws. The personal brand of {commercialName} and any other related logo, service name, or slogan are trademarks of {commercialName} and may not be copied, imitated, or used, in whole or in part, without our prior written permission.",
         "description2": "The projects shown in this portfolio are the result of collaborations with clients and are presented for illustrative purposes of the skills and services offered. The intellectual property of the final projects shown belongs to their respective clients, unless otherwise indicated. The reproduction, distribution, modification, public display, or unauthorized use of any content on this website without the express written consent of {commercialName} is strictly prohibited."
       },
       "siteUse": {
-        "title": "Use of the Website",
+        "title": "Use of the website",
         "intro": "The use of the website is intended for informational and contact purposes. You may not use the website for illegal or unauthorized purposes. You agree not to use the site for the following purposes:",
         "item1": "Defaming, abusing, harassing, threatening, or otherwise violating the legal rights of others.",
         "item2": "Publishing, distributing, or disseminating any material or information that is inappropriate, profane, defamatory, obscene, indecent, or illegal.",
@@ -106,15 +106,15 @@
         "item4": "Spamming or sending unsolicited emails."
       },
       "thirdPartyLinks": {
-        "title": "Links to Third-Party Sites",
+        "title": "Links to third-party sites",
         "description": "Our website may contain links to third-party websites that are not owned or controlled by {commercialName}. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. You acknowledge and agree that we will not be responsible, directly or indirectly, for any damage or loss caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites."
       },
       "userContent": {
-        "title": "User-Generated Content Policy",
+        "title": "User-generated content policy",
         "description": "If you provide content, comments, ideas, suggestions, or any other material (collectively, \"Submission\") through the website, you grant {commercialName} a non-exclusive, perpetual, irrevocable, royalty-free, sublicensable, and worldwide license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such Submission in any form, medium, or technology, in whole or in part, without the need for compensation or notification. This applies to messages sent through the contact form."
       },
       "disclaimer": {
-        "title": "Disclaimer of Warranties and Limitation of Liability",
+        "title": "Disclaimer of warranties and limitation of liability",
         "description1": "The website is provided \"as is\" and \"as available\". Andrés Raxón makes no warranty, express or implied, regarding the operation of the site or the information, content, materials, or products included in it. We do not guarantee that the site will be uninterrupted or error-free. Use of the site is at your own risk.",
         "description2": "To the maximum extent permitted by applicable law, {commercialName} will not be liable for any damages of any kind arising from the use of this site, including but not limited to direct, indirect, incidental, punitive, and consequential damages, or loss of data or profits."
       },
@@ -123,7 +123,7 @@
         "description": "You agree to indemnify and hold harmless {commercialName}, its affiliates, and their respective directors, officers, agents, and employees from and against any claims, demands, damages, losses, costs, liabilities, and expenses, including attorney's fees, arising from your use of or inability to use the website."
       },
       "governingLaw": {
-        "title": "Governing Law and Dispute Resolution",
+        "title": "Governing law and dispute resolution",
         "description": "These Terms will be governed by and interpreted in accordance with the laws of the Republic of Guatemala, without giving effect to its conflict of law principles. Any dispute, controversy, or claim arising out of or related to these Terms will be resolved by the competent courts in Guatemala City. Before initiating any legal action, both parties agree to attempt to resolve the dispute through good-faith negotiation."
       },
       "severability": {
@@ -131,23 +131,23 @@
         "description": "If any provision of these Terms is found to be invalid or unenforceable by a court, the remaining provisions of the Terms will remain in full force and effect. The invalid provision will be modified to the minimum extent necessary to make it valid and enforceable in a manner that achieves the original intent of the parties."
       },
       "noWaiver": {
-        "title": "No Waiver",
+        "title": "No waiver",
         "description": "The failure of {commercialName} to exercise or enforce any right or provision of these Terms will not constitute a waiver of such right or provision. Any waiver of a provision of these Terms must be in writing and signed by a person authorized to act on behalf of {commercialName}."
       },
       "termination": {
-        "title": "Termination of Use",
+        "title": "Termination of use",
         "description": "We reserve the right to suspend or terminate your access to our website, without prior notice, for any reason, including without limitation, breach of these Terms and Conditions. All provisions of the Terms that by their nature should survive termination will survive termination, including without limitation, ownership provisions, warranty disclaimers, indemnification, and limitations of liability."
       },
       "generalProvisions": {
-        "title": "General Provisions",
+        "title": "General provisions",
         "description": "These Terms constitute the entire agreement between you and {commercialName} with respect to the website. The failure to exercise any right or provision of these Terms will not constitute a waiver of such right or provision. If any provision of these Terms is found invalid or unenforceable by a court, the remaining provisions of these Terms will remain in force. The severability clause ensures that the invalidation of one part does not affect the rest of the document."
       },
       "modifications": {
-        "title": "Modifications to the Terms",
+        "title": "Modifications to the terms",
         "description": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our website after those revisions take effect, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the website."
       },
       "changes": {
-        "title": "Changes to These Terms and Conditions of Use",
+        "title": "Changes to these terms and conditions of use",
         "description": "This policy may be updated occasionally to reflect changes in our practices or for operational, legal, or regulatory reasons. We will notify you of any significant changes through a banner on the website by posting the new policy on this page."
       },
       "contact": {
@@ -157,28 +157,28 @@
     }
   },
   "notFoundPage": {
-    "link": "Back to Home",
-    "title": "Page Not Found"
+    "link": "Back to home",
+    "title": "Page not found"
   },
   "errorPage": {
-    "action": "Try Again",
-    "title": "Critical Error"
+    "action": "Try again",
+    "title": "Critical error"
   },
   "homePage": {
     "metadata": {
-      "keywords": "Web Developer, Web Development, Branding, Motion Graphics, Video Editing, Graphic Designer, Programmer, Frontend Programmer, Fullstack Programmer"
+      "keywords": "Web Developer, Web Development, Branding, Motion Graphics, Video editing, Graphic designer, Programmer, Frontend programmer, Full Stack programmer"
     },
     "navigation": {
       "resources": "Resources",
       "languageSwitcher": "Switch language"
     },
     "hero": {
-      "cta": "Hire Services",
+      "cta": "Hire",
       "ctaCV": "Download CV",
       "ctaCVEnglish": "Download CV (English)"
     },
     "projects": {
-      "viewMoreInstagram": "View More on Instagram"
+      "viewMoreInstagram": "View more on Instagram"
     },
     "designTools": {
       "title1": "Transforming ideas into unique projects,",
@@ -227,15 +227,15 @@
         },
         "fields": {
           "clientType": {
-            "label": "Client Type",
+            "label": "Client type",
             "freelancer": "Freelancer",
             "freelancerDescription": "Independent <span>worker</span>",
             "company": "Company",
             "companyDescription": "Formal <span>business</span>"
           },
           "nameOrCompany": {
-            "labelCompany": "Company Name",
-            "labelFreelancer": "Full Name",
+            "labelCompany": "Company name",
+            "labelFreelancer": "Full name",
             "placeholderCompany": "Acme S.A.",
             "placeholderFreelancer": "John Doe"
           },
@@ -377,20 +377,47 @@
   },
   "projects": {
     "signature": "A project by",
-    "ctaCard": "View Full Project",
-    "copyLink": "Copy Link",
-    "linkCopied": "Link Copied",
+    "ctaCard": "View full project",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
     "projectDescription": "Full project description",
     "type": {
-      "caseStudy": "Case Study",
+      "caseStudy": "Case study",
       "normal": "Normal",
       "proposal": "Proposal"
+    },
+    "icons": {
+      "slug": "andrsrxn-icons",
+      "client": "andrsrxn/icons",
+      "industry": "Open source",
+      "summary": "Duotone icon library for React",
+      "description": {
+        "paragraph1": "An open-source, tree-shakable React icon library with 1,000+ duotone UI icons and 250+ flags. Fully typed and accessibility-aware, built from real strokes and shapes instead of flattened paths — making every icon individually controllable and animation-ready.",
+        "paragraph2": "Includes a logical RTL-aware system with opt-in directional variants and dedicated RTL-exclusive icons. Distributed through a Turborepo monorepo separating the package, its raw assets, and the documentation site.",
+        "paragraph3": "Releases are fully automated: Changesets handles semantic versioning and changelogs, npm Trusted Publishing (OIDC) enables token-less, provenance-verified publishing, and GitHub Actions runs linting, type checking, and testing on every change.",
+        "paragraph4": "A Next.js docs site offers a searchable catalog with category, tag, and name-based filtering synced to the URL, icon detail modals, live SVG customization with copy/download, and example pages showing icons in real components."
+      },
+      "content": {
+        "seeRepository": "See repository"
+      },
+      "images": {
+        "bannerSmall": "Banner with the icon catalog",
+        "banner": "Banner with the icon catalog",
+        "iconGrid": "Icon catalog with sidebar and search",
+        "iconModal": "Intercepting Modal with icon details",
+        "iconCustomization": "Adapting color and stroke width for download",
+        "iconKeyline": "Keyline used for the icons",
+        "rtl": "RTL icon mirroring demonstration",
+        "flags": "Flag icons in grid",
+        "iconFlag": "Groups of icons (UI and flag)",
+        "examples": "Examples page showing icons in real components"
+      }
     },
     "zentro": {
       "slug": "zentro-notes-app",
       "client": "Zentro",
       "industry": "Software as a Service (SaaS)",
-      "summary": "Notes App (Full Stack Monorepo)",
+      "summary": "Notes app (Full Stack monorepo)",
       "description": {
         "paragraph1": "Zentro is a modern and ultra-fast note-taking app designed to optimize personal organization and daily productivity. It has support for themes, keyboard shortcuts and handling, and a secure authentication system using Better Auth that integrates GitHub and Google accounts.",
         "paragraph2": "A fluid Drag and Drop interface based on fractional indexing to reorder notes. Built with Next.js 16, Tailwind CSS 4, and Shadcn UI, it uses optimistic mutations with TanStack Query that ensure almost zero perceived latency.",
@@ -398,26 +425,69 @@
         "paragraph4": "The ecosystem prioritizes maximum performance and security through advanced caching strategies, IP geolocation, and CSRF protection. Backed by Unit Testing with Vitest, ensures a robust and continuous deployment on Vercel."
       },
       "content": {
-        "seeRepository": "See Repository",
-        "features": "Princial Features",
-        "keyboard": "Keyboard Control",
-        "create": "Optimistic Note Creation",
-        "update": "Update Note Content",
-        "signOut": "Sign Out",
-        "dragDelete": "Drag and Drop to Delete Note",
-        "reorder": "Reorder Notes"
+        "seeRepository": "See repository",
+        "features": "Principal features",
+        "keyboard": "Keyboard control",
+        "create": "Optimistic note creation",
+        "update": "Update note content",
+        "signOut": "Sign out",
+        "dragDelete": "Drag and drop to delete note",
+        "reorder": "Reorder notes"
       },
       "images": {
         "bannerSmall": "Banner with the application on a laptop and phone",
         "banner": "Banner with the application on a laptop and phone",
-        "visualIdentity": "Visual Identity Elements",
-        "logoConstruction": "Brand Symbol Construction",
-        "signIn": "Sign In Page",
-        "accountDropdown": "Account Dropdown Menu",
-        "accountDialog": "Account Details",
-        "shortcutsDialog": "App Shortcuts",
-        "emptyState": "No Notes State",
-        "errorState": "Error State"
+        "visualIdentity": "Visual Identity elements",
+        "logoConstruction": "Brand symbol construction",
+        "signIn": "Sign in page",
+        "accountDropdown": "Account dropdown menu",
+        "accountDialog": "Account details",
+        "shortcutsDialog": "App shortcuts",
+        "emptyState": "No notes state",
+        "errorState": "Error state"
+      }
+    },
+    "thechoice": {
+      "slug": "the-choice-uiux-design-and-website",
+      "client": "The Choice",
+      "industry": "Restaurant and bakery",
+      "summary": "UI/UX Design and website",
+      "description": {
+        "paragraph1": "The Choice's design implements a solid visual hierarchy based on a 1.2 scale typography system that improves legibility by applying the Law of Continuity in reading. The navigation flow is optimized to reduce the user's cognitive load when identifying the action they wish to perform.",
+        "paragraph2": "The reservation flow was created following Hick's Law, fragmenting a complex process into sequential steps (Selection, Details, Payment and Success), being this the priority user flow.",
+        "paragraph3": "To emphasize the usability of the UI/UX design, it was translated into code by creating a complete interactive and dynamic demo of the site, where any reservation platform can be integrated through an API with an automated and personalized process without leaving the site.",
+        "paragraph4": "The website architecture was built with Next.js Static Site Generator, using reusable components, token system, accessibility (WCAG) levels AA and AAA, SEO optimization and Copywriting; fundamental factors for an optimized and scalable site."
+      },
+      "content": {
+        "userPersona": "User Persona",
+        "homePage": "Homepage and reservations page",
+        "reservationFlow": "Reservation user flow",
+        "designSystem": "Design system",
+        "typographies": "Typography",
+        "typographyScale": "Typography scale",
+        "colorPalette": "Color palette",
+        "tokens": "Color tokens",
+        "buttonDemo": "Button component demo"
+      },
+      "images": {
+        "bannerSmall": "Website on desktop and mobile with Wireframes",
+        "banner": "Website on desktop and mobile with Wireframes",
+        "webWithWireframe": "Website on desktop with half Wireframe overlay",
+        "mainPage": "Website home page",
+        "reservationsPage": "Website reservations page",
+        "paymentReservationsPage": "Reservation payment page",
+        "successPaymentReservationsPage": "Reservation success message page",
+        "reservationsFlow": "User flow for making a reservation on the website",
+        "performance": "Website performance results",
+        "typographies": "Typographies",
+        "typographyScales": "Typography scale",
+        "buttonComposition": "Internal composition of the Button component",
+        "userPersona": "User Persona",
+        "buttonVariants": "Button component variants",
+        "mackbookMockup": "MacBook Pro mockup",
+        "mackbookWebMockup": "Website on MacBook Pro",
+        "colorPalette": "Color palette light and shadow scale",
+        "colorPaletteTokens": "Color design tokens of the palette"
       }
     },
     "vivet": {
@@ -426,7 +496,7 @@
       "industry": "Luxury Streetwear",
       "summary": "Visual Identity and Clothing",
       "description": {
-        "paragraph1": "VIVET by Kai Cenat. A visual and cultural entity that represents luxury Street Wear, permanence and resistance through Dark Avant-Garde, the modification of the Baskerville Old Face typeface and the message reinforced with the slogan \"WE ARE ETERNAL\"",
+        "paragraph1": "VIVET by Kai Cenat. A visual and cultural entity that represents luxury streetwear, permanence and resistance through Dark Avant-Garde, the modification of the Baskerville Old Face typeface and the message reinforced with the slogan \"WE ARE ETERNAL\"",
         "paragraph2": "It does not pursue relevance, it defines identity.",
         "paragraph3": "Demonstration of the new visual identity and personalized outfits mainly with the brand symbol, controlled wear, heavy fabrics, low lighting and dominant composition with static and dynamic poses, according to the communication purpose."
       },
@@ -451,100 +521,18 @@
         "pattern": "Pattern made up of brand symbol elements"
       }
     },
-    "thechoice": {
-      "slug": "the-choice-uiux-design-and-website",
-      "client": "The Choice",
-      "industry": "Restaurant and bakery",
-      "summary": "UI/UX Design and Website",
-      "description": {
-        "paragraph1": "The Choice's design implements a solid visual hierarchy based on a 1.2 scale typography system that improves legibility by applying the Law of Continuity in reading. The navigation flow is optimized to reduce the user's cognitive load when identifying the action they wish to perform.",
-        "paragraph2": "The reservation flow was created following Hick's Law, fragmenting a complex process into sequential steps (Selection -> Details -> Payment -> Success), being this the priority user flow.",
-        "paragraph3": "To emphasize the usability of the UI/UX design, it was translated into code by creating a complete interactive and dynamic demo of the site, where any reservation platform can be integrated through an API with an automated and personalized process without leaving the site.",
-        "paragraph4": "The website architecture was built with Next.js Static Site Generator, using reusable components, token system, accessibility (WCAG) levels AA and AAA, SEO optimization and Copywriting; fundamental factors for an optimized and scalable site."
-      },
-      "content": {
-        "userPersona": "User Persona",
-        "homePage": "Homepage and Reservations Page",
-        "reservationFlow": "Reservation User Flow",
-        "designSystem": "Design System",
-        "typographies": "Typography",
-        "typographyScale": "Typography Scale",
-        "colorPalette": "Color Palette",
-        "tokens": "Color Tokens",
-        "buttonDemo": "Button Component Demo"
-      },
-      "images": {
-        "bannerSmall": "Website on desktop and mobile with Wireframes",
-        "banner": "Website on desktop and mobile with Wireframes",
-        "webWithWireframe": "Website on desktop with half Wireframe overlay",
-        "mainPage": "Website home page",
-        "reservationsPage": "Website reservations page",
-        "paymentReservationsPage": "Reservation payment page",
-        "successPaymentReservationsPage": "Reservation success message page",
-        "reservationsFlow": "User flow for making a reservation on the website",
-        "performance": "Website performance results",
-        "typographies": "Typographies",
-        "typographyScales": "Typography scale",
-        "buttonComposition": "Internal composition of the Button component",
-        "userPersona": "User Persona",
-        "buttonVariants": "Button component variants",
-        "mackbookMockup": "MacBook Pro mockup",
-        "mackbookWebMockup": "Website on MacBook Pro",
-        "colorPalette": "Color palette light and shadow scale",
-        "colorPaletteTokens": "Color design tokens of the palette"
-      }
-    },
-    "designSystem": {
-      "slug": "design-system",
-      "client": "Software as a Service (SaaS)",
-      "industry": "React + TypeScript",
-      "summary": "Design System and Components",
-      "description": {
-        "paragraph1": "An opinionated, modern and scalable Design System built with React, TypeScript and Tailwind CSS.",
-        "paragraph2": "It provides more than 50 different components for the development of web applications, with a token system for colors, typography, spacing, shadows and similar, compound components, states and microinteractions, design patterns such as Atomic Design, UI/UX principles and accessibility (WCAG) levels AA and AAA.",
-        "paragraph3": "An independent set of more than 800 duotone icons (andrsrxn/icons) was designed and developed according to the system's style, designed for multiple purposes and web applications.",
-        "paragraph4": "The performance of the components is optimized to offer a fluid and responsive experience for modern browsers and mobile devices."
-      },
-      "content": {
-        "seeRepositoryIcons": "See Repository (andrsrxn/icons)",
-        "urlSoon": "Coming soon...",
-        "icons": "+800 Duotone Icons (andrsrxn/icons)",
-        "palette": "Color Palette",
-        "typography": "Typography and Typographic Scale",
-        "components": "Showcase of Some Components",
-        "videoPlayer": "YouTube Style Video Player",
-        "syncedTabs": "Synced Tabs",
-        "autocomplete": "Autocomplete",
-        "dropdown": "Dropdown",
-        "form": "Form",
-        "calendarRange": "Calendar Range",
-        "accordion": "Accordion",
-        "choiceBox": "ChoiceBox",
-        "treeView": "TreeView",
-        "multiSelect": "MultiSelect",
-        "alertDialog": "AlertDialog",
-        "soon": "Available Soon..."
-      },
-      "images": {
-        "bannerSmall": "Collection of components from the Design System",
-        "banner": "Components from the Design System",
-        "bannerAnimation": "Collection of components from the Design System",
-        "palette": "Color palette from the Design System",
-        "typography": "Typography from the Design System",
-        "icons": "Icons from the Design System"
-      }
-    },
+
     "atproy": {
       "slug": "grupo-atproy-brand-refresh-and-website",
       "client": "Grupo ATProy",
       "industry": "Electrical engineering and telecommunications",
-      "summary": "Brand Refresh and Website",
+      "summary": "Brand Refresh and website",
       "description": {
         "paragraph1": "With more than two decades of experience in the electrical engineering and telecommunications sector, Grupo ATProy undertakes large-scale projects throughout Central America.",
         "paragraph2": "Faced with the need for their Visual Identity to reflect their quality and standards of excellence, their brand was refined and consistency was established, accompanied by the creation of the Website with Astro to facilitate information about their services and projects carried out throughout their history, being a vital contact medium to increase their reach and market positioning."
       },
       "content": {
-        "seeRepository": "See Repository"
+        "seeRepository": "See repository"
       },
       "images": {
         "bannerSmall": "Official banner with logo and symbol",
@@ -573,13 +561,13 @@
       "slug": "icpsj-branding",
       "client": "La Presencia del Señor Jesús",
       "industry": "Evangelical Church",
-      "summary": "Branding, Website and Social Media",
+      "summary": "Branding, website and social media",
       "description": {
         "paragraph1": "For the establishment of his church and community, the brand was developed from scratch, creating a coherent visual system that reflected its essence in its main communication channels.",
         "paragraph2": "A website (blog) was developed in English and Spanish with Astro, designed to centralize key information about the church, serve as a scheduling tool, offer details about services, and provide access to relevant Bible studies."
       },
       "content": {
-        "seeRepository": "See Repository"
+        "seeRepository": "See repository"
       },
       "images": {
         "bannerSmall": "Official Church banner",
@@ -669,7 +657,7 @@
       "slug": "bonzer-branding",
       "client": "Bonzer",
       "industry": "Aesthetics and personal care",
-      "summary": "Branding, Packaging and Social Media",
+      "summary": "Branding, Packaging and social media",
       "description": {
         "paragraph1": "Bonzer is a brand concept focused on natural products for the care and well-being of young and adult people, generating visible changes in a short time.",
         "paragraph2": "The Branding allows emphasizing the vibrant and close personality of Bonzer, increasing market loyalty and ease of recognition with respect to the competition, mainly in the graphic elements that accompany the different media of advertising."
@@ -694,8 +682,8 @@
     "solarGroup": {
       "slug": "solar-group-guatemala-rebranding",
       "client": "Solar Group Guatemala",
-      "industry": "Electrical engineering",
-      "summary": "Visual Identity Update",
+      "industry": "Solar energy",
+      "summary": "Visual Identity update",
       "description": {
         "paragraph1": "A new growth opportunity was created in the market for Solar Group Guatemala with a consistent and easily recognizable brand in all its applications.",
         "paragraph2": "The brand is distinguished by innovation, message clarity, and constant recognition, providing it with a better market position.",

@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
-import { DesignSystemContent } from '@/components/projects/design-system-content'
+import { IconsContent } from '@/components/projects/icons-content'
 import { TheChoiceContent } from '@/components/projects/the-choice-content'
 import { VIVETContent } from '@/components/projects/vivet-content'
 import { ZentroContent } from '@/components/projects/zentro-content'
@@ -95,6 +95,18 @@ export const PrincipalProjects = async () => {
     <div className='desktop:w-11/12 mx-auto max-w-5xl'>
       <div className='tablet:gap-20 desktop:gap-32 flex flex-col gap-16'>
         <PrincipalProjectCard
+          type={PROJECTS.ICONS.TYPE}
+          slug={t('icons.slug')}
+          client={t('icons.client')}
+          industry={t('icons.industry')}
+          summary={t('icons.summary')}
+          bannerUrl={PROJECTS.ICONS.IMAGES.BANNER.URL}
+          bannerSmallUrl={PROJECTS.ICONS.IMAGES.BANNER_SMALL.URL}
+          bannerAlt={t('icons.images.bannerSmall')}
+
+          content={<IconsContent />}
+        />
+        <PrincipalProjectCard
           type={PROJECTS.ZENTRO.TYPE}
           slug={t('zentro.slug')}
           client={t('zentro.client')}
@@ -116,30 +128,6 @@ export const PrincipalProjects = async () => {
           bannerSmallUrl={PROJECTS.THE_CHOICE_UIUX_DESIGN_WEBSITE.IMAGES.BANNER_SMALL.URL}
           bannerAlt={t('thechoice.images.bannerSmall')}
           content={<TheChoiceContent />}
-        />
-
-        <PrincipalProjectCard
-          type={PROJECTS.DESIGN_SYSTEM.TYPE}
-          slug={t('designSystem.slug')}
-          client={t('designSystem.client')}
-          industry={t('designSystem.industry')}
-          summary={t('designSystem.summary')}
-          bannerUrl={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER.URL}
-          bannerSmallUrl={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER_SMALL.URL}
-          bannerAlt={t('designSystem.images.bannerSmall')}
-          videoComponent={
-            <video
-              autoPlay
-              muted
-              controls={false}
-              loop
-              playsInline
-              poster={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER.URL}
-              className='bg-accent animated-polygon desktop:w-11/12 mx-auto aspect-video border object-cover contrast-85 will-change-[clip-path]'>
-              <source src={PROJECTS.DESIGN_SYSTEM.IMAGES.BANNER_ANIMATION.URL} type='video/mp4' />
-            </video>
-          }
-          content={<DesignSystemContent />}
         />
 
         <PrincipalProjectCard

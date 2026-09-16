@@ -1,4 +1,4 @@
-import { Instrument_Sans, Instrument_Serif } from 'next/font/google'
+import { Geist, Instrument_Serif } from 'next/font/google'
 
 export const fontHeading = Instrument_Serif({
   variable: '--font-heading',
@@ -7,7 +7,7 @@ export const fontHeading = Instrument_Serif({
   weight: '400',
 })
 
-export const fontBody = Instrument_Sans({
+export const fontBody = Geist({
   variable: '--font-body',
   subsets: ['latin'],
   display: 'swap',

@@ -80,7 +80,7 @@ export default async function Home({ params }: PageProps) {
       {/* Main and services */}
       <section className='relative'>
         <div className='h-20' />
-        <div className='display-2xl:container display-2xl:left-[50%] display-2xl:translate-x-[-50%] animate-fade-down display-2xl:w-11/12 tablet:top-20 absolute top-18 left-0 isolate z-0 mx-auto w-full duration-300 ease-in'>
+        <div className='display-2xl:container display-2xl:left-[50%] display-2xl:translate-x-[-50%] animate-fade-down display-2xl:w-11/12 tablet:top-20 absolute top-20 left-0 isolate z-0 mx-auto w-full duration-300 ease-in'>
           <div className='ease-gradient-to-rt display-2xl:block absolute top-0 left-0 hidden h-full w-60' />
           <div className='ease-gradient-to-lt display-2xl:block absolute top-0 right-0 hidden h-full w-60' />
           <picture aria-hidden className='pointer-events-none'>
@@ -97,7 +97,7 @@ export default async function Home({ params }: PageProps) {
             />
           </picture>
         </div>
-        <div className='tablet:gap-6 animate-fade tablet:mt-36 animation-duration-[800ms] relative container mx-auto mt-28 flex w-11/12 flex-col items-center gap-4 opacity-0 [animation-delay:500ms]'>
+        <div className='tablet:gap-6 animate-fade tablet:mt-36 animation-duration-[800ms] relative container mx-auto mt-30 flex w-11/12 flex-col items-center gap-4 opacity-0 [animation-delay:500ms]'>
           <h1 className='text-center'>
             <span className='font-body tablet:text-lg display:text-2xl laptop:text-xl mb-2 block'>
               {COMPANY.NAME}

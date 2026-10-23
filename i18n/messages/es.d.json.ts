@@ -181,7 +181,7 @@ declare const messages: {
       "ctaCVEnglish": "Descargar CV (Inglés)"
     },
     "projects": {
-      "viewMoreInstagram": "Ver más en Instagram"
+      "viewMoreX": "Ver más en X (Twitter)"
     },
     "designTools": {
       "title1": "Transformando ideas en proyectos únicos,",
@@ -401,11 +401,11 @@ declare const messages: {
       "slug": "andrsrxn-icons",
       "client": "andrsrxn/icons",
       "industry": "Open source",
-      "summary": "Librería de +1,000 íconos duotone para React",
+      "summary": "Librería de íconos duotone para React",
       "description": {
-        "paragraph1": "Librería de NPM tree-shakable, con más de 1,000 iconos duotone de UI y más de 250 banderas. Tipada y accesible por defecto, construida con trazos y formas reales en lugar de paths aplanados, lo que hace que cada icono sea controlable individualmente y esté listo para animarse.",
-        "paragraph2": "Incluye un sistema lógico compatible con RTL, con variantes direccionales e iconos exclusivos para RTL. Se distribuye mediante un monorepo con Turborepo que separa el paquete publicado, los assets originales y el sitio de documentación.",
-        "paragraph3": "Changesets gestiona el versionado semántico y los changelogs, npm Trusted Publishing (OIDC) para publicaciones seguras y verificadas, y GitHub Actions ejecuta linting, type check y testing.",
+        "paragraph1": "Una librería de React con más de 2,500 iconos duotone y más de 250 banderas. SVG optimizados y conscientes de RTL, diseñados en Figma. Open-source, licencia MIT, creada para aplicaciones React modernas, con un diseño visualmente consistente y accesible.",
+        "paragraph2": "Sistema lógico RTL, con variantes direccionales e iconos exclusivos para RTL. Distribuido a través de un monorepo Turborepo que separa el paquete, sus assets originales y el sitio de documentación.",
+        "paragraph3": "Changesets maneja el versionado semántico y los changelogs, npm Trusted Publishing (OIDC) permite publicaciones seguras y verificadas, y GitHub Actions ejecuta linting, type checking y testing en cada cambio.",
         "paragraph4": "La documentación en Next.js ofrece un catálogo con búsqueda por categoría, etiqueta y nombre sincronizada con la URL, modales de detalle por icono, personalización en vivo del SVG con opciones de copiar o descargar, y páginas de ejemplos que muestran los iconos dentro de componentes reales."
       },
       "content": {

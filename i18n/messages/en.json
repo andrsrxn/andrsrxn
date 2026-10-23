@@ -178,7 +178,7 @@
       "ctaCVEnglish": "Download CV (English)"
     },
     "projects": {
-      "viewMoreInstagram": "View more on Instagram"
+      "viewMoreX": "View more on X (Twitter)"
     },
     "designTools": {
       "title1": "Transforming ideas into unique projects,",
@@ -392,9 +392,9 @@
       "industry": "Open source",
       "summary": "Duotone icon library for React",
       "description": {
-        "paragraph1": "An open-source, tree-shakable React icon library with 1,000+ duotone UI icons and 250+ flags. Fully typed and accessibility-aware, built from real strokes and shapes instead of flattened paths — making every icon individually controllable and animation-ready.",
-        "paragraph2": "Includes a logical RTL-aware system with opt-in directional variants and dedicated RTL-exclusive icons. Distributed through a Turborepo monorepo separating the package, its raw assets, and the documentation site.",
-        "paragraph3": "Releases are fully automated: Changesets handles semantic versioning and changelogs, npm Trusted Publishing (OIDC) enables token-less, provenance-verified publishing, and GitHub Actions runs linting, type checking, and testing on every change.",
+        "paragraph1": "A React icon library with 2,500+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs. Open-source, MIT licensed, designed on Figma and built for modern React applications. Lightweight, visually consistent, and accessible.",
+        "paragraph2": "RTL-aware system, including directional variants and RTL-exclusive icons. Distributed through a Turborepo monorepo separating the package, its raw assets, and the documentation site.",
+        "paragraph3": "Fully automated releases; Changesets handles semantic versioning and changelogs, npm Trusted Publishing (OIDC) enables token-less, provenance-verified publishing, and GitHub Actions runs linting, type checking, and testing on every change.",
         "paragraph4": "A Next.js docs site offers a searchable catalog with category, tag, and name-based filtering synced to the URL, icon detail modals, live SVG customization with copy/download, and example pages showing icons in real components."
       },
       "content": {

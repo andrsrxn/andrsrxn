@@ -40,6 +40,11 @@ export const COMPANY = {
       USER: 'andrsrxn',
       URL: 'https://github.com/andrsrxn',
     },
+    X: {
+      LABEL: 'X (Twitter)',
+      USER: 'andrsrxn',
+      URL: 'https://x.com/andrsrxn',
+    },
   },
   ADDRESS: {
     LOCALITY: 'Mixco',

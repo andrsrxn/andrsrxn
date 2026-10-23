@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import type { ComponentProps, ReactNode } from 'react'
 import { InView } from '@/components/animated/in-view'
 import { ScrollPolygonContainer } from '@/components/animated/polygon-card'
-import { IconInstagram } from '@/components/icons/brands/instagram'
+import { IconXTwitter } from '@/components/icons/brands/x'
 import { AtproyContent } from '@/components/projects/atproy-content'
 import { BonzerContent } from '@/components/projects/bonzer-content'
 import { IcpsjContent } from '@/components/projects/icpsj-content'
@@ -171,12 +171,12 @@ export const MoreProjects = async ({ className, ...props }: MoreProyectsProps) =
       <div className='desktop:mt-28 desktop:mb-12 mt-20 mb-6 flex items-center justify-center'>
         <Link
           prefetch={false}
-          className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-1 rounded-full border-2 bg-neutral-900 px-6 py-3 text-base leading-none font-bold transition duration-75 hover:bg-neutral-800'
+          className='text-foreground laptop:text-lg desktop:px-8 inline-flex items-center gap-3 rounded-full border-2 bg-neutral-900 px-6 py-3 text-base leading-none font-bold transition duration-75 hover:bg-neutral-800'
           target='_blank'
           rel='noopener noreferrer'
           href={COMPANY.SOCIAL_MEDIA.INSTAGRAM.URL}>
-          <IconInstagram className='mr-1 size-[0.8em] scale-125' />
-          {tHomePage('viewMoreInstagram')} <IconExternalLink className='tablet:size-5 size-4' />
+          <IconXTwitter className='size-[0.8em]' />
+          {tHomePage('viewMoreX')} <IconExternalLink className='tablet:size-5 size-4' />
         </Link>
       </div>
     </div>

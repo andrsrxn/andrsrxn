@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "andrsrxn-icons": {
+      "source": "andrsrxn/icons",
+      "sourceType": "github",
+      "skillPath": "skills/andrsrxn-icons/SKILL.md",
+      "computedHash": "67644dfc45b46d57f61cd2df79dab6401a0e14f04cd5d37c78b06f000d1d3042"
+    }
+  }
+}

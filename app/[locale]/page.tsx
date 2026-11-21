@@ -10,7 +10,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { InView } from '@/components/animated/in-view'
 import { OrbitingLogos } from '@/components/animated/orbiting-logos'
 import { IconXTwitter } from '@/components/icons/brands/x'
-import { MoreProjects } from '@/components/projects/more-projects'
 import { PrincipalProjects } from '@/components/projects/principal-projects'
 import { ContactForm } from '@/components/shared/contact-form'
 import { ObfuscatedEmailLink } from '@/components/shared/obfuscated-email'
@@ -230,15 +229,15 @@ export default async function Home({ params }: PageProps) {
       <Separator className='container mx-auto my-24 w-11/12! max-w-7xl' />
 
       {/* Projects */}
-      <section className='tablet:mt-20 laptop:w-11/12 mx-auto mt-12 max-w-6xl'>
-        <div className='tablet:gap-20 desktop:gap-40 flex flex-col gap-16'>
+      <section className='tablet:mt-20 mx-auto mt-12'>
+        <div className='tablet:gap-20 laptop:gap-40 flex flex-col gap-16'>
           <PrincipalProjects />
         </div>
       </section>
-
+      {/* 
       <section className='laptop:mt-28 mt-24'>
         <MoreProjects />
-      </section>
+      </section> */}
 
       {/* Tools */}
       <section className='desktop:my-36 relative isolate my-30 overflow-hidden'>
@@ -247,7 +246,7 @@ export default async function Home({ params }: PageProps) {
             <span className='text-muted-foreground tablet:text-xl desktop:text-2xl mb-2 block text-lg'>
               {tHomePage('designTools.title1')}
             </span>
-            <span className='font-heading tablet:text-5xl desktop:text-6xl desktop:scale-105 block text-4xl'>
+            <span className='font-heading tablet:text-5xl laptop:text-6xl desktop:text-7xl desktop:scale-105 mx-auto block max-w-md text-4xl'>
               {tHomePage('designTools.title2')}
             </span>
           </h2>
@@ -267,13 +266,13 @@ export default async function Home({ params }: PageProps) {
       {/* Contact */}
       <section className='mb-16 outline-none' id='contacto'>
         <div className='desktop:max-w-3xl container mx-auto mb-6 h-max w-4/5 max-w-xl'>
-          <h2 className='font-heading laptop:text-center tablet:text-5xl desktop:text-7xl text-center text-4xl text-balance outline-none'>
+          <h2 className='font-heading laptop:text-center tablet:text-5xl laptop:text-6xl desktop:text-7xl text-center text-4xl text-balance outline-none'>
             {tHomePage('contact.title')}
           </h2>
         </div>
 
-        <div className='desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
-          <p className='text-muted-foreground desktop:text-lg text-center text-pretty'>
+        <div className='laptop:max-w-xl desktop:max-w-2xl desktop:w-full container mx-auto mb-12 flex w-11/12 max-w-sm items-center justify-center'>
+          <p className='text-muted-foreground laptop:text-lg text-center text-pretty'>
             {tHomePage.rich('contact.description', {
               email: () => <ObfuscatedEmailLink />,
               instagram: () => (

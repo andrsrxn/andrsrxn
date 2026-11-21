@@ -48,13 +48,13 @@ export function ResponsiveSheetContent({
       aria-describedby={undefined}
       className='max-w-5xl'>
       <div
-        className='desktop:grid desktop:gap-12 desktop:grid-cols-2 desktop:mt-6 relative overflow-y-auto'
+        className='laptop:grid laptop:gap-12 laptop:grid-cols-2 laptop:mt-6 relative overflow-y-auto'
         data-lenis-prevent>
-        <DrawerHeader className='desktop:sticky desktop:top-0 desktop:pt-0 desktop:h-max'>
+        <DrawerHeader className='laptop:sticky laptop:top-0 laptop:pt-0 laptop:h-max'>
           <span className='text-muted-foreground tablet:text-base flex text-left text-sm leading-tight'>
             {client}
           </span>
-          <DrawerTitle className='tablet:text-5xl desktop:w-11/12 text-4xl'>{title}</DrawerTitle>
+          <DrawerTitle className='tablet:text-5xl laptop:w-11/12 text-4xl'>{title}</DrawerTitle>
           <DrawerDescription className='sr-only'>
             {tProjects('projectDescription')}
           </DrawerDescription>
@@ -78,20 +78,20 @@ export function ResponsiveSheetContent({
           <Image
             src={bannerUrl}
             alt={bannerAlt}
-            className='bg-accent desktop:mx-0 desktop:w-11/12 tablet:mt-4 mt-2 aspect-video max-w-2xl object-cover'
+            className='bg-accent laptop:mx-0 laptop:w-11/12 tablet:mt-4 mt-2 aspect-video max-w-2xl object-cover'
           />
           <ShareButton
             copiedText={tProjects('linkCopied')}
-            className='desktop:w-11/12 laptop:text-base laptop:h-10 mt-4 max-w-2xl'
+            className='laptop:w-11/12 laptop:text-base laptop:h-10 mt-4 max-w-2xl'
             url={`${SITE.BASE_URL}#${slug}`}>
             {tProjects('copyLink')}
           </ShareButton>
         </DrawerHeader>
-        <Separator className='desktop:hidden mx-auto my-4 w-11/12!' />
+        <Separator className='laptop:hidden mx-auto my-4 w-11/12!' />
 
         <div
           className={cn(
-            'desktop:mt-0 desktop:pt-0 relative pt-6 pb-20',
+            'laptop:mt-0 laptop:pt-0 relative pt-6 pb-20',
             overflow ? 'overflow-x-visible' : 'overflow-x-clip'
           )}
           data-responsive-sheet-overflow>
@@ -110,7 +110,7 @@ export function ResponsiveSheetContent({
 
           <div
             aria-hidden
-            className='ease-gradient-to-t desktop:block pointer-events-none fixed right-0 bottom-0 hidden h-24 w-1/2'
+            className='ease-gradient-to-t laptop:block pointer-events-none fixed right-0 bottom-0 hidden h-24 w-1/2'
           />
         </div>
       </div>

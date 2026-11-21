@@ -398,7 +398,7 @@
       "slug": "andrsrxn-icons",
       "client": "andrsrxn/icons",
       "industry": "Open source",
-      "summary": "Librería de íconos duotone para React",
+      "summary": "Librería de íconos duotone y banderas minimalistas",
       "description": {
         "paragraph1": "Una librería de React con más de 2,500 iconos duotone y más de 250 banderas. SVG optimizados y conscientes de RTL, diseñados en Figma. Open-source, licencia MIT, creada para aplicaciones React modernas, con un diseño visualmente consistente y accesible.",
         "paragraph2": "Sistema lógico RTL, con variantes direccionales e iconos exclusivos para RTL. Distribuido a través de un monorepo Turborepo que separa el paquete, sus assets originales y el sitio de documentación.",
@@ -412,7 +412,7 @@
         "bannerSmall": "Banner con el catálogo de íconos",
         "banner": "Banner con el catálogo de íconos",
         "iconGrid": "Catálogo de íconos con barra lateral y búsqueda",
-        "iconModal": "Intercepting Modal con detalles de los íconos",
+        "iconModal": "Modal con detalles de los íconos",
         "iconCustomization": "Adaptación del color y grosor del trazo para descarga",
         "iconKeyline": "Keyline utilizada para los íconos",
         "rtl": "Ejemplo de ícono compatible con RTL",
@@ -459,7 +459,7 @@
       "slug": "vivet-visual-identity",
       "client": "VIVET",
       "industry": "Streetwear de lujo",
-      "summary": "Identidad Visual y clothing",
+      "summary": "Identidad Visual, Clothing y Marketing",
       "description": {
         "paragraph1": "VIVET by Kai Cenat. Una entidad visual y cultural que representa el Streetwear de lujo, permanencia y resistencia por medio del Dark Avant-Garde, la modificación de la tipografía Baskerville Old Face y el mensaje reforzado con el eslogan \"WE ARE ETERNAL\"",
         "paragraph2": "No persigue la relevancia, define identidad.",
@@ -491,7 +491,7 @@
       "slug": "the-choice-uiux-design-y-sitio-web",
       "client": "The Choice",
       "industry": "Restaurante y panadería",
-      "summary": "Diseño UI/UX y sitio web",
+      "summary": "Diseño UI/UX, Identidad visual y sitio web",
       "description": {
         "paragraph1": "El diseño de The Choice implementa una jerarquía visual sólida fundamentada en un sistema de tipografía con escala 1.2 que mejora la legibilidad al aplicar la Ley de Continuidad en la lectura. El flujo de navegación está optimizado para reducir la carga cognitiva del usuario al identificar la acción que desee realizar.",
         "paragraph2": "El flujo de reservaciones se ha creado siguiendo la Ley de Hick, fragmentando un proceso complejo en pasos secuenciales (Selección, Detalles, Pago y Éxito), siendo este el flujo prioritario de los usuarios.",
@@ -569,9 +569,9 @@
       "slug": "icpsj-branding",
       "client": "La Presencia del Señor Jesús",
       "industry": "Iglesia evangélica",
-      "summary": "Branding, sitio web y redes sociales",
+      "summary": "Branding, sitio web y Marketing",
       "description": {
-        "paragraph1": "Para el establecimiento de su iglesia y comunidad, se desarrolló desde cero la marca creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.",
+        "paragraph1": "Se desarrolló desde cero la marca para el establecimiento de su iglesia y comunidad, creando un sistema visual coherente que reflejara su esencia en sus principales canales de comunicación.",
         "paragraph2": "Se desarrolló un sitio web (blog) en inglés y español con Astro, diseñado para centralizar la información clave de la iglesia, ser una herramienta de calendarización, ofrecer detalles sobre los servicios y acceso a estudios bíblicos relevantes."
       },
       "content": {
@@ -637,7 +637,7 @@
       "slug": "theprincipal-branding",
       "client": "ThePrincipal",
       "industry": "Blog online",
-      "summary": "Branding y Diseño UI/UX",
+      "summary": "Branding, Diseño UI/UX y Marketing",
       "description": {
         "paragraph1": "ThePrincipal es una plataforma en línea de auto aprendizaje inspirada en la lectura de los periódicos combinada con la interacción dinámica de los usuarios en la web.",
         "paragraph2": "El valor del conocimiento online debe estar acompañado de una marca que respalde la experiencia de aprender y descubrir.",
@@ -665,7 +665,7 @@
       "slug": "bonzer-branding",
       "client": "Bonzer",
       "industry": "Estética y cuidado personal",
-      "summary": "Branding, Packaging y redes sociales",
+      "summary": "Branding, Packaging y Marketing",
       "description": {
         "paragraph1": "Bonzer es un concepto de marca enfocada en productos naturales para el cuidado y bienestar personal en jóvenes y adultos, generando cambios visibles en poco tiempo.",
         "paragraph2": "El Branding realizado permite enfatizar la personalidad vibrante y cercana de Bonzer, aumentando la fidelidad del mercado y facilidad de reconocimiento con respecto a la competencia, principalmente en los elementos gráficos que acompañan los distintos medios de publicidad."

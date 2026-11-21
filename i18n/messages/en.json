@@ -390,9 +390,9 @@
       "slug": "andrsrxn-icons",
       "client": "andrsrxn/icons",
       "industry": "Open source",
-      "summary": "Duotone icon library for React",
+      "summary": "Duotone icon library and minimal flags",
       "description": {
-        "paragraph1": "A React icon library with 2,500+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs. Open-source, MIT licensed, designed on Figma and built for modern React applications. Lightweight, visually consistent, and accessible.",
+        "paragraph1": "A React duotone icon library with 3,000+ UI icons and 250+ minimal flags. Smooth, RTL-aware, and optimized. Open-source, MIT licensed, designed on Figma and built for modern React applications. Lightweight, visually consistent, and accessible.",
         "paragraph2": "RTL-aware system, including directional variants and RTL-exclusive icons. Distributed through a Turborepo monorepo separating the package, its raw assets, and the documentation site.",
         "paragraph3": "Fully automated releases; Changesets handles semantic versioning and changelogs, npm Trusted Publishing (OIDC) enables token-less, provenance-verified publishing, and GitHub Actions runs linting, type checking, and testing on every change.",
         "paragraph4": "A Next.js docs site offers a searchable catalog with category, tag, and name-based filtering synced to the URL, icon detail modals, live SVG customization with copy/download, and example pages showing icons in real components."
@@ -404,7 +404,7 @@
         "bannerSmall": "Banner with the icon catalog",
         "banner": "Banner with the icon catalog",
         "iconGrid": "Icon catalog with sidebar and search",
-        "iconModal": "Intercepting Modal with icon details",
+        "iconModal": "Modal with icon details",
         "iconCustomization": "Adapting color and stroke width for download",
         "iconKeyline": "Keyline used for the icons",
         "rtl": "RTL icon mirroring demonstration",
@@ -451,7 +451,7 @@
       "slug": "the-choice-uiux-design-and-website",
       "client": "The Choice",
       "industry": "Restaurant and bakery",
-      "summary": "UI/UX Design and website",
+      "summary": "UI/UX Design, Visual Identity and website",
       "description": {
         "paragraph1": "The Choice's design implements a solid visual hierarchy based on a 1.2 scale typography system that improves legibility by applying the Law of Continuity in reading. The navigation flow is optimized to reduce the user's cognitive load when identifying the action they wish to perform.",
         "paragraph2": "The reservation flow was created following Hick's Law, fragmenting a complex process into sequential steps (Selection, Details, Payment and Success), being this the priority user flow.",
@@ -494,7 +494,7 @@
       "slug": "vivet-visual-identity",
       "client": "VIVET",
       "industry": "Luxury Streetwear",
-      "summary": "Visual Identity and Clothing",
+      "summary": "Visual Identity, Clothing and Marketing",
       "description": {
         "paragraph1": "VIVET by Kai Cenat. A visual and cultural entity that represents luxury streetwear, permanence and resistance through Dark Avant-Garde, the modification of the Baskerville Old Face typeface and the message reinforced with the slogan \"WE ARE ETERNAL\"",
         "paragraph2": "It does not pursue relevance, it defines identity.",
@@ -526,7 +526,7 @@
       "slug": "grupo-atproy-brand-refresh-and-website",
       "client": "Grupo ATProy",
       "industry": "Electrical engineering and telecommunications",
-      "summary": "Brand Refresh and website",
+      "summary": "Brand Refresh and website development",
       "description": {
         "paragraph1": "With more than two decades of experience in the electrical engineering and telecommunications sector, Grupo ATProy undertakes large-scale projects throughout Central America.",
         "paragraph2": "Faced with the need for their Visual Identity to reflect their quality and standards of excellence, their brand was refined and consistency was established, accompanied by the creation of the Website with Astro to facilitate information about their services and projects carried out throughout their history, being a vital contact medium to increase their reach and market positioning."
@@ -561,9 +561,9 @@
       "slug": "icpsj-branding",
       "client": "La Presencia del Señor Jesús",
       "industry": "Evangelical Church",
-      "summary": "Branding, website and social media",
+      "summary": "Branding, website and Marketing",
       "description": {
-        "paragraph1": "For the establishment of his church and community, the brand was developed from scratch, creating a coherent visual system that reflected its essence in its main communication channels.",
+        "paragraph1": "The brand was developed from scratch for the establishment of his church and community, creating a coherent visual system that reflected its essence in its main communication channels.",
         "paragraph2": "A website (blog) was developed in English and Spanish with Astro, designed to centralize key information about the church, serve as a scheduling tool, offer details about services, and provide access to relevant Bible studies."
       },
       "content": {
@@ -629,7 +629,7 @@
       "slug": "theprincipal-branding",
       "client": "ThePrincipal",
       "industry": "Online Blog",
-      "summary": "Branding and UI/UX Design",
+      "summary": "Branding, UI/UX Design and Marketing",
       "description": {
         "paragraph1": "ThePrincipal is an online self-learning platform inspired by reading newspapers combined with dynamic user interaction on the web.",
         "paragraph2": "The value of online knowledge must be accompanied by a brand that supports the experience of learning and discovering.",
@@ -657,7 +657,7 @@
       "slug": "bonzer-branding",
       "client": "Bonzer",
       "industry": "Aesthetics and personal care",
-      "summary": "Branding, Packaging and social media",
+      "summary": "Branding, Packaging and Marketing",
       "description": {
         "paragraph1": "Bonzer is a brand concept focused on natural products for the care and well-being of young and adult people, generating visible changes in a short time.",
         "paragraph2": "The Branding allows emphasizing the vibrant and close personality of Bonzer, increasing market loyalty and ease of recognition with respect to the competition, mainly in the graphic elements that accompany the different media of advertising."
